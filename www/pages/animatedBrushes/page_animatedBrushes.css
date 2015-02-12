@@ -1,0 +1,584 @@
+ /* ##### animated brushes ##### */
+
+
+/* ##### layout styles ##### */
+
+#animatedBrushFrame {
+    display:none;
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:#000;
+    }
+
+
+/* ##### animated brush styles ##### */
+
+
+/* animated brush - font-based graphic elements */
+@font-face {
+    font-family: 'animatedBrushElements';
+    src: url('../../fonts/animatedBrushElements.ttf');
+}
+
+
+#animatedBrushWrapper {
+    width:100%;
+    height:100%;
+    overflow:visible;
+
+}
+
+/* animated brush - "8-bit" style */
+
+#eightBitBrush {
+    position:absolute;
+    top:45%;
+    left:0;
+    width:100%;
+}
+
+#eightBitBrush .pixel {
+    float:left;
+    width:6.2%;
+    height:3em;
+    margin:0;
+    padding:0;
+    }
+ 
+
+/* animated brush - color cycling */
+
+#animatedColor {
+    display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:100;
+    width:100%;
+    height:100%;
+    -webkit-animation-name:colorStrobe;
+    -webkit-animation-duration:3s;
+    -webkit-animation-timing-function:ease;
+    -webkit-animation-delay:0s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-play-state:running;
+    }
+
+@-webkit-keyframes colorStrobe {
+    0% {background: red;}
+    20% {background: yellow;}
+    40% {background: blue;}
+    60% {background: green;}
+    80% {background: purple;}
+    100% {background: red;}
+    }
+
+
+
+/* animated brushes - character-based */
+
+.brush_char {
+    display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:100;
+
+    /*
+    width:800px;
+    height:10000px;
+    */
+
+    width:100%;
+    height:100%;
+
+
+    -webkit-animation-name: charAnimation;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
+    -webkit-animation-timing-function: linear;
+
+    }
+
+
+/* animated brush - dots */
+@-webkit-keyframes charAnimation {
+
+    from {
+        top:0px;
+        }
+
+    to {
+        top:-10000px;
+        }
+}
+
+
+    #brush_dots span {
+        position:absolute;
+        z-index:200;
+        }
+
+
+    #brush_dots span::before {
+        font-family:animatedBrushElements;
+        color:#ffffff;
+        content:"\e600";
+        }
+
+
+
+/* animated brush - circles */
+
+
+@-webkit-keyframes circlesAnimation {
+
+    from {
+        top:0px;
+        }
+
+    to {
+        top:-10000px;
+        }
+}
+
+
+    #brush_circles span {
+        position:absolute;
+        z-index:200;
+        }
+
+
+    #brush_circles span {
+        font-family:animatedBrushElements;
+        }
+
+    .circle0::before {content:"\e625";}
+
+    .circle1::before {content:"\e626";}
+
+    .circle2::before {content:"\e627";}
+
+    .circle3::before {content:"\e628";}     
+
+    .circle4::before {content:"\e629";}
+
+    .circle5::before {content:"\e62a";}
+
+    .circle6::before {content:"\e62b";}
+
+    .circle7::before {content:"\e62c";}
+
+    .circle8::before {content:"\e62d";}
+
+    .circle9::before {content:"\e62e";}
+
+    .circle10::before {content:"\e62f";}                        
+
+    .circle11::before {content:"\e630";}
+
+
+    .circleColor0 {
+        color:#ffffff;
+        }
+
+    .circleColor1 {
+        color:#bffff6;
+        }
+
+    .circleColor2 {
+        color:#f9ffc5;
+        }
+
+    .circleColor3 {
+        color:#ff90b2;
+        }
+
+    .circleColor4 {
+        color:#ffdcb3;
+        }
+
+
+
+/* animated brush - stars */
+
+@-webkit-keyframes starsAnimation {
+
+    from {
+        top:0px;
+        }
+
+    to {
+        top:-10000px;
+        }
+    }
+
+    #brush_stars span {
+        position:absolute;
+        z-index:200;
+        }
+
+
+    #brush_stars span {
+        font-family:animatedBrushElements;
+        }
+
+    .star0::before {content:"\e619";}
+
+    .star1::before {content:"\e61a";}
+
+    .star2::before {content:"\e61b";}
+
+    .star3::before {content:"\e61c";}       
+
+    .star4::before {content:"\e61d";}
+
+    .star5::before {content:"\e61e";}
+
+    .star6::before {content:"\e61f";}
+
+    .star7::before {content:"\e620";}
+
+    .star8::before {content:"\e621";}
+
+    .star9::before {content:"\e622";}
+
+    .star10::before {content:"\e623";}                      
+
+    .star11::before {content:"\e624";}
+
+
+    .starColor0 {
+        color:#ffffff;
+        }
+
+    .starColor1 {
+        color:#f8f8f8;
+        }
+
+    .starColor2 {
+        color:#e6e6e6;
+        }
+
+    .starColor3 {
+        color:#d7dbff;
+        }
+
+    .starColor4 {
+        color:#f3f4ff;
+        }
+
+    .starColor5 {
+        color:#faffd3;
+        }
+
+    .starColor6 {
+        color:#ffd3d3;
+        }   
+
+
+/* Animated brush - snowflakes */
+
+@-webkit-keyframes snowflakesAnimation {
+
+    from {
+        top:0px;
+        }
+
+    to {
+        top:-10000px;
+        }
+}
+
+
+    #brush_snowflakes span {
+        position:absolute;
+        z-index:200;
+        }
+
+
+    #brush_snowflakes span {
+        font-family:animatedBrushElements;
+        }
+
+    .snowflake0::before {content:"\e60d";}
+
+    .snowflake1::before {content:"\e60e";}
+
+    .snowflake2::before {content:"\e60f";}
+
+    .snowflake3::before {content:"\e610";}      
+
+    .snowflake4::before {content:"\e611";}
+
+    .snowflake5::before {content:"\e612";}
+
+    .snowflake6::before {content:"\e613";}
+
+    .snowflake7::before {content:"\e614";}
+
+    .snowflake8::before {content:"\e615";}
+
+    .snowflake9::before {content:"\e616";}
+
+    .snowflake10::before {content:"\e617";}                     
+
+    .snowflake11::before {content:"\e618";}
+
+
+    .snowflakeColor0 {
+        color:#ffffff;
+        }
+
+    .snowflakeColor1 {
+        color:#f8f8f8;
+        }
+
+    .snowflakeColor2 {
+        color:#e6e6e6;
+        }
+
+    .snowflakeColor3 {
+        color:#d7dbff;
+        }
+
+    .snowflakeColor4 {
+        color:#f3f4ff;
+        }
+
+
+/* Animated brush - notes */
+
+@-webkit-keyframes notesAnimation {
+
+    from {
+        top:0px;
+        }
+
+    to {
+        top:-10000px;
+        }
+}
+
+
+    #brush_notes span {
+        position:absolute;
+        z-index:200;
+        }
+
+
+    #brush_notes span {
+        font-family:animatedBrushElements;
+        }
+
+    .note0::before {content:"\e631";}
+
+    .note1::before {content:"\e632";}
+
+    .note2::before {content:"\e633";}
+
+    .note3::before {content:"\e634";}       
+
+    .note4::before {content:"\e635";}
+
+    .note5::before {content:"\e636";}
+
+    .note6::before {content:"\e637";}
+
+    .note7::before {content:"\e638";}
+
+    .note8::before {content:"\e639";}
+
+    .note9::before {content:"\e63a";}
+
+    .note10::before {content:"\e63b";}                      
+
+    .note11::before {content:"\e63c";}
+
+    .note12::before {content:"\e63d";}
+
+    .note13::before {content:"\e63e";}
+
+    .note14::before {content:"\e63f";}
+
+    .note15::before {content:"\e640";}
+
+    .note16::before {content:"\e641";}
+
+    .note17::before {content:"\e642";}
+
+    .note18::before {content:"\e643";}
+
+    .note19::before {content:"\e644";}
+
+    .note20::before {content:"\e645";}
+
+    .note21::before {content:"\e646";}
+
+    .note22::before {content:"\e647";}
+
+    .note23::before {content:"\e648";}
+
+    .note24::before {content:"\e649";}                              
+
+    .note25::before {content:"\e64a";}  
+
+    .noteColor0 {
+        color:#ffffff;
+        }
+
+    .noteColor1 {
+        color:#f8f8f8;
+        }
+
+    .noteColor2 {
+        color:#e6e6e6;
+        }
+
+    .noteColor3 {
+        color:#d7dbff;
+        }
+
+    .noteColor4 {
+        color:#f3f4ff;
+        }
+
+
+/* Animated brush - flowers */
+
+@-webkit-keyframes flowersAnimation {
+
+    from {
+        top:0px;
+        }
+
+    to {
+        top:-10000px;
+        }
+}
+
+
+    #brush_flowers span {
+        position:absolute;
+        z-index:200;
+        }
+
+
+    #brush_flowers span {
+        font-family:animatedBrushElements;
+        }
+
+    .flower0::before {content:"\e601";}
+
+    .flower1::before {content:"\e602";}
+
+    .flower2::before {content:"\e603";}
+
+    .flower3::before {content:"\e604";}     
+
+    .flower4::before {content:"\e605";}
+
+    .flower5::before {content:"\e606";}
+
+    .flower6::before {content:"\e607";}
+
+    .flower7::before {content:"\e608";}
+
+    .flower8::before {content:"\e609";}
+
+    .flower9::before {content:"\e60a";}
+
+    .flower10::before {content:"\e60b";}                        
+
+    .flower11::before {content:"\e60c";}
+
+
+    .flowerColor0 {
+        color:#ffffff;
+        }
+
+    .flowerColor1 {
+        color:#c6a1ee;
+        }
+
+    .flowerColor2 {
+        color:#edb4bb;
+        }
+
+    .flowerColor3 {
+        color:#fff186;
+        }
+
+    .flowerColor4 {
+        color:#afbeff;
+        }
+
+    .flowerColor5 {
+        color:#ffb173;
+        }
+
+    .flowerColor6 {
+        color:#c9fd78;
+        }                                       
+
+    .flowerColor7 {
+        color:#ff8dbd;
+        }
+
+    .flowerColor8 {
+        color:#ffec84;
+        }
+
+    .flowerColor9 {
+        color:#f3d2ff;
+        }
+
+
+/* Animated brush - vines */
+
+#brush_vines {
+
+    width:800px;
+    height:100px;
+
+    margin-left:auto;
+    margin-right:auto;
+    border:1px solid #ccc;
+    background-image:url(/img/vine_02.svg);
+    background-repeat:no-repeat;
+    background-position:0px 0px;
+    background-color:transparent;
+    /* background-size:790px 880px; */ /* vine_01.svg */ /* background image height is +100px (the height of its container) for a smooth animated transition */
+    background-size:790px 790px; /* vine_02.svg */
+    -webkit-animation-duration: 5s;
+    -webkit-animation-name: vineAnimation; 
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
+    -webkit-animation-timing-function: linear;
+    }
+
+
+@-webkit-keyframes vineAnimation {
+
+    from {
+        background-position:0px 0px;
+        }
+
+    to {
+        background-position:0px calc(-790px + 100px);
+        }
+    }        
+
+
+
+
+
+
+/* ##### Navigation ##### */
+
+a#showAnimatedBrushes {
+    font-family:Roboto-Medium;
+    color:#000;
+    }        

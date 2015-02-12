@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+    <link rel="stylesheet" type="text/css" href="../../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/jquery.mobile.custom.structure.css" /> 
+
+    <script src="../../js/jquery-2.1.0.min.js"></script>
+    <script src="../../js/jquery.mobile-1.4.2.min.js"></script> 
+
+    <script type="text/javascript" src="../../js/navigation_pages.js"></script> 
+
+    <link rel="stylesheet" type="text/css" href="page_animatedBrushes.css" /> 
+    <script type="text/javascript" src="page_animatedBrushes.js"></script>
+
+    <title>SpriteBrush - Animation Brushes</title>
+
+</head>
+        
+
+<body>
+
+<!-- Navigation - panel menu -->
+<div data-role="panel" data-display="overlay" id="panel_menu">
+    <div class="ui-panel-inner"></div>
+</div>
+
+<!-- Navigation - overflow menu -->
+<div id="overflow_menu" data-role="popup" data-transition="pop"></div>
+
+<header>
+
+    <div class="header-wrapper">
+        <div class="header-title">
+        <span class="section-title">Animation Brushes</span>
+        </div>
+    </div>
+
+    <nav>
+    <a class="button_menu" href="#panel_menu"></a>
+    <a class="button_overflow" href="#overflow_menu" data-rel="popup"></a>
+    </nav>
+
+</header>
+
+
+<div class="page_container" id="page_animatedBrushes">
+
+
+<form id="form_animatedBrushes">
+
+<fieldset class="layout_labels" id="fieldset_animatedBrush">
+
+<label for="button_selectAnimatedBrush">Animation</label>
+<button id="button_selectAnimatedBrush">8-Bit flame</button>
+<div class="visualSelect" id="visualSelect_animatedBrush">
+
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">8-Bit flame</div>
+        <div class="selectButtonThumbnail thumbnail_colorArray_flame"></div>
+        <button class="selectButton" value="eightBitBrush_colorArray_flame">8-Bit flame</button>
+    </div>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">8-Bit steel</div>
+        <div class="selectButtonThumbnail thumbnail_colorArray_steel"></div>
+        <button class="selectButton" value="eightBitBrush_colorArray_steel">8-Bit steel</button>
+    </div>
+
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Cycle primary colors</div>
+        <div class="selectButtonThumbnail thumbnail_colorCycle_primary"></div>
+        <button class="selectButton" value="colorCycle_primary">Cycle primary colors</button>
+    </div>
+
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Dots</div>
+        <div class="selectButtonThumbnail thumbnail_dots"></div>
+        <button class="selectButton" value="brush_dots">Dots</button>
+    </div>
+
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Circles</div>
+        <div class="selectButtonThumbnail thumbnail_circles"></div>
+        <button class="selectButton" value="brush_circles">Circles</button>
+    </div>
+
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Stars</div>
+        <div class="selectButtonThumbnail thumbnail_stars"></div>
+        <button class="selectButton" value="brush_stars">Stars</button>
+    </div>
+
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Snowflakes</div>
+        <div class="selectButtonThumbnail thumbnail_snowflakes"></div>
+        <button class="selectButton" value="brush_snowflakes">Snowflakes</button>
+    </div>
+
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Notes</div>
+        <div class="selectButtonThumbnail thumbnail_notes"></div>
+        <button class="selectButton" value="brush_notes">Notes</button>
+    </div>
+
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Flowers</div>
+        <div class="selectButtonThumbnail thumbnail_flowers"></div>
+        <button class="selectButton" value="brush_flowers">Flowers</button>
+    </div>
+
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Vines</div>
+        <div class="selectButtonThumbnail thumbnail_vines"></div>
+        <button class="selectButton" value="brush_vines">Vines</button>
+    </div>
+
+
+
+</div>
+<input type="hidden" name="visualSelect_animatedBrushValue" id="visualSelect_animatedBrushValue" value="eightBitBrush_colorArray_flame" />
+
+</fieldset>
+
+<fieldset class="layout_labels" id="fieldset_animatedBrushSpeed">
+
+<label for="button_selectAnimatedBrushSpeed">Speed</label>
+<button id="button_selectAnimatedBrushSpeed">Normal</button>
+<div class="visualSelect" id="visualSelect_animatedBrushSpeed">
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Normal</div>
+        <button class="selectButton" value="1">Normal</button>
+    </div>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Slow</div>
+        <button class="selectButton" value="0">Slow</button>
+    </div>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Fast</div>
+        <button class="selectButton" value="2">Fast</button>
+    </div>
+</div>
+<input type="hidden" name="visualSelect_animatedBrushSpeedValue" id="visualSelect_animatedBrushSpeedValue" value="1" />
+
+</fieldset>
+
+<fieldset class="layout_submit">
+
+<button id="button_showAnimatedBrush">Display Animated Brush</button>
+
+</fieldset>
+
+</form>
+
+    <div class="instructions">
+        <div class="instructions_content"></div>
+    </div>
+
+</div>
+
+
+<!-- ##### Animated Brush ##### -->
+
+
+<div id="animatedBrushFrame">
+
+    <div id="animatedBrushWrapper">
+
+        <div id="eightBitBrush">
+            <div class="pixel" id="p1"></div>
+            <div class="pixel" id="p2"></div>
+            <div class="pixel" id="p3"></div>
+            <div class="pixel" id="p4"></div>
+            <div class="pixel" id="p5"></div>
+            <div class="pixel" id="p6"></div>
+            <div class="pixel" id="p7"></div>
+            <div class="pixel" id="p8"></div>    
+            <div class="pixel" id="p9"></div>
+            <div class="pixel" id="p10"></div>
+            <div class="pixel" id="p11"></div>
+            <div class="pixel" id="p12"></div>
+            <div class="pixel" id="p13"></div>
+            <div class="pixel" id="p14"></div>
+            <div class="pixel" id="p15"></div>
+            <div class="pixel" id="p16"></div>            
+        </div>
+
+        <div id="animatedColor"></div> 
+
+        <div class="brush_char" id="brush_dots"></div>
+
+        <div class="brush_char" id="brush_circles"></div>
+
+        <div class="brush_char" id="brush_stars"></div>
+
+        <div class="brush_char" id="brush_snowflakes"></div>
+
+        <div class="brush_char" id="brush_notes"></div>
+
+        <div class="brush_char" id="brush_flowers"></div>
+
+        <div class="brush_char" id="brush_vines"></div>
+
+    </div>
+
+</div>
+
+
+<!-- ### PhoneGap ### -->
+
+<script type="text/javascript" src="../../js/index.js"></script>
+<script type="text/javascript">
+    app.initialize();
+</script>
+
+    </body>
+</html>
