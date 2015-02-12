@@ -1,2 +1,30 @@
 # spritepaint
 Source code for SpritePaint, the light painting photography app for Android
+
+
+
+Bug list
+
+
+Welcome - Prevent from displaying more than once functionality
+Welcome - "Don't show this screen again" functionality
+Welcome - Formatting
+
+All Brushes - Add "Paused, tap to restore, tap & hold to exit" message when paused
+
+All Buttons - Formatting. Design for label-only buttons
+
+Animations - Tap to hide
+
+Flashlight - Detect if available, show disabled style in menu if not available
+Flashlight - Functionality
+
+Instructions - images, video
+Instructions - Overflow menu
+
+About - Format, update
+About - Overflow menu
+
+Branding - Logo
+
+Web site
