@@ -15,6 +15,9 @@ Welcome - Formatting
 All Buttons - Formatting. Design for label-only buttons
 
 ~~Animations - Tap to hide~~
+~~Animations - Prevent animation brushes from merging when switching to/from brush type~~
+Animations - Prevent speed increase switching to/from 8-bit brushes (and others?)
+Animations - Fix brushes from Dots to Vines
 
 Stencils - Pause screen requires two taps
 

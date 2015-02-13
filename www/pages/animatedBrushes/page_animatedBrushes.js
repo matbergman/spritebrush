@@ -35,22 +35,7 @@ $("#animatedBrushFrame").on("tap",function(){
 /* Tap & hold - return to Animated Brushes screen */
 $("#animatedBrushFrame").on("taphold",function(){
 
-
-    /* Clear 8-bit brushes */
-    if ($("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_flame" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_steel" ) {
-
-        clearInterval(eightBitInterval);
-        $("#eightBitBrush").hide();
-
-        }
-
-    /* Clear color cycling brush */
-    if ($("#visualSelect_animatedBrushValue").val() === "colorCycle_primary") {
-
-
-        }    
-
-
+    $(".animatedBrush").hide();
 
     /* Return to Animated Brushes page */
     returnToPage("#page_animatedBrushes","#animatedBrushFrame");
@@ -153,7 +138,7 @@ function showAnimatedBrush() {
     /* 8-bit brushes */
     if ($("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_flame" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_steel" ) {
 
-        $("#animatedBrushWrapper").show(); // In case the last tap & hold was activated while wrapper was hidden
+        // $("#animatedBrushWrapper").show(); // In case the last tap & hold was activated while wrapper was hidden
 
         $("#eightBitBrush").show();
         eightBitBrush_colorArray = eval($("#visualSelect_animatedBrushValue").val());
