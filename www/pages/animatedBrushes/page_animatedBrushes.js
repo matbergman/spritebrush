@@ -35,7 +35,11 @@ $("#animatedBrushFrame").on("tap",function(){
 /* Tap & hold - return to Animated Brushes screen */
 $("#animatedBrushFrame").on("taphold",function(){
 
+
+    /* Reset each animated brush. Mixed brush types on this page require individual solutions. */
     $(".animatedBrush").hide();
+    clearTimeout(eightBitInterval);
+    $(".pixel").css('background-color', 'transparent');
 
     /* Return to Animated Brushes page */
     returnToPage("#page_animatedBrushes","#animatedBrushFrame");
@@ -129,10 +133,12 @@ for (i=0;i<chips.length;i++) {
 function showAnimatedBrush() {
     $("header").hide();
     $("#page_animatedBrushes").hide();
+    $(".animatedBrush").hide();
     $("#animatedBrushFrame").show();
 
 
 
+    var colorDuration = eval($("#visualSelect_animatedBrushSpeedValue").val());
 
 
     /* 8-bit brushes */
@@ -154,8 +160,6 @@ function showAnimatedBrush() {
 
 
     /* color cycling brush */
-
-    var colorDuration = eval($("#visualSelect_animatedBrushSpeedValue").val());
 
     if ($("#visualSelect_animatedBrushValue").val() === "colorCycle_primary") {
 
@@ -181,6 +185,7 @@ function showAnimatedBrush() {
     /* Character-based animated brushes - dots */
 
     if ($("#visualSelect_animatedBrushValue").val() === "brush_dots") {
+
         charBrushContainer = document.getElementById("brush_dots");
         var numberOfDots = Math.floor(Math.random() * 500);
 
@@ -213,6 +218,8 @@ function showAnimatedBrush() {
 
     }
 
+
+    /* Character-based animated brushes - circles */
 
     if ($("#visualSelect_animatedBrushValue").val() === "brush_circles") {
         charBrushContainer = document.getElementById("brush_circles");
