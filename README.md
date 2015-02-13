@@ -10,11 +10,13 @@ Welcome - Prevent from displaying more than once functionality
 Welcome - "Don't show this screen again" functionality
 Welcome - Formatting
 
-All Brushes - Add "Paused, tap to restore, tap & hold to exit" message when paused
+~~All Brushes - Add "Paused, tap to restore, tap & hold to exit" message when paused~~
 
 All Buttons - Formatting. Design for label-only buttons
 
-Animations - Tap to hide
+~~Animations - Tap to hide~~
+
+Stencils - Pause screen requires two taps
 
 Flashlight - Detect if available, show disabled style in menu if not available
 Flashlight - Functionality

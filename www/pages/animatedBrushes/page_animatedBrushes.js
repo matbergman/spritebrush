@@ -3,6 +3,7 @@ $(document).ready(function(){
 
 $("#button_showAnimatedBrush").on("click", function() {
     showAnimatedBrush();
+    $("#toggleBackground").hide();    
     return false;
     });
 
@@ -26,6 +27,7 @@ $("#button_selectAnimatedBrushSpeed").on("click", function() {
 
 $("#animatedBrushFrame").on("tap",function(){
     $("#animatedBrushWrapper").toggle();
+    $("#toggleBackground").toggle();    
     });
 
 

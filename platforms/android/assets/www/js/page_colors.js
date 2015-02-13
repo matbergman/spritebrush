@@ -7,6 +7,7 @@ $(document).ready(function(){
 
 $("#button_showColor").on("click", function() {
     showColor();
+    $("#toggleBackground").hide();    
     return false;
     });
 

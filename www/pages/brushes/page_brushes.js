@@ -15,6 +15,7 @@ for (i=0; i<pages.length;i++) {
 
 $("#button_showBrush").click(function() {
     showBrush();
+    $("#toggleBackground").hide();
     return false;
     });
 
@@ -31,6 +32,7 @@ $("#button_selectBrush").click(function() {
 
 $("#brushFrame").on("tap",function(){
     $("#theBrush").toggle();
+    $("#toggleBackground").toggle();    
     });
 
 

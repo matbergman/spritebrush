@@ -644,11 +644,26 @@ button#toggleBrushDisplay:focus {
     position:absolute;
     top:0;
     left:0;
-    z-index:100;
+    z-index:400;
     width:100%;
     height:100%;
     background-color:#000000;
+    color:#666;
+    text-align:center;
     } 
+
+    #toggleBackground h1,
+    #toggleBackground p {
+        font-size:2.8em;
+        }
+
+    #toggleBackground h1 {
+        margin:2em 0; 
+        }
+
+    #toggleBackground p {
+        font-weight:100;
+        }
 
 
 /* home buttons */
