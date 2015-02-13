@@ -3,11 +3,11 @@ Source code for SpritePaint, the light painting photography app for Android
 
 
 
-Bug list
+## Bug list
 
 
-Welcome - Prevent from displaying more than once functionality
-Welcome - "Don't show this screen again" functionality
+~~Welcome - Prevent from displaying more than once functionality~~
+~~Welcome - "Don't show this screen again" functionality~~
 Welcome - Formatting
 
 ~~All Brushes - Add "Paused, tap to restore, tap & hold to exit" message when paused~~
@@ -20,15 +20,16 @@ Animations - Prevent speed increase switching to/from 8-bit brushes (and others?
 Animations - Fix brushes from Dots to Vines
 
 Stencils - Pause screen requires two taps
+Stencils - All stencils don't fit bounds of screen
 
 Flashlight - Detect if available, show disabled style in menu if not available
 Flashlight - Functionality
 
 Instructions - images, video
-Instructions - Overflow menu
+~~Instructions - Overflow menu~~
 
 About - Format, update
-About - Overflow menu
+~~About - Overflow menu~~
 
 Branding - Logo
 

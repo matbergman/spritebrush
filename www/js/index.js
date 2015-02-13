@@ -105,9 +105,9 @@ thePanel.appendChild(navFlashlight);
 
 /* ##### Populate content ##### */
 
-if ($(".instructions")) {
+if ($(".instructions").length) {
 
-var instructionsContent = "Tap the screen to toggle the stencil. Tap and hold to close and exit."
+var instructionsContent = "Tap the screen to toggle the stencil. Tap &amp; hold to close and exit."
 
 var instructionsContainer = document.getElementsByClassName("instructions_content")[0];
 instructionsContainer.innerHTML = instructionsContent;
