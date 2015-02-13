@@ -38,8 +38,12 @@ $("#animatedBrushFrame").on("taphold",function(){
 
     /* Reset each animated brush. Mixed brush types on this page require individual solutions. */
     $(".animatedBrush").hide();
-    clearTimeout(eightBitInterval);
+
+    if (eightBitInterval != "undefined") {clearTimeout(eightBitInterval);}
+
     $(".pixel").css('background-color', 'transparent');
+
+
 
     /* Return to Animated Brushes page */
     returnToPage("#page_animatedBrushes","#animatedBrushFrame");
@@ -55,6 +59,8 @@ $("#animatedBrushFrame").on("taphold",function(){
 
 
 /* Animated brush - "8-bit" */                
+
+var eightBitInterval;
 
 var eightBitBrush_colorArray_flame = new Array(
 "#fe8300",
