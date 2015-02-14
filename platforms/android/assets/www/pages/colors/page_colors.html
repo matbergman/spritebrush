@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+    <link rel="stylesheet" type="text/css" href="../../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/jquery.mobile.custom.structure.css" /> 
+
+    <script src="../../js/jquery-2.1.0.min.js"></script>
+    <script src="../../js/jquery.mobile-1.4.2.min.js"></script> 
+
+    <script type="text/javascript" src="../../js/navigation_pages.js"></script> 
+
+    <link rel="stylesheet" type="text/css" href="page_colors.css" />
+    <script src="page_colors.js"></script> 
+
+    <title>SpriteBrush Color Brushes</title>
+</head>
+
+<body>
+
+<!-- Navigation - panel menu -->
+<div data-role="panel" data-display="overlay" id="panel_menu">
+    <div class="ui-panel-inner"></div>
+</div>
+
+<!-- Navigation - overflow menu -->
+<div id="overflow_menu" data-role="popup" data-transition="pop"></div>
+
+<header>
+
+    <div class="header-wrapper">
+        <div class="header-title">
+        <span class="section-title">Color Brushes</span>
+        </div>
+    </div>
+
+    <nav>
+    <a class="button_menu" href="#panel_menu"></a>
+    <a class="button_overflow" href="#overflow_menu" data-rel="popup"></a>
+    </nav>
+
+</header>
+
+
+<div class="page_container" id="page_colors">
+
+<form id="form_color">
+
+<fieldset class="layout_labels" id="fieldset_color">
+
+<label for="button_selectColor">Color</label>
+<button id="button_selectColor">White</button>
+<div class="visualSelect" id="visualSelect_color">
+
+    <div class="selectButtonContainer" style="background-color:#ffffff">
+        <div class="selectButtonLabel">White</div>
+        <button class="selectButton" value="#ffffff">White</button>
+    </div>
+    <div class="selectButtonContainer" style="background-color:#0074D9">
+        <div class="selectButtonLabel">Blue</div>
+        <button class="selectButton" value="#0074D9">Blue</button>
+    </div>
+    <div class="selectButtonContainer" style="background-color:#7FDBFF">
+        <div class="selectButtonLabel">Aqua</div>
+        <button class="selectButton" value="#7FDBFF">Aqua</button>
+    </div>
+    <div class="selectButtonContainer" style="background-color:#39CCCC">
+        <div class="selectButtonLabel">Teal</div>
+        <button class="selectButton" value="#39CCCC">Teal</button>
+    </div>
+    <div class="selectButtonContainer" style="background-color:#3D9970">
+        <div class="selectButtonLabel">Olive</div>
+        <button class="selectButton" value="#3D9970">Olive</button>
+    </div>
+    <div class="selectButtonContainer" style="background-color:#2ECC40">
+        <div class="selectButtonLabel">Green</div>
+        <button class="selectButton" value="#2ECC40">Green</button>
+    </div>
+    <div class="selectButtonContainer" style="background-color:#01FF70">
+        <div class="selectButtonLabel">Lime</div>
+        <button class="selectButton" value="#01FF70">Lime</button>
+    </div>
+    <div class="selectButtonContainer" style="background-color:#FFDC00">
+        <div class="selectButtonLabel">Yellow</div>
+        <button class="selectButton" value="#FFDC00">Yellow</button>
+    </div>
+    <div class="selectButtonContainer" style="background-color:#FF851B">
+        <div class="selectButtonLabel">Orange</div>
+        <button class="selectButton" value="#FF851B">Orange</button>
+    </div>
+    <div class="selectButtonContainer" style="background-color:#FF4136">
+        <div class="selectButtonLabel">Red</div>
+        <button class="selectButton" value="#FF4136">Red</button>
+    </div>
+    <div class="selectButtonContainer" style="background-color:#85144B">
+        <div class="selectButtonLabel">Maroon</div>
+        <button class="selectButton" value="#85144B">Maroon</button>
+    </div>
+    <div class="selectButtonContainer" style="background-color:#F012BE">
+        <div class="selectButtonLabel">Fuchsia</div>
+        <button class="selectButton" value="#F012BE">Fuchsia</button>
+    </div>
+    <div class="selectButtonContainer" style="background-color:#B10DC9">
+        <div class="selectButtonLabel">Purple</div>
+        <button class="selectButton" value="#B10DC9">Purple</button>
+    </div>
+    <div class="selectButtonContainer" style="background-color:#DDDDDD">
+        <div class="selectButtonLabel">Silver</div>
+        <button class="selectButton" value="#DDDDDD">Silver</button>
+    </div>
+</div>
+
+<input type="hidden" name="visualSelect_colorValue" id="visualSelect_colorValue" value="white" />
+
+</fieldset>
+
+
+<fieldset class="layout_labels" id="fieldset_colorMask">
+
+<label for="button_selectMask">Mask</label>
+<button id="button_selectMask">Circle</button>
+<div class="visualSelect" id="visualSelect_mask">
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Circle</div>
+        <div class="selectButtonThumbnail thumbnail_circle"></div>
+        <button class="selectButton" value="mask_circle">Circle</button>
+    </div>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Crescent</div>
+        <div class="selectButtonThumbnail thumbnail_crescent"></div>
+        <button class="selectButton" value="mask_crescent">Crescent</button>
+    </div>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Diamond</div>
+        <div class="selectButtonThumbnail thumbnail_diamond"></div>
+        <button class="selectButton" value="mask_diamond">Diamond</button>
+    </div>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Hexagon</div>
+        <div class="selectButtonThumbnail thumbnail_hexagon"></div>
+        <button class="selectButton" value="mask_hexagon">Hexagon</button>
+    </div>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Octagon</div>
+        <div class="selectButtonThumbnail thumbnail_octagon"></div>
+        <button class="selectButton" value="mask_octagon">Octagon</button>
+    </div>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Square</div>
+        <div class="selectButtonThumbnail thumbnail_square"></div>
+        <button class="selectButton" value="mask_square">Square</button>
+    </div>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Star</div>
+        <div class="selectButtonThumbnail thumbnail_star"></div>
+        <button class="selectButton" value="mask_star">Star</button>
+    </div>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Sunburst</div>
+        <div class="selectButtonThumbnail thumbnail_sunburst"></div>
+        <button class="selectButton" value="mask_sunburst">Sunburst</button>
+    </div>
+</div>
+<input type="hidden" name="visualSelect_maskValue" id="visualSelect_maskValue" value="mask_circle" />
+
+</fieldset>
+
+
+<fieldset class="layout_labels" id="fieldset_colorStrobe">
+
+<label for="button_selectStrobe">Strobe</label>
+<button id="button_selectStrobe">No Strobe</button>
+<div class="visualSelect" id="visualSelect_strobe">
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">No strobe</div>
+    <button class="selectButton" value="0s">No strobe</button>
+    </div>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Fast strobe</div>
+    <button class="selectButton" value="0.5s">Fast strobe</button>
+    </div>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Medium strobe</div>
+    <button class="selectButton" value="1s">Medium strobe</button>
+    </div>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Slow strobe</div>
+    <button class="selectButton" value="3s">Slow strobe</button>
+    </div>
+</div>
+<input type="hidden" name="visualSelect_strobeValue" id="visualSelect_strobeValue" value="0s" />
+
+</fieldset>
+
+<fieldset class="layout_submit">
+
+<button id="button_showColor">Display Color Brush</button>
+
+</fieldset>
+
+</form>
+
+    <div class="instructions">
+        <div class="instructions_content"></div>
+    </div>
+
+</div>
+
+
+
+<!-- ##### Colors ##### -->
+<div id="colorFrame">
+    <div class="toggleDisplay"></div>
+    <div id="colorMask"></div>
+    <div id="colorStrobe"></div>
+    <div id="theColor"></div>
+    <div id="toggleBackground">
+        <h1>Paused</h1>
+        <p>Tap to Restore</p>
+        <p>Tap &amp; Hold to Exit</p>
+    </div>
+</div>
+
+
+
+<!-- ### PhoneGap ### -->
+
+<script type="text/javascript" src="../../js/index.js"></script>
+<script type="text/javascript">
+    app.initialize();
+</script>
+</body>
+
+</html>

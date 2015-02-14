@@ -459,8 +459,15 @@ fieldset.layout_submit {
 
 /* Layout - menu */
 
-#panel_menu {
+#panel_menu,
+#panel_menu .ui-panel-inner {
+    height:100%;
+    overflow-y:scroll;
     }
+
+    #panel_menu .ui-panel-inner {
+        margin-bottom:1em;
+        }
 
     #panel_menu a,
     #overflow_menu a {
@@ -648,7 +655,7 @@ button#toggleBrushDisplay:focus {
     width:100%;
     height:100%;
     background-color:#000000;
-    color:#666;
+    color:#673ab7;
     text-align:center;
     } 
 

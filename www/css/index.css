@@ -459,8 +459,15 @@ fieldset.layout_submit {
 
 /* Layout - menu */
 
-#panel_menu {
+#panel_menu,
+#panel_menu .ui-panel-inner {
+    height:100%;
+    overflow-y:scroll;
     }
+
+    #panel_menu .ui-panel-inner {
+        margin-bottom:1em;
+        }
 
     #panel_menu a,
     #overflow_menu a {

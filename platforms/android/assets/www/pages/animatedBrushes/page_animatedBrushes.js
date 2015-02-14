@@ -3,7 +3,7 @@ $(document).ready(function(){
 
 $("#button_showAnimatedBrush").on("click", function() {
     showAnimatedBrush();
-    /* $("#toggleBackground").hide();    */
+    $("#toggleBackground").hide();    
     return false;
     });
 
@@ -27,7 +27,7 @@ $("#button_selectAnimatedBrushSpeed").on("click", function() {
 
 $("#animatedBrushFrame").on("tap",function(){
     $("#animatedBrushWrapper").toggle();
-   /* $("#toggleBackground").toggle();    */
+    $("#toggleBackground").toggle();    
     });
 
 
@@ -36,19 +36,12 @@ $("#animatedBrushFrame").on("tap",function(){
 $("#animatedBrushFrame").on("taphold",function(){
 
 
-    /* Clear 8-bit brushes */
-    if ($("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_flame" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_steel" ) {
+    /* Reset each animated brush. Mixed brush types on this page require individual solutions. */
+    $(".animatedBrush").hide();
 
-        clearInterval(eightBitInterval);
-        $("#eightBitBrush").hide();
+    if (eightBitInterval != "undefined") {clearTimeout(eightBitInterval);}
 
-        }
-
-    /* Clear color cycling brush */
-    if ($("#visualSelect_animatedBrushValue").val() === "colorCycle_primary") {
-
-
-        }    
+    $(".pixel").css('background-color', 'transparent');
 
 
 
@@ -66,6 +59,8 @@ $("#animatedBrushFrame").on("taphold",function(){
 
 
 /* Animated brush - "8-bit" */                
+
+var eightBitInterval;
 
 var eightBitBrush_colorArray_flame = new Array(
 "#fe8300",
@@ -144,16 +139,18 @@ for (i=0;i<chips.length;i++) {
 function showAnimatedBrush() {
     $("header").hide();
     $("#page_animatedBrushes").hide();
+    $(".animatedBrush").hide();
     $("#animatedBrushFrame").show();
 
 
 
+    var colorDuration = eval($("#visualSelect_animatedBrushSpeedValue").val());
 
 
     /* 8-bit brushes */
     if ($("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_flame" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_steel" ) {
 
-        $("#animatedBrushWrapper").show(); // In case the last tap & hold was activated while wrapper was hidden
+        // $("#animatedBrushWrapper").show(); // In case the last tap & hold was activated while wrapper was hidden
 
         $("#eightBitBrush").show();
         eightBitBrush_colorArray = eval($("#visualSelect_animatedBrushValue").val());
@@ -169,8 +166,6 @@ function showAnimatedBrush() {
 
 
     /* color cycling brush */
-
-    var colorDuration = eval($("#visualSelect_animatedBrushSpeedValue").val());
 
     if ($("#visualSelect_animatedBrushValue").val() === "colorCycle_primary") {
 
@@ -196,6 +191,7 @@ function showAnimatedBrush() {
     /* Character-based animated brushes - dots */
 
     if ($("#visualSelect_animatedBrushValue").val() === "brush_dots") {
+
         charBrushContainer = document.getElementById("brush_dots");
         var numberOfDots = Math.floor(Math.random() * 500);
 
@@ -228,6 +224,8 @@ function showAnimatedBrush() {
 
     }
 
+
+    /* Character-based animated brushes - circles */
 
     if ($("#visualSelect_animatedBrushValue").val() === "brush_circles") {
         charBrushContainer = document.getElementById("brush_circles");

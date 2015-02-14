@@ -24,7 +24,6 @@
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/css/index.css \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/css/jquery.mobile.custom.structure.css \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/css/jquery.mobile.custom.styles.css \
-/Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/css/page_colors.css \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/fonts/animals.ttf \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/fonts/animatedBrushElements.ttf \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/fonts/bugs.ttf \
@@ -81,12 +80,11 @@
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/js/index.js \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/js/jquery-2.1.0.min.js \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/js/jquery.mobile-1.4.2.min.js \
-/Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/js/navigation_home.js \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/js/navigation_pages.js \
-/Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/js/page_colors.js \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/pages/about \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/pages/animatedBrushes \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/pages/brushes \
+/Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/pages/colors \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/pages/instructions \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/pages/stencils \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/pages/about/page_about.css \
@@ -98,6 +96,9 @@
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/pages/brushes/page_brushes.css \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/pages/brushes/page_brushes.html \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/pages/brushes/page_brushes.js \
+/Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/pages/colors/page_colors.css \
+/Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/pages/colors/page_colors.html \
+/Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/pages/colors/page_colors.js \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/pages/instructions/page_instructions.css \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/pages/instructions/page_instructions.html \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/pages/instructions/page_instructions.js \

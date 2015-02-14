@@ -1,11 +1,11 @@
-/* ##### Home (index.html) events ##### */
+/* ##### Navigation events ##### */
 
 $(document).ready(function(){
 
 
 /* page navigation buttons */
 $("#showColors").click(function() {
-    window.location = "../../index.html"
+    window.location = "../colors/page_colors.html"
     });
 
 $("#showBrushes").click(function() {
