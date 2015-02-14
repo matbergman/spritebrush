@@ -459,15 +459,8 @@ fieldset.layout_submit {
 
 /* Layout - menu */
 
-#panel_menu,
-#panel_menu .ui-panel-inner {
-    height:100%;
-    overflow-y:scroll;
+#panel_menu {
     }
-
-    #panel_menu .ui-panel-inner {
-        margin-bottom:1em;
-        }
 
     #panel_menu a,
     #overflow_menu a {
@@ -475,13 +468,17 @@ fieldset.layout_submit {
         padding:1em 0;
         font-size:1.4em;
         border-bottom:1px solid #ccc;    
-        width:210px;
         }
 
         #panel_menu a:last-child,
         #overflow_menu a:last-child {
             border-bottom:0;
             }
+
+        #overflow_menu a {
+            width:14em;
+            }
+
 
 .panel_logo {
     width:auto;
@@ -837,4 +834,29 @@ button#toggleBrushDisplay:focus {
             text-shadow:none;
             text-indent: -99999px;
             outline:1px solid #fff;
-            }          
+            }
+
+
+
+
+/* ##### Media Queries ##### */
+
+/* Small screens, smartphones */
+
+@media only screen and (max-device-width: 640px) {
+
+    body {
+        font-size:.5em;
+        }
+
+    #panel_menu a,
+    #overflow_menu a {
+        font-size:2em;
+        }
+
+    .panel_logo {
+        display:none;
+        }
+
+
+}
