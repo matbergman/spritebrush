@@ -39,7 +39,9 @@ $("#stencilFrame").on("taphold",function(){
 
 /* set character height so graphic fills entire screen */
 
-document.getElementById("char").style.fontSize = heightForPages+"px";
+
+document.getElementById("char").style.height = heightForPages+"px";
+document.getElementById("char").style.width = widthForPages+"px";
 
 });
                 
@@ -53,6 +55,11 @@ function showStencil() {
     
     document.getElementById("char").style['-webkit-animation-duration'] = selectedStencilSpeed;
     theStencil.className = selectedStencil;
+
+
+//console.log("width: "+$("#char").width());
+
+
 
     $("header").hide();
     $("#page_stencils").hide();

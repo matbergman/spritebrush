@@ -52,7 +52,7 @@ function showMask() {
     theMask = document.getElementById("colorMask");
     
     if (selectedMask == "none") theMask.style.backgroundImage = "none";
-    else theMask.style.backgroundImage = "url(img/"+selectedMask+".png)";
+    else theMask.style.backgroundImage = "url(../../img/"+selectedMask+".png)";
 }
 
 
@@ -65,12 +65,14 @@ function showColor() {
     selectedColor  = $("#visualSelect_colorValue").val();
     selectedStrobe = $("#visualSelect_strobeValue").val();
     
+    showMask();
+
     document.getElementById("colorStrobe").style.webkitAnimationDuration=selectedStrobe;
     document.getElementById("theColor").style.backgroundColor = selectedColor;
 
     $("#colorFrame").show();
     $("#theColor").show();
 
-    showMask(); 
+
 
 }

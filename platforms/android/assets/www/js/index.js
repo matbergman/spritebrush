@@ -55,7 +55,7 @@ var app = {
 var currentPage = document.getElementsByClassName("page")[0];
 
 var heightForPages = $(window).height();
-
+var widthForPages = $(window).width();
 
 /* ##### Panel menu ##### */
 

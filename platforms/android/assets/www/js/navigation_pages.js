@@ -20,6 +20,12 @@ $("#showStencils").click(function() {
     window.location = "../stencils/page_stencils.html"
     });
 
+$("#showFlashlight").click(function() {
+    alert("Not activated");
+    });
+
+
+
 $("#instructions").click(function() {
     window.location = "../instructions/page_instructions.html"
     });

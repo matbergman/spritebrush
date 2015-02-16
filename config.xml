@@ -12,5 +12,7 @@
     <preference name="orientation"  value="landscape" />
 
     <content src="index.html" />
+
     <access origin="*" />
+
 </widget>
