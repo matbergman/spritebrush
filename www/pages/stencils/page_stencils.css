@@ -757,6 +757,7 @@
     height:100%;
 	font-family: fontsnthings250;
     font-size:100vh;
+    /* font-size:auto; */
     text-align:center;
     -webkit-animation-name:stencilStrobe;
     -webkit-animation-timing-function:step-start;
