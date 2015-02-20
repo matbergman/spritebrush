@@ -282,58 +282,49 @@ form {
     }
 
 
-/* layout - instructions popup */
+/* layout - splash screen */
 
-#popup_instructions {
-position:fixed;
-top:0;
-left:0;
-z-index:300;
-width:100%;
-height:100%;
-background-color:rgba(0,0,0,0.6);
+#splash {
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:300;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.6);
+    }
 
-}
-
-
-.popup_instructions_content {
-    width:calc(100% - 4.2em);
-    height:calc(100% - 3.4em);
-    overflow-y:scroll;
+.splash_content {
+    width:92%;
+    height:90%;
     margin-left:auto;
     margin-right:auto;
     margin-top:1em;
     margin-bottom:1em;
-    font-size:1.8em;
     border:1px solid #b0bec5;
     background-color:#eceff1;
-    padding:.5em 1em;
-    line-height:1.8em;
+    padding:0 1em;
+    font-size:1.4em;
+    line-height:1.4em;
     font-family:Roboto-Light;
     }
 
-
-    .popup_instructions_content a {
+    .splash_content a {
         color:#000;
         font-family:Roboto-Medium;
         }
 
-    .popup_instructions_content form {
+    .splash_content form {
         margin:0;
         padding:0;
-
         }
 
-
-    .popup_instructions_content label {
+    .splash_content label {
         font-size:1em;
         }
 
 
-
-
 /* layout - instructions */
-
 
 .instructions {
     position:absolute;
@@ -592,6 +583,25 @@ a.button:hover {
   text-decoration: none;
   color: #e6e6e6;
 }  
+
+.button.dialog {
+    position:absolute;
+    bottom:1em;
+    left:0;
+    margin:0;
+    padding:1.4em 0;
+    background-color:transparent;
+    width:100%;
+    text-align:center;
+    border:0;
+    border-top:1px solid #666;
+    color:#222;
+    font-size:1em;
+    box-shadow:none;
+    border-radius:0;
+    text-transform:inherit;
+    }
+
 
 header nav a {
     display: block;
