@@ -53,7 +53,10 @@
 
 /* ##### Buttons ##### */
 
-    
+#visualSelect_strobe {
+    padding-top:10%;
+    }    
+
 #visualSelect_mask {}        
 
     #visualSelect_mask .selectButtonContainer {
@@ -103,7 +106,7 @@
                 } 
 
 #visualSelect_color {}
-    
+
     #visualSelect_color .selectButtonContainer .selectButtonThumbnail {
         display:none;
         }

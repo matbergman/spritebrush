@@ -68,6 +68,7 @@ button,
 .button {
     color:#e6e6e6;
     background-color:#455a64;
+    font-family: Roboto-Regular;
     }
 
 .button:hover,
@@ -714,7 +715,7 @@ button#toggleBrushDisplay:focus {
     z-index:300;
     width:100%;
     overflow-y:scroll;
-    background-color:#000;
+    background-color:#cfd8dc;
     }
 
     .visualSelect .selectButtonContainer {
@@ -725,7 +726,6 @@ button#toggleBrushDisplay:focus {
         clear:both;
         overflow:auto;
         font-family:Roboto-Light;
-        color:#ccc;
         font-size:1.8em;
         margin:0 2em;
         }
@@ -738,7 +738,7 @@ button#toggleBrushDisplay:focus {
         padding:0;
         width:25%;
         float:left;
-        background:#000;
+        background:#455a64;
         background-size:contain;
         background-repeat:no-repeat;
         background-position:top center;
