@@ -32,7 +32,7 @@ $("#stencilFrame").on("tap",function(){
 
 $("#stencilFrame").on("taphold",function(){
     $("#toggleBackground").hide();
-    $("#stencil").show();        
+    $("#stencil").hide();        
     returnToPage("#page_stencils","#stencilFrame");
     });
 
@@ -63,7 +63,7 @@ function showStencil() {
     for (i=0;i<wideStencilArray.length;i++) {
         if (selectedStencil == wideStencilArray[i]) {
 
-            $("#char").css('fontSize','50vh');
+            $("#char").css('fontSize','20vw');
             }
         //else {$("#char").css('fontSize','24px');}
         }
