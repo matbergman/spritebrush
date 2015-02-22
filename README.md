@@ -10,8 +10,8 @@ Source code for SpritePaint, the light painting photography app for Android
 
 ~~Welcome - Prevent from displaying more than once functionality~~
 ~~Welcome - "Don't show this screen again" functionality~~
-Welcome - Simplify HTML from popup to bordered element	
-Welcome - Formatting
+~~Welcome - Simplify HTML from popup to bordered element~~
+~~Welcome - Formatting~~
 
 ~~All Brushes - Add "Paused, tap to restore, tap & hold to exit" message when paused~~
 All Buttons - Formatting. Design for label-only buttons

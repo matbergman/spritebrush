@@ -110,15 +110,9 @@
 #visualSelect_stencil .selectButtonThumbnail {
     color:#fff;
     text-align:center;
-    font-size:6em;
-    margin-top:5%;
+    font-size:8em;
+    margin-top:20%;
     }
-
-.selectButtonLabel,
-.selectButton {
-    font-family:ornaments;
-    }
-
 
 .stencil_0000::before {
     font-family:ornaments;
@@ -720,16 +714,11 @@
     content:"\E606";
     }
 
-                            
+#visualSelect_stencilSpeed .selectButtonContainer {
+    width:33.33%;
+    }
 
-
-
-                                                
-
-
-
-
-   
+  
 #button_selectStencil {
     font-size:3em;
     padding:.5em;

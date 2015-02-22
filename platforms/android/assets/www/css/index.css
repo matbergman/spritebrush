@@ -68,6 +68,7 @@ button,
 .button {
     color:#e6e6e6;
     background-color:#455a64;
+    font-family: Roboto-Regular;
     }
 
 .button:hover,
@@ -282,58 +283,50 @@ form {
     }
 
 
-/* layout - instructions popup */
+/* layout - splash screen */
 
-#popup_instructions {
-position:fixed;
-top:0;
-left:0;
-z-index:300;
-width:100%;
-height:100%;
-background-color:rgba(0,0,0,0.6);
+#splash {
+    display:block;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:300;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.6);
+    }
 
-}
-
-
-.popup_instructions_content {
-    width:calc(100% - 4.2em);
-    height:calc(100% - 3.4em);
-    overflow-y:scroll;
+.splash_content {
+    position:relative;
+    width:60%;
+    height:90%;
     margin-left:auto;
     margin-right:auto;
     margin-top:1em;
     margin-bottom:1em;
-    font-size:1.8em;
-    border:1px solid #b0bec5;
     background-color:#eceff1;
-    padding:.5em 1em;
-    line-height:1.8em;
+    padding:.5em 1em 0 1em;
+    font-size:1.5em;
+    line-height:1.5em;
     font-family:Roboto-Light;
     }
 
-
-    .popup_instructions_content a {
+    .splash_content a {
         color:#000;
         font-family:Roboto-Medium;
         }
 
-    .popup_instructions_content form {
+    .splash_button {
+        position:absolute;
+        bottom:0;
+        left:0;
         margin:0;
-        padding:0;
-
+        width:100%;
+        border-top:1px solid #666;
         }
-
-
-    .popup_instructions_content label {
-        font-size:1em;
-        }
-
-
 
 
 /* layout - instructions */
-
 
 .instructions {
     position:absolute;
@@ -593,6 +586,26 @@ a.button:hover {
   color: #e6e6e6;
 }  
 
+
+.button.dialog {
+    padding:1.4em 0;
+    background-color:transparent;
+    width:100%;
+    text-align:center;
+    border:0;
+    color:#222;
+    font-size:1em;
+    box-shadow:none;
+    border-radius:0;
+    text-transform:inherit;
+    }
+
+    .button.dialog:active,
+    .button.dialog:focus {
+        background-color:#455a64;
+        color:#fff;
+        }
+
 header nav a {
     display: block;
     height: 48px;
@@ -704,7 +717,7 @@ button#toggleBrushDisplay:focus {
     z-index:300;
     width:100%;
     overflow-y:scroll;
-    background-color:#000;
+    background-color:#cfd8dc;
     }
 
     .visualSelect .selectButtonContainer {
@@ -715,7 +728,6 @@ button#toggleBrushDisplay:focus {
         clear:both;
         overflow:auto;
         font-family:Roboto-Light;
-        color:#ccc;
         font-size:1.8em;
         margin:0 2em;
         }
@@ -728,7 +740,7 @@ button#toggleBrushDisplay:focus {
         padding:0;
         width:25%;
         float:left;
-        background:#000;
+        background:#455a64;
         background-size:contain;
         background-repeat:no-repeat;
         background-position:top center;
