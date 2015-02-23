@@ -114,6 +114,57 @@
     margin-top:20%;
     }
 
+    #visualSelect_stencil .selectButtonThumbnail.stencil_0056 {
+        font-size:5em;
+        margin-left:-.5em;
+        margin-top:30%;
+        }
+
+    #visualSelect_stencil .selectButtonThumbnail.stencil_0058 {
+        font-size:5em;
+        margin-top:30%;
+        }
+
+    #visualSelect_stencil .selectButtonThumbnail.stencil_0062 {
+        font-size:5em;
+        margin-top:30%;
+        }
+
+    #visualSelect_stencil .selectButtonThumbnail.stencil_0066 {
+        font-size:5em;
+        margin-top:30%;
+        }
+
+    #visualSelect_stencil .selectButtonThumbnail.stencil_0091 {
+        font-size:7em;
+        }
+
+    #visualSelect_stencil .selectButtonThumbnail.stencil_0098 {
+        font-size:6em;
+        margin-top:30%;
+        }
+
+    #visualSelect_stencil .selectButtonThumbnail.stencil_0100 {
+        font-size:4em;
+        margin-top:30%;
+        }
+
+    #visualSelect_stencil .selectButtonThumbnail.stencil_0104 {
+        font-size:6em;
+        margin-top:30%;
+        }
+
+    #visualSelect_stencil .selectButtonThumbnail.stencil_0110 {
+        font-size:5em;
+        margin-top:30%;
+        }
+
+    #visualSelect_stencil .selectButtonThumbnail.stencil_0111 {
+        font-size:4em;
+        margin-top:30%;
+        }
+
+
 .stencil_0000::before {
     font-family:ornaments;
     content:"\E600";
@@ -714,9 +765,19 @@
     content:"\E606";
     }
 
+
+
+
+
+
 #visualSelect_stencilSpeed .selectButtonContainer {
     width:33.33%;
     }
+
+
+
+
+
 
   
 #button_selectStencil {
@@ -727,9 +788,7 @@
 
 #stencilFrame {
     display:none;
-    position:absolute;
-    top:0;
-    left:0;
+    position:fixed;
     z-index:300;
     width:100%;
     height:100%;
@@ -738,16 +797,12 @@
 
 
 #stencil {
-
-    }
-
-#char {
     width:100%;
     height:100%;
-	font-family: fontsnthings250;
     font-size:100vh;
-    /* font-size:auto; */
+    color:#fff;
     text-align:center;
+    background-color:#000;
     -webkit-animation-name:stencilStrobe;
     -webkit-animation-timing-function:step-start;
     -webkit-animation-delay:0s;
@@ -760,6 +815,61 @@
     97%  {color:black;}
     100% {color:white;}
     }
+
+    #stencil.stencil_0056 {
+        font-size:40vh;
+        margin-top:.5em;
+        }
+
+    #stencil.stencil_0058 {
+        font-size:40vh;
+        margin-top:.5em;
+        }
+
+    #stencil.stencil_0059 {
+        font-size:50vh;
+        margin-top:.5em;
+        }
+
+    #stencil.stencil_0062 {
+        font-size:50vh;
+        margin-top:.5em;
+        }
+
+    #stencil.stencil_0066 {
+        font-size:50vh;
+        margin-top:.5em;
+        }
+
+    #stencil.stencil_0091 {
+        font-size:60vh;
+        margin-top:.15em;
+        }
+
+    #stencil.stencil_0092 {
+        font-size:65vh;
+        margin-top:.15em;
+        }
+
+    #stencil.stencil_0098 {
+        font-size:50vh;
+        margin-top:.15em;
+        }
+
+    #stencil.stencil_0100 {
+        font-size:30vh;
+        margin-top:.75em;
+        }
+
+    #stencil.stencil_0110 {
+        font-size:40vh;
+        margin-top:.75em;
+        }
+
+    #stencil.stencil_0111 {
+        font-size:30vh;
+        margin-top:.75em;
+        }
 
 
 /* ##### Navigation ##### */
