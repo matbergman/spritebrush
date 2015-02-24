@@ -35,6 +35,8 @@ $("#animatedBrushFrame").on("tap",function(){
 /* Tap & hold - return to Animated Brushes screen */
 $("#animatedBrushFrame").on("taphold",function(){
 
+    /* Restore page background color from black */
+    $(".ui-page-theme-a").css("backgroundColor","#cfd8dc");
 
     /* Reset each animated brush. Mixed brush types on this page require individual solutions. */
     $(".animatedBrush").hide();
@@ -136,20 +138,19 @@ for (i=0;i<chips.length;i++) {
 /* ##### Display animated brush ##### */
 
 function showAnimatedBrush() {
+
+    /* Set page background color to black in case of swiping */
+    $(".ui-page-theme-a").css("backgroundColor","#000");
+
     $("header").hide();
     $("#page_animatedBrushes").hide();
     $(".animatedBrush").hide();
     $("#animatedBrushFrame").show();
 
-
-
     var colorDuration = eval($("#visualSelect_animatedBrushSpeedValue").val());
-
 
     /* 8-bit brushes */
     if ($("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_flame" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_steel" ) {
-
-        // $("#animatedBrushWrapper").show(); // In case the last tap & hold was activated while wrapper was hidden
 
         $("#eightBitBrush").show();
         eightBitBrush_colorArray = eval($("#visualSelect_animatedBrushValue").val());
@@ -192,7 +193,7 @@ function showAnimatedBrush() {
     if ($("#visualSelect_animatedBrushValue").val() === "brush_dots") {
 
         charBrushContainer = document.getElementById("brush_dots");
-        var numberOfDots = Math.floor(Math.random() * 500);
+        var numberOfDots = Math.floor(Math.random() * 300);
 
         if (colorDuration === 0) charSpeed = "40s";
         else if (colorDuration === 1) charSpeed = "20s";
@@ -200,6 +201,8 @@ function showAnimatedBrush() {
         else charSpeed = "20s";
 
         charBrushContainer.style.webkitAnimationDuration=charSpeed; 
+
+        charBrushContainer.innerHTML = "";
 
         for (i=0;i<numberOfDots;i++) {
 
@@ -228,7 +231,7 @@ function showAnimatedBrush() {
 
     if ($("#visualSelect_animatedBrushValue").val() === "brush_circles") {
         charBrushContainer = document.getElementById("brush_circles");
-        var numberOfCircles = Math.floor(Math.random() * 500);
+        var numberOfCircles = Math.floor(Math.random() * 300);
 
         if (colorDuration === 0) charSpeed = "40s";
         else if (colorDuration === 1) charSpeed = "20s";
@@ -236,6 +239,8 @@ function showAnimatedBrush() {
         else charSpeed = "20s";
 
         charBrushContainer.style.webkitAnimationDuration=charSpeed; 
+
+        charBrushContainer.innerHTML = "";
 
         for (i=0;i<numberOfCircles;i++) {
 
@@ -262,10 +267,15 @@ function showAnimatedBrush() {
 
     }
 
+
+    /* Character-based animated brushes - stars */
+
     if ($("#visualSelect_animatedBrushValue").val() === "brush_stars") {
         charBrushContainer = document.getElementById("brush_stars");
 
-        var numberOfstars = Math.floor(Math.random() * 500);
+        var numberOfstars = Math.floor(Math.random() * 300);
+
+        charBrushContainer.innerHTML = "";
 
         for (i=0;i<numberOfstars;i++) {
 
@@ -291,14 +301,18 @@ function showAnimatedBrush() {
         $("#brush_stars").show();
     }
 
+
+    /* Character-based animated brushes - snowflakes */
+
     if ($("#visualSelect_animatedBrushValue").val() === "brush_snowflakes") {
         charBrushContainer = document.getElementById("brush_snowflakes");
 
-        var numberOfSnowflakes = Math.floor(Math.random() * 500);
+        var numberOfSnowflakes = Math.floor(Math.random() * 300);
 
         var topPos;
         var leftPos;
 
+        charBrushContainer.innerHTML = "";
 
         for (i=0;i<numberOfSnowflakes;i++) {
 
@@ -326,14 +340,17 @@ function showAnimatedBrush() {
     }
 
 
+    /* Character-based animated brushes - notes */
+
     if ($("#visualSelect_animatedBrushValue").val() === "brush_notes") {
         charBrushContainer = document.getElementById("brush_notes");
 
-        var numberOfnotes = Math.floor(Math.random() * 500);
+        var numberOfnotes = Math.floor(Math.random() * 300);
 
         var topPos;
         var leftPos;
 
+        charBrushContainer.innerHTML = "";
 
         for (i=0;i<numberOfnotes;i++) {
 
@@ -360,14 +377,17 @@ function showAnimatedBrush() {
 
     }
 
+    /* Character-based animated brushes - flowers */
+
     if ($("#visualSelect_animatedBrushValue").val() === "brush_flowers") {
         charBrushContainer = document.getElementById("brush_flowers");
 
-        var numberOfFlowers = Math.floor(Math.random() * 500);
+        var numberOfFlowers = Math.floor(Math.random() * 300);
 
         var topPos;
         var leftPos;
 
+        charBrushContainer.innerHTML = "";
 
         for (i=0;i<numberOfFlowers;i++) {
 
