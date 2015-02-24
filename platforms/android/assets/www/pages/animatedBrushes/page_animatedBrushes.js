@@ -38,12 +38,11 @@ $("#animatedBrushFrame").on("taphold",function(){
 
     /* Reset each animated brush. Mixed brush types on this page require individual solutions. */
     $(".animatedBrush").hide();
-
     if (eightBitInterval != "undefined") {clearTimeout(eightBitInterval);}
-
     $(".pixel").css('background-color', 'transparent');
 
-
+    /* Reset wrapper display state for next brush */
+    $("#animatedBrushWrapper").hide();
 
     /* Return to Animated Brushes page */
     returnToPage("#page_animatedBrushes","#animatedBrushFrame");

@@ -25,7 +25,7 @@ Source code for SpritePaint, the light painting photography app for Android
 
 
 Animations - Add select button icons
-
+	
 ~~Animations - Tap to hide~~
 
 ~~Animations - Prevent animation brushes from merging when switching to/from brush type~~

@@ -539,19 +539,17 @@
 /* Animated brush - vines */
 
 #brush_vines {
-
-    width:800px;
+    position:absolute;
+    top:45%;
+    left:0;
+    width:100%;
     height:100px;
-
-    margin-left:auto;
-    margin-right:auto;
     border:0;
     background-image:url(../../img/vine_02.svg);
     background-repeat:no-repeat;
     background-position:0px 0px;
     background-color:transparent;
-    /* background-size:790px 880px; */ /* vine_01.svg */ /* background image height is +100px (the height of its container) for a smooth animated transition */
-    background-size:790px 790px; /* vine_02.svg */
+    background-size:100% 790px; /* vine_02.svg */
     -webkit-animation-duration: 5s;
     -webkit-animation-name: vineAnimation; 
     -webkit-animation-iteration-count: infinite;
@@ -570,6 +568,66 @@
         background-position:0px calc(-790px + 100px);
         }
     }        
+
+
+/* ##### Thumbnails ##### */
+
+.selectButtonThumbnail {
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    }
+
+.thumbnail_colorArray_flame {
+    background-image:url(../../img/thumb_8bitFlame.gif);
+    }
+
+.thumbnail_colorArray_steel {
+    background-image:url(../../img/thumb_8bitSteel.gif);
+    }
+
+
+
+.thumbnail_colorCycle_primary {
+
+/*
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:100;
+*/
+
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:30%;
+
+    width:70%;
+    height:32%;
+
+    -webkit-animation-name:colorStrobe;
+    -webkit-animation-duration:3s;
+    -webkit-animation-timing-function:ease;
+    -webkit-animation-delay:0s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-play-state:running;
+    }
+
+/*
+@-webkit-keyframes colorStrobe {
+    0% {background: red;}
+    20% {background: yellow;}
+    40% {background: blue;}
+    60% {background: green;}
+    80% {background: purple;}
+    100% {background: red;}
+    }
+*/
+
+
 
 
 /* ##### Buttons ##### */
