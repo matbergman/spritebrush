@@ -539,19 +539,17 @@
 /* Animated brush - vines */
 
 #brush_vines {
-
-    width:800px;
+    position:absolute;
+    top:45%;
+    left:0;
+    width:100%;
     height:100px;
-
-    margin-left:auto;
-    margin-right:auto;
     border:0;
     background-image:url(../../img/vine_02.svg);
     background-repeat:no-repeat;
     background-position:0px 0px;
     background-color:transparent;
-    /* background-size:790px 880px; */ /* vine_01.svg */ /* background image height is +100px (the height of its container) for a smooth animated transition */
-    background-size:790px 790px; /* vine_02.svg */
+    background-size:100% 790px; /* vine_02.svg */
     -webkit-animation-duration: 5s;
     -webkit-animation-name: vineAnimation; 
     -webkit-animation-iteration-count: infinite;
