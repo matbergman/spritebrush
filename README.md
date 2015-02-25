@@ -23,8 +23,9 @@ Source code for SpritePaint, the light painting photography app for Android
 
 ~~Colors - Background is white instead of black~~
 
+~~Colors - Select button thumbnail background colors~~
 
-Animations - Add select button icons
+~~Animations - Add select button icons~~
 	
 ~~Animations - Tap to hide~~
 
@@ -34,8 +35,9 @@ Animations - Add select button icons
 
 ~~Animations - Fix brushes from Dots to Vines~~
 
-Stencils - Pause screen requires two taps
-Stencils - All stencils don't fit bounds of screen
+~~Stencils - Pause screen requires two taps~~
+
+~~Stencils - All stencils don't fit bounds of screen~~
 
 Flashlight - Detect if available, show disabled style in menu if not available
 Flashlight - Functionality
