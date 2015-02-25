@@ -77,6 +77,14 @@
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/mask_sunburst.png \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/thumb_8bitFlame.gif \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/thumb_8bitSteel.gif \
+/Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/thumb_circles.png \
+/Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/thumb_dots.gif \
+/Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/thumb_dots.png \
+/Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/thumb_flowers.png \
+/Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/thumb_notes.png \
+/Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/thumb_snowflakes.png \
+/Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/thumb_stars.png \
+/Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/thumb_vines.png \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/vine_01.svg \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/vine_02.svg \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/js/index.js \
