@@ -40,14 +40,24 @@ Source code for SpritePaint, the light painting photography app for Android
 ~~Stencils - All stencils don't fit bounds of screen~~
 
 Flashlight - Detect if available, show disabled style in menu if not available
+
 Flashlight - Functionality
 
 Instructions - images, video
+
 ~~Instructions - Overflow menu~~
 
 About - Format, update
+
 ~~About - Overflow menu~~
 
 Branding - Logo
+
+Set up Google account for app distribution
+
+Set up app support (G+)
+
+Publish
+
 
 Web site
