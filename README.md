@@ -12,7 +12,6 @@ Source code for SpritePaint, the light painting photography app for Android
 
 ~~Welcome - "Don't show this screen again" functionality~~
 
-
 ~~Welcome - Simplify HTML from popup to bordered element~~
 
 ~~Welcome - Formatting~~
@@ -53,11 +52,10 @@ About - Format, update
 
 Branding - Logo
 
-Set up Google account for app distribution
+~~Set up Google account for app distribution (spritepaint@gmail.com~~
 
-Set up app support (G+)
-
-Publish
-
+Set up app support (G+) - G+ company page
 
 Web site
+
+Publish
