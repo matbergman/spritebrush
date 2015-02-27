@@ -5,6 +5,24 @@ Source code for SpritePaint, the light painting photography app for Android
 
 ## Bug list
 
+Night mode - keep active across pages
+
+Flashlight - Detect if available, show disabled style in menu if not available
+
+Flashlight - Functionality
+
+Instructions - images, video
+
+About - Format, update
+
+Branding - Logo
+
+Set up app support (G+) - G+ company page
+
+Web site
+
+Publish
+
 
 ~~CSS - Media queries for smartphones vs. tablets~~
 
@@ -38,24 +56,8 @@ Source code for SpritePaint, the light painting photography app for Android
 
 ~~Stencils - All stencils don't fit bounds of screen~~
 
-Flashlight - Detect if available, show disabled style in menu if not available
-
-Flashlight - Functionality
-
-Instructions - images, video
-
 ~~Instructions - Overflow menu~~
-
-About - Format, update
 
 ~~About - Overflow menu~~
 
-Branding - Logo
-
 ~~Set up Google account for app distribution (spritepaint@gmail.com~~
-
-Set up app support (G+) - G+ company page
-
-Web site
-
-Publish

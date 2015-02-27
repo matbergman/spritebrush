@@ -745,10 +745,7 @@ button#toggleBrushDisplay:focus {
         background-repeat:no-repeat;
         background-position:top center;
         color:#c8f0fa;
-
         }        
-
-
 
         .selectButtonContainer .selectButtonLabel {
             position:absolute;
@@ -780,6 +777,23 @@ button#toggleBrushDisplay:focus {
             }
 
 
+    body.nightMode .visualSelect {
+        background-color:#000;
+        }
+
+        body.nightMode .selectButtonContainer {
+            background:#000;
+            color:#673ab7;
+            }        
+
+            body.nightMode .selectButtonContainer .selectButtonLabel {
+                color:#673ab7;
+                text-shadow:none;
+                }
+
+            body.nightMode .selectButtonContainer button {
+                outline:1px solid #673ab7;
+                }
 
 
 /* ##### Media Queries ##### */
