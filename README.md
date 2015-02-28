@@ -5,7 +5,7 @@ Source code for SpritePaint, the light painting photography app for Android
 
 ## Bug list
 
-Night mode - keep active across pages
+~~Night mode - keep active across pages~~
 
 Flashlight - Detect if available, show disabled style in menu if not available
 

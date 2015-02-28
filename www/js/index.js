@@ -48,9 +48,6 @@ var app = {
     }
 };
 
-    console.log("Mode: "+localStorage.getItem("mode"));
-
-
 
 /* ##### Configure layout #####  */
 
@@ -180,7 +177,7 @@ $(selectedListButtons).click(function() {
 
 selectedList.style.height = heightForPages+"px";
 
-    }    
+}    
 
 /* ##### Return to page ##### */
 
@@ -192,79 +189,20 @@ function returnToPage(thePage, theFrame) {
 
 
 /* ##### Toggle night mode theme */
+
+
+function getTheme() {
+    if (localStorage.getItem("mode") == "night") {$("body").toggleClass("nightMode");}
+    }
  
-//localStorage.setItem("mode", "day");
-
 function toggleTheme() {
-
-
-
-
-
-
-
-
     $("body").toggleClass("nightMode");
-
-
-
- var theMatch = $("body").attr("class").match(/nightMode(\d*)/);
-
-    console.log("theMatch: "+theMatch);
-
-
+     var theMatch = $("body").attr("class").match(/nightMode(\d*)/);
         if (theMatch == "nightMode,") {
-            console.log("hit!");
             localStorage.setItem("mode", "night");            
             }
         else {
-            console.log("miss!");
             localStorage.setItem("mode", "day");
             }
-
-
-        console.log("Local Storage value: "+localStorage.getItem("mode"));
-
-
-   // localStorage.setItem("mode", "night");
-
-
-//console.log($("body").attr("class"));
-
     $("#overflow_menu").popup("close");
-
-
-
-
 }
-
-
-/*
-$("#popupInstructionsHide").click(function() {
-
-    var instructionsPopupCheckbox = $("#popupInstructionsCheckbox").is(":checked");
-
-    $("#popup_instructions").hide();
-
-
-console.log("instructionsPopupCheckbox value: "+instructionsPopupCheckbox);
-
-    if (instructionsPopupCheckbox === true) {
-        localStorage.setItem("displayInstructionPopup","true");
-        console.log("Set localstorage as true");
-        }
-    else {
-        localStorage.setItem("displayInstructionPopup","false");
-        console.log("Set localstorage as false");
-        }        
-
-
-console.log("Local storage is set as: "+localStorage.getItem("displayInstructionPopup"));
-
-    return false;
-    });
-
-
-});
-*/
-                
