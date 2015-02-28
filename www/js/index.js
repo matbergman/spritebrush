@@ -48,6 +48,8 @@ var app = {
     }
 };
 
+    console.log("Mode: "+localStorage.getItem("mode"));
+
 
 
 /* ##### Configure layout #####  */
@@ -191,9 +193,49 @@ function returnToPage(thePage, theFrame) {
 
 /* ##### Toggle night mode theme */
  
+//localStorage.setItem("mode", "day");
+
 function toggleTheme() {
+
+
+
+
+
+
+
+
     $("body").toggleClass("nightMode");
+
+
+
+ var theMatch = $("body").attr("class").match(/nightMode(\d*)/);
+
+    console.log("theMatch: "+theMatch);
+
+
+        if (theMatch == "nightMode,") {
+            console.log("hit!");
+            localStorage.setItem("mode", "night");            
+            }
+        else {
+            console.log("miss!");
+            localStorage.setItem("mode", "day");
+            }
+
+
+        console.log("Local Storage value: "+localStorage.getItem("mode"));
+
+
+   // localStorage.setItem("mode", "night");
+
+
+//console.log($("body").attr("class"));
+
     $("#overflow_menu").popup("close");
+
+
+
+
 }
 
 

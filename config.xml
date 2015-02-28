@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.example.lightbrush" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>SpritePaint</name>
+    <name>SpriteBrush</name>
     <description>
-        Light Brush Palette
+    Transform your smartphone or tablet into an enchanted light painting brush
     </description>
-    <author email="mat@matbergman.com" href="http://www.matbergman.com">
+    <author email="spritepaint@gmail.com" href="http://www.spritebrush.com">
         Mat Bergman
     </author>
     
