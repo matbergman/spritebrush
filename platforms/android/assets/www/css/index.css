@@ -528,7 +528,6 @@ button,
   text-transform: uppercase;
   font-size: 90%;
   line-height: 90%;
-  -webkit-transition: all 0.2s ease;
   display: inline-block;
   box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.12);
   border:0;
@@ -614,8 +613,10 @@ a.button:hover {
 
     .button.dialog:active,
     .button.dialog:focus {
-        background-color:#455a64;
+        background-color:#dd2c00;
         color:#fff;
+        border-color:#dd2c00;
+        box-shadow:none;
         }
 
 header nav a {
@@ -828,13 +829,25 @@ button#toggleBrushDisplay:focus {
         font-size:2.2em;
         }
 
+    a.button_menu {
+        left:10px;
+        }
+
     #panel_menu a,
     #overflow_menu a {
         font-size:2em;
         }
 
+    .visualSelect_description {
+        font-size: 2.2em;
+        }
+
     .panel_logo {
         display:none;
+        }
+
+    #form_color {
+        margin-top:74px;
         }
 
     #page_instructions .content_container p:first-child {
@@ -845,10 +858,6 @@ button#toggleBrushDisplay:focus {
         margin-top:3.5em;
         }
 
-    .visualSelect_description {
-        font-size: 2.2em;
-        }
-
     #page_colors fieldset.layout_submit {
         bottom:4.5em;
         }
@@ -857,5 +866,8 @@ button#toggleBrushDisplay:focus {
         bottom:7.5em;
         }
 
+    .splash_content {
+        font-size:1.65em;
+        }
 
 }        

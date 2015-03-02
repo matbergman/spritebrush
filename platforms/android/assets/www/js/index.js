@@ -99,7 +99,7 @@ thePanel.appendChild(navColors);
 thePanel.appendChild(navBrushes);
 thePanel.appendChild(navAnimatedBrushes);
 thePanel.appendChild(navStencils);
-thePanel.appendChild(navFlashlight);
+//thePanel.appendChild(navFlashlight);
 
 
 /* ##### Populate content ##### */

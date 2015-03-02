@@ -100,6 +100,7 @@
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/js/jquery-2.1.0.min.js \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/js/jquery.mobile-1.4.2.min.js \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/js/navigation_pages.js \
+/Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/js/plugins \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/pages/about \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/pages/animatedBrushes \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/pages/brushes \
