@@ -4,11 +4,11 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
-    <name>SpritePaint</name>
+    <name>SpriteBrush</name>
     <description>
-        Light Brush Palette
+    Transform your smartphone or tablet into an enchanted light painting brush
     </description>
-    <author email="mat@matbergman.com" href="http://www.matbergman.com">
+    <author email="spritepaint@gmail.com" href="http://www.spritebrush.com">
         Mat Bergman
     </author>
     <preference name="Fullscreen" value="true" />

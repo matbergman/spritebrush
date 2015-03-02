@@ -49,7 +49,6 @@ var app = {
 };
 
 
-
 /* ##### Configure layout #####  */
 
 var currentPage = document.getElementsByClassName("page")[0];
@@ -178,7 +177,7 @@ $(selectedListButtons).click(function() {
 
 selectedList.style.height = heightForPages+"px";
 
-    }    
+}    
 
 /* ##### Return to page ##### */
 
@@ -190,39 +189,20 @@ function returnToPage(thePage, theFrame) {
 
 
 /* ##### Toggle night mode theme */
+
+
+function getTheme() {
+    if (localStorage.getItem("mode") == "night") {$("body").toggleClass("nightMode");}
+    }
  
 function toggleTheme() {
     $("body").toggleClass("nightMode");
+     var theMatch = $("body").attr("class").match(/nightMode(\d*)/);
+        if (theMatch == "nightMode,") {
+            localStorage.setItem("mode", "night");            
+            }
+        else {
+            localStorage.setItem("mode", "day");
+            }
     $("#overflow_menu").popup("close");
 }
-
-
-/*
-$("#popupInstructionsHide").click(function() {
-
-    var instructionsPopupCheckbox = $("#popupInstructionsCheckbox").is(":checked");
-
-    $("#popup_instructions").hide();
-
-
-console.log("instructionsPopupCheckbox value: "+instructionsPopupCheckbox);
-
-    if (instructionsPopupCheckbox === true) {
-        localStorage.setItem("displayInstructionPopup","true");
-        console.log("Set localstorage as true");
-        }
-    else {
-        localStorage.setItem("displayInstructionPopup","false");
-        console.log("Set localstorage as false");
-        }        
-
-
-console.log("Local storage is set as: "+localStorage.getItem("displayInstructionPopup"));
-
-    return false;
-    });
-
-
-});
-*/
-                

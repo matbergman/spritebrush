@@ -358,7 +358,7 @@ body.content .ui-page-active {
 
 .content_container {
     position:absolute;
-    top:64px;
+    top:0;
     width:auto;
     padding:0 2em;
     height:100%;
@@ -373,7 +373,6 @@ body.content .ui-page-active {
     font-size:1.8em;
     margin:1em 0 0 0;
     padding:0;
-
     }
 
 .content_container h2 {
@@ -388,7 +387,6 @@ body.content .ui-page-active {
 
     .content_container ul li {
         margin-bottom:0.5em;
-
         }
 
 .content_container table {
@@ -402,6 +400,11 @@ body.content .ui-page-active {
         background-color:#f1f1f1;
         }
 
+        body.nightMode .content_container table td {
+            background-color:#222;
+            border-color:#673ab7;
+            }
+
         .content_container table td.label {
             text-align:right;
             font-family:Roboto-Medium;
@@ -409,8 +412,15 @@ body.content .ui-page-active {
             }
 
         .content_container table td.value {
-
             }
+
+#page_instructions .content_container p:first-child {
+    margin-top:4em;
+    }
+
+#page_about .content_container h1:first-child {
+    margin-top:2em;
+    }
 
 
 /* layout - forms */
@@ -745,10 +755,7 @@ button#toggleBrushDisplay:focus {
         background-repeat:no-repeat;
         background-position:top center;
         color:#c8f0fa;
-
         }        
-
-
 
         .selectButtonContainer .selectButtonLabel {
             position:absolute;
@@ -780,6 +787,23 @@ button#toggleBrushDisplay:focus {
             }
 
 
+    body.nightMode .visualSelect {
+        background-color:#000;
+        }
+
+        body.nightMode .selectButtonContainer {
+            background:#000;
+            color:#673ab7;
+            }        
+
+            body.nightMode .selectButtonContainer .selectButtonLabel {
+                color:#673ab7;
+                text-shadow:none;
+                }
+
+            body.nightMode .selectButtonContainer button {
+                outline:1px solid #673ab7;
+                }
 
 
 /* ##### Media Queries ##### */

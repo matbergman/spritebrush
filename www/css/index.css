@@ -491,9 +491,11 @@ fieldset.layout_submit {
 
 .panel_logo_image {
     display:block;
-    width:15em;
-    height:2em;
-    background-color:#999;
+    width:210px;
+    height:28px;
+    background-image:url(../img/logo.svg);
+    background-repeat:no-repeat;
+    background-size:contain;
     }
 
 
