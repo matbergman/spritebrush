@@ -75,6 +75,7 @@
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/icon_mask_sunburst-night.png \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/icon_mask_sunburst.png \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/logo.png \
+/Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/logo.svg \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/mask_circle.png \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/mask_crescent.png \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/mask_diamond.png \

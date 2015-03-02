@@ -1,5 +1,5 @@
-# spritepaint
-Source code for SpritePaint, the light painting photography app for Android
+# SpriteBrush
+Source code for SpriteBrush, the light painting photography app for Android
 
 
 
@@ -13,11 +13,11 @@ Flashlight - Functionality
 
 Instructions - images, video
 
-About - Format, update
+~~About - Format, update~~
 
-Branding - Logo
+~~Branding - Logo~~
 
-Set up app support (G+) - G+ company page
+~~Set up app support (G+) - G+ company page~~
 
 Web site
 

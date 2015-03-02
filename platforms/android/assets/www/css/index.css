@@ -491,9 +491,11 @@ fieldset.layout_submit {
 
 .panel_logo_image {
     display:block;
-    width:15em;
-    height:2em;
-    background-color:#999;
+    width:210px;
+    height:28px;
+    background-image:url(../img/logo.svg);
+    background-repeat:no-repeat;
+    background-size:contain;
     }
 
 
@@ -816,6 +818,16 @@ button#toggleBrushDisplay:focus {
         font-size:.5em;
         }
 
+    button,
+    .button {
+        font-size:2.2em;
+        padding:.85em 1em;
+        }
+
+    .selectButtonContainer .selectButtonLabel {
+        font-size:2.2em;
+        }
+
     #panel_menu a,
     #overflow_menu a {
         font-size:2em;
@@ -825,5 +837,25 @@ button#toggleBrushDisplay:focus {
         display:none;
         }
 
+    #page_instructions .content_container p:first-child {
+        margin-top:5.5em;
+        }
 
-}
+    #page_about .content_container h1:first-child {
+        margin-top:3.5em;
+        }
+
+    .visualSelect_description {
+        font-size: 2.2em;
+        }
+
+    #page_colors fieldset.layout_submit {
+        bottom:4.5em;
+        }
+
+    #page_colors .instructions {
+        bottom:7.5em;
+        }
+
+
+}        
