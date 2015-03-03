@@ -177,12 +177,12 @@
     
 .stencil_0002::before {
     font-family:ornaments;
-    content:"\E602";
+    content:"\E602\202F";
     }    
 
 .stencil_0003::before {
     font-family:ornaments;
-    content:"\E603";
+    content:"\E603\202F";
     }  
     
 .stencil_0004::before {
@@ -424,17 +424,17 @@
 
 .stencil_0048::before {
     font-family:organic;
-    content:"\E600";
+    content:"\E600\202F";
     }  
 
 .stencil_0049::before {
     font-family:organic;
-    content:"\E601";
+    content:"\E601\202F";
     }  
 
 .stencil_0050::before {
     font-family:organic;
-    content:"\E602";
+    content:"\E602\202F";
     }  
 
 .stencil_0051::before {
@@ -462,10 +462,9 @@
     content:"\E607";
     } 
 
-
 .stencil_0056::before {
     font-family:animals;
-    content:"\E600";
+    content:"\E600\202F";
     } 
 
 .stencil_0057::before {
@@ -485,7 +484,7 @@
 
 .stencil_0060::before {
     font-family:animals;
-    content:"\E604";
+    content:"\E604\202F";
     } 
 
 .stencil_0061::before {
@@ -532,7 +531,7 @@
 
 .stencil_0069::before {
     font-family:bugs;
-    content:"\E601";
+    content:"\E601\202F";
     } 
 
 .stencil_0070::before {
@@ -547,7 +546,7 @@
 
 .stencil_0072::before {
     font-family:bugs;
-    content:"\E604";
+    content:"\E604\202F";
     } 
 
 .stencil_0073::before {
@@ -572,7 +571,7 @@
 
 .stencil_0077::before {
     font-family:bugs;
-    content:"\E609";
+    content:"\E609\202F";
     } 
 
 .stencil_0078::before {
@@ -603,12 +602,12 @@
 
 .stencil_0083::before {
     font-family:people;
-    content:"\E602";
+    content:"\E602\202F";
     }
 
 .stencil_0084::before {
     font-family:people;
-    content:"\E603";
+    content:"\E603\202F";
     }
 
 .stencil_0085::before {
@@ -675,7 +674,7 @@
 
 .stencil_0097::before {
     font-family:underTheSea;
-    content:"\E602";
+    content:"\E602\202F";
     }
 
 .stencil_0098::before {
@@ -695,7 +694,7 @@
 
 .stencil_0101::before {
     font-family:underTheSea;
-    content:"\E606";
+    content:"\E606\202F";
     }
 
 .stencil_0102::before {
@@ -710,7 +709,7 @@
 
 .stencil_0104::before {
     font-family:underTheSea;
-    content:"\E609";
+    content:"\E609\202F";
     }
 
 .stencil_0105::before {
@@ -725,7 +724,7 @@
 
 .stencil_0107::before {
     font-family:underTheSea;
-    content:"\E60c";
+    content:"\E60c\202F";
     }
 
 
@@ -872,9 +871,20 @@
         }
 
 
+
+@media only screen and (min-device-width: 641px) {
+.stencil_0069::before,
+.stencil_0072::before,
+.stencil_0077::before {
+    padding-left:30px;
+    } 
+}
+
+
 /* ##### Navigation ##### */
 
 a#showStencils {
     font-family:Roboto-Medium;
     color:#000;
     }
+
