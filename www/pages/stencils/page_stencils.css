@@ -114,6 +114,10 @@
     margin-top:20%;
     }
 
+    body.nightMode #visualSelect_stencil .selectButtonThumbnail {
+        color:#5c5c5c;
+        }
+
     #visualSelect_stencil .selectButtonThumbnail.stencil_0056 {
         font-size:5em;
         margin-left:-.5em;

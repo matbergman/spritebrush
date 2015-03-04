@@ -242,8 +242,6 @@ function showAnimatedBrush() {
         else if (colorDuration === 2) flameSpeed = "1s";
         else flameSpeed = "3s";
 
-        console.log(flameSpeed);
-
         $("#brush_flame").show();
 
         flameContainer.style.webkitAnimationDuration=flameSpeed; 
@@ -521,6 +519,27 @@ function showAnimatedBrush() {
     }
 
     if ($("#visualSelect_animatedBrushValue").val() === "brush_vines") {
+
+        vineContainer = document.getElementById("brush_vines");
+
+        vineContainer.style.backgroundSize = "100% "+widthForPages+"px";
+
+         var keyframes = '@-webkit-keyframes vineAnimation { '+
+                            'from {background-position:0px 0px;}'+
+                            'to {background-position:0px calc(-'+widthForPages+'640px + 100px);}'+
+                          '}';
+
+
+        var vineSpeed;
+        if (colorDuration === 0) vineSpeed = "15s";
+        else if (colorDuration === 1) vineSpeed = "5s";
+        else if (colorDuration === 2) vineSpeed = "1s";
+        else vineSpeed = "3s";
+
+
+        vineContainer.style.webkitAnimationDuration=vineSpeed; 
+
+
 
         $("#brush_vines").show();    
 

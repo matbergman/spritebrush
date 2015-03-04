@@ -541,7 +541,7 @@
     background-repeat:no-repeat;
     background-position:0px 0px;
     background-color:transparent;
-    background-size:100% 790px; /* vine_02.svg */
+    background-size:100% 640px; /* vine_02.svg */
     -webkit-animation-duration: 5s;
     -webkit-animation-name: vineAnimation; 
     -webkit-animation-iteration-count: infinite;
@@ -557,7 +557,7 @@
         }
 
     to {
-        background-position:0px calc(-790px + 100px);
+        background-position:0px calc(-640px + 100px);
         }
     }        
 
