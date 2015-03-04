@@ -54,8 +54,11 @@
 /* ##### Buttons ##### */
 
 #visualSelect_strobe {
-    padding-top:10%;
     }    
+
+    #visualSelect_strobe .visualSelect_description {
+        margin-bottom:5%;
+        }
 
 #visualSelect_mask {}        
 

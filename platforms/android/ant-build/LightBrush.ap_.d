@@ -58,6 +58,7 @@
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/fonts/RobotoTTF/RobotoCondensed-LightItalic.ttf \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/fonts/RobotoTTF/RobotoCondensed-Regular.ttf \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/animatedBrush_fire.jpg \
+/Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/icon_flame.gif \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/icon_mask_circle-night.png \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/icon_mask_circle.png \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/icon_mask_crescent-night.png \
@@ -84,6 +85,8 @@
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/mask_square.png \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/mask_star.png \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/mask_sunburst.png \
+/Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/thumb_8bitCamo.gif \
+/Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/thumb_8bitCheckers.gif \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/thumb_8bitFlame.gif \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/thumb_8bitSteel.gif \
 /Users/Mat/Documents/code/spritepaint/platforms/android/assets/www/img/thumb_circles.png \

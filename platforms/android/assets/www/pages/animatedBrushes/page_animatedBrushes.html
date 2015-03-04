@@ -58,8 +58,32 @@
 <fieldset class="layout_labels" id="fieldset_animatedBrush">
 
 <label for="button_selectAnimatedBrush">Animation</label>
-<button id="button_selectAnimatedBrush">8-Bit flame</button>
+<button id="button_selectAnimatedBrush">Cycle primary colors</button>
 <div class="visualSelect" id="visualSelect_animatedBrush">
+
+   <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Cycle primary colors</div>
+        <div class="selectButtonThumbnail thumbnail_colorCycle_primary"></div>
+        <button class="selectButton" value="colorCycle_primary">Cycle primary colors</button>
+    </div>
+
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Spinner</div>
+        <div class="selectButtonThumbnail thumbnail_spinner"></div>
+        <button class="selectButton" value="brush_spinner">Spinner</button>
+    </div>
+
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Fire</div>
+        <div class="selectButtonThumbnail thumbnail_flame"></div>
+        <button class="selectButton" value="brush_flame">Fire</button>
+    </div>
+
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Vines</div>
+        <div class="selectButtonThumbnail thumbnail_vines"></div>
+        <button class="selectButton" value="brush_vines">Vines</button>
+    </div>
 
     <div class="selectButtonContainer">  
         <div class="selectButtonLabel">8-Bit flame</div>
@@ -72,10 +96,16 @@
         <button class="selectButton" value="eightBitBrush_colorArray_steel">8-Bit steel</button>
     </div>
 
-    <div class="selectButtonContainer">  
-        <div class="selectButtonLabel">Cycle primary colors</div>
-        <div class="selectButtonThumbnail thumbnail_colorCycle_primary"></div>
-        <button class="selectButton" value="colorCycle_primary">Cycle primary colors</button>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">8-Bit camo</div>
+        <div class="selectButtonThumbnail thumbnail_colorArray_camo"></div>
+        <button class="selectButton" value="eightBitBrush_colorArray_camo">8-Bit camo</button>
+    </div>
+
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">8-Bit checkers</div>
+        <div class="selectButtonThumbnail thumbnail_colorArray_checkers"></div>
+        <button class="selectButton" value="eightBitBrush_colorArray_checkers">8-Bit checkers</button>
     </div>
 
     <div class="selectButtonContainer">  
@@ -102,6 +132,7 @@
         <button class="selectButton" value="brush_snowflakes">Snowflakes</button>
     </div>
 
+<!--
     <div class="selectButtonContainer">  
         <div class="selectButtonLabel">Notes</div>
         <div class="selectButtonThumbnail thumbnail_notes"></div>
@@ -114,16 +145,11 @@
         <button class="selectButton" value="brush_flowers">Flowers</button>
     </div>
 
-    <div class="selectButtonContainer">  
-        <div class="selectButtonLabel">Vines</div>
-        <div class="selectButtonThumbnail thumbnail_vines"></div>
-        <button class="selectButton" value="brush_vines">Vines</button>
-    </div>
-
+-->
 
 
 </div>
-<input type="hidden" name="visualSelect_animatedBrushValue" id="visualSelect_animatedBrushValue" value="eightBitBrush_colorArray_flame" />
+<input type="hidden" name="visualSelect_animatedBrushValue" id="visualSelect_animatedBrushValue" value="colorCycle_primary" />
 
 </fieldset>
 
@@ -192,6 +218,10 @@
             <div class="pixel" id="p16"></div>            
         </div>
 
+        <div class="animatedBrush" id="brush_spinner">
+            <div id="brush_spinnerShape"></div>
+        </div>
+
         <div class="animatedBrush" id="animatedColor"></div> 
 
         <div class="animatedBrush brush_char" id="brush_dots"></div>
@@ -206,7 +236,9 @@
 
         <div class="animatedBrush brush_char" id="brush_flowers"></div>
 
-        <div class="animatedBrush brush_char" id="brush_vines"></div>
+        <div class="animatedBrush" id="brush_vines"></div>
+
+        <div class="animatedBrush" id="brush_flame"></div>
 
     </div>
 

@@ -178,21 +178,29 @@
 <label for="button_selectStrobe">Strobe</label>
 <button id="button_selectStrobe">No Strobe</button>
 <div class="visualSelect" id="visualSelect_strobe">
+
+    <div class="visualSelect_description">
+    <p>
+    Strobing colors create dots and dashes, depending on the speed of the strobe. No strobe paints solid lines.
+    </p>
+    </div>
+
+
     <div class="selectButtonContainer">
         <div class="selectButtonLabel">No strobe</div>
     <button class="selectButton" value="0s">No strobe</button>
     </div>
     <div class="selectButtonContainer">
-        <div class="selectButtonLabel">Fast strobe</div>
-    <button class="selectButton" value="0.5s">Fast strobe</button>
+        <div class="selectButtonLabel">Slow strobe</div>
+    <button class="selectButton" value="3s">Slow strobe</button>
     </div>
     <div class="selectButtonContainer">
         <div class="selectButtonLabel">Medium strobe</div>
     <button class="selectButton" value="1s">Medium strobe</button>
     </div>
     <div class="selectButtonContainer">
-        <div class="selectButtonLabel">Slow strobe</div>
-    <button class="selectButton" value="3s">Slow strobe</button>
+        <div class="selectButtonLabel">Fast strobe</div>
+    <button class="selectButton" value="0.5s">Fast strobe</button>
     </div>
 </div>
 <input type="hidden" name="visualSelect_strobeValue" id="visualSelect_strobeValue" value="0s" />

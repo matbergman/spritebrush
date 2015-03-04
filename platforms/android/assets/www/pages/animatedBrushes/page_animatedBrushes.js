@@ -45,6 +45,7 @@ $("#animatedBrushFrame").on("taphold",function(){
 
     /* Reset each animated brush. Mixed brush types on this page require individual solutions. */
     $(".animatedBrush").hide();
+
     if (eightBitInterval != "undefined") {clearTimeout(eightBitInterval);}
     $(".pixel").css('background-color', 'transparent');
 
@@ -107,6 +108,37 @@ var eightBitBrush_colorArray_steel = new Array(
 "#514d46"
 );
 
+var eightBitBrush_colorArray_camo = new Array(
+"#c7bb81",
+"#353a40",
+"#51774e",
+"#66563c",
+"#c7bb81",
+"#353a40",
+"#51774e",
+"#66563c",
+"#c7bb81",
+"#353a40",
+"#51774e",
+"#66563c"
+);
+
+var eightBitBrush_colorArray_checkers = new Array(
+"#d72020",
+"#d72020",
+"#d72020",
+"#d72020",
+"#d72020",
+"#d72020",
+"#000000",
+"#000000",
+"#000000",
+"#000000",
+"#000000",
+"#000000"
+);
+
+
 
 /* randomize arrays */
 function shuffle8BitArray(array) {
@@ -155,7 +187,7 @@ function showAnimatedBrush() {
     var colorDuration = eval($("#visualSelect_animatedBrushSpeedValue").val());
 
     /* 8-bit brushes */
-    if ($("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_flame" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_steel" ) {
+    if ($("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_flame" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_steel" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_camo" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_checkers" ) {
 
         $("#eightBitBrush").show();
         eightBitBrush_colorArray = eval($("#visualSelect_animatedBrushValue").val());
@@ -169,6 +201,54 @@ function showAnimatedBrush() {
         eightBitInterval = setInterval(function() { update8BitBrush(eightBitBrush_colorArray); },eightBitSpeed);
         }
 
+
+    /* spinner */
+    if ($("#visualSelect_animatedBrushValue").val() === "brush_spinner") {
+
+        spinnerContainer = document.getElementById("brush_spinner");
+        spinnerShape = document.getElementById("brush_spinnerShape");
+
+        var spinnerSpeed;
+        if (colorDuration === 0) spinnerSpeed = "6s";
+        else if (colorDuration === 1) spinnerSpeed = "3s";
+        else if (colorDuration === 2) spinnerSpeed = "1s";
+        else spinnerSpeed = "3s";
+
+
+        spinnerContainer.style.height = heightForPages+"px";
+        spinnerShape.style.width = heightForPages+"px";
+        spinnerShape.style.marginTop = (heightForPages/2)+"px";
+
+        $(".animatedBrushWrapper").toggle();
+        $("#brush_spinner").show();
+        spinnerShape.style.webkitAnimationDuration=spinnerSpeed; 
+
+        }
+
+
+    /* Flame */
+    if ($("#visualSelect_animatedBrushValue").val() === "brush_flame") {
+
+        flameContainer = document.getElementById("brush_flame");
+
+        var flameImageWidth = 800;
+        var flameImageHeight = 12660;
+
+        var flameIncrement = flameImageHeight/30;
+
+        var flameSpeed;
+        if (colorDuration === 0) flameSpeed = "15s";
+        else if (colorDuration === 1) flameSpeed = "5s";
+        else if (colorDuration === 2) flameSpeed = "1s";
+        else flameSpeed = "3s";
+
+        console.log(flameSpeed);
+
+        $("#brush_flame").show();
+
+        flameContainer.style.webkitAnimationDuration=flameSpeed; 
+
+        }
 
     /* color cycling brush */
 
@@ -198,11 +278,11 @@ function showAnimatedBrush() {
     if ($("#visualSelect_animatedBrushValue").val() === "brush_dots") {
 
         charBrushContainer = document.getElementById("brush_dots");
-        var numberOfDots = Math.floor(Math.random() * 300);
+        var numberOfDots = 110;
 
-        if (colorDuration === 0) charSpeed = "40s";
-        else if (colorDuration === 1) charSpeed = "20s";
-        else if (colorDuration === 2) charSpeed = "5s";
+        if (colorDuration === 0) charSpeed = "60s";
+        else if (colorDuration === 1) charSpeed = "40s";
+        else if (colorDuration === 2) charSpeed = "10s";
         else charSpeed = "20s";
 
         charBrushContainer.style.webkitAnimationDuration=charSpeed; 
@@ -236,11 +316,12 @@ function showAnimatedBrush() {
 
     if ($("#visualSelect_animatedBrushValue").val() === "brush_circles") {
         charBrushContainer = document.getElementById("brush_circles");
-        var numberOfCircles = Math.floor(Math.random() * 300);
+        //var numberOfCircles = (Math.floor(Math.random() * 100))+50;
+        var numberOfCircles = 110;
 
-        if (colorDuration === 0) charSpeed = "40s";
-        else if (colorDuration === 1) charSpeed = "20s";
-        else if (colorDuration === 2) charSpeed = "5s";
+        if (colorDuration === 0) charSpeed = "60s";
+        else if (colorDuration === 1) charSpeed = "40s";
+        else if (colorDuration === 2) charSpeed = "10s";
         else charSpeed = "20s";
 
         charBrushContainer.style.webkitAnimationDuration=charSpeed; 
@@ -278,7 +359,14 @@ function showAnimatedBrush() {
     if ($("#visualSelect_animatedBrushValue").val() === "brush_stars") {
         charBrushContainer = document.getElementById("brush_stars");
 
-        var numberOfstars = Math.floor(Math.random() * 300);
+        var numberOfstars = 110;
+
+        if (colorDuration === 0) charSpeed = "60s";
+        else if (colorDuration === 1) charSpeed = "40s";
+        else if (colorDuration === 2) charSpeed = "10s";
+        else charSpeed = "20s";
+
+        charBrushContainer.style.webkitAnimationDuration=charSpeed; 
 
         charBrushContainer.innerHTML = "";
 
@@ -312,10 +400,14 @@ function showAnimatedBrush() {
     if ($("#visualSelect_animatedBrushValue").val() === "brush_snowflakes") {
         charBrushContainer = document.getElementById("brush_snowflakes");
 
-        var numberOfSnowflakes = Math.floor(Math.random() * 300);
+        var numberOfSnowflakes = 110;
 
-        var topPos;
-        var leftPos;
+        if (colorDuration === 0) charSpeed = "60s";
+        else if (colorDuration === 1) charSpeed = "40s";
+        else if (colorDuration === 2) charSpeed = "10s";
+        else charSpeed = "20s";
+
+        charBrushContainer.style.webkitAnimationDuration=charSpeed; 
 
         charBrushContainer.innerHTML = "";
 
@@ -350,10 +442,14 @@ function showAnimatedBrush() {
     if ($("#visualSelect_animatedBrushValue").val() === "brush_notes") {
         charBrushContainer = document.getElementById("brush_notes");
 
-        var numberOfnotes = Math.floor(Math.random() * 300);
+        var numberOfnotes =110;
 
-        var topPos;
-        var leftPos;
+        if (colorDuration === 0) charSpeed = "60s";
+        else if (colorDuration === 1) charSpeed = "40s";
+        else if (colorDuration === 2) charSpeed = "10s";
+        else charSpeed = "20s";
+
+        charBrushContainer.style.webkitAnimationDuration=charSpeed; 
 
         charBrushContainer.innerHTML = "";
 
@@ -387,10 +483,14 @@ function showAnimatedBrush() {
     if ($("#visualSelect_animatedBrushValue").val() === "brush_flowers") {
         charBrushContainer = document.getElementById("brush_flowers");
 
-        var numberOfFlowers = Math.floor(Math.random() * 300);
+        var numberOfFlowers = 110;
 
-        var topPos;
-        var leftPos;
+        if (colorDuration === 0) charSpeed = "60s";
+        else if (colorDuration === 1) charSpeed = "40s";
+        else if (colorDuration === 2) charSpeed = "10s";
+        else charSpeed = "20s";
+
+        charBrushContainer.style.webkitAnimationDuration=charSpeed; 
 
         charBrushContainer.innerHTML = "";
 

@@ -9,6 +9,8 @@ Instructions - images, video
 
 Web site
 
+LINT & Minimize
+
 Publish
 
 ~~Night mode - keep active across pages~~
