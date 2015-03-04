@@ -632,19 +632,19 @@
     }
 
 .thumbnail_colorArray_flame {
-    background-image:url(../../img/thumb_8bitFlame.gif);
+    background-image:url(../../img/thumb_8bitFlame.png);
     }
 
 .thumbnail_colorArray_steel {
-    background-image:url(../../img/thumb_8bitSteel.gif);
+    background-image:url(../../img/thumb_8bitSteel.png);
     }
 
 .thumbnail_colorArray_camo {
-    background-image:url(../../img/thumb_8bitCamo.gif);
+    background-image:url(../../img/thumb_8bitCamo.png);
     }
 
 .thumbnail_colorArray_checkers {
-    background-image:url(../../img/thumb_8bitCheckers.gif);
+    background-image:url(../../img/thumb_8bitCheckers.png);
     }        
 
 .thumbnail_spinner {
@@ -667,7 +667,7 @@
     height: 32%;
     border-radius:6px;
     border:2px solid #333;
-    background-image:url(../../img/icon_flame.gif);
+    background-image:url(../../img/icon_flame.jpg);
     background-size:cover;
     }
 
