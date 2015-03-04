@@ -56,8 +56,32 @@
 <fieldset class="layout_labels" id="fieldset_brush">
 
 <label for="button_selectBrush">Pattern</label>
-<button id="button_selectBrush">Rainbow</button>
+<button id="button_selectBrush">Point</button>
 <div class="visualSelect" id="visualSelect_brush">
+
+
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Point</div>
+        <div class="selectButtonThumbnail brush_points points_1"></div>
+        <button class="selectButton" value="brush_points points_1">Point</button>
+    </div> 
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Two points</div>
+        <div class="selectButtonThumbnail brush_points points_2"></div>
+        <button class="selectButton" value="brush_points points_2">Two points</button>
+    </div> 
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Three points</div>
+        <div class="selectButtonThumbnail brush_points points_3"></div>
+        <button class="selectButton" value="brush_points points_3">Three points</button>
+    </div> 
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Four points</div>
+        <div class="selectButtonThumbnail brush_points points_4"></div>
+        <button class="selectButton" value="brush_points points_4">Four points</button>
+    </div>         
+
+
 
     <div class="selectButtonContainer">  
         <div class="selectButtonLabel">Rainbow</div>
@@ -99,31 +123,13 @@
         <div class="selectButtonThumbnail brush_usa"></div>
         <button class="selectButton" value="brush_usa">Red, White, Blue</button>
     </div>
-    <div class="selectButtonContainer">  
-        <div class="selectButtonLabel">Green, White, Red</div>
-        <div class="selectButtonThumbnail brush_mexico"></div>
-        <button class="selectButton" value="brush_mexico">Green, White, Red</button>
-    </div>
-    <div class="selectButtonContainer">
-        <div class="selectButtonLabel">Points</div>
-        <div class="selectButtonThumbnail brush_points"></div>
-        <button class="selectButton" value="brush_points">Points</button>
-    </div>    
+
+   
 
     <div class="selectButtonContainer">
         <div class="selectButtonLabel">Gradient - Silver</div>
         <div class="selectButtonThumbnail brush_gradient"></div>
         <button class="selectButton" value="brush_gradient">Gradient</button>
-    </div>
-    <div class="selectButtonContainer">
-        <div class="selectButtonLabel">Gradient - Green</div>
-        <div class="selectButtonThumbnail brush_gradient green"></div>
-        <button class="selectButton" value="brush_gradient green">Gradient (Green)</button>
-    </div>
-    <div class="selectButtonContainer">
-        <div class="selectButtonLabel">Gradient - Violet</div>
-        <div class="selectButtonThumbnail brush_gradient violet"></div>
-        <button class="selectButton" value="brush_gradient violet">Gradient (Violet)</button>
     </div>
     <div class="selectButtonContainer">
         <div class="selectButtonLabel">Gradient - Red</div>
@@ -147,16 +153,6 @@
         <button class="selectButton" value="brush_smoke">Smoke</button>
     </div>
     <div class="selectButtonContainer">
-        <div class="selectButtonLabel">Smoke - Green</div>
-        <div class="selectButtonThumbnail brush_smoke green"></div>
-        <button class="selectButton" value="brush_smoke green">Smoke (Green)</button>
-    </div>
-    <div class="selectButtonContainer">
-        <div class="selectButtonLabel">Smoke - Violet</div>
-        <div class="selectButtonThumbnail brush_smoke violet"></div>
-        <button class="selectButton" value="brush_smoke violet">Smoke (Violet)</button>
-    </div>
-    <div class="selectButtonContainer">
         <div class="selectButtonLabel">Smoke - Red</div>
         <div class="selectButtonThumbnail brush_smoke red"></div>
         <button class="selectButton" value="brush_smoke red">Smoke (Red)</button>
@@ -172,7 +168,7 @@
         <button class="selectButton" value="brush_smoke blue">Smoke (Blue)</button>
     </div>
 </div>
-<input type="hidden" name="visualSelect_brushValue" id="visualSelect_brushValue" value="brush_rainbow" />
+<input type="hidden" name="visualSelect_brushValue" id="visualSelect_brushValue" value="brush_points points_1" />
 
 </fieldset>
 
