@@ -7,6 +7,8 @@ Source code for SpriteBrush, the light painting photography app for Android
 
 Instructions - images, video
 
+About - G+ page, github addresses
+
 Web site
 
 LINT & Minimize
