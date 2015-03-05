@@ -316,6 +316,15 @@ form {
         font-family:Roboto-Medium;
         }
 
+    .splash_logo {
+        width:auto;
+        height:35px;
+        background-image:url(../img/logo.svg);
+        background-repeat:no-repeat;
+        background-size:cover;
+        margin-top:.25em;
+        }
+
     .splash_button {
         position:absolute;
         bottom:0;
@@ -495,7 +504,7 @@ fieldset.layout_submit {
     height:28px;
     background-image:url(../img/logo.svg);
     background-repeat:no-repeat;
-    background-size:contain;
+    background-size:cover;
     }
 
 
@@ -869,5 +878,9 @@ button#toggleBrushDisplay:focus {
     .splash_content {
         font-size:1.65em;
         }
+
+    .splash_logo {
+        height:28px;
+        }        
 
 }        

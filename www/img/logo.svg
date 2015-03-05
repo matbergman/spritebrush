@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="210.509px" height="28px" viewBox="0 0 210.509 28" enable-background="new 0 0 210.509 28" xml:space="preserve">
-<path fill-rule="evenodd" clip-rule="evenodd" fill="#B7B7B7" d="M19.277,19.923C26.981,16.482,28.174,28,28.174,28h22.637V14.015V0
-	H28.174c0,0-1.193,11.524-8.897,8.084C5.494,1.927,0,14.003,0,14.003S5.494,26.08,19.277,19.923z M5.338,12.185
-	c0.977,0,1.768,0.792,1.768,1.768c0,0.977-0.791,1.768-1.768,1.768c-0.976,0-1.768-0.792-1.768-1.768
-	C3.571,12.977,4.362,12.185,5.338,12.185z"/>
-<rect x="31.811" fill="#969696" width="19" height="28"/>
-<rect x="50.811" opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" fill="#FF0000" width="159.698" height="9.333"/>
-<rect x="50.811" y="9.333" opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFF00" width="159.698" height="9.333"/>
-<rect x="50.811" y="18.667" opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" fill="#0000FF" width="159.698" height="9.333"/>
+<svg version="1.1" id="Brush" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="601.637px" height="29px" viewBox="0 0 601.637 29" enable-background="new 0 0 601.637 29" xml:space="preserve">
+<rect x="51.684" y="0.196" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="549.952" height="28.607"/>
+<rect x="51.637" y="0.196" opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" fill="#FF0000" width="550" height="9.708"/>
+<rect x="51.637" y="9.904" opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFF00" width="550" height="9.191"/>
+<rect x="51.637" y="19.096" opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" fill="#0000FF" width="550" height="9.708"/>
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" stroke="#999999" d="M19.794,20.288
+	c7.691-3.436,8.882,8.212,8.882,8.212h23.009V14.242V0.5H28.676c0,0-1.19,11.38-8.882,7.945C6.034,2.299,0.549,14.367,0.549,14.367
+	S6.034,26.435,19.794,20.288z M5.878,12.415c0.975,0,1.766,0.79,1.766,1.765s-0.791,1.765-1.766,1.765s-1.765-0.79-1.765-1.765
+	S4.903,12.415,5.878,12.415z"/>
+<rect x="33.685" y="4.5" fill="#999999" stroke="#999999" width="14" height="20"/>
+<text transform="matrix(1 0 0 1 208.6846 22.0957)" display="none" fill="#282828" font-family="'Ed-Roman'" font-size="26">SpriteBrush</text>
 </svg>

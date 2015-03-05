@@ -183,6 +183,7 @@ function showAnimatedBrush() {
     $("#page_animatedBrushes").hide();
     $(".animatedBrush").hide();
     $("#animatedBrushFrame").show();
+    $("#animatedBrushWrapper").show();
 
     var colorDuration = eval($("#visualSelect_animatedBrushSpeedValue").val());
 
@@ -219,7 +220,6 @@ function showAnimatedBrush() {
         spinnerShape.style.width = heightForPages+"px";
         spinnerShape.style.marginTop = (heightForPages/2)+"px";
 
-        $("#animatedBrushWrapper").show();
         $("#brush_spinner").show();
         spinnerShape.style.webkitAnimationDuration=spinnerSpeed; 
 
@@ -237,8 +237,8 @@ function showAnimatedBrush() {
         var flameIncrement = flameImageHeight/30;
 
         var flameSpeed;
-        if (colorDuration === 0) flameSpeed = "15s";
-        else if (colorDuration === 1) flameSpeed = "5s";
+        if (colorDuration === 0) flameSpeed = "10s";
+        else if (colorDuration === 1) flameSpeed = "3s";
         else if (colorDuration === 2) flameSpeed = "1s";
         else flameSpeed = "3s";
 
@@ -435,89 +435,6 @@ function showAnimatedBrush() {
     }
 
 
-    /* Character-based animated brushes - notes */
-
-    if ($("#visualSelect_animatedBrushValue").val() === "brush_notes") {
-        charBrushContainer = document.getElementById("brush_notes");
-
-        var numberOfnotes =110;
-
-        if (colorDuration === 0) charSpeed = "60s";
-        else if (colorDuration === 1) charSpeed = "40s";
-        else if (colorDuration === 2) charSpeed = "10s";
-        else charSpeed = "20s";
-
-        charBrushContainer.style.webkitAnimationDuration=charSpeed; 
-
-        charBrushContainer.innerHTML = "";
-
-        for (i=0;i<numberOfnotes;i++) {
-
-            var newnote = document.createElement("span");
-
-            noteColor = Math.floor(Math.random() * 5);
-            noteStyle = Math.floor(Math.random() * 26);
-            newnote.className = "note"+noteStyle+" noteColor"+noteColor;
-
-            noteSize = Math.floor(Math.random() * 10);
-            newnote.style.fontSize = noteSize+"em";
-
-            leftPos = Math.floor(Math.random() * 800);
-            topPos = Math.floor(Math.random() * 10000);
-
-            charBrushContainer.appendChild(newnote);
-
-            newnote.style.left = leftPos+"px";
-            newnote.style.top = topPos+"px";
-
-        }   
-
-        $("#brush_notes").show();
-
-    }
-
-    /* Character-based animated brushes - flowers */
-
-    if ($("#visualSelect_animatedBrushValue").val() === "brush_flowers") {
-        charBrushContainer = document.getElementById("brush_flowers");
-
-        var numberOfFlowers = 110;
-
-        if (colorDuration === 0) charSpeed = "60s";
-        else if (colorDuration === 1) charSpeed = "40s";
-        else if (colorDuration === 2) charSpeed = "10s";
-        else charSpeed = "20s";
-
-        charBrushContainer.style.webkitAnimationDuration=charSpeed; 
-
-        charBrushContainer.innerHTML = "";
-
-        for (i=0;i<numberOfFlowers;i++) {
-
-            var newFlower = document.createElement("span");
-
-            flowerColor = Math.floor(Math.random() * 10);
-            flowerStyle = Math.floor(Math.random() * 12);
-            newFlower.className = "flower"+flowerStyle+" flowerColor"+flowerColor;
-
-            flowerSize = Math.floor(Math.random() * 10);
-            newFlower.style.fontSize = flowerSize+"em";
-
-            leftPos = Math.floor(Math.random() * 800);
-            topPos = Math.floor(Math.random() * 10000);
-
-            charBrushContainer.appendChild(newFlower);
-
-            newFlower.style.left = leftPos+"px";
-            newFlower.style.top = topPos+"px";
-
-        }   
-
-        $("#brush_flowers").show();    
-
-
-    }
-
     if ($("#visualSelect_animatedBrushValue").val() === "brush_vines") {
 
         vineContainer = document.getElementById("brush_vines");
@@ -543,7 +460,6 @@ function showAnimatedBrush() {
 
         vineContainer.style.webkitAnimationDuration=vineSpeed; 
 
-        $("#animatedBrushWrapper").show();        
         $("#brush_vines").show();    
 
         }   
