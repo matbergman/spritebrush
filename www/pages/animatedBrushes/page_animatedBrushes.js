@@ -1,4 +1,4 @@
-$(document).ready(function(){
+    $(document).ready(function(){
 
 /* ##### Check if night mode skin is enabled */
 getTheme();
@@ -219,7 +219,7 @@ function showAnimatedBrush() {
         spinnerShape.style.width = heightForPages+"px";
         spinnerShape.style.marginTop = (heightForPages/2)+"px";
 
-        $(".animatedBrushWrapper").toggle();
+        $("#animatedBrushWrapper").show();
         $("#brush_spinner").show();
         spinnerShape.style.webkitAnimationDuration=spinnerSpeed; 
 
@@ -522,25 +522,28 @@ function showAnimatedBrush() {
 
         vineContainer = document.getElementById("brush_vines");
 
-        vineContainer.style.backgroundSize = "100% "+widthForPages+"px";
+        if (widthForPages <= 640) {
+                $("#brush_vines").addClass("brush_vines-640");
+            }
 
-         var keyframes = '@-webkit-keyframes vineAnimation { '+
-                            'from {background-position:0px 0px;}'+
-                            'to {background-position:0px calc(-'+widthForPages+'640px + 100px);}'+
-                          '}';
+        if (widthForPages > 640) {
+                $("#brush_vines").addClass("brush_vines-960");
+            }
 
+        if (widthForPages > 960) {
+            $("#brush_vines").addClass("brush_vines-1280");
+            }     
 
         var vineSpeed;
         if (colorDuration === 0) vineSpeed = "15s";
         else if (colorDuration === 1) vineSpeed = "5s";
         else if (colorDuration === 2) vineSpeed = "1s";
-        else vineSpeed = "3s";
+        else vineSpeed = "5s";
 
 
         vineContainer.style.webkitAnimationDuration=vineSpeed; 
 
-
-
+        $("#animatedBrushWrapper").show();        
         $("#brush_vines").show();    
 
         }   
