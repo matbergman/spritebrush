@@ -532,7 +532,8 @@
 
 #brush_vines {
     margin-top:20%;
-
+    margin-left:auto;
+    margin-right:auto;
     width:800px;
     height:100px;
     border:0;
@@ -549,16 +550,16 @@
 
     }
 
-    .brush_vines-640 {
+    #brush_vines.brush_vines-640 {
         -webkit-transform: scale(0.8);
         margin-left:-80px;
         }
 
-    .brush_vines-960 {
+    #brush_vines.brush_vines-960 {
         -webkit-transform: scale(1.2);
         }
 
-    .brush_vines-1280 {
+    #brush_vines.brush_vines-1280 {
         -webkit-transform: scale(1.6);
         }
 
