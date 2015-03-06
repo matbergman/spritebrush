@@ -111,7 +111,7 @@ body.nightMode {
     }
 
 body.nightMode .ui-page-theme-a {
-   background-color:#000;
+   background-color:#000 !important; /* override intermittent jqueryUI inline background color bug */
     }
 
 body.nightMode header {
@@ -146,6 +146,10 @@ body.nightMode a {
 
 body.nightMode header nav a {
     color:#673ab7;
+    }
+
+body.nightMode .panel_logo_image {
+    opacity:0.2;
     }
 
 body.nightMode .section-title {
@@ -206,6 +210,9 @@ header {
     height:64px;
     }
 
+h1,h2,h3,h4 {
+    font-weight:normal;
+    }
 
 a {
     text-decoration:none;
@@ -334,8 +341,7 @@ form {
         border-top:1px solid #666;
         }
 
-
-/* layout - instructions */
+/* layout - page instructions */
 
 .instructions {
     position:absolute;
@@ -356,7 +362,7 @@ form {
         padding:.5em 1em;
         line-height:1.8em;
         font-family:Roboto-Light;
-        }
+        }  
 
 
 /* layout - content */
@@ -379,18 +385,18 @@ body.content .ui-page-active {
 
 .content_container h1 {
     font-family:Roboto-Light;
-    font-size:1.8em;
-    margin:1em 0 0 0;
+    font-size:1.6em;
+    margin:1.2em 0 .5em 0;
     padding:0;
     }
 
 .content_container h2 {
     font-family:Roboto-Regular;
-    font-size:1.4em;
-    margin:1em 0 .5em 0;
+    font-size:1em;
+    font-weight:bold;
+    margin:2em 0 .5em 0;
     padding:0;
     }
-
 
 .content_container ul {}
 
@@ -405,13 +411,19 @@ body.content .ui-page-active {
     .content_container table td {
         padding:.5em;
         vertical-align:top;
-        border-top:2px solid #fff;
-        background-color:#f1f1f1;
+        border-top:1px solid #333333;
+        background-color:#607d8b;
+        color:#f1f1f1;
         }
+
+        .content_container table tr:first-child td {
+            border-top:0;
+            }
 
         body.nightMode .content_container table td {
             background-color:#222;
             border-color:#673ab7;
+            color:#673ab7;
             }
 
         .content_container table td.label {
@@ -422,14 +434,6 @@ body.content .ui-page-active {
 
         .content_container table td.value {
             }
-
-#page_instructions .content_container p:first-child {
-    margin-top:4em;
-    }
-
-#page_about .content_container h1:first-child {
-    margin-top:2em;
-    }
 
 
 /* layout - forms */

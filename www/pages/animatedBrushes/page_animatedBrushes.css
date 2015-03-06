@@ -737,6 +737,36 @@
     bottom:0;
     }
 
+    body.nightMode .thumbnail_dots {
+        background-image:url(../../img/thumb_dots-night.png);
+        }
+
+    body.nightMode .thumbnail_circles {
+        background-image:url(../../img/thumb_circles-night.png);
+        }
+
+    body.nightMode .thumbnail_stars {
+        background-image:url(../../img/thumb_stars-night.png);
+        }
+
+    body.nightMode .thumbnail_snowflakes {
+        background-image:url(../../img/thumb_snowflakes-night.png);
+        }
+
+    body.nightMode .thumbnail_notes {
+        background-image:url(../../img/thumb_notes-night.png);
+        }
+
+    body.nightMode .thumbnail_flowers {
+        background-image:url(../../img/thumb_flowers-night.png);
+        }
+
+    body.nightMode .thumbnail_vines {
+        background-image:url(../../img/thumb_vines-night.png);
+        position:absolute;
+        bottom:0;
+        }    
+
 /* ##### Buttons ##### */
 
 #visualSelect_animatedBrushSpeed {
