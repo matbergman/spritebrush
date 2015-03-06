@@ -26,7 +26,7 @@
 #theBrush {
     width:100%;
     height:2em;
-    margin-top:20%;
+    margin-top:30%;
     }
 
 @font-face {
@@ -47,6 +47,23 @@ font-family: 'point';
     .brush_points:after {
         content:"\e600\e601\e601\e601\e601\e601\e600\e601\e601\e601\e601\e601\e600";
         }
+
+    .points_1::after {
+        content:"\e600";
+        }
+
+    .points_2::after {
+        content:"\e600\e601\e601\e601\e601\e601\e601\e601\e601\e601\e601\e601\e600";
+        }
+
+    .points_3::after {
+        content:"\e600\e601\e601\e601\e601\e601\e601\e600\e601\e601\e601\e601\e601\e601\e600";
+        }
+
+    .points_4::after {
+        content:"\e600\e601\e601\e601\e601\e601\e600\e601\e601\e601\e601\e601\e600\e601\e601\e601\e601\e601\e600";
+        }                
+
 
     .selectButtonThumbnail.brush_points {
         font-size:.5em;

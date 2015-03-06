@@ -7,4 +7,12 @@ a#instructions {
 
 #page_instructions .content_container p:first-child {
     margin-top:4em;
-    }      
+    }
+
+@media only screen and (max-device-width: 640px) {
+
+	#page_instructions .content_container p:first-child {
+	    margin-top:6em;
+	    }
+
+}          

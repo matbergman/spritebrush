@@ -4,3 +4,19 @@ a#about {
     font-family:Roboto-Medium;
     color:#000;
     }
+
+#page_about .content_container h1:first-child {
+    margin-top:2.5em;
+    }
+
+/* ##### Media Queries ##### */
+
+/* Small screens, smartphones */
+
+@media only screen and (max-device-width: 640px) {
+
+	#page_about .content_container h1:first-child {
+	    margin-top:4em;
+	    }
+
+}

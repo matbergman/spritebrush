@@ -531,23 +531,37 @@
 /* Animated brush - vines */
 
 #brush_vines {
-    position:absolute;
-    top:45%;
-    left:0;
-    width:100%;
+    margin-top:20%;
+    margin-left:auto;
+    margin-right:auto;
+    width:800px;
     height:100px;
     border:0;
     background-image:url(../../img/vine_02.svg);
     background-repeat:no-repeat;
     background-position:0px 0px;
     background-color:transparent;
-    background-size:100% 790px; /* vine_02.svg */
+    background-size:100% 800px; /* vine_02.svg */
     -webkit-animation-duration: 5s;
     -webkit-animation-name: vineAnimation; 
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-play-state: running;
     -webkit-animation-timing-function: linear;
+
     }
+
+    #brush_vines.brush_vines-640 {
+        -webkit-transform: scale(0.8);
+        margin-left:-80px;
+        }
+
+    #brush_vines.brush_vines-960 {
+        -webkit-transform: scale(1.2);
+        }
+
+    #brush_vines.brush_vines-1280 {
+        -webkit-transform: scale(1.6);
+        }
 
 
 @-webkit-keyframes vineAnimation {
@@ -557,7 +571,7 @@
         }
 
     to {
-        background-position:0px calc(-790px + 100px);
+        background-position:0px calc(-800px + 100px);
         }
     }        
 
@@ -632,19 +646,19 @@
     }
 
 .thumbnail_colorArray_flame {
-    background-image:url(../../img/thumb_8bitFlame.gif);
+    background-image:url(../../img/thumb_8bitFlame.png);
     }
 
 .thumbnail_colorArray_steel {
-    background-image:url(../../img/thumb_8bitSteel.gif);
+    background-image:url(../../img/thumb_8bitSteel.png);
     }
 
 .thumbnail_colorArray_camo {
-    background-image:url(../../img/thumb_8bitCamo.gif);
+    background-image:url(../../img/thumb_8bitCamo.png);
     }
 
 .thumbnail_colorArray_checkers {
-    background-image:url(../../img/thumb_8bitCheckers.gif);
+    background-image:url(../../img/thumb_8bitCheckers.png);
     }        
 
 .thumbnail_spinner {
@@ -667,7 +681,7 @@
     height: 32%;
     border-radius:6px;
     border:2px solid #333;
-    background-image:url(../../img/icon_flame.gif);
+    background-image:url(../../img/icon_flame.jpg);
     background-size:cover;
     }
 
@@ -722,6 +736,36 @@
     position:absolute;
     bottom:0;
     }
+
+    body.nightMode .thumbnail_dots {
+        background-image:url(../../img/thumb_dots-night.png);
+        }
+
+    body.nightMode .thumbnail_circles {
+        background-image:url(../../img/thumb_circles-night.png);
+        }
+
+    body.nightMode .thumbnail_stars {
+        background-image:url(../../img/thumb_stars-night.png);
+        }
+
+    body.nightMode .thumbnail_snowflakes {
+        background-image:url(../../img/thumb_snowflakes-night.png);
+        }
+
+    body.nightMode .thumbnail_notes {
+        background-image:url(../../img/thumb_notes-night.png);
+        }
+
+    body.nightMode .thumbnail_flowers {
+        background-image:url(../../img/thumb_flowers-night.png);
+        }
+
+    body.nightMode .thumbnail_vines {
+        background-image:url(../../img/thumb_vines-night.png);
+        position:absolute;
+        bottom:0;
+        }    
 
 /* ##### Buttons ##### */
 
