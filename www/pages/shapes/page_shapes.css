@@ -78,8 +78,8 @@
                 background-image:url(../../img/icon_mask_circle.png);
                 }        
             
-            #visualSelect_mask .selectButtonContainer .thumbnail_crescent {
-                background-image:url(../../img/icon_mask_crescent.png);
+            #visualSelect_mask .selectButtonContainer .thumbnail_bar {
+                background-image:url(../../img/icon_mask_bar.png);
                 }  
             
             #visualSelect_mask .selectButtonContainer .thumbnail_diamond {
@@ -110,8 +110,8 @@
                     background-image:url(../../img/icon_mask_circle-night.png);
                     }        
                 
-                body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_crescent {
-                    background-image:url(../../img/icon_mask_crescent-night.png);
+                body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_bar {
+                    background-image:url(../../img/icon_mask_bar-night.png);
                     }  
                 
                 body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_diamond {
