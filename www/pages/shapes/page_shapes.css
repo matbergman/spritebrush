@@ -1,4 +1,4 @@
-/* ##### colors ##### */
+/* ##### shapes ##### */
 
 #colorFrame {
     display:none;
@@ -152,7 +152,7 @@
 
 /* ##### Navigation ##### */
 
-a#showColors {
+a#showShapes {
     font-family:Roboto-Medium;
     color:#000;
     }
@@ -161,6 +161,6 @@ a#showColors {
 
 /* ##### Layout ##### */
 
-#page_colors fieldset.layout_labels {
+#page_shapes fieldset.layout_labels {
     margin-bottom:1.25em;
     }  

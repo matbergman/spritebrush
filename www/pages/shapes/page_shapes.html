@@ -17,8 +17,8 @@
 
     <script type="text/javascript" src="../../js/navigation_pages.js"></script> 
 
-    <link rel="stylesheet" type="text/css" href="page_colors.css" />
-    <script src="page_colors.js"></script> 
+    <link rel="stylesheet" type="text/css" href="page_shapes.css" />
+    <script src="page_shapes.js"></script> 
 
     <title>SpriteBrush Color Brushes</title>
 </head>
@@ -37,7 +37,7 @@
 
     <div class="header-wrapper">
         <div class="header-title">
-        <span class="section-title">Color Brushes</span>
+        <span class="section-title">Shape Brushes</span>
         </div>
     </div>
 
@@ -49,9 +49,63 @@
 </header>
 
 
-<div class="page_container" id="page_colors">
+<div class="page_container" id="page_shapes">
 
 <form id="form_color">
+
+
+<fieldset class="layout_labels" id="fieldset_colorMask">
+
+<label for="button_selectMask">Shape</label>
+<button id="button_selectMask">Circle</button>
+<div class="visualSelect" id="visualSelect_mask">
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Circle</div>
+        <div class="selectButtonThumbnail thumbnail_circle"></div>
+        <button class="selectButton" value="mask_circle">Circle</button>
+    </div>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Crescent</div>
+        <div class="selectButtonThumbnail thumbnail_crescent"></div>
+        <button class="selectButton" value="mask_crescent">Crescent</button>
+    </div>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Diamond</div>
+        <div class="selectButtonThumbnail thumbnail_diamond"></div>
+        <button class="selectButton" value="mask_diamond">Diamond</button>
+    </div>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Hexagon</div>
+        <div class="selectButtonThumbnail thumbnail_hexagon"></div>
+        <button class="selectButton" value="mask_hexagon">Hexagon</button>
+    </div>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Octagon</div>
+        <div class="selectButtonThumbnail thumbnail_octagon"></div>
+        <button class="selectButton" value="mask_octagon">Octagon</button>
+    </div>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Square</div>
+        <div class="selectButtonThumbnail thumbnail_square"></div>
+        <button class="selectButton" value="mask_square">Square</button>
+    </div>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Star</div>
+        <div class="selectButtonThumbnail thumbnail_star"></div>
+        <button class="selectButton" value="mask_star">Star</button>
+    </div>
+    <div class="selectButtonContainer">
+        <div class="selectButtonLabel">Sunburst</div>
+        <div class="selectButtonThumbnail thumbnail_sunburst"></div>
+        <button class="selectButton" value="mask_sunburst">Sunburst</button>
+    </div>
+</div>
+<input type="hidden" name="visualSelect_maskValue" id="visualSelect_maskValue" value="mask_circle" />
+
+</fieldset>
+
+
+
 
 <fieldset class="layout_labels" id="fieldset_color">
 
@@ -122,55 +176,6 @@
 </fieldset>
 
 
-<fieldset class="layout_labels" id="fieldset_colorMask">
-
-<label for="button_selectMask">Mask</label>
-<button id="button_selectMask">Circle</button>
-<div class="visualSelect" id="visualSelect_mask">
-    <div class="selectButtonContainer">  
-        <div class="selectButtonLabel">Circle</div>
-        <div class="selectButtonThumbnail thumbnail_circle"></div>
-        <button class="selectButton" value="mask_circle">Circle</button>
-    </div>
-    <div class="selectButtonContainer">
-        <div class="selectButtonLabel">Crescent</div>
-        <div class="selectButtonThumbnail thumbnail_crescent"></div>
-        <button class="selectButton" value="mask_crescent">Crescent</button>
-    </div>
-    <div class="selectButtonContainer">
-        <div class="selectButtonLabel">Diamond</div>
-        <div class="selectButtonThumbnail thumbnail_diamond"></div>
-        <button class="selectButton" value="mask_diamond">Diamond</button>
-    </div>
-    <div class="selectButtonContainer">
-        <div class="selectButtonLabel">Hexagon</div>
-        <div class="selectButtonThumbnail thumbnail_hexagon"></div>
-        <button class="selectButton" value="mask_hexagon">Hexagon</button>
-    </div>
-    <div class="selectButtonContainer">
-        <div class="selectButtonLabel">Octagon</div>
-        <div class="selectButtonThumbnail thumbnail_octagon"></div>
-        <button class="selectButton" value="mask_octagon">Octagon</button>
-    </div>
-    <div class="selectButtonContainer">
-        <div class="selectButtonLabel">Square</div>
-        <div class="selectButtonThumbnail thumbnail_square"></div>
-        <button class="selectButton" value="mask_square">Square</button>
-    </div>
-    <div class="selectButtonContainer">
-        <div class="selectButtonLabel">Star</div>
-        <div class="selectButtonThumbnail thumbnail_star"></div>
-        <button class="selectButton" value="mask_star">Star</button>
-    </div>
-    <div class="selectButtonContainer">
-        <div class="selectButtonLabel">Sunburst</div>
-        <div class="selectButtonThumbnail thumbnail_sunburst"></div>
-        <button class="selectButton" value="mask_sunburst">Sunburst</button>
-    </div>
-</div>
-<input type="hidden" name="visualSelect_maskValue" id="visualSelect_maskValue" value="mask_circle" />
-
-</fieldset>
 
 
 <fieldset class="layout_labels" id="fieldset_colorStrobe">
@@ -181,7 +186,7 @@
 
     <div class="visualSelect_description">
     <p>
-    Strobing colors create dots and dashes, depending on the speed of the strobe. No strobe paints solid lines.
+    Strobing shapes create dots and dashes, depending on the speed of the strobe. No strobe paints solid lines.
     </p>
     </div>
 
@@ -223,7 +228,7 @@
 
 
 
-<!-- ##### Colors ##### -->
+<!-- ##### Shapes ##### -->
 <div id="colorFrame">
     <div class="toggleDisplay"></div>
     <div id="colorMask"></div>

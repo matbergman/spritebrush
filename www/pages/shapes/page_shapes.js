@@ -40,7 +40,7 @@ $("#colorFrame").on("tap",function(){
 
 
 $("#colorFrame").on("taphold",function(){
-    returnToPage("#page_colors","#colorFrame");
+    returnToPage("#page_shapes","#colorFrame");
     });
 
 
@@ -61,7 +61,7 @@ function showMask() {
 function showColor() {
 
     $("header").hide();
-    $("#page_colors").hide();
+    $("#page_shapes").hide();
 
     selectedColor  = $("#visualSelect_colorValue").val();
     selectedStrobe = $("#visualSelect_strobeValue").val();

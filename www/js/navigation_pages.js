@@ -4,8 +4,8 @@ $(document).ready(function(){
 
 
 /* page navigation buttons */
-$("#showColors").click(function() {
-    window.location = "../colors/page_colors.html"
+$("#showShapes").click(function() {
+    window.location = "../shapes/page_shapes.html"
     });
 
 $("#showBrushes").click(function() {

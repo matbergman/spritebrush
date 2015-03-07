@@ -879,11 +879,11 @@ button#toggleBrushDisplay:focus {
         margin-top:3.5em;
         }
 
-    #page_colors fieldset.layout_submit {
+    #page_shapes fieldset.layout_submit {
         bottom:4.5em;
         }
 
-    #page_colors .instructions {
+    #page_shapes .instructions {
         bottom:7.5em;
         }
 
