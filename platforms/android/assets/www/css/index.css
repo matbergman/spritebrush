@@ -1,3 +1,6 @@
+/* ##### SpriteBrush shared CSS ##### */
+/* ##### Page specific styles are published in each page's individual style sheet ##### */
+
 /* ##### PhoneGap styles ##### */
 
 * {
@@ -290,7 +293,7 @@ form {
     }
 
 
-/* layout - splash screen */
+/* layout - splash screen (index.html) */
 
 #splash {
     display:block;
@@ -341,7 +344,8 @@ form {
         border-top:1px solid #666;
         }
 
-/* layout - page instructions */
+
+/* layout - page instructions (embedded text block) */
 
 .instructions {
     position:absolute;
@@ -411,7 +415,7 @@ body.content .ui-page-active {
     .content_container table td {
         padding:.5em;
         vertical-align:top;
-        border-top:1px solid #333333;
+        border-top:1px solid #4c6571;
         background-color:#607d8b;
         color:#f1f1f1;
         }
@@ -512,7 +516,7 @@ fieldset.layout_submit {
     }
 
 
-/* Layout - overflow */
+/* Layout - overflow menu */
 
 
 .ui-popup#overflow_menu {
@@ -879,11 +883,11 @@ button#toggleBrushDisplay:focus {
         margin-top:3.5em;
         }
 
-    #page_colors fieldset.layout_submit {
+    #page_shapes fieldset.layout_submit {
         bottom:4.5em;
         }
 
-    #page_colors .instructions {
+    #page_shapes .instructions {
         bottom:7.5em;
         }
 

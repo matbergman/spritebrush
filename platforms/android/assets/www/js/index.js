@@ -68,9 +68,9 @@ thePanelLogoImage.className = "panel_logo_image";
 
 var navColors = document.createElement("a");
 navColors.href = "#";
-navColors.id = "showColors";
+navColors.id = "showShapes";
 navColors.className = "ui-link";
-navColors.innerHTML = "Colors";
+navColors.innerHTML = "Shapes";
 
 var navBrushes = document.createElement("a");
 navBrushes.href = "#";
