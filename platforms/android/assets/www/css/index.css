@@ -700,7 +700,7 @@ button#toggleBrushDisplay:focus {
 
     #toggleBackground h1,
     #toggleBackground p {
-        font-size:2em;
+        font-size:1em;
         }
 
     #toggleBackground .paused_head {
