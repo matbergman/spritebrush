@@ -79,11 +79,11 @@
 
 .brush_char {
     display:none;
-    margin-top:20%;
+    position:absolute;
+    top:30%;
+    text-align:center;
     width:100%;
-    height:100%;
     }
-
 
 /* Make some characters invisible for random spacing */
 .obj_hide {
