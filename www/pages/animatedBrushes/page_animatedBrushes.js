@@ -172,7 +172,7 @@ function updateCharBrush(theBrush) {
 
 var brush = document.getElementById(theBrush);
 
-var numberOfObj = 10; // A static maximum number of items to show each frame
+var numberOfObj = 20; // A static maximum number of items to show each frame (including blanks), determined by trial & error
 
 brush.innerHTML = "";
 
