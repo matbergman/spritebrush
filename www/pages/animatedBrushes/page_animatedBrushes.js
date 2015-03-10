@@ -13,7 +13,6 @@ $("#button_showAnimatedBrush").on("click", function() {
     });
 
 
-
 /* Select buttons */
 
 $("#button_selectAnimatedBrush").on("click", function() {
@@ -44,9 +43,8 @@ $("#animatedBrushFrame").on("taphold",function(){
     $(".ui-page-theme-a").css("backgroundColor","#cfd8dc");
 
     /* Reset each animated brush. Mixed brush types on this page require individual solutions. */
+    clearInterval(theInterval);
     $(".animatedBrush").hide();
-
-    if (eightBitInterval != "undefined") {clearTimeout(eightBitInterval);}
     $(".pixel").css('background-color', 'transparent');
 
     /* Reset wrapper display state for next brush */
@@ -61,13 +59,10 @@ $("#animatedBrushFrame").on("taphold",function(){
 });
 
 
-
 /* ##### Animated Brushes ##### */
 
 
 /* Animated brush - "8-bit" */                
-
-var eightBitInterval;
 
 var eightBitBrush_colorArray_flame = new Array(
 "#fe8300",
@@ -141,7 +136,7 @@ var eightBitBrush_colorArray_checkers = new Array(
 
 
 /* randomize arrays */
-function shuffle8BitArray(array) {
+function ShuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
         var temp = array[i];
@@ -157,7 +152,7 @@ function update8BitBrush(eightBitBrush_colorArray) {
 var brush = document.getElementById("eightBitBrush");
 var chips = brush.getElementsByClassName("pixel");
 
-shuffle8BitArray(eightBitBrush_colorArray);
+ShuffleArray(eightBitBrush_colorArray);
 
 for (i=0;i<chips.length;i++) {
     chips[i].style.backgroundColor=eightBitBrush_colorArray[i];
@@ -171,8 +166,70 @@ for (i=0;i<chips.length;i++) {
 
 
 
+/* Animated brush - character based */        
+
+function updateCharBrush(theBrush) {
+
+var brush = document.getElementById(theBrush);
+
+var numberOfObj = 10; // A static maximum number of items to show each frame
+
+brush.innerHTML = "";
+
+for (i=0;i<numberOfObj;i++) {
+
+    var newObj = document.createElement("span"); // Characters are applied to <span> elements through the CSS content attribute
+
+    
+    // The dot animated brush is a bit different than the rest -- a single character and color. 
+    if (theBrush == "brush_dots") {
+        objStyle = Math.floor(Math.random() * 10);
+        if (objStyle == 1) {newObj.className = "showDot";}
+        else {newObj.className = "";}
+        objSize = Math.floor(Math.random() * 10);
+        newObj.style.fontSize = objSize+"em";
+        }
+
+    if (theBrush == "brush_circles") {
+        charBrushLayout(newObj, "circle");
+        }    
+
+    if (theBrush == "brush_stars") {
+        charBrushLayout(newObj, "star");
+        }    
+
+    if (theBrush == "brush_snowflakes") {
+        charBrushLayout(newObj, "snowflake");
+        }   
+
+    brush.appendChild(newObj);
+    
+    }
+
+}
+
+ 
+// Animated character brush - randomizes each frame 
+function charBrushLayout(newObj, objType) {
+
+objStyle = Math.floor(Math.random() * 12);
+newObj.className = objType+objStyle;
+objColor = Math.floor(Math.random() * 50);
+if (objColor <= 4) {newObj.className += " "+objType+"Color"+objColor;}
+
+else {newObj.className += " obj_hide";}
+
+objSize = Math.floor(Math.random() * 10);
+
+newObj.style.fontSize = objSize+"em";
+
+}
+
+
 
 /* ##### Display animated brush ##### */
+
+var theInterval; // All js animated brushes use this interval so that it can be cleared on exit
 
 function showAnimatedBrush() {
 
@@ -185,7 +242,7 @@ function showAnimatedBrush() {
     $("#animatedBrushFrame").show();
     $("#animatedBrushWrapper").show();
 
-    var colorDuration = eval($("#visualSelect_animatedBrushSpeedValue").val());
+    var animationSpeed = eval($("#visualSelect_animatedBrushSpeedValue").val());
 
     /* 8-bit brushes */
     if ($("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_flame" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_steel" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_camo" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_checkers" ) {
@@ -194,25 +251,40 @@ function showAnimatedBrush() {
         eightBitBrush_colorArray = eval($("#visualSelect_animatedBrushValue").val());
 
         var eightBitSpeed;
-        if (colorDuration === 0) eightBitSpeed = 1000;
-        else if (colorDuration === 1) eightBitSpeed = 100;
-        else if (colorDuration === 2) eightBitSpeed = 10;
+        if (animationSpeed === 0) eightBitSpeed = 1000;
+        else if (animationSpeed === 1) eightBitSpeed = 100;
+        else if (animationSpeed === 2) eightBitSpeed = 10;
         else eightBitSpeed = 100;
 
-        eightBitInterval = setInterval(function() { update8BitBrush(eightBitBrush_colorArray); },eightBitSpeed);
+        theInterval = setInterval(function() { update8BitBrush(eightBitBrush_colorArray); },eightBitSpeed);
         }
 
 
-    /* spinner */
+    /* Color cycling animated brush */
+
+    if ($("#visualSelect_animatedBrushValue").val() === "colorCycle_primary") {
+
+        var colorFlowSpeed;
+        if (animationSpeed === 0) colorFlowSpeed = "6s";
+        else if (animationSpeed === 1) colorFlowSpeed = "3s";
+        else if (animationSpeed === 2) colorFlowSpeed = "1s";
+        else colorFlowSpeed = "3s";
+
+        $("#animatedColor").show();
+        document.getElementById("animatedColor").style.webkitAnimationDuration=colorFlowSpeed;        
+    }
+
+
+    /* Spinner animated brush */
     if ($("#visualSelect_animatedBrushValue").val() === "brush_spinner") {
 
         spinnerContainer = document.getElementById("brush_spinner");
         spinnerShape = document.getElementById("brush_spinnerShape");
 
         var spinnerSpeed;
-        if (colorDuration === 0) spinnerSpeed = "6s";
-        else if (colorDuration === 1) spinnerSpeed = "3s";
-        else if (colorDuration === 2) spinnerSpeed = "1s";
+        if (animationSpeed === 0) spinnerSpeed = "6s";
+        else if (animationSpeed === 1) spinnerSpeed = "3s";
+        else if (animationSpeed === 2) spinnerSpeed = "1s";
         else spinnerSpeed = "3s";
 
 
@@ -226,7 +298,7 @@ function showAnimatedBrush() {
         }
 
 
-    /* Flame */
+    /* Flame animated brush */
     if ($("#visualSelect_animatedBrushValue").val() === "brush_flame") {
 
         flameContainer = document.getElementById("brush_flame");
@@ -237,10 +309,10 @@ function showAnimatedBrush() {
         var flameIncrement = flameImageHeight/30;
 
         var flameSpeed;
-        if (colorDuration === 0) flameSpeed = "10s";
-        else if (colorDuration === 1) flameSpeed = "3s";
-        else if (colorDuration === 2) flameSpeed = "1s";
-        else flameSpeed = "3s";
+        if (animationSpeed === 0) flameSpeed = "30s";
+        else if (animationSpeed === 1) flameSpeed = "15s";
+        else if (animationSpeed === 2) flameSpeed = "5s";
+        else flameSpeed = "15s";
 
         $("#brush_flame").show();
 
@@ -248,193 +320,8 @@ function showAnimatedBrush() {
 
         }
 
-    /* color cycling brush */
 
-    if ($("#visualSelect_animatedBrushValue").val() === "colorCycle_primary") {
-
-        var colorFlowSpeed;
-        if (colorDuration === 0) colorFlowSpeed = "6s";
-        else if (colorDuration === 1) colorFlowSpeed = "3s";
-        else if (colorDuration === 2) colorFlowSpeed = "1s";
-        else colorFlowSpeed = "3s";
-
-        $("#animatedColor").show();
-        document.getElementById("animatedColor").style.webkitAnimationDuration=colorFlowSpeed;        
-    }
-
-
-
-    /* ##### Character-based animated brushes ##### */
-
-    var charBrushContainer;
-    var charSpeed;
-    var topPos;
-    var leftPos;
-
-    /* Character-based animated brushes - dots */
-
-    if ($("#visualSelect_animatedBrushValue").val() === "brush_dots") {
-
-        charBrushContainer = document.getElementById("brush_dots");
-        var numberOfDots = 110;
-
-        if (colorDuration === 0) charSpeed = "60s";
-        else if (colorDuration === 1) charSpeed = "40s";
-        else if (colorDuration === 2) charSpeed = "10s";
-        else charSpeed = "20s";
-
-        charBrushContainer.style.webkitAnimationDuration=charSpeed; 
-
-        charBrushContainer.innerHTML = "";
-
-        for (i=0;i<numberOfDots;i++) {
-
-            var newDot = document.createElement("span");
-
-            dotSize = Math.floor(Math.random() * 10);
-
-            newDot.style.fontSize = dotSize+"em";
-
-            leftPos = Math.floor(Math.random() * 800);
-            topPos = Math.floor(Math.random() * 10000);
-
-            charBrushContainer.appendChild(newDot);
-
-            newDot.style.left = leftPos+"px";
-            newDot.style.top = topPos+"px";
-
-        }   
-
-        $("#brush_dots").show();
-
-    }
-
-
-    /* Character-based animated brushes - circles */
-
-    if ($("#visualSelect_animatedBrushValue").val() === "brush_circles") {
-        charBrushContainer = document.getElementById("brush_circles");
-        //var numberOfCircles = (Math.floor(Math.random() * 100))+50;
-        var numberOfCircles = 110;
-
-        if (colorDuration === 0) charSpeed = "60s";
-        else if (colorDuration === 1) charSpeed = "40s";
-        else if (colorDuration === 2) charSpeed = "10s";
-        else charSpeed = "20s";
-
-        charBrushContainer.style.webkitAnimationDuration=charSpeed; 
-
-        charBrushContainer.innerHTML = "";
-
-        for (i=0;i<numberOfCircles;i++) {
-
-            var newCircle = document.createElement("span");
-
-            circleColor = Math.floor(Math.random() * 5);
-            circleStyle = Math.floor(Math.random() * 12);
-            newCircle.className = "circle"+circleStyle+" circleColor"+circleColor;
-
-            circleSize = Math.floor(Math.random() * 10);
-            newCircle.style.fontSize = circleSize+"em";
-
-            leftPos = Math.floor(Math.random() * 800);
-            topPos = Math.floor(Math.random() * 10000);
-
-            charBrushContainer.appendChild(newCircle);
-
-            newCircle.style.left = leftPos+"px";
-            newCircle.style.top = topPos+"px";
-
-        }   
-
-        $("#brush_circles").show();
-
-    }
-
-
-    /* Character-based animated brushes - stars */
-
-    if ($("#visualSelect_animatedBrushValue").val() === "brush_stars") {
-        charBrushContainer = document.getElementById("brush_stars");
-
-        var numberOfstars = 110;
-
-        if (colorDuration === 0) charSpeed = "60s";
-        else if (colorDuration === 1) charSpeed = "40s";
-        else if (colorDuration === 2) charSpeed = "10s";
-        else charSpeed = "20s";
-
-        charBrushContainer.style.webkitAnimationDuration=charSpeed; 
-
-        charBrushContainer.innerHTML = "";
-
-        for (i=0;i<numberOfstars;i++) {
-
-            var newstar = document.createElement("span");
-
-            starColor = Math.floor(Math.random() * 7);
-            starStyle = Math.floor(Math.random() * 12);
-            newstar.className = "star"+starStyle+" starColor"+starColor;
-
-            starSize = Math.floor(Math.random() * 10);
-            newstar.style.fontSize = starSize+"em";
-
-            leftPos = Math.floor(Math.random() * 800);
-            topPos = Math.floor(Math.random() * 10000);
-
-            charBrushContainer.appendChild(newstar);
-
-            newstar.style.left = leftPos+"px";
-            newstar.style.top = topPos+"px";
-
-        }   
-
-        $("#brush_stars").show();
-    }
-
-
-    /* Character-based animated brushes - snowflakes */
-
-    if ($("#visualSelect_animatedBrushValue").val() === "brush_snowflakes") {
-        charBrushContainer = document.getElementById("brush_snowflakes");
-
-        var numberOfSnowflakes = 110;
-
-        if (colorDuration === 0) charSpeed = "60s";
-        else if (colorDuration === 1) charSpeed = "40s";
-        else if (colorDuration === 2) charSpeed = "10s";
-        else charSpeed = "20s";
-
-        charBrushContainer.style.webkitAnimationDuration=charSpeed; 
-
-        charBrushContainer.innerHTML = "";
-
-        for (i=0;i<numberOfSnowflakes;i++) {
-
-            var newSnowflake = document.createElement("span");
-
-            snowflakeColor = Math.floor(Math.random() * 5);
-            snowflakeStyle = Math.floor(Math.random() * 12);
-            newSnowflake.className = "snowflake"+snowflakeStyle+" snowflakeColor"+snowflakeColor;
-
-            snowflakeSize = Math.floor(Math.random() * 10);
-            newSnowflake.style.fontSize = snowflakeSize+"em";
-
-            leftPos = Math.floor(Math.random() * 800);
-            topPos = Math.floor(Math.random() * 10000);
-
-            charBrushContainer.appendChild(newSnowflake);
-
-            newSnowflake.style.left = leftPos+"px";
-            newSnowflake.style.top = topPos+"px";
-
-        }
-
-        $("#brush_snowflakes").show();
-
-    }
-
-
+    /* Vine animated brush */
     if ($("#visualSelect_animatedBrushValue").val() === "brush_vines") {
 
         vineContainer = document.getElementById("brush_vines");
@@ -452,9 +339,9 @@ function showAnimatedBrush() {
             }     
 
         var vineSpeed;
-        if (colorDuration === 0) vineSpeed = "15s";
-        else if (colorDuration === 1) vineSpeed = "5s";
-        else if (colorDuration === 2) vineSpeed = "1s";
+        if (animationSpeed === 0) vineSpeed = "15s";
+        else if (animationSpeed === 1) vineSpeed = "5s";
+        else if (animationSpeed === 2) vineSpeed = "1s";
         else vineSpeed = "5s";
 
 
@@ -464,5 +351,39 @@ function showAnimatedBrush() {
 
         }   
 
+
+    /* Character-based animated brushes */
+
+    var charBrushContainer;
+    var charSpeed;
+
+    if (animationSpeed === 0) charSpeed = 500;
+    else if (animationSpeed === 1) charSpeed = 100;
+    else if (animationSpeed === 2) charSpeed = 50;
+    else charSpeed = 100;
+
+    /* Character-based animated brushes - dots */
+    if ($("#visualSelect_animatedBrushValue").val() === "brush_dots") {
+    $("#brush_dots").show();
+    theInterval = setInterval(function() { updateCharBrush("brush_dots"); },charSpeed);    
     }
 
+    /* Character-based animated brushes - circles */
+    if ($("#visualSelect_animatedBrushValue").val() === "brush_circles") {
+    $("#brush_circles").show();
+    theInterval = window.setInterval(function() { updateCharBrush("brush_circles"); },charSpeed);   
+    }
+
+    /* Character-based animated brushes - stars */
+    if ($("#visualSelect_animatedBrushValue").val() === "brush_stars") {
+    $("#brush_stars").show();
+    theInterval = window.setInterval(function() { updateCharBrush("brush_stars"); },charSpeed); 
+    }
+
+    /* Character-based animated brushes - snowflakes */
+    if ($("#visualSelect_animatedBrushValue").val() === "brush_snowflakes") {
+    $("#brush_snowflakes").show();
+    theInterval = window.setInterval(function() { updateCharBrush("brush_snowflakes"); },charSpeed); 
+    }
+
+}

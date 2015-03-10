@@ -19,15 +19,14 @@
 @font-face {
     font-family: 'animatedBrushElements';
     src: url('../../fonts/animatedBrushElements.ttf');
-}
+    }
 
 
 #animatedBrushWrapper {
     width:100%;
     height:100%;
     overflow:visible;
-
-}
+    }
 
 /* animated brush - "8-bit" style */
 
@@ -36,7 +35,7 @@
     top:45%;
     left:0;
     width:100%;
-}
+    }
 
 #eightBitBrush .pixel {
     float:left;
@@ -80,71 +79,41 @@
 
 .brush_char {
     display:none;
-    position:absolute;
-    top:0;
-    left:0;
-    z-index:100;
+    margin-top:20%;
     width:100%;
     height:100%;
-    -webkit-animation-name: charAnimation;
-    -webkit-animation-duration: 20s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-play-state: running;
-    -webkit-animation-timing-function: linear;
-
     }
 
 
-/* animated brush - dots */
-@-webkit-keyframes charAnimation {
+/* Make some characters invisible for random spacing */
+.obj_hide {
+    color:#000;
+    }
 
-    from {
-        top:0px;
-        }
 
-    to {
-        top:-10000px;
-        }
-}
-
+    /* Dots - animated character-based brushes */
 
     #brush_dots span {
-        position:absolute;
-        z-index:200;
+        vertical-align:middle;
         }
-
 
     #brush_dots span::before {
         font-family:animatedBrushElements;
-        color:#ffffff;
+        color:#000;
         content:"\e600";
         }
 
-
-
-/* animated brush - circles */
-
-
-@-webkit-keyframes circlesAnimation {
-
-    from {
-        top:0px;
+    #brush_dots span.showDot::before {
+        color:#fff;
         }
 
-    to {
-        top:-10000px;
-        }
-}
 
 
-    #brush_circles span {
-        position:absolute;
-        z-index:200;
-        }
-
+    /* Circles - animated character-based brushes */
 
     #brush_circles span {
         font-family:animatedBrushElements;
+        vertical-align:middle;
         }
 
     .circle0::before {content:"\e625";}
@@ -193,28 +162,11 @@
         }
 
 
-
-/* animated brush - stars */
-
-@-webkit-keyframes starsAnimation {
-
-    from {
-        top:0px;
-        }
-
-    to {
-        top:-10000px;
-        }
-    }
-
-    #brush_stars span {
-        position:absolute;
-        z-index:200;
-        }
-
+    /* Stars - animated character-based brushes */
 
     #brush_stars span {
         font-family:animatedBrushElements;
+        vertical-align:middle;
         }
 
     .star0::before {content:"\e619";}
@@ -271,28 +223,11 @@
         }   
 
 
-/* Animated brush - snowflakes */
-
-@-webkit-keyframes snowflakesAnimation {
-
-    from {
-        top:0px;
-        }
-
-    to {
-        top:-10000px;
-        }
-}
-
-
-    #brush_snowflakes span {
-        position:absolute;
-        z-index:200;
-        }
-
+    /* Snowflakes - animated character-based brushes */
 
     #brush_snowflakes span {
         font-family:animatedBrushElements;
+        vertical-align:middle;        
         }
 
     .snowflake0::before {content:"\e60d";}
@@ -341,25 +276,7 @@
         }
 
 
-/* Animated brush - notes */
-
-@-webkit-keyframes notesAnimation {
-
-    from {
-        top:0px;
-        }
-
-    to {
-        top:-10000px;
-        }
-}
-
-
-    #brush_notes span {
-        position:absolute;
-        z-index:200;
-        }
-
+    /* Notes - animated character-based brushes */
 
     #brush_notes span {
         font-family:animatedBrushElements;
@@ -438,25 +355,7 @@
         }
 
 
-/* Animated brush - flowers */
-
-@-webkit-keyframes flowersAnimation {
-
-    from {
-        top:0px;
-        }
-
-    to {
-        top:-10000px;
-        }
-}
-
-
-    #brush_flowers span {
-        position:absolute;
-        z-index:200;
-        }
-
+    /* Flowers - animated character-based brushes */
 
     #brush_flowers span {
         font-family:animatedBrushElements;
