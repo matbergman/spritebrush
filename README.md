@@ -8,7 +8,7 @@ About
 -----
 SpriteBrush light painting Android application  
 v0.1, 3/13/2015  
-[www.spritebrush.com](www.spritebrush.com)
+[http://www.spritebrush.com](www.spritebrush.com)
 
 
 Support
