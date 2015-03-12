@@ -6,14 +6,14 @@ SpriteBrush is authored in HTML5 and published with PhoneGap.
 
 About
 -----
-SpriteBrush light painting Android application
-v0.1, 3/13/2015
+SpriteBrush light painting Android application  
+v0.1, 3/13/2015  
 [www.spritebrush.com](www.spritebrush.com)
 
 
 Support
 -------
-Technical support, questions, suggestions:
+Technical support, questions, suggestions:  
 [http://wwwgoogle.com/+Spritebrushapp](google.com/+Spritebrushapp)
 
 
@@ -41,5 +41,5 @@ History
 
 About the Author
 ----------------
-Mat Bergman
+Mat Bergman  
 [http://www.matbergman.com](www.matbergman.com)
