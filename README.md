@@ -8,13 +8,13 @@ About
 -----
 SpriteBrush light painting Android application  
 v0.1, 3/13/2015  
-[http://www.spritebrush.com](www.spritebrush.com)
+[www.spritebrush.com](http://www.spritebrush.com)
 
 
 Support
 -------
 Technical support, questions, suggestions:  
-[http://wwwgoogle.com/+Spritebrushapp](google.com/+Spritebrushapp)
+[google.com/+Spritebrushapp](http://www.google.com/+Spritebrushapp)
 
 History
 -------
@@ -24,4 +24,4 @@ History
 About the Author
 ----------------
 Mat Bergman  
-[http://www.matbergman.com](www.matbergman.com)
+[www.matbergman.com](http://www.matbergman.com)
