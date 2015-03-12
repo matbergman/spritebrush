@@ -51,10 +51,9 @@ var app = {
 
 /* ##### Configure layout #####  */
 
-var currentPage = document.getElementsByClassName("page")[0];
-
 var heightForPages = $(window).height();
 var widthForPages = $(window).width();
+
 
 /* ##### Panel menu ##### */
 
@@ -102,7 +101,7 @@ thePanel.appendChild(navStencils);
 //thePanel.appendChild(navFlashlight);
 
 
-/* ##### Populate content ##### */
+/* ##### Populate instructions content ##### */
 
 if ($(".instructions").length) {
 
@@ -112,7 +111,6 @@ var instructionsContainer = document.getElementsByClassName("instructions_conten
 instructionsContainer.innerHTML = instructionsContent;
 
 }
-
 
 
 /* ##### Overflow menu ##### */
@@ -150,13 +148,9 @@ theOverflow.appendChild(navAbout);
 function createSelect(elem) {
 
 var selectedList = document.getElementById(elem).getElementsByClassName("visualSelect")[0];
-
 var selectedListInput = document.getElementById(elem).getElementsByTagName("input")[0];
 var selectedListText = document.getElementById(elem).getElementsByTagName("button")[0];
-
-
 var selectedListContainers = selectedList.getElementsByClassName("selectButtonContainer");
-
 var selectedListButtons = selectedList.getElementsByTagName("button");
 
 $(selectedList).show();
@@ -188,7 +182,7 @@ function returnToPage(thePage, theFrame) {
 }
 
 
-/* ##### Toggle night mode theme */
+/* ##### Toggle night mode theme ##### */
 
 
 function getTheme() {
