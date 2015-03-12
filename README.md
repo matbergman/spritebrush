@@ -1,69 +1,45 @@
-# SpriteBrush
+SpriteBrush
+===========
 Source code for SpriteBrush, the light painting photography app for Android
 
+SpriteBrush is authored in HTML5 and published with PhoneGap.
+
+About
+-----
+SpriteBrush light painting Android application
+v0.1, 3/13/2015
+[www.spritebrush.com](www.spritebrush.com)
 
 
-## Bug list
-
-Instructions - images, video
-
-About - G+ page, github addresses
-
-Web site
-
-LINT & Minimize
-
-Publish
-
-~~Night mode - keep active across pages~~
-
-~~About - Format, update~~
-
-~~Branding - Logo~~
-
-~~Set up app support (G+) - G+ company page~~
-
-~~CSS - Media queries for smartphones vs. tablets~~
-
-~~Welcome - Prevent from displaying more than once functionality~~
-
-~~Welcome - "Don't show this screen again" functionality~~
-
-~~Welcome - Simplify HTML from popup to bordered element~~
-
-~~Welcome - Formatting~~
-
-~~All Brushes - Add "Paused, tap to restore, tap & hold to exit" message when paused~~
-
-~~All Buttons - Formatting. Design for label-only buttons~~
-
-~~Colors - Background is white instead of black~~
-
-~~Colors - Select button thumbnail background colors~~
-
-~~Animations - Add select button icons~~
-	
-~~Animations - Tap to hide~~
-
-~~Animations - Prevent animation brushes from merging when switching to/from brush type~~
-
-~~Animations - Prevent speed increase switching to/from 8-bit brushes (and others?)~~
-
-~~Animations - Fix brushes from Dots to Vines~~
-
-~~Stencils - Pause screen requires two taps~~
-
-~~Stencils - All stencils don't fit bounds of screen~~
-
-~~Instructions - Overflow menu~~
-
-~~About - Overflow menu~~
-
-~~Set up Google account for app distribution (spritepaint@gmail.com~~
+Support
+-------
+Technical support, questions, suggestions:
+[http://wwwgoogle.com/+Spritebrushapp](google.com/+Spritebrushapp)
 
 
-## V2 Requests
+License
+-------
+The MIT License (MIT)
 
-Flashlight - Detect if available, show disabled style in menu if not available
+Copyright &copy; 2015 Mat Bergman
 
-Flashlight - Functionality
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+History
+-------
+* v0.1, 3/15/2015: SpriteBrush was made as a fun toy for all human Earthlings.
+
+
+About the Author
+----------------
+Mat Bergman
+[http://www.matbergman.com](www.matbergman.com)
