@@ -1,5 +1,10 @@
 /* ##### Navigation ##### */
 
+#page_about a {
+	color:#000;
+	font-weight:bold;
+	}
+
 a#about {
     font-family:Roboto-Medium;
     color:#000;

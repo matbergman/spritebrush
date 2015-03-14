@@ -1,4 +1,4 @@
-/Users/Mat/Documents/code/spritepaint/platforms/android/ant-gen/com/example/lightbrush/R.java \
+/Users/Mat/Documents/code/spritepaint/platforms/android/ant-gen/com/spritebrush/R.java \
  : /Users/Mat/Documents/code/spritepaint/platforms/android/res/drawable/icon.png \
 /Users/Mat/Documents/code/spritepaint/platforms/android/res/drawable-hdpi/icon.png \
 /Users/Mat/Documents/code/spritepaint/platforms/android/res/drawable-ldpi/icon.png \
