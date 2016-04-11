@@ -17,28 +17,56 @@
 
     <script type="text/javascript" src="../../js/navigation.js"></script> 
 
-    <link rel="stylesheet" type="text/css" href="page_settings.css" /> 
-    <script type="text/javascript" src="page_settings.js"></script>
+    <link rel="stylesheet" type="text/css" href="page_settings.css" />
+    <script type="text/javascript" src="page_settings.js"></script> 
 
     <title>SpriteBrush Settings</title>
-
 </head>
 
-<body class="settings">
+<body>
+
+<!-- Navigation - panel menu -->
+<div data-role="panel" data-display="overlay" id="panel_menu">
+    <div class="ui-panel-inner"></div>
+</div>
+
+<!-- Navigation - overflow menu -->
+<div id="overflow_menu" data-role="popup" data-transition="pop"></div>
+
+<header>
+
+    <div class="header-wrapper">
+        <div class="header-title">
+        <span class="section-title">Settings</span>
+        </div>
+    </div>
+
+    <nav>
+    <a class="button_back" href="" onClick="window.history.back();"></a>
+    <a class="button_overflow" href="#overflow_menu" data-rel="popup"></a>
+    </nav>
+
+</header>
+
 
 <div class="page_container" id="page_settings">
 
-<form id="form_screensize">
+<form id="form_settings">
 
-<fieldset class="layout_labels" id="fieldset_screensize">
 
-    <div class="visualSelect_description">
-    <p>
-    XXX
-    </p>
-    </div>
+<fieldset class="layout_labels" id="fieldset_brushsize">
 
-    <div class="visualSelect" id="visualSelect_screensize">
+<label for="button_selectBrushsize">Brush Size</label>
+<button id="button_selectBrushsize"></button>
+
+    <div class="visualSelect" id="visualSelect_brushsize">
+
+        <div class="visualSelect_description">
+        <p>
+        Adjust the size of brushes on your device's screen. Useful to display small brushes on large tablets.
+        </p>
+        </div>
+
         <div class="selectButtonContainer">
             <div class="selectButtonLabel">100%</div>
         <button class="selectButton" value=100>100%</button>
@@ -57,13 +85,23 @@
         </div>
     </div>
 
-<input type="hidden" name="visualSelect_screensizeValue" id="visualSelect_screensizeValue" value="100" />
+    <input type="hidden" name="visualSelect_brushsizeValue" id="visualSelect_brushsizeValue" value="100" />
+
 
 </fieldset>
 
+
+
+
+
+
+
 </form>
 
+
 </div>
+
+
 
 
 
@@ -74,6 +112,6 @@
 <script type="text/javascript">
     app.initialize();
 </script>
+</body>
 
-    </body>
 </html>

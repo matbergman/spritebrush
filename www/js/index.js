@@ -136,11 +136,16 @@ navAbout.href = "#";
 navAbout.id = "about";
 navAbout.innerHTML = "About";
 
+var navSettings = document.createElement("a");
+navSettings.href = "#";
+navSettings.id = "settings";
+navSettings.innerHTML = "Settings";
+
 navNightMode.appendChild(navNightModeToggle);
 theOverflow.appendChild(navNightMode);
 theOverflow.appendChild(navInstructions);
 theOverflow.appendChild(navAbout);
-
+theOverflow.appendChild(navSettings);
 
     
 /* ##### Custom select control ##### */
@@ -200,3 +205,9 @@ function toggleTheme() {
             }
     $("#overflow_menu").popup("close");
 }
+
+/* ##### Set brush size ##### */
+var brushsize;
+var defaultBrushsize = 100;
+
+

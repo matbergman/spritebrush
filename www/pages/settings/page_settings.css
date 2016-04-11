@@ -1,7 +1,10 @@
-.settings .visualSelect {
+.visualSelect_settings {
+	position:relative;
 	display:block;
-	height:100%;
+	overflow-y:hidden;
 }
+
+
 
 /* ##### Media Queries ##### */
 

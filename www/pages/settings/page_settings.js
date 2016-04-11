@@ -3,33 +3,26 @@ $(document).ready(function(){
 /* ##### Check if night mode skin is enabled */
 getTheme();
 
+if (localStorage.brushsize == 0) {brushsize = defaultBrushsize;}
+else {brushsize = localStorage.brushsize;}
+document.getElementById("button_selectBrushsize").innerHTML = brushsize+"%";
+
 
 /* Select buttons */
 
-$(".selectButton").on("click", function() {
-	console.log(this.value);
-	window.history.back();
+$("#button_selectBrushsize").on("click", function() {
+
+    createSelect("fieldset_brushsize"); 
+    return false;
+
     });
 
 
+/* Save the selected brush size to local storage for use on all pages */
+$(".selectButton").on("click",function() {
+    localStorage.brushsize = this.value;
+	});
 
-/* ##### Screen size buttons */
-
-createSelect("fieldset_screensize"); 
-
-/*
-var selectedScreensize  = $("#visualSelect_screensizeValue").val();
-
-
-if (selectedScreensize == 100) {console.log("+++100")}
-else if (selectedScreensize == 80) {console.log("+++80")}
-else if (selectedScreensize == 50) {console.log("+++50")}
-else if (selectedScreensize == 20) {console.log("+++20")}
-else {console.log("+++none")}
-
-
-console.log(selectedScreensize);
-*/
 
 
 });

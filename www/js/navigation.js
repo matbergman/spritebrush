@@ -34,6 +34,10 @@ $("#about").click(function() {
     window.location = "../about/page_about.html"
     });
 
+$("#settings").click(function() {
+    window.location = "../settings/page_settings.html"
+    });
+
 $("#nightMode").click(function() {
     toggleTheme();
     });

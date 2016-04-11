@@ -4,6 +4,16 @@ $(document).ready(function(){
 getTheme();
 
 
+/* ##### Set brush size ####  */
+// brushsize variable set in index.js, modified in page_settings.html
+
+
+var brushsize = localStorage.getItem('brushsize');
+if (brushsize==0) {brushsize = defaultBrushsize}
+var brushsizeClassname = "brushsize_"+brushsize;
+$("#container_brushsize").removeClass().addClass(brushsizeClassname);
+
+
 /* ##### Event handlers ##### */
 
 $("#button_showColor").on("click", function() {
