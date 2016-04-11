@@ -658,7 +658,7 @@ header nav a {
     height: 48px;
     width: 48px;
     position: fixed;
-    font-family:icons-app;
+    font-family:icons-app; /* font family generated with icomoon.io app */
     text-align:center;
     font-size:17px;
     line-height:48px;
@@ -682,6 +682,16 @@ header nav a {
         a.button_overflow::before {
             content:"\E601";
             }
+
+    a.button_back {
+        top:8px;
+        left:20px;
+        font-size:1.6em;
+        }
+
+        a.button_back::before {
+            content:"\e900";
+        }
 
 
 .toggleDisplay {
