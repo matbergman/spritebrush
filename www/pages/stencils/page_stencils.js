@@ -4,6 +4,18 @@ $(document).ready(function(){
 getTheme();
 
 
+/* ##### Populate instructions content ##### */
+
+if ($(".instructions").length) {
+
+var instructionsContent = "Tap the screen to toggle the stencil. Tap &amp; hold to close and exit."
+
+var instructionsContainer = document.getElementsByClassName("instructions_content")[0];
+instructionsContainer.innerHTML = instructionsContent;
+
+}
+
+
 /* ##### Event handlers ##### */
 $("#button_showStencil").on("click", function() {
     showStencil();

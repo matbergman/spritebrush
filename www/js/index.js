@@ -101,17 +101,6 @@ thePanel.appendChild(navStencils);
 //thePanel.appendChild(navFlashlight);
 
 
-/* ##### Populate instructions content ##### */
-
-if ($(".instructions").length) {
-
-var instructionsContent = "Tap the screen to toggle the stencil. Tap &amp; hold to close and exit."
-
-var instructionsContainer = document.getElementsByClassName("instructions_content")[0];
-instructionsContainer.innerHTML = instructionsContent;
-
-}
-
 
 /* ##### Overflow menu ##### */
 

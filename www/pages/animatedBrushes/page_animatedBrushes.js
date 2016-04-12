@@ -4,6 +4,18 @@
 getTheme();
 
 
+/* ##### Populate instructions content ##### */
+
+if ($(".instructions").length) {
+
+var instructionsContent = "Tap the screen to toggle the animated brush. Tap &amp; hold to close and exit."
+
+var instructionsContainer = document.getElementsByClassName("instructions_content")[0];
+instructionsContainer.innerHTML = instructionsContent;
+
+}
+
+
 /* ##### Event handlers ##### */
 
 $("#button_showAnimatedBrush").on("click", function() {
