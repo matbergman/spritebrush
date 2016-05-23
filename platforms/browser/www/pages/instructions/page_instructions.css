@@ -1,0 +1,34 @@
+/* ##### Navigation ##### */
+
+a#instructions {
+    font-family:Roboto-Medium;
+    color:#000;
+    }
+
+#page_instructions .content_container p:first-child {
+    margin-top:4em;
+    }
+
+/* ##### Layout ##### */
+
+.screenshots {
+	width:860px;
+	overflow:auto;
+	margin:0 0 1em 0;
+	}
+
+.img_screenshot {
+	width:212px;
+	height:119px;
+	padding:1px;
+	float:left;
+	}
+
+
+@media only screen and (max-device-width: 640px) {
+
+	#page_instructions .content_container p:first-child {
+	    margin-top:6em;
+	    }
+
+}          

@@ -1,0 +1,52 @@
+.visualSelect_settings {
+	position:relative;
+	display:block;
+	overflow-y:hidden;
+}
+
+@font-face { 
+	font-family: 'brushsize';
+	src: url(../../fonts/icons_brushsize.ttf);
+    }
+
+    .font-brushsize {
+        font-family:brushsize;
+        }
+
+
+.selectButtonThumbnail_settings {
+	font-size:15em;
+	text-align:center;
+	line-height:1.4;
+}
+
+
+.brushsizeSelect_100::before {
+    font-family:brushsize;
+    content:"\E900";
+    }
+
+.brushsizeSelect_80::before {
+    font-family:brushsize;
+    content:"\E901";
+    }
+
+.brushsizeSelect_50::before {
+    font-family:brushsize;
+    content:"\E902";
+    }
+
+.brushsizeSelect_20::before {
+    font-family:brushsize;
+    content:"\E903";
+    }        
+
+
+/* ##### Media Queries ##### */
+
+/* Small screens, smartphones */
+
+@media only screen and (max-device-width: 640px) {
+
+
+}
