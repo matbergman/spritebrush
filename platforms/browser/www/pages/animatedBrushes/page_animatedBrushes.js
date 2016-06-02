@@ -16,6 +16,14 @@ instructionsContainer.innerHTML = instructionsContent;
 }
 
 
+/* ##### Set brush size ####  */
+// brushsize variable set in index.js, modified in page_settings.html
+var brushsize = localStorage.getItem('brushsize');
+if (brushsize==0 || brushsize==null) {brushsize = defaultBrushsize}
+var brushsizeClassname = "brushsize_"+brushsize;
+$("#container_brushsize").removeClass().addClass(brushsizeClassname);
+
+
 /* ##### Event handlers ##### */
 
 $("#button_showAnimatedBrush").on("click", function() {
@@ -177,6 +185,27 @@ for (i=0;i<chips.length;i++) {
 }
 
 
+function updateStreaker() {
+
+var brush = document.getElementById("streaker");
+var chips = brush.getElementsByClassName("ball");
+var displayVal;
+
+for (i=0;i<chips.length;i++) {
+
+    displayVal = Math.random();
+
+        if (displayVal > .8) {
+            chips[i].className = "ball on"
+        }
+        else {
+            chips[i].className = "ball off"
+        }
+    }
+
+}
+
+
 
 /* Animated brush - character based */        
 
@@ -272,20 +301,57 @@ function showAnimatedBrush() {
         }
 
 
-    /* Color cycling animated brush */
-
+    /* Cycling Primary Colors animated brush */
     if ($("#visualSelect_animatedBrushValue").val() === "colorCycle_primary") {
 
-        var colorFlowSpeed;
-        if (animationSpeed === 0) colorFlowSpeed = "6s";
-        else if (animationSpeed === 1) colorFlowSpeed = "3s";
-        else if (animationSpeed === 2) colorFlowSpeed = "1s";
-        else colorFlowSpeed = "3s";
+        var colorPrimarySpeed;
+        if (animationSpeed === 0) colorPrimarySpeed = "6s";
+        else if (animationSpeed === 1) colorPrimarySpeed = "3s";
+        else if (animationSpeed === 2) colorPrimarySpeed = "1s";
+        else colorPrimarySpeed = "3s";
 
-        $("#animatedColor").show();
-        document.getElementById("animatedColor").style.webkitAnimationDuration=colorFlowSpeed;        
+        $("#colorCycle_primary").show();
+        document.getElementById("colorCycle_primary").style.webkitAnimationDuration=colorPrimarySpeed;        
     }
 
+    /* Cycling Summer Colors animated brush */
+    if ($("#visualSelect_animatedBrushValue").val() === "colorCycle_summer") {
+
+        var colorSummerSpeed;
+        if (animationSpeed === 0) colorSummerSpeed = "6s";
+        else if (animationSpeed === 1) colorSummerSpeed = "3s";
+        else if (animationSpeed === 2) colorSummerSpeed = "1s";
+        else colorSummerSpeed = "3s";
+
+        $("#colorCycle_summer").show();
+        document.getElementById("colorCycle_summer").style.webkitAnimationDuration=colorSummerSpeed;        
+    }
+
+    /* Cycling Autumn Colors animated brush */
+    if ($("#visualSelect_animatedBrushValue").val() === "colorCycle_autumn") {
+
+        var colorAutumnSpeed;
+        if (animationSpeed === 0) colorAutumnSpeed = "6s";
+        else if (animationSpeed === 1) colorAutumnSpeed = "3s";
+        else if (animationSpeed === 2) colorAutumnSpeed = "1s";
+        else colorAutumnSpeed = "3s";
+
+        $("#colorCycle_autumn").show();
+        document.getElementById("colorCycle_autumn").style.webkitAnimationDuration=colorAutumnSpeed;        
+    }
+
+    /* Cycling Winter Colors animated brush */
+    if ($("#visualSelect_animatedBrushValue").val() === "colorCycle_winter") {
+
+        var colorWinterSpeed;
+        if (animationSpeed === 0) colorWinterSpeed = "6s";
+        else if (animationSpeed === 1) colorWinterSpeed = "3s";
+        else if (animationSpeed === 2) colorWinterSpeed = "1s";
+        else colorWinterSpeed = "3s";
+
+        $("#colorCycle_winter").show();
+        document.getElementById("colorCycle_winter").style.webkitAnimationDuration=colorWinterSpeed;        
+    }
 
     /* Spinner animated brush */
     if ($("#visualSelect_animatedBrushValue").val() === "brush_spinner") {
@@ -300,9 +366,11 @@ function showAnimatedBrush() {
         else spinnerSpeed = "3s";
 
 
-        spinnerContainer.style.height = heightForPages+"px";
-        spinnerShape.style.width = heightForPages+"px";
-        spinnerShape.style.marginTop = (heightForPages/2)+"px";
+        var spinnerHeight =  $("#container_brushsize").height();
+
+        spinnerContainer.style.height = spinnerHeight+"px";
+        spinnerShape.style.width = spinnerHeight+"px";
+        spinnerShape.style.marginTop = (spinnerHeight/2)+"px";
 
         $("#brush_spinner").show();
         spinnerShape.style.webkitAnimationDuration=spinnerSpeed; 
@@ -333,35 +401,137 @@ function showAnimatedBrush() {
         }
 
 
-    /* Vine animated brush */
-    if ($("#visualSelect_animatedBrushValue").val() === "brush_vines") {
+    /* Bounce animated brush */
 
-        vineContainer = document.getElementById("brush_vines");
 
-        if (widthForPages <= 640) {
-                $("#brush_vines").addClass("brush_vines-640");
+    var brushHeight = $("#container_brushsize").height();
+    var ballHeight = $(".ball").height();
+    var translateVal = brushHeight - ballHeight + "px";
+
+    if ($("#visualSelect_animatedBrushValue").val() === "brush_bounce") {
+
+        var stylesheet = document.styleSheets[2];
+        console.log(stylesheet);
+        var rules = stylesheet.rules;
+        var i = rules.length;
+        var keyframes;
+        var keyframe;
+
+        while (i--) {
+
+        keyframes = rules.item(i);
+
+            if (keyframes.type === keyframes.KEYFRAMES_RULE && keyframes.name === "bounceAnimation") {
+
+                rules = keyframes.cssRules;
+                i = rules.length;
+
+                while (i--) {
+                    keyframe = rules.item(i);
+
+                    if (keyframe.type === keyframe.KEYFRAME_RULE && keyframe.keyText === "100%") {
+                        keyframe.style.transform = "translateY("+translateVal+")";
+                        break;
+                    }
+                }
+                break;
             }
+        }
 
-        if (widthForPages > 640) {
-                $("#brush_vines").addClass("brush_vines-960");
-            }
+        var bounceSpeed;
+        if (animationSpeed === 0) bounceSpeed = "3s";
+        else if (animationSpeed === 1) bounceSpeed = "1s";
+        else if (animationSpeed === 2) bounceSpeed = ".5s";
+        else bounceSpeed = "5s";
 
-        if (widthForPages > 960) {
-            $("#brush_vines").addClass("brush_vines-1280");
-            }     
-
-        var vineSpeed;
-        if (animationSpeed === 0) vineSpeed = "15s";
-        else if (animationSpeed === 1) vineSpeed = "5s";
-        else if (animationSpeed === 2) vineSpeed = "1s";
-        else vineSpeed = "5s";
+        bounceContainer = document.getElementsByClassName("bounce")[0];
+        bounceContainer.style.webkitAnimationDuration=bounceSpeed; 
 
 
-        vineContainer.style.webkitAnimationDuration=vineSpeed; 
+        $("#brush_bounce").show();    
 
-        $("#brush_vines").show();    
+    }   
 
-        }   
+
+
+    /* Orbit animated brush */
+
+    if ($("#visualSelect_animatedBrushValue").val() === "brush_orbit") {
+
+        orbitContainer = document.getElementsByClassName("orbit")[0];
+
+        orbitContainer.style.transformOrigin = (brushHeight/2)+"px 0";
+
+        var orbitLeft = ($("#container_brushsize").width()/2) - (brushHeight/2) - (ballHeight/2);
+        orbitContainer.style.left =  orbitLeft + "px";
+
+        var orbitSpeed;
+        if (animationSpeed === 0) orbitSpeed = "3s";
+        else if (animationSpeed === 1) orbitSpeed = "1s";
+        else if (animationSpeed === 2) orbitSpeed = ".5s";
+        else orbitSpeed = "5s";
+
+        orbitContainer.style.webkitAnimationDuration=orbitSpeed; 
+
+
+        $("#brush_orbit").show();    
+
+    }   
+
+
+
+    /* Pulse animated brush */
+
+    if ($("#visualSelect_animatedBrushValue").val() === "brush_pulse") {
+
+        pulseContainer = document.getElementsByClassName("pulse")[0];
+
+
+        var pulseSpeed;
+        if (animationSpeed === 0) pulseSpeed = "3s";
+        else if (animationSpeed === 1) pulseSpeed = "1s";
+        else if (animationSpeed === 2) pulseSpeed = ".5s";
+        else pulseSpeed = "5s";
+
+        pulseContainer.style.webkitAnimationDuration=pulseSpeed; 
+
+
+        $("#brush_pulse").show();    
+
+    }
+
+
+    /* Fade animated brush */
+
+    if ($("#visualSelect_animatedBrushValue").val() === "brush_fader") {
+
+        faderContainer = document.getElementsByClassName("fader")[0];
+
+        var faderSpeed;
+        if (animationSpeed === 0) faderSpeed = "3s";
+        else if (animationSpeed === 1) faderSpeed = "1s";
+        else if (animationSpeed === 2) faderSpeed = ".5s";
+        else faderSpeed = "5s";
+
+        faderContainer.style.webkitAnimationDuration=faderSpeed; 
+
+        $("#brush_fader").show();    
+
+    }
+
+
+
+    /* Streaker animated brush */
+
+    if ($("#visualSelect_animatedBrushValue").val() === "brush_streaker") {
+
+        theInterval = setInterval(function() { updateStreaker(); },1000); 
+
+        $("#brush_streaker").show();    
+
+    }
+
+
 
 
     /* Character-based animated brushes */

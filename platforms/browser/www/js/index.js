@@ -54,7 +54,6 @@ var app = {
 var heightForPages = $(window).height();
 var widthForPages = $(window).width();
 
-
 /* ##### Panel menu ##### */
 
 var thePanel = document.getElementsByClassName("ui-panel-inner")[0];
@@ -128,13 +127,13 @@ navAbout.innerHTML = "About";
 var navSettings = document.createElement("a");
 navSettings.href = "#";
 navSettings.id = "settings";
-navSettings.innerHTML = "Settings";
+navSettings.innerHTML = "Brush size";
 
 navNightMode.appendChild(navNightModeToggle);
 theOverflow.appendChild(navNightMode);
+theOverflow.appendChild(navSettings);
 theOverflow.appendChild(navInstructions);
 theOverflow.appendChild(navAbout);
-theOverflow.appendChild(navSettings);
 
     
 /* ##### Custom select control ##### */
@@ -196,7 +195,6 @@ function toggleTheme() {
 }
 
 /* ##### Set brush size ##### */
-console.log("+++++ "+localStorage.brushsize);
 var brushsize;
 var defaultBrushsize = 100;
 

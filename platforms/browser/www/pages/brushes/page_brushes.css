@@ -44,6 +44,23 @@ font-family: 'point';
     text-align:center;
     }
 
+    .brushsize_100 .brush_points {
+        font-size:3em;
+    }
+
+    .brushsize_80 .brush_points {
+        font-size:2.4em;
+    }
+
+    .brushsize_50 .brush_points {
+        font-size:1.5em;
+    }
+
+    .brushsize_20 .brush_points {
+        font-size:.6em;
+
+    }
+
     .brush_points:after {
         content:"\e600\e601\e601\e601\e601\e601\e600\e601\e601\e601\e601\e601\e600";
         }

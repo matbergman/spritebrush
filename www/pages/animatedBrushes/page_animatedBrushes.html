@@ -63,26 +63,50 @@
 
    <div class="selectButtonContainer">  
         <div class="selectButtonLabel">Cycle primary colors</div>
-        <div class="selectButtonThumbnail thumbnail_colorCycle_primary"></div>
+        <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_primary"></div>
         <button class="selectButton" value="colorCycle_primary">Cycle primary colors</button>
     </div>
 
-    <div class="selectButtonContainer">  
-        <div class="selectButtonLabel">Spinner</div>
-        <div class="selectButtonThumbnail thumbnail_spinner"></div>
-        <button class="selectButton" value="brush_spinner">Spinner</button>
+   <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Cycle summer colors</div>
+        <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_summer"></div>
+        <button class="selectButton" value="colorCycle_summer">Cycle summer colors</button>
+    </div>
+
+   <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Cycle autumn colors</div>
+        <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_autumn"></div>
+        <button class="selectButton" value="colorCycle_autumn">Cycle autumn colors</button>
+    </div>
+
+   <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Cycle winter colors</div>
+        <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_winter"></div>
+        <button class="selectButton" value="colorCycle_winter">Cycle autumn colors</button>
     </div>
 
     <div class="selectButtonContainer">  
-        <div class="selectButtonLabel">Fire</div>
-        <div class="selectButtonThumbnail thumbnail_flame"></div>
-        <button class="selectButton" value="brush_flame">Fire</button>
+        <div class="selectButtonLabel">Bounce</div>
+        <div class="selectButtonThumbnail thumbnail_bounce"></div>
+        <button class="selectButton" value="brush_bounce">Bounce</button>
     </div>
 
     <div class="selectButtonContainer">  
-        <div class="selectButtonLabel">Vines</div>
-        <div class="selectButtonThumbnail thumbnail_vines"></div>
-        <button class="selectButton" value="brush_vines">Vines</button>
+        <div class="selectButtonLabel">Orbit</div>
+        <div class="selectButtonThumbnail thumbnail_orbit"></div>
+        <button class="selectButton" value="brush_orbit">Orbit</button>
+    </div>
+
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Pulse</div>
+        <div class="selectButtonThumbnail thumbnail_pulse"></div>
+        <button class="selectButton" value="brush_pulse">Pulse</button>
+    </div>
+
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Fade</div>
+        <div class="selectButtonThumbnail thumbnail_fader"></div>
+        <button class="selectButton" value="brush_fader">Fade</button>
     </div>
 
     <div class="selectButtonContainer">  
@@ -127,6 +151,24 @@
         <div class="selectButtonLabel">Snowflakes</div>
         <div class="selectButtonThumbnail thumbnail_snowflakes"></div>
         <button class="selectButton" value="brush_snowflakes">Snowflakes</button>
+    </div>
+
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Streak</div>
+        <div class="selectButtonThumbnail thumbnail_streaker"></div>
+        <button class="selectButton" value="brush_streaker">Streak</button>
+    </div>
+
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Spinner</div>
+        <div class="selectButtonThumbnail thumbnail_spinner"></div>
+        <button class="selectButton" value="brush_spinner">Spinner</button>
+    </div>
+
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Fire</div>
+        <div class="selectButtonThumbnail thumbnail_flame"></div>
+        <button class="selectButton" value="brush_flame">Fire</button>
     </div>
 
 
@@ -213,7 +255,13 @@
                 <div id="brush_spinnerShape"></div>
             </div>
 
-            <div class="animatedBrush" id="animatedColor"></div> 
+            <div class="animatedBrush colorCycle" id="colorCycle_primary"></div> 
+
+            <div class="animatedBrush colorCycle" id="colorCycle_summer"></div> 
+
+            <div class="animatedBrush colorCycle" id="colorCycle_autumn"></div> 
+
+            <div class="animatedBrush colorCycle" id="colorCycle_winter"></div> 
 
             <div class="animatedBrush brush_char" id="brush_dots">
 
@@ -246,7 +294,44 @@
 
             <div class="animatedBrush brush_char" id="brush_flowers"></div>
 
-            <div class="animatedBrush" id="brush_vines"></div>
+            <div class="animatedBrush" id="brush_bounce">
+                <div class="ball bounce"></div>
+            </div>
+
+            <div class="animatedBrush" id="brush_orbit">
+                <div class="ball orbit"></div>
+            </div>
+
+            <div class="animatedBrush" id="brush_pulse">
+                <div class="ball pulse"></div>
+            </div>
+
+            <div class="animatedBrush" id="brush_fader">
+                <div class="ball fader"></div>
+            </div>
+
+            <div class="animatedBrush" id="brush_streaker">
+
+                <div class="streaker_container" id="streaker"> 
+                    <div class="ball" id="b1"></div>
+                    <div class="ball" id="b2"></div>
+                    <div class="ball" id="b3"></div>
+                    <div class="ball" id="b4"></div>
+                    <div class="ball" id="b5"></div>
+                    <div class="ball" id="b6"></div>
+                    <div class="ball" id="b7"></div>
+                    <div class="ball" id="b8"></div>    
+                    <div class="ball" id="b9"></div>
+                    <div class="ball" id="b10"></div>
+                    <div class="ball" id="b11"></div>
+                    <div class="ball" id="b12"></div>
+                    <div class="ball" id="b13"></div>
+                    <div class="ball" id="b14"></div>
+                    <div class="ball" id="b15"></div>
+                    <div class="ball" id="b16"></div>            
+                </div>
+
+            </div>
 
             <div class="animatedBrush" id="brush_flame"></div>
 
