@@ -12,16 +12,14 @@ a#instructions {
 /* ##### Layout ##### */
 
 .screenshots {
-	width:860px;
+	width:100%;
 	overflow:auto;
 	margin:0 0 1em 0;
+	line-height:1;
 	}
 
 .img_screenshot {
-	width:212px;
-	height:119px;
-	padding:1px;
-	float:left;
+	width:24.45%;
 	}
 
 

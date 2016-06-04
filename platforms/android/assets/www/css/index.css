@@ -349,7 +349,7 @@ form {
 
 .instructions {
     position:absolute;
-    bottom:8.5em;
+    bottom:9.5em;
     left:0;
     width:100%;
     z-index:1;
@@ -410,6 +410,8 @@ body.content .ui-page-active {
 
 .content_container table {
     border-collapse:collapse;
+    clear:both;
+    line-height:1.4;
     }
 
     .content_container table td {

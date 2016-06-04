@@ -1,79 +1,79 @@
-    $(document).ready(function(){
+$(document).ready(function(){
 
-/* ##### Check if night mode skin is enabled */
-getTheme();
-
-
-/* ##### Populate instructions content ##### */
-
-if ($(".instructions").length) {
-
-var instructionsContent = "Tap the screen to toggle the animated brush. Tap &amp; hold to close and exit."
-
-var instructionsContainer = document.getElementsByClassName("instructions_content")[0];
-instructionsContainer.innerHTML = instructionsContent;
-
-}
+    /* ##### Check if night mode skin is enabled */
+    getTheme();
 
 
-/* ##### Set brush size ####  */
-// brushsize variable set in index.js, modified in page_settings.html
-var brushsize = localStorage.getItem('brushsize');
-if (brushsize==0 || brushsize==null) {brushsize = defaultBrushsize}
-var brushsizeClassname = "brushsize_"+brushsize;
-$("#container_brushsize").removeClass().addClass(brushsizeClassname);
+    /* ##### Populate instructions content ##### */
+
+    if ($(".instructions").length) {
+
+    var instructionsContent = "Tap the screen to toggle the animated brush. Tap &amp; hold to close and exit."
+
+    var instructionsContainer = document.getElementsByClassName("instructions_content")[0];
+    instructionsContainer.innerHTML = instructionsContent;
+
+    }
 
 
-/* ##### Event handlers ##### */
-
-$("#button_showAnimatedBrush").on("click", function() {
-    showAnimatedBrush();
-    $("#toggleBackground").hide();    
-    return false;
-    });
-
-
-/* Select buttons */
-
-$("#button_selectAnimatedBrush").on("click", function() {
-    createSelect("fieldset_animatedBrush"); 
-    return false;
-    });
+    /* ##### Set brush size ####  */
+    // brushsize variable set in index.js, modified in page_settings.html
+    var brushsize = localStorage.getItem('brushsize');
+    if (brushsize==0 || brushsize==null) {brushsize = defaultBrushsize}
+    var brushsizeClassname = "brushsize_"+brushsize;
+    $("#container_brushsize").removeClass().addClass(brushsizeClassname);
 
 
-$("#button_selectAnimatedBrushSpeed").on("click", function() {
-    createSelect("fieldset_animatedBrushSpeed"); 
-    return false;
-    });
+    /* ##### Event handlers ##### */
+
+    $("#button_showAnimatedBrush").on("click", function() {
+        showAnimatedBrush();
+        $("#toggleBackground").hide();    
+        return false;
+        });
 
 
-/* Touch events */
+    /* Select buttons */
 
-$("#animatedBrushFrame").on("tap",function(){
-    $("#animatedBrushWrapper").toggle();
-    $("#toggleBackground").toggle();    
-    });
+    $("#button_selectAnimatedBrush").on("click", function() {
+        createSelect("fieldset_animatedBrush"); 
+        return false;
+        });
+
+
+    $("#button_selectAnimatedBrushSpeed").on("click", function() {
+        createSelect("fieldset_animatedBrushSpeed"); 
+        return false;
+        });
+
+
+    /* Touch events */
+
+    $("#animatedBrushFrame").on("tap",function(){
+        $("#animatedBrushWrapper").toggle();
+        $("#toggleBackground").toggle();    
+        });
 
 
 
-/* Tap & hold - return to Animated Brushes screen */
-$("#animatedBrushFrame").on("taphold",function(){
+    /* Tap & hold - return to Animated Brushes screen */
+    $("#animatedBrushFrame").on("taphold",function(){
 
-    /* Restore page background color from black */
-    $(".ui-page-theme-a").css("backgroundColor","#cfd8dc");
+        /* Restore page background color from black */
+        $(".ui-page-theme-a").css("backgroundColor","#cfd8dc");
 
-    /* Reset each animated brush. Mixed brush types on this page require individual solutions. */
-    clearInterval(theInterval);
-    $(".animatedBrush").hide();
-    $(".pixel").css('background-color', 'transparent');
+        /* Reset each animated brush. Mixed brush types on this page require individual solutions. */
+        clearInterval(theInterval);
+        $(".animatedBrush").hide();
+        $(".pixel").css('background-color', 'transparent');
 
-    /* Reset wrapper display state for next brush */
-    $("#animatedBrushWrapper").hide();
+        /* Reset wrapper display state for next brush */
+        $("#animatedBrushWrapper").hide();
 
-    /* Return to Animated Brushes page */
-    returnToPage("#page_animatedBrushes","#animatedBrushFrame");
+        /* Return to Animated Brushes page */
+        returnToPage("#page_animatedBrushes","#animatedBrushFrame");
 
-    });
+        });
 
 
 });
@@ -410,8 +410,8 @@ function showAnimatedBrush() {
 
     if ($("#visualSelect_animatedBrushValue").val() === "brush_bounce") {
 
-        var stylesheet = document.styleSheets[2];
-        console.log(stylesheet);
+        // Change CSS keyframe value based on screen size        
+        var stylesheet = document.styleSheets[2]; // page_animatedBrushes.css
         var rules = stylesheet.rules;
         var i = rules.length;
         var keyframes;
@@ -446,7 +446,6 @@ function showAnimatedBrush() {
 
         bounceContainer = document.getElementsByClassName("bounce")[0];
         bounceContainer.style.webkitAnimationDuration=bounceSpeed; 
-
 
         $("#brush_bounce").show();    
 
