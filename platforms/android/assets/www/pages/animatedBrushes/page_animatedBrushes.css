@@ -517,13 +517,11 @@
     }
 
 #brush_spinnerShape {
+    position:absolute;
     width:auto;
     height:6px;
     border-radius:3px;
     background: -webkit-linear-gradient(left, #ffff96 0%,#ffffff 40%,#ffffff 60%,#ffff96 100%);
-    margin-left:auto;
-    margin-right:auto;
-    margin-top:auto;
     -webkit-animation: spinnerAnimation 1s linear infinite;
     }
 
