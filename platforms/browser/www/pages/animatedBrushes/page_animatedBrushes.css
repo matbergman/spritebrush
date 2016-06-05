@@ -546,21 +546,21 @@
 .ball.bounce {
     top:0;
     left:calc(50% - 5px);   
-    animation-name: bounceAnimation;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: linear;
+    -webkit-animation-name: bounceAnimation;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: linear;
 }
 
-@keyframes bounceAnimation {
+@-webkit-keyframes bounceAnimation {
 
   from {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
   }
 
   to {
-    transform: translateY(360px);
+    -webkit-transform: translateY(360px);
   }
 
 }
@@ -573,21 +573,21 @@
 .ball.orbit {
     top:calc(50% - 5px);
     left:calc(50% - 180px - 5px);
-    animation-name: orbitAnimation;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    transform-origin: 180px 0;    
+    -webkit-animation-name: orbitAnimation;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-transform-origin: 180px 0;    
 }
 
-@keyframes orbitAnimation {
+@-webkit-keyframes orbitAnimation {
 
   from {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
   }
 
   to {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
   }
 
 }
@@ -598,23 +598,23 @@
 .ball.pulse {
     top:calc(50% - 5px);
     left:calc(50% - 5px);   
-    animation-name: pulseAnimation;
-    animation-duration: .5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate; 
-    animation-timing-function: linear;
+    -webkit-animation-name: pulseAnimation;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate; 
+    -webkit-animation-timing-function: linear;
 }
 
 
 
-@keyframes pulseAnimation {
+@-webkit-keyframes pulseAnimation {
 
   from {
-    transform: scale(1,1);
+    -webkit-transform: scale(1,1);
   }
 
   to {
-    transform: scale(10,10);
+    -webkit-transform: scale(10,10);
   }
 
 
@@ -624,11 +624,11 @@
 /* Animated brush - fade */
 
 .fader {
-    animation-name: faderAnimation;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate; 
-    animation-timing-function: linear;
+    -webkit-animation-name: faderAnimation;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate; 
+    -webkit-animation-timing-function: linear;
 }
 
 .ball.fader {
@@ -671,7 +671,7 @@
     }    
 
 
-@keyframes faderAnimation {
+@-webkit-keyframes faderAnimation {
 
   from {
     opacity:0;
@@ -708,16 +708,16 @@
 }
 
 .streaker_container .ball.on {
-    animation-name: streakerAnimationOn;
+    -webkit-animation-name: streakerAnimationOn;
     opacity:1;
 }
 
 .streaker_container .ball.off {
-    animation-name: streakerAnimationOff;
+    -webkit-animation-name: streakerAnimationOff;
     opacity:0;
 }
 
-@keyframes streakerAnimationOn {
+@-webkit-keyframes streakerAnimationOn {
 
   from {
     opacity:0;
@@ -730,7 +730,7 @@
 
 }
 
-@keyframes streakerAnimationOff {
+@-webkit-keyframes streakerAnimationOff {
 
   from {
     opacity:1;
@@ -784,22 +784,22 @@
 
     top:0;
     left:calc(50% - 5px);   
-    animation-name: bounceThumbnailAnimation;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: linear;
+    -webkit-animation-name: bounceThumbnailAnimation;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: linear;
 
 }
 
-    @keyframes bounceThumbnailAnimation {
+    @-webkit-keyframes bounceThumbnailAnimation {
 
       from {
-        transform: translateY(20px);
+        -webkit-transform: translateY(20px);
       }
 
       to {
-        transform: translateY(80px);
+        -webkit-transform: translateY(80px);
       }
 
     }
@@ -815,22 +815,22 @@
 
     top:calc(50% - 5px);
     left:calc(50% - 50px - 5px);
-    animation-name: orbitThumbnailAnimation;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    transform-origin: 50px 0;    
+    -webkit-animation-name: orbitThumbnailAnimation;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-transform-origin: 50px 0;    
 
 }
 
-    @keyframes orbitThumbnailAnimation {
+    @-webkit-keyframes orbitThumbnailAnimation {
 
       from {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
       }
 
       to {
-        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
       }
 
     }
@@ -846,22 +846,22 @@
 
     top:calc(40% - 5px);
     left:calc(50% - 5px);   
-    animation-name: pulseThumbnailAnimation;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate; 
-    animation-timing-function: linear;
+    -webkit-animation-name: pulseThumbnailAnimation;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate; 
+    -webkit-animation-timing-function: linear;
 
 }
 
-    @keyframes pulseThumbnailAnimation {
+    @-webkit-keyframes pulseThumbnailAnimation {
 
       from {
-        transform: scale(1,1);
+        -webkit-transform: scale(1,1);
       }
 
       to {
-        transform: scale(3,3);
+        -webkit-transform: scale(3,3);
       }
 
 
@@ -878,15 +878,15 @@
     top:calc(40% - 5px);
     left:calc(50% - 5px);
 
-    animation-name: faderThumbnailAnimation;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate; 
-    animation-timing-function: linear;
+    -webkit-animation-name: faderThumbnailAnimation;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate; 
+    -webkit-animation-timing-function: linear;
 
 }
 
-    @keyframes faderThumbnailAnimation {
+    @-webkit-keyframes faderThumbnailAnimation {
 
       from {
         opacity:0;
@@ -909,7 +909,7 @@
     background-image:url(../../img/icon_streaker.png);
     background-size:150px 50px;
     background-position:0px 0px;
-    animation: streakerThumbnailAnimation 5s steps(5) infinite; 
+    -webkit-animation: streakerThumbnailAnimation 5s steps(5) infinite; 
     }
 
     @-webkit-keyframes streakerThumbnailAnimation {
@@ -937,7 +937,7 @@
     background-image:url(../../img/icon_flame.png);
     background-size:150px 50px;
     background-position:0px 0px;
-    animation: flameThumbnailAnimation .5s steps(5) infinite; 
+    -webkit-animation: flameThumbnailAnimation .5s steps(5) infinite; 
     }
 
     @-webkit-keyframes flameThumbnailAnimation {

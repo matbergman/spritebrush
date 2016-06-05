@@ -421,7 +421,7 @@ function showAnimatedBrush() {
 
         keyframes = rules.item(i);
 
-            if (keyframes.type === keyframes.KEYFRAMES_RULE && keyframes.name === "bounceAnimation") {
+            if (keyframes.type === keyframes.WEBKIT_KEYFRAMES_RULE && keyframes.name === "bounceAnimation") {
 
                 rules = keyframes.cssRules;
                 i = rules.length;
@@ -429,8 +429,8 @@ function showAnimatedBrush() {
                 while (i--) {
                     keyframe = rules.item(i);
 
-                    if (keyframe.type === keyframe.KEYFRAME_RULE && keyframe.keyText === "100%") {
-                        keyframe.style.transform = "translateY("+translateVal+")";
+                    if (keyframe.type === keyframe.WEBKIT_KEYFRAME_RULE && keyframe.keyText === "100%") {
+                        keyframe.style.webkitTransform = "translateY("+translateVal+")";
                         break;
                     }
                 }
@@ -447,6 +447,7 @@ function showAnimatedBrush() {
         bounceContainer = document.getElementsByClassName("bounce")[0];
         bounceContainer.style.webkitAnimationDuration=bounceSpeed; 
 
+
         $("#brush_bounce").show();    
 
     }   
@@ -459,7 +460,7 @@ function showAnimatedBrush() {
 
         orbitContainer = document.getElementsByClassName("orbit")[0];
 
-        orbitContainer.style.transformOrigin = (brushHeight/2)+"px 0";
+        orbitContainer.style.webkitTransformOrigin = (brushHeight/2)+"px 0";
 
         var orbitLeft = ($("#container_brushsize").width()/2) - (brushHeight/2) - (ballHeight/2);
         orbitContainer.style.left =  orbitLeft + "px";
