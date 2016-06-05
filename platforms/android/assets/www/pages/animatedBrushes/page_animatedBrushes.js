@@ -285,6 +285,10 @@ function showAnimatedBrush() {
 
     var animationSpeed = eval($("#visualSelect_animatedBrushSpeedValue").val());
 
+    var brushHeight = $("#container_brushsize").height();
+    var ballHeight = $(".ball").height();
+    var translateVal = brushHeight - ballHeight + "px";
+
     /* 8-bit brushes */
     if ($("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_flame" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_steel" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_camo" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_checkers" ) {
 
@@ -367,10 +371,14 @@ function showAnimatedBrush() {
 
 
         var spinnerHeight =  $("#container_brushsize").height();
+        var spinnerWidth = $("#container_brushsize").width();
+
+console.log(spinnerWidth);
 
         spinnerContainer.style.height = spinnerHeight+"px";
         spinnerShape.style.width = spinnerHeight+"px";
-        spinnerShape.style.marginTop = (spinnerHeight/2)+"px";
+        spinnerShape.style.top = (spinnerHeight/2) - 3 +"px";
+        spinnerShape.style.left = (spinnerWidth/2) - (spinnerHeight/2) +"px";
 
         $("#brush_spinner").show();
         spinnerShape.style.webkitAnimationDuration=spinnerSpeed; 
@@ -402,11 +410,6 @@ function showAnimatedBrush() {
 
 
     /* Bounce animated brush */
-
-
-    var brushHeight = $("#container_brushsize").height();
-    var ballHeight = $(".ball").height();
-    var translateVal = brushHeight - ballHeight + "px";
 
     if ($("#visualSelect_animatedBrushValue").val() === "brush_bounce") {
 

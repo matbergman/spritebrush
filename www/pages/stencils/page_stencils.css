@@ -802,7 +802,6 @@
 #stencil {
     width:100%;
     height:100%;
-    font-size:100vh;
     color:#fff;
     text-align:center;
     background-color:#000;
@@ -813,67 +812,197 @@
     -webkit-animation-play-state:running;
     }
 
+    .brushsize_20 #stencil {font-size:20vh; line-height:20vh;}
+
+    .brushsize_50 #stencil {font-size:50vh; line-height:50vh;}
+
+    .brushsize_80 #stencil {font-size:80vh; line-height:80vh;}
+
+    .brushsize_100 #stencil {font-size:100vh; line-height:100vh;}
+
+
 @-webkit-keyframes stencilStrobe {
     0%   {color:black;}
     97%  {color:black;}
     100% {color:white;}
     }
 
-    #stencil.stencil_0056 {
+    .brushsize_20 #stencil.stencil_0056 {
+        font-size:10vh;
+        }
+
+    .brushsize_50 #stencil.stencil_0056 {
+        font-size:20vh;
+        }
+
+    .brushsize_80 #stencil.stencil_0056 {
+        font-size:30vh;
+        }
+
+    .brushsize_100 #stencil.stencil_0056 {
         font-size:40vh;
-        margin-top:.5em;
+        }                
+
+    .brushsize_20 #stencil.stencil_0058 {
+        font-size:10vh;
         }
 
-    #stencil.stencil_0058 {
+    .brushsize_50 #stencil.stencil_0058 {
+        font-size:20vh;
+        }
+
+    .brushsize_80 #stencil.stencil_0058 {
+        font-size:30vh;
+        }
+
+    .brushsize_100 #stencil.stencil_0058 {
         font-size:40vh;
-        margin-top:.5em;
         }
 
-    #stencil.stencil_0059 {
+    .brushsize_20 #stencil.stencil_0059 {
+        font-size:10vh;
+        }
+
+    .brushsize_50 #stencil.stencil_0059 {
+        font-size:25vh;
+        }
+
+    .brushsize_80 #stencil.stencil_0059 {
+        font-size:30vh;
+        }        
+
+    .brushsize_100 #stencil.stencil_0059 {
         font-size:50vh;
-        margin-top:.5em;
         }
 
-    #stencil.stencil_0062 {
+    .brushsize_20 #stencil.stencil_0062 {
+        font-size:10vh;
+        }
+
+    .brushsize_50 #stencil.stencil_0062 {
+        font-size:25vh;
+        }
+
+    .brushsize_80 #stencil.stencil_0062 {
+        font-size:30vh;
+        }
+
+    .brushsize_100 #stencil.stencil_0062 {
         font-size:50vh;
-        margin-top:.5em;
+        }                
+
+    .brushsize_20 #stencil.stencil_0066 {
+        font-size:10vh;
         }
 
-    #stencil.stencil_0066 {
+    .brushsize_50 #stencil.stencil_0066 {
+        font-size:25vh;
+        }
+
+    .brushsize_80 #stencil.stencil_0066 {
+        font-size:30vh;
+        }        
+
+    .brushsize_100 #stencil.stencil_0066 {
         font-size:50vh;
-        margin-top:.5em;
         }
 
-    #stencil.stencil_0091 {
+    .brushsize_20 #stencil.stencil_0091 {
+        font-size:15vh;
+        }
+
+    .brushsize_50 #stencil.stencil_0091 {
+        font-size:30vh;
+        }
+
+    .brushsize_80 #stencil.stencil_0091 {
+        font-size:45vh;
+        }        
+
+    .brushsize_100 #stencil.stencil_0091 {
         font-size:60vh;
-        margin-top:.15em;
         }
 
-    #stencil.stencil_0092 {
+
+    .brushsize_20 #stencil.stencil_0092 {
+        font-size:15vh;
+        }
+
+    .brushsize_50 #stencil.stencil_0092 {
+        font-size:32vh;
+        }
+
+    .brushsize_80 #stencil.stencil_0092 {
+        font-size:45vh;
+        }
+
+    .brushsize_100 #stencil.stencil_0092 {
         font-size:65vh;
-        margin-top:.15em;
         }
 
-    #stencil.stencil_0098 {
+    .brushsize_20 #stencil.stencil_0098 {
+        font-size:10vh;
+        }
+
+    .brushsize_50 #stencil.stencil_0098 {
+        font-size:25vh;
+        }
+
+    .brushsize_80 #stencil.stencil_0098 {
+        font-size:30vh;
+        }
+
+    .brushsize_100 #stencil.stencil_0098 {
         font-size:50vh;
-        margin-top:.15em;
         }
 
-    #stencil.stencil_0100 {
+    .brushsize_20 #stencil.stencil_0100 {
+        font-size:10vh;
+        }
+
+    .brushsize_50 #stencil.stencil_0100 {
+        font-size:15vh;
+        }
+
+    .brushsize_80 #stencil.stencil_0100 {
+        font-size:20vh;
+        }
+
+    .brushsize_100 #stencil.stencil_0100 {
         font-size:30vh;
-        margin-top:.75em;
+        }                
+
+    .brushsize_20 #stencil.stencil_0110 {
+        font-size:10vh;
         }
 
-    #stencil.stencil_0110 {
+    .brushsize_50 #stencil.stencil_0110 {
+        font-size:20vh;
+        }
+
+    .brushsize_80 #stencil.stencil_0110 {
+        font-size:30vh;
+        }
+
+    .brushsize_100 #stencil.stencil_0110 {
         font-size:40vh;
-        margin-top:.75em;
         }
 
-    #stencil.stencil_0111 {
+    .brushsize_20 #stencil.stencil_0111 {
+        font-size:10vh;
+        }
+
+    .brushsize_50 #stencil.stencil_0111 {
+        font-size:15vh;
+        }
+
+    .brushsize_80 #stencil.stencil_0111 {
+        font-size:20vh;
+        }
+
+    .brushsize_100 #stencil.stencil_0111 {
         font-size:30vh;
-        margin-top:.75em;
         }
-
 
 
 @media only screen and (min-device-width: 641px) {
