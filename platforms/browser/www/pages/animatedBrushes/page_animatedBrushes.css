@@ -132,6 +132,7 @@
     top:30%;
     text-align:center;
     width:100%;
+    overflow:hidden;
     }
 
 /* Make some characters invisible for random spacing */
@@ -153,7 +154,9 @@
         }
 
     #brush_dots span.showDot::before {
-        color:#fff;
+        background: -webkit-linear-gradient(#eee, #333);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         }
 
 
