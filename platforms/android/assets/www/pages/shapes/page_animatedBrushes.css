@@ -84,6 +84,19 @@
         100% {background: red;}
         }
 
+#colorCycle_spring {
+    -webkit-animation-name:colorCycleSpring;
+    }
+
+    @-webkit-keyframes colorCycleSpring {
+        0% {background: #45e851;}
+        20% {background: #5cb9ff;}
+        40% {background: #ffd722;}
+        60% {background: #e80855;}
+        80% {background: #8626ee;}
+        100% {background: #45e851;}
+        }
+
 #colorCycle_summer {
     -webkit-animation-name:colorCycleSummer;
     }
@@ -749,7 +762,7 @@
 
 
 /* ##### Thumbnails ##### */
-
+/*
 .selectButtonThumbnail {
     position:absolute;
     width:100%;
@@ -758,7 +771,7 @@
     background-repeat:no-repeat;
     background-position:center;
     }
-
+*/
 .thumbnail_colorArray_flame {
     background-image:url(../../img/thumb_8bitFlame.png);
     }
@@ -949,9 +962,9 @@
     position:relative;
     margin-left:auto;
     margin-right:auto;
-    margin-top:40%;
+    margin-top:0;
     width:100%;
-    height:5%;
+    height:100%;
     -webkit-animation-duration:3s;
     -webkit-animation-timing-function:ease;
     -webkit-animation-delay:0s;
@@ -961,6 +974,10 @@
 
     .thumbnail_colorCycle_primary {
         -webkit-animation-name:colorCyclePrimary;
+        }
+
+    .thumbnail_colorCycle_spring {
+        -webkit-animation-name:colorCycleSpring;
         }
 
     .thumbnail_colorCycle_summer {
@@ -975,6 +992,49 @@
         -webkit-animation-name:colorCycleWinter;
         }
 
+    .thumbnail_colorCycle_forest {
+        -webkit-animation-name:colorCycleForest;
+        }
+
+    .thumbnail_colorCycle_sea {
+        -webkit-animation-name:colorCycleSea;
+        }
+
+    .thumbnail_colorCycle_desert {
+        -webkit-animation-name:colorCycleDesert;
+        }
+
+    .thumbnail_colorCycle_citrus {
+        -webkit-animation-name:colorCycleCitrus;
+        }
+
+    .thumbnail_colorCycle_retro {
+        -webkit-animation-name:colorCycleRetro;
+        }        
+
+    .thumbnail_colorCycle_redWhiteBlue {
+        -webkit-animation-name:colorCycleRedWhiteBlue;
+        }
+
+    .thumbnail_colorCycle_grayscale {
+        -webkit-animation-name:colorCycleGrayscale;
+        }
+
+    .thumbnail_colorCycle_red {
+        -webkit-animation-name:colorCycleRed;
+        }
+
+    .thumbnail_colorCycle_yellow {
+        -webkit-animation-name:colorCycleYellow;
+        }        
+
+    .thumbnail_colorCycle_blue {
+        -webkit-animation-name:thumbnail_colorCycle_blue;
+        }
+
+    .thumbnail_colorCycle_green {
+        -webkit-animation-name:colorCycleGreen;
+        }                
 
 
 .thumbnail_dots {

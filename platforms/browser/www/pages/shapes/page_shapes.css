@@ -51,7 +51,6 @@
     }
 
 
-
 /* ##### Buttons ##### */
 
 #visualSelect_strobe {
@@ -73,6 +72,7 @@
             background-size:50%;
             background-position:center center;
             background-repeat:no-repeat;
+            margin-top:0;
             }
     
             #visualSelect_mask .selectButtonContainer .thumbnail_circle {
@@ -140,15 +140,14 @@
                     } 
 
 
-#visualSelect_color {}
-
-    #visualSelect_color .selectButtonContainer .selectButtonThumbnail {
+.visualSelect_list_item-colors .selectButtonContainer .selectButtonThumbnail {
         display:none;
         }
 
-    #visualSelect_color .selectButtonContainer button {
+.visualSelect_list_item-colors .selectButtonContainer button {
         outline:0;
         }
+
 
 
 /* ##### Navigation ##### */
