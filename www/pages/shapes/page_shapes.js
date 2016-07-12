@@ -88,6 +88,9 @@ function showColor() {
     
     showMask();
 
+
+    console.log("selectedColor: "+selectedColor);
+
     document.getElementById("colorStrobe").style.webkitAnimationDuration=selectedStrobe;
     document.getElementById("theColor").style.backgroundColor = selectedColor;
 
