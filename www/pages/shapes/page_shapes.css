@@ -81,6 +81,10 @@
             background-repeat:no-repeat;
             margin-top:0;
             }
+
+            #visualSelect_mask .selectButtonContainer .thumbnail_fullscreen {
+                background-image:url(../../img/icon_mask_fullscreen.png);
+                }        
     
             #visualSelect_mask .selectButtonContainer .thumbnail_circle {
                 background-image:url(../../img/icon_mask_circle.png);
@@ -90,16 +94,8 @@
                 background-image:url(../../img/icon_mask_bar.png);
                 }  
             
-            #visualSelect_mask .selectButtonContainer .thumbnail_diamond {
-                background-image:url(../../img/icon_mask_diamond.png);
-                }  
-            
-            #visualSelect_mask .selectButtonContainer .thumbnail_hexagon {
-                background-image:url(../../img/icon_mask_hexagon.png);
-                }  
-            
-            #visualSelect_mask .selectButtonContainer .thumbnail_octagon {
-                background-image:url(../../img/icon_mask_octagon.png);
+            #visualSelect_mask .selectButtonContainer .thumbnail_line {
+                background-image:url(../../img/icon_mask_line.png);
                 }  
             
             #visualSelect_mask .selectButtonContainer .thumbnail_square {
@@ -110,9 +106,13 @@
                 background-image:url(../../img/icon_mask_star.png);
                 }                      
             
-            #visualSelect_mask .selectButtonContainer .thumbnail_sunburst {
-                background-image:url(../../img/icon_mask_sunburst.png);
-                } 
+            #visualSelect_mask .selectButtonContainer .thumbnail_point {
+                background-image:url(../../img/icon_mask_point.png);
+                }                      
+
+                body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_fullscreen {
+                    background-image:url(../../img/icon_mask_fullscreen-night.png);
+                    }       
 
                 body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_circle {
                     background-image:url(../../img/icon_mask_circle-night.png);
@@ -122,17 +122,9 @@
                     background-image:url(../../img/icon_mask_bar-night.png);
                     }  
                 
-                body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_diamond {
-                    background-image:url(../../img/icon_mask_diamond-night.png);
-                    }  
-                
-                body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_hexagon {
-                    background-image:url(../../img/icon_mask_hexagon-night.png);
-                    }  
-                
-                body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_octagon {
-                    background-image:url(../../img/icon_mask_octagon-night.png);
-                    }  
+                body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_line {
+                    background-image:url(../../img/icon_mask_line-night.png);
+                    }                
                 
                 body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_square {
                     background-image:url(../../img/icon_mask_square-night.png);
@@ -142,9 +134,9 @@
                     background-image:url(../../img/icon_mask_star-night.png);
                     }                      
                 
-                body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_sunburst {
-                    background-image:url(../../img/icon_mask_sunburst-night.png);
-                    } 
+                body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_point {
+                    background-image:url(../../img/icon_mask_point-night.png);
+                    }                                      
 
 
 .visualSelect_list_item-colors .selectButtonContainer .selectButtonThumbnail {

@@ -81,7 +81,7 @@ function showMask() {
         $(theMask).addClass(selectedMask);
 
         var stripesWidth;
-        if (selectedMask == "mask_circle" || selectedMask == "mask_square") {
+        if (selectedMask == "mask_circle" || selectedMask == "mask_square" || selectedMask == "mask_star") {
 
             stripesWidth = $(window).height();
 
