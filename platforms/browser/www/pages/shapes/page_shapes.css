@@ -44,6 +44,13 @@
     -webkit-animation-play-state:running;
     }
 
+.brush_stripes {
+    height:100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
 @-webkit-keyframes colorStrobe {
     0%   {background-color:black;}
     50%  {background-color:black;}

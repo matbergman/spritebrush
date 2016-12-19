@@ -72,8 +72,31 @@ function showMask() {
     selectedMask = $("#visualSelect_maskValue").val();
     theMask = document.getElementById("colorMask");
     
+
+    console.log("selectedMask: "+selectedMask);
+
     if (selectedMask == "none") theMask.style.backgroundImage = "none";
-    else theMask.style.backgroundImage = "url(../../img/"+selectedMask+".png)";
+    else {
+        theMask.style.backgroundImage = "url(../../img/"+selectedMask+".png)";
+        $(theMask).addClass(selectedMask);
+
+        var stripesWidth;
+        if (selectedMask == "mask_circle" || selectedMask == "mask_square") {
+
+            stripesWidth = $(window).height();
+
+            console.log("stripesWidth: "+stripesWidth);
+
+        }
+
+        else {
+            stripesWidth = "100%";
+        }
+
+        $(".brush_stripes").css("width", stripesWidth+"px");
+
+        $(".brush_stripes").addClass("brush_citrus");
+    }
 }
 
 
