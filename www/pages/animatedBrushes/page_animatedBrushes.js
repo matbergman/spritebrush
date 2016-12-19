@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+
     /* ##### Check if night mode skin is enabled */
     getTheme();
 
@@ -19,7 +21,7 @@ $(document).ready(function(){
     /* ##### Set brush size ####  */
     // brushsize variable set in index.js, modified in page_settings.html
     var brushsize = localStorage.getItem('brushsize');
-    if (brushsize==0 || brushsize==null) {brushsize = defaultBrushsize}
+    if (brushsize==null) {brushsize = defaultBrushsize}
     var brushsizeClassname = "brushsize_"+brushsize;
     $("#container_brushsize").removeClass().addClass(brushsizeClassname);
 
