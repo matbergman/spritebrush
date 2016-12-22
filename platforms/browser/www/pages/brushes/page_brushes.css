@@ -27,6 +27,15 @@
     margin-top:30%;
     }
 
+
+
+
+
+
+
+/* Brushes - Points */
+
+
 @font-face {
 font-family: 'point';
     src:url(../../fonts/point.ttf);
@@ -85,6 +94,8 @@ font-family: 'point';
         margin-top:40%;
         }
 
+
+/* Brushes - smoke */
 
 .brush_smoke {
     background: -webkit-linear-gradient(left,

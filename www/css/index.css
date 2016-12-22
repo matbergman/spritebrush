@@ -813,7 +813,7 @@ button#toggleBrushDisplay:focus {
         padding:0;
         width:25%;
         float:left;
-        background:#455a64;
+        background-color:#455a64;
         background-size:contain;
         background-repeat:no-repeat;
         background-position:top center;

@@ -136,7 +136,7 @@
 
 <fieldset class="layout_labels" id="fieldset_color">
 
-<label for="button_selectColor">Color</label>
+<label for="button_selectColor">Fill</label>
 <button id="button_selectColor">White</button>
 
 
@@ -187,9 +187,6 @@ $(".select_menu_link").on("click", function() {
     var selectedLink = $(this).attr("id");
 
     $(".visualSelect_list_item").hide();
-
-
-    console.log(selectedLink);
 
     if (selectedLink=="select_menu_colors") {
         $(".visualSelect_list_item-colors").show();
@@ -245,70 +242,105 @@ $(".select_menu_link").on("click", function() {
 
         <li class="visualSelect_list_item visualSelect_list_item-colors">
 
-        <div class="selectButtonContainer" style="background-color:#ffffff">
+        <div class="selectButtonContainer" style="background-color:#fff">
             <div class="selectButtonLabel">White</div>
-            <button class="selectButton" value="#ffffff">White</button>
+            <button class="selectButton" value="color_white">White</button>
         </div>
-        <div class="selectButtonContainer" style="background-color:#0074D9">
+        <div class="selectButtonContainer" style="background-color:blue">
             <div class="selectButtonLabel">Blue</div>
-            <button class="selectButton" value="#0074D9">Blue</button>
+            <button class="selectButton" value="color_blue">Blue</button>
         </div>
-        <div class="selectButtonContainer" style="background-color:#7FDBFF">
+        <div class="selectButtonContainer" style="background-color:aqua">
             <div class="selectButtonLabel">Aqua</div>
-            <button class="selectButton" value="#7FDBFF">Aqua</button>
+            <button class="selectButton" value="color_aqua">Aqua</button>
         </div>
-        <div class="selectButtonContainer" style="background-color:#39CCCC">
+        <div class="selectButtonContainer" style="background-color:teal">
             <div class="selectButtonLabel">Teal</div>
-            <button class="selectButton" value="#39CCCC">Teal</button>
+            <button class="selectButton" value="color_teal">Teal</button>
         </div>
-        <div class="selectButtonContainer" style="background-color:#3D9970">
+        <div class="selectButtonContainer" style="background-color:olive">
             <div class="selectButtonLabel">Olive</div>
-            <button class="selectButton" value="#3D9970">Olive</button>
+            <button class="selectButton" value="color_olive">Olive</button>
         </div>
-        <div class="selectButtonContainer" style="background-color:#2ECC40">
+        <div class="selectButtonContainer" style="background-color:green">
             <div class="selectButtonLabel">Green</div>
-            <button class="selectButton" value="#2ECC40">Green</button>
+            <button class="selectButton" value="color_green">Green</button>
         </div>
-        <div class="selectButtonContainer" style="background-color:#01FF70">
+        <div class="selectButtonContainer" style="background-color:lime">
             <div class="selectButtonLabel">Lime</div>
-            <button class="selectButton" value="#01FF70">Lime</button>
+            <button class="selectButton" value="color_lime">Lime</button>
         </div>
-        <div class="selectButtonContainer" style="background-color:#FFDC00">
+        <div class="selectButtonContainer" style="background-color:yellow">
             <div class="selectButtonLabel">Yellow</div>
-            <button class="selectButton" value="#FFDC00">Yellow</button>
+            <button class="selectButton" value="color_yellow">Yellow</button>
         </div>
-        <div class="selectButtonContainer" style="background-color:#FF851B">
+        <div class="selectButtonContainer" style="background-color:orange">
             <div class="selectButtonLabel">Orange</div>
-            <button class="selectButton" value="#FF851B">Orange</button>
+            <button class="selectButton" value="color_orange">Orange</button>
         </div>
-        <div class="selectButtonContainer" style="background-color:#FF4136">
+        <div class="selectButtonContainer" style="background-color:red">
             <div class="selectButtonLabel">Red</div>
-            <button class="selectButton" value="#FF4136">Red</button>
+            <button class="selectButton" value="color_red">Red</button>
         </div>
-        <div class="selectButtonContainer" style="background-color:#85144B">
+        <div class="selectButtonContainer" style="background-color:maroon">
             <div class="selectButtonLabel">Maroon</div>
-            <button class="selectButton" value="#85144B">Maroon</button>
+            <button class="selectButton" value="color_maroon">Maroon</button>
         </div>
-        <div class="selectButtonContainer" style="background-color:#F012BE">
+        <div class="selectButtonContainer" style="background-color:fuchsia">
             <div class="selectButtonLabel">Fuchsia</div>
-            <button class="selectButton" value="#F012BE">Fuchsia</button>
+            <button class="selectButton" value="color_fuchsia">Fuchsia</button>
         </div>
-        <div class="selectButtonContainer" style="background-color:#B10DC9">
+        <div class="selectButtonContainer" style="background-color:purple">
             <div class="selectButtonLabel">Purple</div>
-            <button class="selectButton" value="#B10DC9">Purple</button>
+            <button class="selectButton" value="color_purple">Purple</button>
         </div>
-        <div class="selectButtonContainer" style="background-color:#DDDDDD">
+        <div class="selectButtonContainer" style="background-color:silver">
             <div class="selectButtonLabel">Silver</div>
-            <button class="selectButton" value="#DDDDDD">Silver</button>
+            <button class="selectButton" value="color_silver">Silver</button>
         </div>
 
         </li>
 
         <li class="visualSelect_list_item visualSelect_list_item-stripes">
         <div class="selectButtonContainer">  
-            <div class="selectButtonLabel">Stripes</div>
+            <div class="selectButtonLabel">Rainbow</div>
+            <div class="selectButtonThumbnail brush_rainbow"></div>
+            <button class="selectButton" value="brush_rainbow">Rainbow</button>
+        </div>
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Citrus</div>
             <div class="selectButtonThumbnail brush_citrus"></div>
-            <button class="selectButton" value="brush_citrus">Stripes</button>
+            <button class="selectButton" value="brush_citrus">Citrus</button>
+        </div>
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Retro</div>
+            <div class="selectButtonThumbnail brush_retro"></div>
+            <button class="selectButton" value="brush_retro">Retro</button>
+        </div>
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Winter</div>
+            <div class="selectButtonThumbnail brush_winter"></div>
+            <button class="selectButton" value="brush_winter">Winter</button>
+        </div>
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Spring</div>
+            <div class="selectButtonThumbnail brush_spring"></div>
+            <button class="selectButton" value="brush_spring">Spring</button>
+        </div>
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Summer</div>
+            <div class="selectButtonThumbnail brush_summer"></div>
+            <button class="selectButton" value="brush_summer">Summer</button>
+        </div>
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Autumn</div>
+            <div class="selectButtonThumbnail brush_autumn"></div>
+            <button class="selectButton" value="brush_autumn">Autumn</button>
+        </div>
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Red, White, Blue</div>
+            <div class="selectButtonThumbnail brush_usa"></div>
+            <button class="selectButton" value="brush_usa">Red, White, Blue</button>
         </div>
         </li>
 
@@ -437,7 +469,7 @@ $(".select_menu_link").on("click", function() {
 
 </div>
 
-<input type="hidden" name="visualSelect_colorValue" id="visualSelect_colorValue" value="white" />
+<input type="hidden" name="visualSelect_colorValue" id="visualSelect_colorValue" value="color_white" />
 
 </fieldset>
 
@@ -498,11 +530,6 @@ $(".select_menu_link").on("click", function() {
 <div id="colorFrame">
     <div class="toggleDisplay"></div>
     <div id="container_brushsize">
-
-        <div class="brush_stripes"></div>
-
-
-
         <div id="colorMask"></div>
         <div id="colorStrobe"></div>
         <div id="theColor"></div>

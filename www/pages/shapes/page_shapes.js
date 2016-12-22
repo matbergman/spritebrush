@@ -71,9 +71,6 @@ $("#colorFrame").on("taphold",function(){
 function showMask() {
     selectedMask = $("#visualSelect_maskValue").val();
     theMask = document.getElementById("colorMask");
-    
-
-    console.log("selectedMask: "+selectedMask);
 
     if (selectedMask == "none") theMask.style.backgroundImage = "none";
     else {
@@ -82,21 +79,16 @@ function showMask() {
 
         var stripesWidth;
         if (selectedMask == "mask_circle" || selectedMask == "mask_square" || selectedMask == "mask_star") {
-
             stripesWidth = $(window).height();
-
-            console.log("stripesWidth: "+stripesWidth);
-
         }
 
         else {
             stripesWidth = "100%";
         }
 
-        $(".brush_stripes").css("width", stripesWidth+"px");
-
-        $(".brush_stripes").addClass("brush_citrus");
+        $("#theColor").css("width", stripesWidth+"px");
     }
+
 }
 
 
@@ -105,21 +97,19 @@ function showColor() {
 
     $("header").hide();
     $("#page_shapes").hide();
+    $("#theColor").removeClass();
 
     selectedColor  = $("#visualSelect_colorValue").val();
     selectedStrobe = $("#visualSelect_strobeValue").val();
     
+
     showMask();
 
-
-    console.log("selectedColor: "+selectedColor);
-
     document.getElementById("colorStrobe").style.webkitAnimationDuration=selectedStrobe;
-    document.getElementById("theColor").style.backgroundColor = selectedColor;
+//    document.getElementById("theColor").style.backgroundColor = selectedColor;
 
     $("#colorFrame").show();
+    $("#theColor").addClass(selectedColor);
     $("#theColor").show();
-
-
 
 }
