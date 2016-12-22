@@ -71,23 +71,30 @@ $("#colorFrame").on("taphold",function(){
 function showMask() {
     selectedMask = $("#visualSelect_maskValue").val();
     theMask = document.getElementById("colorMask");
+    var maskWidth;
 
-    if (selectedMask == "none") theMask.style.backgroundImage = "none";
+    if (selectedMask == "none" || selectedMask == "mask_fullscreen") {
+        theMask.style.backgroundImage = "none";        
+        maskWidth = "100%";
+    } 
+
     else {
         theMask.style.backgroundImage = "url(../../img/"+selectedMask+".png)";
         $(theMask).addClass(selectedMask);
 
-        var stripesWidth;
         if (selectedMask == "mask_circle" || selectedMask == "mask_square" || selectedMask == "mask_star") {
-            stripesWidth = $(window).height();
+            maskWidth = $(window).height()+"px";
         }
-
+        else if (selectedMask == "mask_point") {
+            maskWidth = "20px";
+        }
         else {
-            stripesWidth = "100%";
+            maskWidth = "100%";
         }
 
-        $("#theColor").css("width", stripesWidth+"px");
     }
+
+    $("#theColor").css("width", maskWidth);
 
 }
 
@@ -101,12 +108,10 @@ function showColor() {
 
     selectedColor  = $("#visualSelect_colorValue").val();
     selectedStrobe = $("#visualSelect_strobeValue").val();
-    
 
     showMask();
 
     document.getElementById("colorStrobe").style.webkitAnimationDuration=selectedStrobe;
-//    document.getElementById("theColor").style.backgroundColor = selectedColor;
 
     $("#colorFrame").show();
     $("#theColor").addClass(selectedColor);
