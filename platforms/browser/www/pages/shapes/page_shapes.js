@@ -106,28 +106,35 @@ $(".select_menu_link").on("click", function() {
 function showMask() {
     selectedMask = $("#visualSelect_maskValue").val();
     theMask = document.getElementById("colorMask");
+
+    maskBrushSize = document.getElementById("container_brushsize").className.slice(10);
+
+    console.log("maskBrushSize: "+maskBrushSize);
+
     var maskWidth;
 
     if (selectedMask == "none" || selectedMask == "mask_fullscreen") {
         theMask.style.backgroundImage = "none";        
-        maskWidth = "100%";
+        maskWidth = maskBrushSize+"%";
     } 
 
     else {
         theMask.style.backgroundImage = "url(../../img/"+selectedMask+".png)";
         $(theMask).addClass(selectedMask);
 
-        if (selectedMask == "mask_circle" || selectedMask == "mask_square" || selectedMask == "mask_star") {
-            maskWidth = $(window).height()+"px";
+        if (selectedMask == "mask_circle" || selectedMask == "mask_square" || selectedMask == "mask_sunburst") {
+            maskWidth = ($(window).height()*(maskBrushSize/100))+"px";
         }
         else if (selectedMask == "mask_point") {
-            maskWidth = "20px";
+            maskWidth = 20*(maskBrushSize/100)+"px";
         }
         else {
             maskWidth = "100%";
         }
 
     }
+
+    console.log("maskWidth: "+maskWidth);
 
     $("#theColor").css("width", maskWidth);
 

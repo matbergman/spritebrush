@@ -1092,11 +1092,3 @@
     #visualSelect_animatedBrushSpeed .selectButtonContainer {
         width:33.33%;
         }
-
-
-/* ##### Navigation ##### */
-
-a#showAnimatedBrushes {
-    font-family:Roboto-Medium;
-    color:#000;
-    }        

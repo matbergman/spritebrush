@@ -8,10 +8,6 @@ $("#showShapes").click(function() {
     window.location = "../shapes/page_shapes.html"
     });
 
-$("#showBrushes").click(function() {
-    window.location = "../brushes/page_brushes.html"
-    });
-
 $("#showAnimatedBrushes").click(function() {
     window.location = "../animatedBrushes/page_animatedBrushes.html"
     });

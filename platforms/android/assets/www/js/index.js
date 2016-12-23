@@ -68,12 +68,7 @@ var navColors = document.createElement("a");
 navColors.href = "#";
 navColors.id = "showShapes";
 navColors.className = "ui-link";
-navColors.innerHTML = "Shapes";
-
-var navBrushes = document.createElement("a");
-navBrushes.href = "#";
-navBrushes.id = "showBrushes";
-navBrushes.innerHTML = "Patterns";
+navColors.innerHTML = "Brushes";
 
 var navAnimatedBrushes = document.createElement("a");
 navAnimatedBrushes.href = "#";
@@ -85,19 +80,12 @@ navStencils.href = "#";
 navStencils.id = "showStencils";
 navStencils.innerHTML = "Stencils";
 
-var navFlashlight = document.createElement("a");
-navFlashlight.href = "#";
-navFlashlight.id = "showFlashlight";
-navFlashlight.innerHTML = "Flashlight";
-
 thePanelLogo.appendChild(thePanelLogoImage);
 thePanel.appendChild(thePanelLogo);
 
 thePanel.appendChild(navColors);
-thePanel.appendChild(navBrushes);
 thePanel.appendChild(navAnimatedBrushes);
 thePanel.appendChild(navStencils);
-//thePanel.appendChild(navFlashlight);
 
 
 
