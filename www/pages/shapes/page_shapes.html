@@ -40,7 +40,7 @@
 
     <div class="header-wrapper">
         <div class="header-title">
-        <span class="section-title">Shape Brushes</span>
+        <span class="section-title">Brushes</span>
         </div>
     </div>
 
@@ -93,31 +93,6 @@
         <div class="selectButtonThumbnail thumbnail_point"></div>
         <button class="selectButton" value="mask_point">Point</button>
     </div>        
-<!--
-    <div class="selectButtonContainer">
-        <div class="selectButtonLabel">Diamond</div>
-        <div class="selectButtonThumbnail thumbnail_diamond"></div>
-        <button class="selectButton" value="mask_diamond">Diamond</button>
-    </div>
-    <div class="selectButtonContainer">
-        <div class="selectButtonLabel">Hexagon</div>
-        <div class="selectButtonThumbnail thumbnail_hexagon"></div>
-        <button class="selectButton" value="mask_hexagon">Hexagon</button>
-    </div>
-    <div class="selectButtonContainer">
-        <div class="selectButtonLabel">Octagon</div>
-        <div class="selectButtonThumbnail thumbnail_octagon"></div>
-        <button class="selectButton" value="mask_octagon">Octagon</button>
-    </div>
--->
-
-<!--
-    <div class="selectButtonContainer">
-        <div class="selectButtonLabel">Star</div>
-        <div class="selectButtonThumbnail thumbnail_star"></div>
-        <button class="selectButton" value="mask_star">Star</button>
-    </div>
--->
 
     <div class="selectButtonContainer">
         <div class="selectButtonLabel">Sunburst</div>
@@ -139,94 +114,11 @@
 <label for="button_selectColor">Fill</label>
 <button id="button_selectColor">White</button>
 
-
-<style>
-
-#select_menu {
-    position:fixed;
-    top:0;
-    left:0;
-    width:calc(25% - 2em);
-    height:100%;
-    margin:0;
-    padding:1em;
-    list-style:none;
-}
-
-.visualSelect_list {
-    float:left;
-    width:75%;
-    height:100%;
-    margin:0 0 0 25%;
-    padding:0;
-    list-style:none;
-}
-
-.visualSelect_list_item {
-    width:100%;
-    height:100%;
-    display:none;
-}
-
-
-.visualSelect_list_item-colors {
-    display:block;
-}
-
-</style>
-
-
-<script>
-
-$(document).ready(function(){
-
-
-$(".select_menu_link").on("click", function() {
-
-
-    var selectedLink = $(this).attr("id");
-
-    $(".visualSelect_list_item").hide();
-
-    if (selectedLink=="select_menu_colors") {
-        $(".visualSelect_list_item-colors").show();
-    }
-
-    else if (selectedLink=="select_menu_stripes") {
-        $(".visualSelect_list_item-stripes").show();
-    }
-
-    else if (selectedLink=="select_menu_spectrum") {
-        $(".visualSelect_list_item-spectrum").show();
-    }
-
-    else if (selectedLink=="select_menu_gradient") {
-        $(".visualSelect_list_item-gradient").show();
-    }
-
-    else if (selectedLink=="select_menu_cycles") {
-        $(".visualSelect_list_item-cycles").show();
-    }
-
-    else {
-        $(".visualSelect_list_item-colors").show();
-    }        
-
-    });
-
-
-});
-
-
-
-</script>
-
-
 <div class="visualSelect" id="visualSelect_color">
 
     <div id="select_menu">
 
-    <a class="select_menu_link" id="select_menu_colors">Colors</a>
+    <a class="select_menu_link active" id="select_menu_colors">Colors</a>
 
     <a class="select_menu_link" id="select_menu_stripes">Stripes</a>
 
@@ -304,43 +196,43 @@ $(".select_menu_link").on("click", function() {
         <li class="visualSelect_list_item visualSelect_list_item-stripes">
         <div class="selectButtonContainer">  
             <div class="selectButtonLabel">Rainbow</div>
-            <div class="selectButtonThumbnail brush_rainbow"></div>
-            <button class="selectButton" value="brush_rainbow">Rainbow</button>
+            <div class="selectButtonThumbnail stripes_rainbow"></div>
+            <button class="selectButton" value="stripes_rainbow">Rainbow</button>
         </div>
         <div class="selectButtonContainer">  
             <div class="selectButtonLabel">Citrus</div>
-            <div class="selectButtonThumbnail brush_citrus"></div>
-            <button class="selectButton" value="brush_citrus">Citrus</button>
+            <div class="selectButtonThumbnail stripes_citrus"></div>
+            <button class="selectButton" value="stripes_citrus">Citrus</button>
         </div>
         <div class="selectButtonContainer">  
             <div class="selectButtonLabel">Retro</div>
-            <div class="selectButtonThumbnail brush_retro"></div>
-            <button class="selectButton" value="brush_retro">Retro</button>
+            <div class="selectButtonThumbnail stripes_retro"></div>
+            <button class="selectButton" value="stripes_retro">Retro</button>
         </div>
         <div class="selectButtonContainer">  
             <div class="selectButtonLabel">Winter</div>
-            <div class="selectButtonThumbnail brush_winter"></div>
-            <button class="selectButton" value="brush_winter">Winter</button>
+            <div class="selectButtonThumbnail stripes_winter"></div>
+            <button class="selectButton" value="stripes_winter">Winter</button>
         </div>
         <div class="selectButtonContainer">  
             <div class="selectButtonLabel">Spring</div>
-            <div class="selectButtonThumbnail brush_spring"></div>
-            <button class="selectButton" value="brush_spring">Spring</button>
+            <div class="selectButtonThumbnail stripes_spring"></div>
+            <button class="selectButton" value="stripes_spring">Spring</button>
         </div>
         <div class="selectButtonContainer">  
             <div class="selectButtonLabel">Summer</div>
-            <div class="selectButtonThumbnail brush_summer"></div>
-            <button class="selectButton" value="brush_summer">Summer</button>
+            <div class="selectButtonThumbnail stripes_summer"></div>
+            <button class="selectButton" value="stripes_summer">Summer</button>
         </div>
         <div class="selectButtonContainer">  
             <div class="selectButtonLabel">Autumn</div>
-            <div class="selectButtonThumbnail brush_autumn"></div>
-            <button class="selectButton" value="brush_autumn">Autumn</button>
+            <div class="selectButtonThumbnail stripes_autumn"></div>
+            <button class="selectButton" value="stripes_autumn">Autumn</button>
         </div>
         <div class="selectButtonContainer">  
             <div class="selectButtonLabel">Red, White, Blue</div>
-            <div class="selectButtonThumbnail brush_usa"></div>
-            <button class="selectButton" value="brush_usa">Red, White, Blue</button>
+            <div class="selectButtonThumbnail stripes_usa"></div>
+            <button class="selectButton" value="stripes_usa">Red, White, Blue</button>
         </div>
         </li>
 
@@ -348,8 +240,8 @@ $(".select_menu_link").on("click", function() {
         <li class="visualSelect_list_item visualSelect_list_item-spectrum">
         <div class="selectButtonContainer">  
             <div class="selectButtonLabel">Spectrum</div>
-            <div class="selectButtonThumbnail brush_rainbow"></div>
-            <button class="selectButton" value="brush_rainbow">Spectrum</button>
+            <div class="selectButtonThumbnail gradient_rainbow"></div>
+            <button class="selectButton" value="gradient_rainbow">Spectrum</button>
         </div>
         </li>
 
@@ -474,8 +366,6 @@ $(".select_menu_link").on("click", function() {
 </fieldset>
 
 
-
-
 <fieldset class="layout_labels" id="fieldset_colorStrobe">
 
 <label for="button_selectStrobe">Strobe</label>
@@ -487,7 +377,6 @@ $(".select_menu_link").on("click", function() {
     Strobing shapes create dots and dashes, depending on the speed of the strobe. No strobe paints solid lines.
     </p>
     </div>
-
 
     <div class="selectButtonContainer">
         <div class="selectButtonLabel">No strobe</div>
@@ -512,7 +401,7 @@ $(".select_menu_link").on("click", function() {
 
 <fieldset class="layout_submit">
 
-<button id="button_showColor">Display Shape Brush</button>
+<button id="button_showColor">Display Brush</button>
 
 </fieldset>
 

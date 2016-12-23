@@ -97,11 +97,14 @@ header nav a {
     color:#fff;
     }
 
-#panel_menu a,
-#overflow_menu a,
-#select_menu a {
+.select_menu_link {
     color:#666;
     }
+
+.active {
+     color:#000;
+     font-weight:bold;
+}
 
 .panel_logo {
     border-bottom:1px solid #999;
