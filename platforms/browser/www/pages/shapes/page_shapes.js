@@ -109,13 +109,11 @@ function showMask() {
 
     maskBrushSize = document.getElementById("container_brushsize").className.slice(10);
 
-    console.log("maskBrushSize: "+maskBrushSize);
-
     var maskWidth;
 
     if (selectedMask == "none" || selectedMask == "mask_fullscreen") {
         theMask.style.backgroundImage = "none";        
-        maskWidth = maskBrushSize+"%";
+        maskWidth = "maskBrushSize+"%"";
     } 
 
     else {
@@ -123,12 +121,13 @@ function showMask() {
         $(theMask).addClass(selectedMask);
 
         if (selectedMask  == "mask_points") {
-            maskWidth = maskBrushSize+"%";
+            maskWidth = "100%";
         }
 
-        if (selectedMask == "mask_circle" || selectedMask == "mask_square" || selectedMask == "mask_sunburst") {
+        else if (selectedMask == "mask_circle" || selectedMask == "mask_square" || selectedMask == "mask_sunburst") {
             maskWidth = ($(window).height()*(maskBrushSize/100))+"px";
         }
+
         else if (selectedMask == "mask_point") {
             maskWidth = 20*(maskBrushSize/100)+"px";
         }
@@ -137,8 +136,6 @@ function showMask() {
         }
 
     }
-
-    console.log("maskWidth: "+maskWidth);
 
     $("#theColor").css("width", maskWidth);
 
