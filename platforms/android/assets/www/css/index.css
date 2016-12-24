@@ -913,11 +913,11 @@ button#toggleBrushDisplay:focus {
         margin-top:3.5em;
         }
 
-    #page_shapes fieldset.layout_submit {
+    #page_brushes fieldset.layout_submit {
         bottom:4.5em;
         }
 
-    #page_shapes .instructions {
+    #page_brushes .instructions {
         bottom:7.5em;
         }
 

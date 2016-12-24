@@ -60,7 +60,7 @@ $("#colorFrame").on("tap",function(){
 
 
 $("#colorFrame").on("taphold",function(){
-    returnToPage("#page_shapes","#colorFrame");
+    returnToPage("#page_brushes","#colorFrame");
     });
 
 
@@ -146,7 +146,7 @@ function showMask() {
 function showColor() {
 
     $("header").hide();
-    $("#page_shapes").hide();
+    $("#page_brushes").hide();
     $("#theColor").removeClass();
 
     selectedColor  = $("#visualSelect_colorValue").val();
