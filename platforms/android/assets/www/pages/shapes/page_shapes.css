@@ -100,13 +100,18 @@
                 background-image:url(../../img/icon_mask_point.png);
                 }                      
 
+            #visualSelect_mask .selectButtonContainer .thumbnail_points {
+                background-image:url(../../img/icon_mask_points.png);
+                } 
+
                 body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_fullscreen,
                 body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_circle,
                 body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_bar,
                 body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_line,
                 body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_square,
                 body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_sunburst,
-                body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_point {
+                body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_point,
+                body.nightMode #visualSelect_mask .selectButtonContainer .thumbnail_points {
                     opacity:0.4;
                     }                                      
 

@@ -8,7 +8,7 @@ getTheme();
 
 if ($(".instructions").length) {
 
-var instructionsContent = "Tap the screen to toggle the shape. Tap &amp; hold to close and exit."
+var instructionsContent = "Tap the screen to toggle the brush. Tap &amp; hold to close and exit."
 
 var instructionsContainer = document.getElementsByClassName("instructions_content")[0];
 instructionsContainer.innerHTML = instructionsContent;
@@ -121,6 +121,10 @@ function showMask() {
     else {
         theMask.style.backgroundImage = "url(../../img/"+selectedMask+".png)";
         $(theMask).addClass(selectedMask);
+
+        if (selectedMask  == "mask_points") {
+            maskWidth = maskBrushSize+"%";
+        }
 
         if (selectedMask == "mask_circle" || selectedMask == "mask_square" || selectedMask == "mask_sunburst") {
             maskWidth = ($(window).height()*(maskBrushSize/100))+"px";
