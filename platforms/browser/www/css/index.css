@@ -548,6 +548,14 @@ fieldset.layout_submit {
 .brushsize_20 {width:20%; height:20%; margin-top:25%;}
 
 
+/* Layout - thumbnails */
+
+.selectButtonThumbnail {
+    width:100%;
+    height:1em;
+    margin-top:40%;
+    }
+
 
 /* ##### controls ##### */
 
