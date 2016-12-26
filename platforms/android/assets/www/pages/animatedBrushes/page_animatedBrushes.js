@@ -192,7 +192,7 @@ for (i=0;i<chips.length;i++) {
 }
 
 
-function updateStreaker() {
+function updateStreaker(selectedFill) {
 
 var brush = document.getElementById("streaker");
 var chips = brush.getElementsByClassName("ball");
@@ -203,10 +203,10 @@ for (i=0;i<chips.length;i++) {
     displayVal = Math.random();
 
         if (displayVal > .8) {
-            chips[i].className = "ball on"
+            chips[i].className = "ball on " + selectedFill
         }
         else {
-            chips[i].className = "ball off"
+            chips[i].className = "ball off " + selectedFill
         }
     }
 
@@ -458,6 +458,10 @@ console.log(spinnerWidth);
         bounceContainer.style.webkitAnimationDuration=bounceSpeed; 
 
 
+        selectedFill  = $("#visualSelect_fillValue").val();
+        bounceContainer.className = "ball bounce";
+        $(bounceContainer).addClass(selectedFill);
+
         $("#brush_bounce").show();    
 
     }   
@@ -483,6 +487,9 @@ console.log(spinnerWidth);
 
         orbitContainer.style.webkitAnimationDuration=orbitSpeed; 
 
+        selectedFill  = $("#visualSelect_fillValue").val();
+        orbitContainer.className = "ball orbit";
+        $(orbitContainer).addClass(selectedFill);
 
         $("#brush_orbit").show();    
 
@@ -495,8 +502,6 @@ console.log(spinnerWidth);
     if ($("#visualSelect_animatedBrushValue").val() === "brush_pulse") {
 
         pulseContainer = document.getElementsByClassName("pulse")[0];
-
-
         var pulseSpeed;
         if (animationSpeed === 0) pulseSpeed = "3s";
         else if (animationSpeed === 1) pulseSpeed = "1s";
@@ -505,6 +510,9 @@ console.log(spinnerWidth);
 
         pulseContainer.style.webkitAnimationDuration=pulseSpeed; 
 
+        selectedFill  = $("#visualSelect_fillValue").val();
+        pulseContainer.className = "ball pulse";
+        $(pulseContainer).addClass(selectedFill);
 
         $("#brush_pulse").show();    
 
@@ -525,6 +533,10 @@ console.log(spinnerWidth);
 
         faderContainer.style.webkitAnimationDuration=faderSpeed; 
 
+        selectedFill  = $("#visualSelect_fillValue").val();
+        faderContainer.className = "ball fader";
+        $(faderContainer).addClass(selectedFill);
+
         $("#brush_fader").show();    
 
     }
@@ -535,7 +547,8 @@ console.log(spinnerWidth);
 
     if ($("#visualSelect_animatedBrushValue").val() === "brush_streaker") {
 
-        theInterval = setInterval(function() { updateStreaker(); },1000); 
+        selectedFill  = $("#visualSelect_fillValue").val();
+        theInterval = setInterval(function() { updateStreaker(selectedFill); },1000); 
 
         $("#brush_streaker").show();    
 

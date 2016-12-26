@@ -27,8 +27,8 @@ $("#container_brushsize").removeClass().addClass(brushsizeClassname);
 
 /* ##### Event handlers ##### */
 
-$("#button_showColor").on("click", function() {
-    showColor();
+$("#button_showFill").on("click", function() {
+    showFill();
     $("#toggleBackground").hide();    
     return false;
     });
@@ -36,19 +36,19 @@ $("#button_showColor").on("click", function() {
 
 /* Select buttons */
 
-$("#button_selectColor").on("click", function() {
-    createSelect("fieldset_color"); 
+$("#button_selectFill").on("click", function() {
+    createSelect("fieldset_fill"); 
     return false;
     });
     
 $("#button_selectMask").on("click", function() {
-    createSelect("fieldset_colorMask"); 
+    createSelect("fieldset_mask"); 
     return false;
     });
 
 
 $("#button_selectStrobe").on("click", function() {
-    createSelect("fieldset_colorStrobe"); 
+    createSelect("fieldset_strobe"); 
     return false;
     });
 
@@ -107,13 +107,13 @@ function showMask() {
 
 
 
-function showColor() {
+function showFill() {
 
     $("header").hide();
     $("#page_brushes").hide();
     $("#theColor").removeClass();
 
-    selectedColor  = $("#visualSelect_colorValue").val();
+    selectedColor  = $("#visualSelect_fillValue").val();
     selectedStrobe = $("#visualSelect_strobeValue").val();
 
     showMask();
