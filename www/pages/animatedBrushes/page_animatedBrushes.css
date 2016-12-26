@@ -683,31 +683,11 @@
 
 
 /* ##### Thumbnails ##### */
-/*
-.selectButtonThumbnail {
-    position:absolute;
-    width:100%;
-    height:100%;
-    background-size:contain;
-    background-repeat:no-repeat;
-    background-position:center;
-    }
-*/
-.thumbnail_colorArray_flame {
-    background-image:url(../../img/thumb_8bitFlame.png);
-    }
 
-.thumbnail_colorArray_steel {
-    background-image:url(../../img/thumb_8bitSteel.png);
-    }
 
-.thumbnail_colorArray_camo {
-    background-image:url(../../img/thumb_8bitCamo.png);
+.thumbnail_8bit {
+    background-image:url(../../img/thumb_8bit.gif);
     }
-
-.thumbnail_colorArray_checkers {
-    background-image:url(../../img/thumb_8bitCheckers.png);
-    }        
 
 .thumbnail_bounce {
 
@@ -718,7 +698,8 @@
     position:absolute;
 
     top:0;
-    left:calc(50% - 5px);   
+    left:calc(50% - 5px);
+    margin-top:0;   
     -webkit-animation-name: bounceThumbnailAnimation;
     -webkit-animation-duration: 1s;
     -webkit-animation-iteration-count: infinite;
@@ -748,7 +729,7 @@
     background-color:#fff;
     position:absolute;
 
-    top:calc(50% - 5px);
+    top:0;
     left:calc(50% - 50px - 5px);
     -webkit-animation-name: orbitThumbnailAnimation;
     -webkit-animation-duration: 2s;
@@ -779,7 +760,7 @@
     background-color:#fff;
     position:absolute;
 
-    top:calc(40% - 5px);
+    top:0;
     left:calc(50% - 5px);   
     -webkit-animation-name: pulseThumbnailAnimation;
     -webkit-animation-duration: 1s;
@@ -810,7 +791,7 @@
     border-radius:50%;
     background-color:#fff;
     position:absolute;
-    top:calc(40% - 5px);
+    top:0;
     left:calc(50% - 5px);
 
     -webkit-animation-name: faderThumbnailAnimation;
