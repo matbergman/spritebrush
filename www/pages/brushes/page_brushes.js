@@ -64,43 +64,6 @@ $("#colorFrame").on("taphold",function(){
     returnToPage("#page_brushes","#colorFrame");
     });
 
-
-$(".select_menu_link").on("click", function() {
-
-    $(".select_menu_link").removeClass("active");
-
-    $(this).addClass("active");
-
-    var selectedLink = $(this).attr("id");
-
-    $(".visualSelect_list_item").hide();
-
-    if (selectedLink=="select_menu_colors") {
-        $(".visualSelect_list_item-colors").show();
-    }
-
-    else if (selectedLink=="select_menu_stripes") {
-        $(".visualSelect_list_item-stripes").show();
-    }
-
-    else if (selectedLink=="select_menu_spectrum") {
-        $(".visualSelect_list_item-spectrum").show();
-    }
-
-    else if (selectedLink=="select_menu_gradient") {
-        $(".visualSelect_list_item-gradient").show();
-    }
-
-    else if (selectedLink=="select_menu_cycles") {
-        $(".visualSelect_list_item-cycles").show();
-    }
-
-    else {
-        $(".visualSelect_list_item-colors").show();
-    }        
-
-    });
-
 });
 
 

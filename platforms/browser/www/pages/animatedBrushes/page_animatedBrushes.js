@@ -36,6 +36,11 @@ $(document).ready(function(){
 
 
     /* Select buttons */
+    $("#button_selectFill").on("click", function() {
+        createSelect("fieldset_fill"); 
+        return false;
+        });
+
 
     $("#button_selectAnimatedBrush").on("click", function() {
         createSelect("fieldset_animatedBrush"); 

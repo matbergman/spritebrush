@@ -237,7 +237,7 @@ a {
     }
 
 form {
-    margin:84px 0 0 0;
+    margin:74px 0 0 0;
     padding:0;
     }
 
@@ -364,7 +364,7 @@ form {
 
 .instructions {
     position:absolute;
-    bottom:9.5em;
+    bottom:7.5em;
     left:0;
     width:100%;
     z-index:1;
@@ -460,7 +460,7 @@ body.content .ui-page-active {
 /* layout - forms */
 
 fieldset.layout_labels {
-    margin:0 2em 2em 2em;
+    margin:0 2em 1.25em 2em;
     }
 
 fieldset.layout_labels label {
@@ -479,7 +479,7 @@ fieldset.layout_labels button:not(.selectButton) {
 
 fieldset.layout_submit {
     position:absolute;
-    bottom:5.5em;
+    bottom:4.5em;
     left:0;
     z-index:200;
     width:100%;
@@ -518,6 +518,40 @@ fieldset.layout_submit {
     background-repeat:no-repeat;
     background-size:cover;
     }
+
+
+/* Layout - visual select menu */
+
+#select_menu {
+    position:fixed;
+    top:0;
+    left:0;
+    width:calc(25% - 2em);
+    height:100%;
+    margin:0;
+    padding:1em;
+    list-style:none;
+}
+
+.visualSelect_list {
+    float:left;
+    width:75%;
+    height:100%;
+    margin:0 0 0 25%;
+    padding:0;
+    list-style:none;
+}
+
+.visualSelect_list_item {
+    width:100%;
+    height:100%;
+    display:none;
+}
+
+
+.visualSelect_list_item-colors {
+    display:block;
+}
 
 
 /* Layout - overflow menu */
@@ -919,14 +953,6 @@ button#toggleBrushDisplay:focus {
 
     #page_about .content_container h1:first-child {
         margin-top:3.5em;
-        }
-
-    #page_brushes fieldset.layout_submit {
-        bottom:4.5em;
-        }
-
-    #page_brushes .instructions {
-        bottom:7.5em;
         }
 
     .splash_content {
