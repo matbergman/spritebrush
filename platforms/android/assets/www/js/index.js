@@ -62,7 +62,10 @@ $(".select_menu_link").on("click", function() {
 
     var selectedLink = $(this).attr("id");
 
-    $(".visualSelect_list_item").hide();
+    /* console.log("selectedLink: "+selectedLink); */
+
+    // Hide the "fill" menu options, but not the single "palette" menu option
+    $("#fieldset_fill .visualSelect_list_item").hide();
 
     if (selectedLink=="select_menu_colors") {
         $(".visualSelect_list_item-colors").show();
@@ -183,12 +186,12 @@ $(selectedList).show();
 $(selectedListButtons).click(function() {
 
 
-
+    /*
     console.log("$(\"#visualSelect_animatedBrushValue\").val(): "+$("#visualSelect_animatedBrushValue").val());
     console.log("this.value: "+this.value);
+    */
 
-
-    if (this.value == "eightBitBrush_colorArray_flame" || $("#visualSelect_animatedBrushValue").val() == "eightBitBrush_colorArray_flame") {
+    if (this.value == "eightBitBrush" || $("#visualSelect_animatedBrushValue").val() == "eightBitBrush") {
         $("#fieldset_fill").hide();        
         $("#fieldset_palette").show();
     }
@@ -196,7 +199,6 @@ $(selectedListButtons).click(function() {
         $("#fieldset_fill").show();        
         $("#fieldset_palette").hide();
     }
-
 
     $(selectedListInput).val(this.value);
 

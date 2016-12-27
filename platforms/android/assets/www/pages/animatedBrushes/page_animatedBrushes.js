@@ -95,74 +95,46 @@ $(document).ready(function(){
 
 
 /* Animated brush - "8-bit" */                
+/*
 
-var eightBitBrush_colorArray_flame = new Array(
-"#fe8300",
-"#feaf00",
-"#fc6500",    
-"#c32704",    
-"#8a0304",    
-"#d93b00",    
-"#ef4b00",    
-"#ffe300",    
-"#d45000",    
-"#e26400",    
-"#9b4200",    
-"#d37f00",    
-"#fffb96",    
-"#976d00",    
-"#c99c00",    
-"#fffb96"
+*/
+
+var eightBitBrush_colorArray_primary = new Array(
+"red",
+"red",
+"red",
+"red",
+"red",
+"yellow",
+"yellow",
+"yellow",
+"yellow",
+"yellow",
+"yellow",
+"blue",    
+"blue",    
+"blue",    
+"blue",    
+"blue"
 );
 
-
-var eightBitBrush_colorArray_steel = new Array(
-"#f9f9f9",
-"#d3d2d0",
-"#a7a4a1",    
-"#514d46",    
-"#ebeae8",    
-"#b4b3b2",    
-"#c9c8c4",    
-"#918e8a",    
-"#dad9dd",    
-"#bebcba",    
-"#c4c7ce",    
-"#77726c",    
-"#e2e2e5",    
-"#e3e2de",    
-"#ebebef",    
-"#514d46"
-);
-
-var eightBitBrush_colorArray_camo = new Array(
-"#c7bb81",
-"#353a40",
-"#51774e",
-"#66563c",
-"#c7bb81",
-"#353a40",
-"#51774e",
-"#66563c",
-"#c7bb81",
-"#353a40",
-"#51774e",
-"#66563c"
-);
-
-var eightBitBrush_colorArray_checkers = new Array(
-"#d72020",
-"#d72020",
-"#d72020",
-"#d72020",
-"#d72020",
-"#d72020",
-"#000000",
-"#000000",
-"#000000",
-"#000000",
-"#000000",
-"#000000"
+var eightBitBrush_colorArray_citrus = new Array(
+"#84d628",
+"#d0f54f",
+"#fcff33",
+"#ffa71b",
+"#ff5e45",
+"#6fb322",
+"#a5c23e",
+"#e2e52e",
+"#e59719",
+"#cc4b37",
+"#72d600",
+"#c0f500",
+"#fbff00",
+"#ff9d00",
+"#ff2200",
+"#c88a26"
 );
 
 
@@ -180,6 +152,9 @@ function ShuffleArray(array) {
 
 
 function update8BitBrush(eightBitBrush_colorArray) {
+
+
+
 
 var brush = document.getElementById("eightBitBrush");
 var chips = brush.getElementsByClassName("pixel");
@@ -302,17 +277,28 @@ function showAnimatedBrush() {
     var translateVal = brushHeight - ballHeight + "px";
 
     /* 8-bit brushes */
-    if ($("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_flame" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_steel" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_camo" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_checkers" ) {
+    if ($("#visualSelect_animatedBrushValue").val() === "eightBitBrush") {
 
         $("#eightBitBrush").show();
-        eightBitBrush_colorArray = eval($("#visualSelect_animatedBrushValue").val());
-        console.log("eightBitBrush_colorArray: "+eightBitBrush_colorArray);
 
 
         selectedPalette  = $("#visualSelect_paletteValue").val();
 
-        console.log("selectedPalette: "+selectedPalette);
+        if (selectedPalette == "palette_primary") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_primary;
+        }
 
+        else if (selectedPalette == "palette_citrus") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_citrus;
+        }
+
+        else {
+            eightBitBrush_colorArray == eightBitBrush_colorArray_primary;            
+        }
+
+
+        console.log("eightBitBrush_colorArray: "+eightBitBrush_colorArray);
+        console.log("selectedPalette: "+selectedPalette);
 
 
 

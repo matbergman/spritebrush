@@ -553,6 +553,10 @@ fieldset.layout_submit {
     display:block;
 }
 
+.visualSelect_list_item-palette {
+    display:block;
+}
+
 
 /* Layout - overflow menu */
 
