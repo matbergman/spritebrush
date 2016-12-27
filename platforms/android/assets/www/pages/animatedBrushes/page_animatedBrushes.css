@@ -15,11 +15,23 @@
     position:absolute;
 }
 
+#fieldset_palette {
+    display:none;
+}
+
+.visualSelect_list_item-palette {
+    display:block;
+}
+
 /* ##### navigation #####  */
 
 #showAnimatedBrushes {
     color:#000;
     font-weight:bold;
+}
+
+#select_menu_palettes {
+    display:none;
 }
 
 

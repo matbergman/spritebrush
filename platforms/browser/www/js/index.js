@@ -181,6 +181,23 @@ var selectedListButtons = selectedList.getElementsByTagName("button");
 $(selectedList).show();
 
 $(selectedListButtons).click(function() {
+
+
+
+    console.log("$(\"#visualSelect_animatedBrushValue\").val(): "+$("#visualSelect_animatedBrushValue").val());
+    console.log("this.value: "+this.value);
+
+
+    if (this.value == "eightBitBrush_colorArray_flame" || $("#visualSelect_animatedBrushValue").val() == "eightBitBrush_colorArray_flame") {
+        $("#fieldset_fill").hide();        
+        $("#fieldset_palette").show();
+    }
+    else {
+        $("#fieldset_fill").show();        
+        $("#fieldset_palette").hide();
+    }
+
+
     $(selectedListInput).val(this.value);
 
     if (elem != "fieldset_stencil") {

@@ -41,6 +41,11 @@ $(document).ready(function(){
         return false;
         });
 
+    $("#button_selectPalette").on("click", function() {
+        createSelect("fieldset_palette"); 
+        return false;
+        });
+
 
     $("#button_selectAnimatedBrush").on("click", function() {
         createSelect("fieldset_animatedBrush"); 
@@ -301,6 +306,15 @@ function showAnimatedBrush() {
 
         $("#eightBitBrush").show();
         eightBitBrush_colorArray = eval($("#visualSelect_animatedBrushValue").val());
+        console.log("eightBitBrush_colorArray: "+eightBitBrush_colorArray);
+
+
+        selectedPalette  = $("#visualSelect_paletteValue").val();
+
+        console.log("selectedPalette: "+selectedPalette);
+
+
+
 
         var eightBitSpeed;
         if (animationSpeed === 0) eightBitSpeed = 1000;
@@ -311,58 +325,6 @@ function showAnimatedBrush() {
         theInterval = setInterval(function() { update8BitBrush(eightBitBrush_colorArray); },eightBitSpeed);
         }
 
-
-    /* Cycling Primary Colors animated brush */
-    if ($("#visualSelect_animatedBrushValue").val() === "colorCycle_primary") {
-
-        var colorPrimarySpeed;
-        if (animationSpeed === 0) colorPrimarySpeed = "6s";
-        else if (animationSpeed === 1) colorPrimarySpeed = "3s";
-        else if (animationSpeed === 2) colorPrimarySpeed = "1s";
-        else colorPrimarySpeed = "3s";
-
-        $("#colorCycle_primary").show();
-        document.getElementById("colorCycle_primary").style.webkitAnimationDuration=colorPrimarySpeed;        
-    }
-
-    /* Cycling Summer Colors animated brush */
-    if ($("#visualSelect_animatedBrushValue").val() === "colorCycle_summer") {
-
-        var colorSummerSpeed;
-        if (animationSpeed === 0) colorSummerSpeed = "6s";
-        else if (animationSpeed === 1) colorSummerSpeed = "3s";
-        else if (animationSpeed === 2) colorSummerSpeed = "1s";
-        else colorSummerSpeed = "3s";
-
-        $("#colorCycle_summer").show();
-        document.getElementById("colorCycle_summer").style.webkitAnimationDuration=colorSummerSpeed;        
-    }
-
-    /* Cycling Autumn Colors animated brush */
-    if ($("#visualSelect_animatedBrushValue").val() === "colorCycle_autumn") {
-
-        var colorAutumnSpeed;
-        if (animationSpeed === 0) colorAutumnSpeed = "6s";
-        else if (animationSpeed === 1) colorAutumnSpeed = "3s";
-        else if (animationSpeed === 2) colorAutumnSpeed = "1s";
-        else colorAutumnSpeed = "3s";
-
-        $("#colorCycle_autumn").show();
-        document.getElementById("colorCycle_autumn").style.webkitAnimationDuration=colorAutumnSpeed;        
-    }
-
-    /* Cycling Winter Colors animated brush */
-    if ($("#visualSelect_animatedBrushValue").val() === "colorCycle_winter") {
-
-        var colorWinterSpeed;
-        if (animationSpeed === 0) colorWinterSpeed = "6s";
-        else if (animationSpeed === 1) colorWinterSpeed = "3s";
-        else if (animationSpeed === 2) colorWinterSpeed = "1s";
-        else colorWinterSpeed = "3s";
-
-        $("#colorCycle_winter").show();
-        document.getElementById("colorCycle_winter").style.webkitAnimationDuration=colorWinterSpeed;        
-    }
 
     /* Spinner animated brush */
     if ($("#visualSelect_animatedBrushValue").val() === "brush_spinner") {
@@ -379,8 +341,6 @@ function showAnimatedBrush() {
 
         var spinnerHeight =  $("#container_brushsize").height();
         var spinnerWidth = $("#container_brushsize").width();
-
-console.log(spinnerWidth);
 
         spinnerContainer.style.height = spinnerHeight+"px";
         spinnerShape.style.width = spinnerHeight+"px";
