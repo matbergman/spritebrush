@@ -37,6 +37,23 @@ $(document).ready(function(){
 
     /* Select buttons */
     $("#button_selectFill").on("click", function() {
+
+        var brushType = $("#visualSelect_animatedBrushValue").val();
+        console.log("brushType: "+brushType);
+
+         // Display Palette menu instead of Fill menu for brushes that don't lend themselves to textures like stripes, gradients. etc.
+        if (brushType == "eightBitBrush" || brushType == "brush_spinner") {
+            $(".visualSelect_list_item-colors").hide();
+            $(".select_menu-standard").hide();        
+            $(".select_menu-alt").show();
+        }
+
+        else {
+            $(".visualSelect_list_item-colors").show();            
+            $(".select_menu-standard").show();        
+            $(".select_menu-alt").hide();
+        }
+
         createSelect("fieldset_fill"); 
         return false;
         });
@@ -318,8 +335,7 @@ function showAnimatedBrush() {
 
         $("#eightBitBrush").show();
 
-
-        selectedPalette  = $("#visualSelect_paletteValue").val();
+        selectedPalette  = $("#visualSelect_fillValue").val();
 
         if (selectedPalette == "palette_primary") {
             eightBitBrush_colorArray = eightBitBrush_colorArray_primary;

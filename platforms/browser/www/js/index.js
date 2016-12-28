@@ -87,6 +87,10 @@ $(".select_menu_link").on("click", function() {
         $(".visualSelect_list_item-cycles").show();
     }
 
+    else if (selectedLink=="select_menu_palette") {
+        $(".visualSelect_list_item-palette").show();
+    }
+
     else {
         $(".visualSelect_list_item-colors").show();
     }        
@@ -186,20 +190,23 @@ $(selectedList).show();
 $(selectedListButtons).click(function() {
 
 
-    console.log("$(\"#visualSelect_animatedBrushValue\").val(): "+$("#visualSelect_animatedBrushValue").val());
     console.log("this.value: "+this.value);
 
-    /* Display Palette menu instead of Fill menu for brushes that don't lend themselves to textures like stripes, gradients. etc. */
     if (isNaN(this.value) == true) { // Don't swap palette/fill menu for the button_selectAnimatedBrushSpeed button
 
         if (this.value == "eightBitBrush" || this.value == "brush_spinner") {
-            $("#fieldset_fill").hide();        
-            $("#fieldset_palette").show();
+            $("#button_selectFill").html("Primary Palette");
+            $("#visualSelect_fillValue").val("palette_primary");
+
         }
 
         else {
-            $("#fieldset_fill").show();        
-            $("#fieldset_palette").hide();
+            // Update to use local storage
+            $("#button_selectFill").html("White");
+            $("#visualSelect_fillValue").val("color_white");
+
+            $(".select_menu_link").removeClass("active");
+            $("#select_menu_colors").addClass("active");
         }
 
     }
