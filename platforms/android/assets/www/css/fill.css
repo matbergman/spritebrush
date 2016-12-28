@@ -59,6 +59,17 @@
 
 /* ##### Stripes ##### */
 
+.stripes_primary {
+    background: -webkit-linear-gradient(left,
+    red 0%,
+    red 33%,
+    yellow 33%,
+    yellow 66%,
+    blue 66%,
+    blue 100%
+    );
+}
+
 .stripes_rainbow {
     background: -webkit-linear-gradient(left,
     red 0%,
@@ -184,6 +195,22 @@
     blue 100%
     );
 }
+
+.stripes_steel {
+    background: -webkit-linear-gradient(left,
+    #f9f9f9 0%,
+    #f9f9f9 20%,
+    #d3d2d0 20%,
+    #d3d2d0 40%,
+    #a7a4a1 40%,
+    #a7a4a1 60%,
+    #514d46 60%,
+    #514d46 80%,
+    #ebeae8 80%,
+    #ebeae8 100%
+    );
+}
+
 
 
 /* ##### Gradients ##### */
@@ -440,6 +467,154 @@ background: -webkit-linear-gradient(left,
         }
 
 
+/* ##### Palettes ##### */
+/* Used by brushes that don't lend themselves to textures like stripes, gradients. etc. */
+
+.palette_primary {
+    background: -webkit-linear-gradient(left,
+    red 0%,
+    red 33%,
+    yellow 33%,
+    yellow 66%,
+    blue 66%,
+    blue 100%
+    );
+}
+
+.palette_rainbow {
+    background: -webkit-linear-gradient(left,
+    red 0%,
+    red 14.285%,
+    orange 14%,
+    orange 28.57%,
+    yellow 28.57%,
+    yellow 42.855%,
+    green 42.855%,
+    green 57.14%,
+    blue 57.14%,
+    blue 71.425%,
+    indigo 71.425%,
+    indigo 85.71%,
+    violet 85.71%,
+    violet 100%
+    );
+}
+
+.palette_citrus {
+    background: -webkit-linear-gradient(left,
+    #84d628 0%,
+    #84d628 20%,
+    #d0f54f 20%,
+    #d0f54f 40%,
+    #fcff33 40%,
+    #fcff33 60%,
+    #ffa71b 60%,
+    #ffa71b 80%,
+    #ff5e45 80%,
+    #ff5e45 100%
+    );
+}
+
+.palette_retro {
+    background: -webkit-linear-gradient(left,
+    #404040 0%,
+    #404040 20%,
+    #024959 20%,
+    #024959 40%,
+    #037e8c 40%,
+    #037e8c 60%,
+    #f2efdc 60%,
+    #f2efdc 80%,
+    #f24c27 80%,
+    #f24c27 100%
+    );
+}
+
+.palette_winter {
+    background: -webkit-linear-gradient(left,
+    #273f5a 0%,
+    #273f5a 20%,
+    #c6dbf3 20%,
+    #c6dbf3 40%,
+    #4b81a5 40%,
+    #4b81a5 60%,
+    #74a0bf 60%,
+    #74a0bf 80%,
+    #98c4da 80%,
+    #98c4da 100%
+    );
+}
+
+.palette_spring {
+    background: -webkit-linear-gradient(left,
+    #45e851 0%,
+    #45e851 20%,
+    #5cb9ff 20%,
+    #5cb9ff 40%,
+    #ffd722 40%,
+    #ffd722 60%,
+    #e80855 60%,
+    #e80855 80%,
+    #8626ee 80%,
+    #8626ee 100%
+    );
+}
+
+.palette_summer {
+    background: -webkit-linear-gradient(left,
+    #ff860d 0%,
+    #ff860d 20%,
+    #e8430c 20%,
+    #e8430c 40%,
+    #ff0000 40%,
+    #ff0000 60%,
+    #ff12dd 60%,
+    #ff12dd 80%,
+    #a10dff 80%,
+    #a10dff 100%
+    );
+}
+
+.palette_autumn {
+    background: -webkit-linear-gradient(left,
+    #766537 0%,
+    #766537 20%,
+    #eeb415 20%,
+    #eeb415 40%,
+    #bf5b04 40%,
+    #bf5b04 60%,
+    #c26f2d 60%,
+    #c26f2d 80%,
+    #592202 80%,
+    #592202 100%
+    );
+}
+
+.palette_usa {
+    background: -webkit-linear-gradient(left,
+    red 0%,
+    red 33%,
+    white 33%,
+    white 66%,
+    blue 66%,
+    blue 100%
+    );
+}
+
+.palette_steel {
+    background: -webkit-linear-gradient(left,
+    #f9f9f9 0%,
+    #f9f9f9 20%,
+    #d3d2d0 20%,
+    #d3d2d0 40%,
+    #a7a4a1 40%,
+    #a7a4a1 60%,
+    #514d46 60%,
+    #514d46 80%,
+    #ebeae8 80%,
+    #ebeae8 100%
+    );
+}
 
 
 

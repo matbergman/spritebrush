@@ -101,20 +101,7 @@ $(document).ready(function(){
 
 var eightBitBrush_colorArray_primary = new Array(
 "red",
-"red",
-"red",
-"red",
-"red",
 "yellow",
-"yellow",
-"yellow",
-"yellow",
-"yellow",
-"yellow",
-"blue",    
-"blue",    
-"blue",    
-"blue",    
 "blue"
 );
 
@@ -123,20 +110,73 @@ var eightBitBrush_colorArray_citrus = new Array(
 "#d0f54f",
 "#fcff33",
 "#ffa71b",
-"#ff5e45",
-"#6fb322",
-"#a5c23e",
-"#e2e52e",
-"#e59719",
-"#cc4b37",
-"#72d600",
-"#c0f500",
-"#fbff00",
-"#ff9d00",
-"#ff2200",
-"#c88a26"
+"#ff5e45"
 );
 
+var eightBitBrush_colorArray_retro = new Array(
+"#404040",
+"#024959",
+"#037e8c",
+"#f2efdc",
+"#f24c27"
+);
+
+var eightBitBrush_colorArray_winter = new Array(
+"#273f5a",
+"#c6dbf3",
+"#4b81a5",
+"#74a0bf",
+"#98c4da"
+);
+
+var eightBitBrush_colorArray_spring = new Array(
+"#45e851",
+"#5cb9ff",
+"#ffd722",
+"#e80855",
+"#8626ee"
+);
+
+var eightBitBrush_colorArray_summer = new Array(
+"#ff860d",
+"#e8430c",
+"#ff0000",
+"#ff12dd",
+"#a10dff"
+);
+
+var eightBitBrush_colorArray_autumn = new Array(
+"#766537",
+"#eeb415",
+"#bf5b04",
+"#c26f2d",
+"#592202"
+);
+
+var eightBitBrush_colorArray_usa = new Array(
+"red",
+"white",
+"blue"
+);
+
+var eightBitBrush_colorArray_steel = new Array(
+"#f9f9f9",
+"#d3d2d0",
+"#a7a4a1",    
+"#514d46",    
+"#ebeae8",    
+"#b4b3b2",    
+"#c9c8c4",    
+"#918e8a",    
+"#dad9dd",    
+"#bebcba",    
+"#c4c7ce",    
+"#77726c",    
+"#e2e2e5",    
+"#e3e2de",    
+"#ebebef",    
+"#514d46"
+);
 
 
 /* randomize arrays */
@@ -290,6 +330,34 @@ function showAnimatedBrush() {
 
         else if (selectedPalette == "palette_citrus") {
             eightBitBrush_colorArray = eightBitBrush_colorArray_citrus;
+        }
+
+        else if (selectedPalette == "palette_retro") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_retro;
+        }
+
+        else if (selectedPalette == "palette_winter") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_winter;
+        }
+
+        else if (selectedPalette == "palette_spring") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_spring;
+        }
+
+        else if (selectedPalette == "palette_summer") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_summer;
+        }
+
+        else if (selectedPalette == "palette_autumn") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_autumn;
+        }
+
+        else if (selectedPalette == "palette_usa") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_usa;
+        }
+
+        else if (selectedPalette == "palette_steel") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_steel;
         }
 
         else {
