@@ -15,8 +15,13 @@
     position:absolute;
 }
 
-#fieldset_palette {
+#fieldset_fill {
     display:none;
+}
+
+
+#fieldset_palette {
+    display:block;
 }
 
 

@@ -95,9 +95,6 @@ $(document).ready(function(){
 
 
 /* Animated brush - "8-bit" */                
-/*
-
-*/
 
 var eightBitBrush_colorArray_primary = new Array(
 "red",

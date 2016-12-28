@@ -186,18 +186,22 @@ $(selectedList).show();
 $(selectedListButtons).click(function() {
 
 
-    /*
     console.log("$(\"#visualSelect_animatedBrushValue\").val(): "+$("#visualSelect_animatedBrushValue").val());
     console.log("this.value: "+this.value);
-    */
 
-    if (this.value == "eightBitBrush" || $("#visualSelect_animatedBrushValue").val() == "eightBitBrush") {
-        $("#fieldset_fill").hide();        
-        $("#fieldset_palette").show();
-    }
-    else {
-        $("#fieldset_fill").show();        
-        $("#fieldset_palette").hide();
+    /* Display Palette menu instead of Fill menu for brushes that don't lend themselves to textures like stripes, gradients. etc. */
+    if (isNaN(this.value) == true) { // Don't swap palette/fill menu for the button_selectAnimatedBrushSpeed button
+
+        if (this.value == "eightBitBrush" || this.value == "brush_spinner") {
+            $("#fieldset_fill").hide();        
+            $("#fieldset_palette").show();
+        }
+
+        else {
+            $("#fieldset_fill").show();        
+            $("#fieldset_palette").hide();
+        }
+
     }
 
     $(selectedListInput).val(this.value);
