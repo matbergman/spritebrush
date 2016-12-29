@@ -18,13 +18,9 @@
 
 /* ##### navigation #####  */
 
-#showAnimatedBrushes {
+#select_menu_palette {
     color:#000;
     font-weight:bold;
-}
-
-#select_menu_palettes {
-    display:none;
 }
 
 
@@ -472,8 +468,13 @@
         to { -webkit-transform: rotate(360deg) scale(1) skew(1deg) translate(0px); }
         }
 
+    #brush_spinnerShape.primary {
+        background: -webkit-linear-gradient(left, red  0%, yellow 50%, blue 100%);        
+    }
 
-
+    #brush_spinnerShape.citrus {
+        background: -webkit-linear-gradient(left, #84d628 0%, #d0f54f 25%, #fcff33 50%, #ffa71b 75%, #ff5e45 100%);        
+    }
 
 
 /* Animated brush - bounce */

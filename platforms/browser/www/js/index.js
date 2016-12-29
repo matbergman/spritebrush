@@ -56,16 +56,12 @@ $(document).ready(function(){
 
 $(".select_menu_link").on("click", function() {
 
-    $(".select_menu_link").removeClass("active");
+    $(".visualSelect_list_item").hide();
 
+    $(".select_menu_link").removeClass("active");
     $(this).addClass("active");
 
     var selectedLink = $(this).attr("id");
-
-    /* console.log("selectedLink: "+selectedLink); */
-
-    // Hide the "fill" menu options, but not the single "palette" menu option
-    $("#fieldset_fill .visualSelect_list_item").hide();
 
     if (selectedLink=="select_menu_colors") {
         $(".visualSelect_list_item-colors").show();
@@ -189,19 +185,17 @@ $(selectedList).show();
 
 $(selectedListButtons).click(function() {
 
-
-    console.log("this.value: "+this.value);
-
+    // Reset Fill menu when switching between standand and alternate brushes
     if (isNaN(this.value) == true) { // Don't swap palette/fill menu for the button_selectAnimatedBrushSpeed button
 
         if (this.value == "eightBitBrush" || this.value == "brush_spinner") {
             $("#button_selectFill").html("Primary Palette");
             $("#visualSelect_fillValue").val("palette_primary");
-
+            $(".visualSelect_list_item").hide();
+            $(".visualSelect_list_item-palette").show();
         }
 
         else {
-            // Update to use local storage
             $("#button_selectFill").html("White");
             $("#visualSelect_fillValue").val("color_white");
 
