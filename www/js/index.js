@@ -188,11 +188,19 @@ $(selectedListButtons).click(function() {
     // Reset Fill menu when switching between standand and alternate brushes
     if (isNaN(this.value) == true) { // Don't swap palette/fill menu for the button_selectAnimatedBrushSpeed button
 
+        // Display fill menu if hidden by a non-filled brush (flame, etc.)
+        $("#fieldset_fill").show();
+
         if (this.value == "eightBitBrush" || this.value == "brush_spinner") {
             $("#button_selectFill").html("Primary Palette");
             $("#visualSelect_fillValue").val("palette_primary");
             $(".visualSelect_list_item").hide();
             $(".visualSelect_list_item-palette").show();
+        }
+
+        else if (this.value == "brush_flame") {
+            // Hide the fill menu - the flame brush doesn't take a fill
+            $("#fieldset_fill").hide();
         }
 
         else {
