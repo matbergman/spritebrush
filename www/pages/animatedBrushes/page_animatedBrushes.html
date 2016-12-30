@@ -133,7 +133,7 @@
 <fieldset class="layout_labels" id="fieldset_fill">
 
 <label for="button_selectFill">Fill</label>
-<button id="button_selectFill">White</button>
+<button id="button_selectFill">Primary Palette</button>
 
 <div class="visualSelect" id="visualSelect_fill">
 
@@ -446,83 +446,10 @@
 
 </div>
 
-<input type="hidden" name="visualSelect_fillValue" id="visualSelect_fillValue" value="color_white" />
+<input type="hidden" name="visualSelect_fillValue" id="visualSelect_fillValue" value="palette_primary" />
 
 </fieldset>
 
-<!--
-<fieldset class="layout_labels" id="fieldset_palette">
-
-<label for="button_selectPalette">Palette</label>
-<button id="button_selectPalette">Primary</button>
-
-<div class="visualSelect" id="visualSelect_palette">
-
-    <div id="select_menu">
-
-    <a class="select_menu_link active" id="select_menu_palette">Palettes</a>
-
-    </div>
-
-    <ul class="visualSelect_list">
-        <li class="visualSelect_list_item visualSelect_list_item-palette">
-        <div class="selectButtonContainer">
-            <div class="selectButtonLabel">Primary</div>
-            <div class="selectButtonThumbnail palette_primary"></div>
-            <button class="selectButton" value="palette_primary">Primary Palette</button>
-        </div>    
-        <div class="selectButtonContainer">
-            <div class="selectButtonLabel">Citrus</div>
-            <div class="selectButtonThumbnail palette_citrus"></div>
-            <button class="selectButton" value="palette_citrus">Citrus Palette</button>
-        </div>                 
-        <div class="selectButtonContainer">
-            <div class="selectButtonLabel">Retro</div>
-            <div class="selectButtonThumbnail palette_retro"></div>
-            <button class="selectButton" value="palette_retro">Retro Palette</button>
-        </div> 
-        <div class="selectButtonContainer">
-            <div class="selectButtonLabel">Winter</div>
-            <div class="selectButtonThumbnail palette_winter"></div>
-            <button class="selectButton" value="palette_winter">Winter Palette</button>
-        </div>         
-        <div class="selectButtonContainer">
-            <div class="selectButtonLabel">Spring</div>
-            <div class="selectButtonThumbnail palette_spring"></div>
-            <button class="selectButton" value="palette_spring">Spring Palette</button>
-        </div> 
-        <div class="selectButtonContainer">
-            <div class="selectButtonLabel">Summer</div>
-            <div class="selectButtonThumbnail palette_summer"></div>
-            <button class="selectButton" value="palette_summer">Summer Palette</button>
-        </div>         
-        <div class="selectButtonContainer">
-            <div class="selectButtonLabel">Autumn</div>
-            <div class="selectButtonThumbnail palette_autumn"></div>
-            <button class="selectButton" value="palette_autumn">Autumn Palette</button>
-        </div>
-        <div class="selectButtonContainer">
-            <div class="selectButtonLabel">Red, White, Blue</div>
-            <div class="selectButtonThumbnail palette_usa"></div>
-            <button class="selectButton" value="palette_usa">Red, White, Blue Palette</button>
-        </div>                   
-        <div class="selectButtonContainer">
-            <div class="selectButtonLabel">Steel</div>
-            <div class="selectButtonThumbnail palette_steel"></div>
-            <button class="selectButton" value="palette_steel">Steel Palette</button>
-        </div> 
-        </li>
-
-    </ul>
-
-</div>
-
-<input type="hidden" name="visualSelect_paletteValue" id="visualSelect_paletteValue" value="palette_primary" />
-
-</fieldset>
-
-
--->
 
 <fieldset class="layout_labels" id="fieldset_animatedBrushSpeed">
 
@@ -599,7 +526,7 @@
             </div>
 
             <div class="animatedBrush" id="brush_spinner">
-                <div id="brush_spinnerShape" class="citrus"></div>
+                <div id="brush_spinnerShape"></div>
             </div>
 
             <div class="animatedBrush colorCycle" id="colorCycle_primary"></div> 
