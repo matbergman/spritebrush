@@ -398,6 +398,7 @@ function showAnimatedBrush() {
 
         spinnerContainer = document.getElementById("brush_spinner");
         spinnerShape = document.getElementById("brush_spinnerShape");
+        var spinnerBrush = $("#visualSelect_fillValue").val();
 
         var spinnerSpeed;
         if (animationSpeed === 0) spinnerSpeed = "6s";
@@ -413,6 +414,10 @@ function showAnimatedBrush() {
         spinnerShape.style.width = spinnerHeight+"px";
         spinnerShape.style.top = (spinnerHeight/2) - 3 +"px";
         spinnerShape.style.left = (spinnerWidth/2) - (spinnerHeight/2) +"px";
+
+        spinnerShape.className = spinnerBrush;
+
+        console.log("spinnerBrush:" +spinnerBrush);
 
         $("#brush_spinner").show();
         spinnerShape.style.webkitAnimationDuration=spinnerSpeed; 

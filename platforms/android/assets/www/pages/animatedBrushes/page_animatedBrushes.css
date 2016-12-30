@@ -468,12 +468,40 @@
         to { -webkit-transform: rotate(360deg) scale(1) skew(1deg) translate(0px); }
         }
 
-    #brush_spinnerShape.primary {
+    #brush_spinnerShape.palette_primary {
         background: -webkit-linear-gradient(left, red  0%, yellow 50%, blue 100%);        
     }
 
-    #brush_spinnerShape.citrus {
+    #brush_spinnerShape.palette_citrus {
         background: -webkit-linear-gradient(left, #84d628 0%, #d0f54f 25%, #fcff33 50%, #ffa71b 75%, #ff5e45 100%);        
+    }
+
+    #brush_spinnerShape.palette_retro {
+        background: -webkit-linear-gradient(left, #404040 0%, #024959 25%, #037e8c 50%, #f2efdc 75%, #f24c27 100%);        
+    }
+
+    #brush_spinnerShape.palette_winter {
+        background: -webkit-linear-gradient(left, #273f5a 0%, #c6dbf3 25%, #4b81a5 50%, #74a0bf 75%, #98c4da 100%);        
+    }
+
+    #brush_spinnerShape.palette_spring {
+        background: -webkit-linear-gradient(left, #45e851 0%, #5cb9ff 25%, #ffd722 50%, #e80855 75%, #8626ee 100%);        
+    }
+
+    #brush_spinnerShape.palette_summer {
+        background: -webkit-linear-gradient(left, #ff860d 0%, #e8430c 25%, #ff0000 50%, #ff12dd 75%, #a10dff 100%);        
+    }
+
+    #brush_spinnerShape.palette_autumn {
+        background: -webkit-linear-gradient(left, #766537 0%, #eeb415 25%, #bf5b04 50%, #c26f2d 75%, #592202 100%);        
+    }
+
+    #brush_spinnerShape.palette_usa {
+        background: -webkit-linear-gradient(left, red  0%, white 50%, blue 100%);        
+    }
+
+    #brush_spinnerShape.palette_steel {
+        background: -webkit-linear-gradient(left, #f9f9f9 0%, #d3d2d0 25%, #a7a4a1 50%, #514d46 75%, #ebeae8 100%);        
     }
 
 
