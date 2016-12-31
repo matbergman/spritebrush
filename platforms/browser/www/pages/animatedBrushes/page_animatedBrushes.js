@@ -39,7 +39,6 @@ $(document).ready(function(){
     $("#button_selectFill").on("click", function() {
 
         var brushType = $("#visualSelect_animatedBrushValue").val();
-        console.log("brushType: "+brushType);
 
          // Display Palette menu instead of Fill menu for brushes that don't lend themselves to textures like stripes, gradients. etc.
         if (brushType == "eightBitBrush" || brushType == "brush_spinner" || brushType == "brush_dots" || brushType == "brush_circles" || brushType == "brush_sparkles" || brushType == "brush_snowflakes") {
@@ -262,18 +261,6 @@ for (i=0;i<numberOfObj;i++) {
 
     var newObj = document.createElement("span"); // Characters are applied to <span> elements through the CSS content attribute
 
-    
-    // The dot animated brush is a bit different than the rest -- a single character and color. 
-
-/*
-    if (theBrush == "brush_dots") {
-        objStyle = Math.floor(Math.random() * 10);
-        if (objStyle == 1) {newObj.className = "showDot";}
-        else {newObj.className = "";}
-        objSize = Math.floor(Math.random() * 10);
-        newObj.style.fontSize = objSize+"em";
-        }
-*/
     if (theBrush == "brush_dots") { 
         charBrushLayout(newObj, "dots");
     }
@@ -382,12 +369,6 @@ function showAnimatedBrush() {
         else {
             eightBitBrush_colorArray == eightBitBrush_colorArray_primary;            
         }
-
-
-        console.log("eightBitBrush_colorArray: "+eightBitBrush_colorArray);
-        console.log("selectedPalette: "+selectedPalette);
-
-
 
         var eightBitSpeed;
         if (animationSpeed === 0) eightBitSpeed = 1000;
@@ -551,6 +532,49 @@ function showAnimatedBrush() {
         selectedFill  = $("#visualSelect_fillValue").val();
         pulseContainer.className = "ball pulse";
         $(pulseContainer).addClass(selectedFill);
+  
+        // Manually add the CSS webkit animation names for both the brush animation and color cycle animation. JS requires comma syntax to prevent animations from overriding each other.
+        pulseContainer.style.webkitAnimationName = "";
+
+        if (selectedFill == "colorCycle colorCycle_primary") {
+            pulseContainer.style.webkitAnimationName = "pulseAnimation, colorCyclePrimary"; 
+        }
+
+        else if (selectedFill == "colorCycle colorCycle_citrus") {
+            pulseContainer.style.webkitAnimationName = "pulseAnimation, colorCycleCitrus"; 
+        }
+
+        else if (selectedFill == "colorCycle colorCycle_retro") {
+            pulseContainer.style.webkitAnimationName = "pulseAnimation, colorCycleRetro";             
+        }
+
+        else if (selectedFill == "colorCycle colorCycle_winter") {
+            pulseContainer.style.webkitAnimationName = "pulseAnimation, colorCycleWinter";             
+        }
+
+        else if (selectedFill == "colorCycle colorCycle_spring") {
+            pulseContainer.style.webkitAnimationName = "pulseAnimation, colorCycleSpring";             
+        }
+
+        else if (selectedFill == "colorCycle colorCycle_summer") {
+            pulseContainer.style.webkitAnimationName = "pulseAnimation, colorCycleSummer";             
+        }
+
+        else if (selectedFill == "colorCycle colorCycle_autumn") {
+            pulseContainer.style.webkitAnimationName = "pulseAnimation, colorCycleAutumn";             
+        }
+
+        else if (selectedFill == "colorCycle colorCycle_usa") {
+            pulseContainer.style.webkitAnimationName = "pulseAnimation, colorCycleUsa";             
+        }
+
+        else if (selectedFill == "colorCycle colorCycle_steel") {
+            pulseContainer.style.webkitAnimationName = "pulseAnimation, colorCycleSteel";             
+        }
+
+        else {
+            pulseContainer.style.webkitAnimationName = "pulseAnimation";             
+        }
 
         $("#brush_pulse").show();    
 
@@ -572,8 +596,52 @@ function showAnimatedBrush() {
         faderContainer.style.webkitAnimationDuration=faderSpeed; 
 
         selectedFill  = $("#visualSelect_fillValue").val();
+        console.log(selectedFill);
         faderContainer.className = "ball fader";
         $(faderContainer).addClass(selectedFill);
+
+        // Manually add the CSS webkit animation names for both the brush animation and color cycle animation. JS requires comma syntax to prevent animations from overriding each other.
+        faderContainer.style.webkitAnimationName = "";
+
+        if (selectedFill == "colorCycle colorCycle_primary") {
+            faderContainer.style.webkitAnimationName = "faderAnimation, colorCyclePrimary"; 
+        }
+
+        else if (selectedFill == "colorCycle colorCycle_citrus") {
+            faderContainer.style.webkitAnimationName = "faderAnimation, colorCycleCitrus"; 
+        }
+
+        else if (selectedFill == "colorCycle colorCycle_retro") {
+            faderContainer.style.webkitAnimationName = "faderAnimation, colorCycleRetro";             
+        }
+
+        else if (selectedFill == "colorCycle colorCycle_winter") {
+            faderContainer.style.webkitAnimationName = "faderAnimation, colorCycleWinter";             
+        }
+
+        else if (selectedFill == "colorCycle colorCycle_spring") {
+            faderContainer.style.webkitAnimationName = "faderAnimation, colorCycleSpring";             
+        }
+
+        else if (selectedFill == "colorCycle colorCycle_summer") {
+            faderContainer.style.webkitAnimationName = "faderAnimation, colorCycleSummer";             
+        }
+
+        else if (selectedFill == "colorCycle colorCycle_autumn") {
+            faderContainer.style.webkitAnimationName = "faderAnimation, colorCycleAutumn";             
+        }
+
+        else if (selectedFill == "colorCycle colorCycle_usa") {
+            faderContainer.style.webkitAnimationName = "faderAnimation, colorCycleUsa";             
+        }
+
+        else if (selectedFill == "colorCycle colorCycle_steel") {
+            faderContainer.style.webkitAnimationName = "faderAnimation, colorCycleSteel";             
+        }
+
+        else {
+            faderContainer.style.webkitAnimationName = "faderAnimation";             
+        }
 
         $("#brush_fader").show();    
 
