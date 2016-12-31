@@ -186,7 +186,7 @@ $(selectedList).show();
 $(selectedListButtons).click(function() {
 
     // Reset Fill menu when switching between standand and alternate brushes
-    if (isNaN(this.value) == true) { // Don't swap palette/fill menu for the button_selectAnimatedBrushSpeed button
+    if (isNaN(this.value) == true) { // Don't swap palette/fill menu for button_selectAnimatedBrushSpeed and button_selectStrobe
 
         // Display fill menu if hidden by a non-filled brush (flame, etc.)
         $("#fieldset_fill").show();

@@ -118,7 +118,7 @@ function showFill() {
 
     showMask();
 
-    document.getElementById("colorStrobe").style.webkitAnimationDuration=selectedStrobe;
+    document.getElementById("colorStrobe").style.webkitAnimationDuration=selectedStrobe+"s";
 
     $("#colorFrame").show();
     $("#theColor").addClass(selectedColor);
