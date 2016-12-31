@@ -264,6 +264,8 @@ for (i=0;i<numberOfObj;i++) {
 
     
     // The dot animated brush is a bit different than the rest -- a single character and color. 
+
+/*
     if (theBrush == "brush_dots") {
         objStyle = Math.floor(Math.random() * 10);
         if (objStyle == 1) {newObj.className = "showDot";}
@@ -271,6 +273,10 @@ for (i=0;i<numberOfObj;i++) {
         objSize = Math.floor(Math.random() * 10);
         newObj.style.fontSize = objSize+"em";
         }
+*/
+    if (theBrush == "brush_dots") { 
+        charBrushLayout(newObj, "dots");
+    }
 
     if (theBrush == "brush_circles") {
         charBrushLayout(newObj, "circle");
@@ -297,7 +303,7 @@ function charBrushLayout(newObj, objType) {
 objStyle = Math.floor(Math.random() * 12);
 newObj.className = objType+objStyle;
 objColor = Math.floor(Math.random() * 50);
-if (objColor <= 4) {newObj.className += " "+objType+"Color"+objColor;}
+if (objColor <= 4) {newObj.className += " charColor"+objColor+" "+objType+"Color"+objColor;}
 
 else {newObj.className += " obj_hide";}
 
@@ -601,31 +607,46 @@ function showAnimatedBrush() {
 
     /* Character-based animated brushes - dots */
     if ($("#visualSelect_animatedBrushValue").val() === "brush_dots") {
-    $("#brush_dots").show();
-    theInterval = setInterval(function() { updateCharBrush("brush_dots"); },charSpeed);    
+        var dotFill = $("#visualSelect_fillValue").val();
+
+        document.getElementById("brush_dots").className = "animatedBrush brush_char"; // reset brush style
+        $("#brush_dots").addClass(dotFill); // set brush style
+
+        $("#brush_dots").show();
+        theInterval = setInterval(function() { updateCharBrush("brush_dots"); },charSpeed);    
     }
 
     /* Character-based animated brushes - circles */
     if ($("#visualSelect_animatedBrushValue").val() === "brush_circles") {
-    $("#brush_circles").show();
-    theInterval = window.setInterval(function() { updateCharBrush("brush_circles"); },charSpeed);   
-    }
+        var circleFill = $("#visualSelect_fillValue").val();
 
-    /* Character-based animated brushes - stars */
+        document.getElementById("brush_circles").className = "animatedBrush brush_char"; // reset brush style
+        $("#brush_circles").addClass(circleFill); // set brush style
+
+        $("#brush_circles").show();
+        theInterval = window.setInterval(function() { updateCharBrush("brush_circles"); },charSpeed);   
+        }
+
+    /* Character-based animated brushes - sparkles */
     if ($("#visualSelect_animatedBrushValue").val() === "brush_sparkles") {
-    var sparkleFill = $("#visualSelect_fillValue").val();
+        var sparkleFill = $("#visualSelect_fillValue").val();
 
-    document.getElementById("brush_sparkles").className = "animatedBrush brush_char"; // reset brush style
-    $("#brush_sparkles").addClass(sparkleFill); // set brush style
+        document.getElementById("brush_sparkles").className = "animatedBrush brush_char"; // reset brush style
+        $("#brush_sparkles").addClass(sparkleFill); // set brush style
 
-    $("#brush_sparkles").show();
-    theInterval = window.setInterval(function() { updateCharBrush("brush_sparkles"); },charSpeed); 
+        $("#brush_sparkles").show();
+        theInterval = window.setInterval(function() { updateCharBrush("brush_sparkles"); },charSpeed); 
     }
 
     /* Character-based animated brushes - snowflakes */
     if ($("#visualSelect_animatedBrushValue").val() === "brush_snowflakes") {
-    $("#brush_snowflakes").show();
-    theInterval = window.setInterval(function() { updateCharBrush("brush_snowflakes"); },charSpeed); 
+        var snowflakeFill = $("#visualSelect_fillValue").val();
+
+        document.getElementById("brush_snowflakes").className = "animatedBrush brush_char"; // reset brush style
+        $("#brush_snowflakes").addClass(snowflakeFill); // set brush style
+
+        $("#brush_snowflakes").show();
+        theInterval = window.setInterval(function() { updateCharBrush("brush_snowflakes"); },charSpeed); 
     }
 
 }

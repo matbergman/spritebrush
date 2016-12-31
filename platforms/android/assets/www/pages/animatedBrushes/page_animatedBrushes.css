@@ -81,25 +81,26 @@
 
     /* Dots - animated character-based brushes */
 
+    #brush_dots {
+        background:transparent;
+    }
+
     #brush_dots span {
+        font-family:animatedBrushElements;
         vertical-align:middle;
         }
 
     #brush_dots span::before {
-        font-family:animatedBrushElements;
-        color:#000;
         content:"\e600";
-        }
-
-    #brush_dots span.showDot::before {
-        background: -webkit-linear-gradient(#eee, #333);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         }
 
 
 
     /* Circles - animated character-based brushes */
+
+    #brush_circles {
+        background:transparent;
+    }
 
     #brush_circles span {
         font-family:animatedBrushElements;
@@ -131,28 +132,8 @@
     .circle11::before {content:"\e630";}
 
 
-    .circleColor0 {
-        color:#ffffff;
-        }
 
-    .circleColor1 {
-        color:#bffff6;
-        }
-
-    .circleColor2 {
-        color:#f9ffc5;
-        }
-
-    .circleColor3 {
-        color:#ff90b2;
-        }
-
-    .circleColor4 {
-        color:#ffdcb3;
-        }
-
-
-    /* Stars - animated character-based brushes */
+    /* Sparkles - animated character-based brushes */
 
     #brush_sparkles {
         background:transparent;
@@ -188,226 +169,12 @@
     .sparkle11::before {content:"\e624";}
 
 
-    .palette_primary .sparkleColor0,
-    .palette_primary .sparkleColor1 {
-        color:red;
-        }        
-
-    .palette_primary .sparkleColor2,
-    .palette_primary .sparkleColor3 {
-        color:yellow;
-        }        
-
-    .palette_primary .sparkleColor4 {
-        color:blue;
-        }        
-
-
-    .palette_citrus .sparkleColor0 {
-        color:#84d628;
-        }
-
-    .palette_citrus .sparkleColor1 {
-        color:#d0f54f;
-        }        
-
-    .palette_citrus .sparkleColor2 {
-        color:#fcff33;
-        }
-
-    .palette_citrus .sparkleColor3 {
-        color:#ffa71b;
-        }        
-
-    .palette_citrus .sparkleColor4 {
-        color:#ff5e45;
-        } 
-
-
-    .palette_retro .sparkleColor0 {
-        color:#404040;
-        }
-
-    .palette_retro .sparkleColor1 {
-        color:#024959;
-        }        
-
-    .palette_retro .sparkleColor2 {
-        color:#037e8c;
-        }
-
-    .palette_retro .sparkleColor3 {
-        color:#f2efdc;
-        }        
-
-    .palette_retro .sparkleColor4 {
-        color:#f24c27;
-        } 
-
-
-    .palette_winter .sparkleColor0 {
-        color:#273f5a;
-        }
-
-    .palette_winter .sparkleColor1 {
-        color:#c6dbf3;
-        }        
-
-    .palette_winter .sparkleColor2 {
-        color:#4b81a5;
-        }
-
-    .palette_winter .sparkleColor3 {
-        color:#74a0bf;
-        }        
-
-    .palette_winter .sparkleColor4 {
-        color:#98c4da;
-        } 
-
-
-    .palette_spring .sparkleColor0 {
-        color:#45e851;
-        }
-
-    .palette_spring .sparkleColor1 {
-        color:#5cb9ff;
-        }        
-
-    .palette_spring .sparkleColor2 {
-        color:#ffd722;
-        }
-
-    .palette_spring .sparkleColor3 {
-        color:#e80855;
-        }        
-
-    .palette_spring .sparkleColor4 {
-        color:#8626ee;
-        } 
-
-
-    .palette_summer .sparkleColor0 {
-        color:#ff860d;
-        }
-
-    .palette_summer .sparkleColor1 {
-        color:#e8430c;
-        }        
-
-    .palette_summer .sparkleColor2 {
-        color:#ff0000;
-        }
-
-    .palette_summer .sparkleColor3 {
-        color:#ff12dd;
-        }        
-
-    .palette_summer .sparkleColor4 {
-        color:#a10dff;
-        } 
-
-
-    .palette_autumn .sparkleColor0 {
-        color:#766537;
-        }
-
-    .palette_autumn .sparkleColor1 {
-        color:#eeb415;
-        }        
-
-    .palette_autumn .sparkleColor2 {
-        color:#bf5b04;
-        }
-
-    .palette_autumn .sparkleColor3 {
-        color:#c26f2d;
-        }        
-
-    .palette_autumn .sparkleColor4 {
-        color:#592202;
-        } 
-
-
-    .palette_usa .sparkleColor0,
-    .palette_usa .sparkleColor1{
-        color:red;
-        }        
-
-    .palette_usa .sparkleColor2,
-    .palette_usa .sparkleColor3 {
-        color:white;
-        }        
-
-    .palette_usa .sparkleColor4 {
-        color:blue;
-        }  
-
-
-    .palette_steel .sparkleColor0 {
-        color:#f9f9f9;
-        }
-
-    .palette_steel .sparkleColor1 {
-        color:#d3d2d0;
-        }        
-
-    .palette_steel .sparkleColor2 {
-        color:#a7a4a1;
-        }
-
-    .palette_steel .sparkleColor3 {
-        color:#514d46;
-        }        
-
-    .palette_steel .sparkleColor4 {
-        color:#ebeae8;
-        } 
-
-
-
-
-
-    
-    
-
-
-
-
-
-
-/*
-
-    .sparkleColor0 {
-        color:#ffffff;
-        }
-
-    .sparkleColor1 {
-        color:#f8f8f8;
-        }
-
-    .sparkleColor2 {
-        color:#e6e6e6;
-        }
-
-    .sparkleColor3 {
-        color:#d7dbff;
-        }
-
-    .sparkleColor4 {
-        color:#f3f4ff;
-        }
-
-    .sparkleColor5 {
-        color:#faffd3;
-        }
-
-    .sparkleColor6 {
-        color:#ffd3d3;
-        }   
-*/
 
     /* Snowflakes - animated character-based brushes */
+
+    #brush_snowflakes {
+        background:transparent;
+    }
 
     #brush_snowflakes span {
         font-family:animatedBrushElements;
@@ -439,176 +206,6 @@
     .snowflake11::before {content:"\e618";}
 
 
-    .snowflakeColor0 {
-        color:#ffffff;
-        }
-
-    .snowflakeColor1 {
-        color:#f8f8f8;
-        }
-
-    .snowflakeColor2 {
-        color:#e6e6e6;
-        }
-
-    .snowflakeColor3 {
-        color:#d7dbff;
-        }
-
-    .snowflakeColor4 {
-        color:#f3f4ff;
-        }
-
-
-    /* Notes - animated character-based brushes */
-
-    #brush_notes span {
-        font-family:animatedBrushElements;
-        }
-
-    .note0::before {content:"\e631";}
-
-    .note1::before {content:"\e632";}
-
-    .note2::before {content:"\e633";}
-
-    .note3::before {content:"\e634";}       
-
-    .note4::before {content:"\e635";}
-
-    .note5::before {content:"\e636";}
-
-    .note6::before {content:"\e637";}
-
-    .note7::before {content:"\e638";}
-
-    .note8::before {content:"\e639";}
-
-    .note9::before {content:"\e63a";}
-
-    .note10::before {content:"\e63b";}                      
-
-    .note11::before {content:"\e63c";}
-
-    .note12::before {content:"\e63d";}
-
-    .note13::before {content:"\e63e";}
-
-    .note14::before {content:"\e63f";}
-
-    .note15::before {content:"\e640";}
-
-    .note16::before {content:"\e641";}
-
-    .note17::before {content:"\e642";}
-
-    .note18::before {content:"\e643";}
-
-    .note19::before {content:"\e644";}
-
-    .note20::before {content:"\e645";}
-
-    .note21::before {content:"\e646";}
-
-    .note22::before {content:"\e647";}
-
-    .note23::before {content:"\e648";}
-
-    .note24::before {content:"\e649";}                              
-
-    .note25::before {content:"\e64a";}  
-
-    .noteColor0 {
-        color:#ffffff;
-        }
-
-    .noteColor1 {
-        color:#f8f8f8;
-        }
-
-    .noteColor2 {
-        color:#e6e6e6;
-        }
-
-    .noteColor3 {
-        color:#d7dbff;
-        }
-
-    .noteColor4 {
-        color:#f3f4ff;
-        }
-
-
-    /* Flowers - animated character-based brushes */
-
-    #brush_flowers span {
-        font-family:animatedBrushElements;
-        }
-
-    .flower0::before {content:"\e601";}
-
-    .flower1::before {content:"\e602";}
-
-    .flower2::before {content:"\e603";}
-
-    .flower3::before {content:"\e604";}     
-
-    .flower4::before {content:"\e605";}
-
-    .flower5::before {content:"\e606";}
-
-    .flower6::before {content:"\e607";}
-
-    .flower7::before {content:"\e608";}
-
-    .flower8::before {content:"\e609";}
-
-    .flower9::before {content:"\e60a";}
-
-    .flower10::before {content:"\e60b";}                        
-
-    .flower11::before {content:"\e60c";}
-
-
-    .flowerColor0 {
-        color:#ffffff;
-        }
-
-    .flowerColor1 {
-        color:#c6a1ee;
-        }
-
-    .flowerColor2 {
-        color:#edb4bb;
-        }
-
-    .flowerColor3 {
-        color:#fff186;
-        }
-
-    .flowerColor4 {
-        color:#afbeff;
-        }
-
-    .flowerColor5 {
-        color:#ffb173;
-        }
-
-    .flowerColor6 {
-        color:#c9fd78;
-        }                                       
-
-    .flowerColor7 {
-        color:#ff8dbd;
-        }
-
-    .flowerColor8 {
-        color:#ffec84;
-        }
-
-    .flowerColor9 {
-        color:#f3d2ff;
-        }
 
 
 /* Animated brush - flames */
@@ -656,7 +253,7 @@
     width:auto;
     height:6px;
     border-radius:3px;
-    background: -webkit-linear-gradient(left, #ffff96 0%,#ffffff 40%,#ffffff 60%,#ffff96 100%);
+    background: -webkit-linear-gradient(left, #f9f9f9 0%, #d3d2d0 25%, #a7a4a1 50%, #514d46 75%, #ebeae8 100%);  
     -webkit-animation: spinnerAnimation 1s linear infinite;
     }
 
@@ -1067,7 +664,7 @@
 .thumbnail_spinner {
     width:90%;
     height:3px;
-    background: -webkit-linear-gradient(left, #ffff96 0%,#ffffff 40%,#ffffff 60%,#ffff96 100%);
+    background: -webkit-linear-gradient(left, #f9f9f9 0%, #d3d2d0 50%, #ebeae8 100%);  
     margin-left:auto;
     margin-right:auto;
     margin-top:50%;
@@ -1093,15 +690,17 @@
 
 
 .thumbnail_dots {
-    margin-top:0;
-    height:100%;
-    background-image:url(../../img/thumb_dots.png);
+    height:50px;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-image:url(../../img/thumb_dots.gif);
     }
 
 .thumbnail_circles {
-    margin-top:0;
-    height:100%;
-    background-image:url(../../img/thumb_circles.png);
+    height:50px;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-image:url(../../img/thumb_circles.gif);
     }
 
 .thumbnail_sparkles {
@@ -1112,26 +711,11 @@
     }
 
 .thumbnail_snowflakes {
-    margin-top:0;
-    height:100%;
-    background-image:url(../../img/thumb_snowflakes.png);
+    height:50px;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-image:url(../../img/thumb_snowflakes.gif);
     }
-
-    body.nightMode .thumbnail_dots {
-        background-image:url(../../img/thumb_dots-night.png);
-        }
-
-    body.nightMode .thumbnail_circles {
-        background-image:url(../../img/thumb_circles-night.png);
-        }
-
-    body.nightMode .thumbnail_sparkles {
-        background-image:url(../../img/thumb_stars-night.png);
-        }
-
-    body.nightMode .thumbnail_snowflakes {
-        background-image:url(../../img/thumb_snowflakes-night.png);
-        }
 
 
 /* ##### Buttons ##### */

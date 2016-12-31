@@ -594,6 +594,9 @@ fieldset.layout_submit {
     margin-top:40%;
     }
 
+body.nightMode .selectButtonThumbnail {
+    opacity:0.4;
+}
 
 /* ##### controls ##### */
 
