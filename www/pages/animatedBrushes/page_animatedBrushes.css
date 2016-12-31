@@ -154,64 +154,258 @@
 
     /* Stars - animated character-based brushes */
 
-    #brush_stars span {
+    #brush_sparkles {
+        background:transparent;
+    }
+
+    #brush_sparkles span {
         font-family:animatedBrushElements;
         vertical-align:middle;
         }
 
-    .star0::before {content:"\e619";}
+    .sparkle0::before {content:"\e619";}
 
-    .star1::before {content:"\e61a";}
+    .sparkle1::before {content:"\e61a";}
 
-    .star2::before {content:"\e61b";}
+    .sparkle2::before {content:"\e61b";}
 
-    .star3::before {content:"\e61c";}       
+    .sparkle3::before {content:"\e61c";}       
 
-    .star4::before {content:"\e61d";}
+    .sparkle4::before {content:"\e61d";}
 
-    .star5::before {content:"\e61e";}
+    .sparkle5::before {content:"\e61e";}
 
-    .star6::before {content:"\e61f";}
+    .sparkle6::before {content:"\e61f";}
 
-    .star7::before {content:"\e620";}
+    .sparkle7::before {content:"\e620";}
 
-    .star8::before {content:"\e621";}
+    .sparkle8::before {content:"\e621";}
 
-    .star9::before {content:"\e622";}
+    .sparkle9::before {content:"\e622";}
 
-    .star10::before {content:"\e623";}                      
+    .sparkle10::before {content:"\e623";}                      
 
-    .star11::before {content:"\e624";}
+    .sparkle11::before {content:"\e624";}
 
 
-    .starColor0 {
+    .palette_primary .sparkleColor0,
+    .palette_primary .sparkleColor1 {
+        color:red;
+        }        
+
+    .palette_primary .sparkleColor2,
+    .palette_primary .sparkleColor3 {
+        color:yellow;
+        }        
+
+    .palette_primary .sparkleColor4 {
+        color:blue;
+        }        
+
+
+    .palette_citrus .sparkleColor0 {
+        color:#84d628;
+        }
+
+    .palette_citrus .sparkleColor1 {
+        color:#d0f54f;
+        }        
+
+    .palette_citrus .sparkleColor2 {
+        color:#fcff33;
+        }
+
+    .palette_citrus .sparkleColor3 {
+        color:#ffa71b;
+        }        
+
+    .palette_citrus .sparkleColor4 {
+        color:#ff5e45;
+        } 
+
+
+    .palette_retro .sparkleColor0 {
+        color:#404040;
+        }
+
+    .palette_retro .sparkleColor1 {
+        color:#024959;
+        }        
+
+    .palette_retro .sparkleColor2 {
+        color:#037e8c;
+        }
+
+    .palette_retro .sparkleColor3 {
+        color:#f2efdc;
+        }        
+
+    .palette_retro .sparkleColor4 {
+        color:#f24c27;
+        } 
+
+
+    .palette_winter .sparkleColor0 {
+        color:#273f5a;
+        }
+
+    .palette_winter .sparkleColor1 {
+        color:#c6dbf3;
+        }        
+
+    .palette_winter .sparkleColor2 {
+        color:#4b81a5;
+        }
+
+    .palette_winter .sparkleColor3 {
+        color:#74a0bf;
+        }        
+
+    .palette_winter .sparkleColor4 {
+        color:#98c4da;
+        } 
+
+
+    .palette_spring .sparkleColor0 {
+        color:#45e851;
+        }
+
+    .palette_spring .sparkleColor1 {
+        color:#5cb9ff;
+        }        
+
+    .palette_spring .sparkleColor2 {
+        color:#ffd722;
+        }
+
+    .palette_spring .sparkleColor3 {
+        color:#e80855;
+        }        
+
+    .palette_spring .sparkleColor4 {
+        color:#8626ee;
+        } 
+
+
+    .palette_summer .sparkleColor0 {
+        color:#ff860d;
+        }
+
+    .palette_summer .sparkleColor1 {
+        color:#e8430c;
+        }        
+
+    .palette_summer .sparkleColor2 {
+        color:#ff0000;
+        }
+
+    .palette_summer .sparkleColor3 {
+        color:#ff12dd;
+        }        
+
+    .palette_summer .sparkleColor4 {
+        color:#a10dff;
+        } 
+
+
+    .palette_autumn .sparkleColor0 {
+        color:#766537;
+        }
+
+    .palette_autumn .sparkleColor1 {
+        color:#eeb415;
+        }        
+
+    .palette_autumn .sparkleColor2 {
+        color:#bf5b04;
+        }
+
+    .palette_autumn .sparkleColor3 {
+        color:#c26f2d;
+        }        
+
+    .palette_autumn .sparkleColor4 {
+        color:#592202;
+        } 
+
+
+    .palette_usa .sparkleColor0,
+    .palette_usa .sparkleColor1{
+        color:red;
+        }        
+
+    .palette_usa .sparkleColor2,
+    .palette_usa .sparkleColor3 {
+        color:white;
+        }        
+
+    .palette_usa .sparkleColor4 {
+        color:blue;
+        }  
+
+
+    .palette_steel .sparkleColor0 {
+        color:#f9f9f9;
+        }
+
+    .palette_steel .sparkleColor1 {
+        color:#d3d2d0;
+        }        
+
+    .palette_steel .sparkleColor2 {
+        color:#a7a4a1;
+        }
+
+    .palette_steel .sparkleColor3 {
+        color:#514d46;
+        }        
+
+    .palette_steel .sparkleColor4 {
+        color:#ebeae8;
+        } 
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+/*
+
+    .sparkleColor0 {
         color:#ffffff;
         }
 
-    .starColor1 {
+    .sparkleColor1 {
         color:#f8f8f8;
         }
 
-    .starColor2 {
+    .sparkleColor2 {
         color:#e6e6e6;
         }
 
-    .starColor3 {
+    .sparkleColor3 {
         color:#d7dbff;
         }
 
-    .starColor4 {
+    .sparkleColor4 {
         color:#f3f4ff;
         }
 
-    .starColor5 {
+    .sparkleColor5 {
         color:#faffd3;
         }
 
-    .starColor6 {
+    .sparkleColor6 {
         color:#ffd3d3;
         }   
-
+*/
 
     /* Snowflakes - animated character-based brushes */
 
@@ -897,33 +1091,31 @@
         100% { background-position: 0px -50px; }
         }
 
-    
-
 
 .thumbnail_dots {
+    margin-top:0;
+    height:100%;
     background-image:url(../../img/thumb_dots.png);
     }
 
 .thumbnail_circles {
+    margin-top:0;
+    height:100%;
     background-image:url(../../img/thumb_circles.png);
     }
 
-.thumbnail_stars {
-    background-image:url(../../img/thumb_stars.png);
+.thumbnail_sparkles {
+    height:50px;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-image:url(../../img/thumb_sparkles.gif);
     }
 
 .thumbnail_snowflakes {
+    margin-top:0;
+    height:100%;
     background-image:url(../../img/thumb_snowflakes.png);
     }
-
-.thumbnail_notes {
-    background-image:url(../../img/thumb_notes.png);
-    }
-
-.thumbnail_flowers {
-    background-image:url(../../img/thumb_flowers.png);
-    }
-
 
     body.nightMode .thumbnail_dots {
         background-image:url(../../img/thumb_dots-night.png);
@@ -933,20 +1125,12 @@
         background-image:url(../../img/thumb_circles-night.png);
         }
 
-    body.nightMode .thumbnail_stars {
+    body.nightMode .thumbnail_sparkles {
         background-image:url(../../img/thumb_stars-night.png);
         }
 
     body.nightMode .thumbnail_snowflakes {
         background-image:url(../../img/thumb_snowflakes-night.png);
-        }
-
-    body.nightMode .thumbnail_notes {
-        background-image:url(../../img/thumb_notes-night.png);
-        }
-
-    body.nightMode .thumbnail_flowers {
-        background-image:url(../../img/thumb_flowers-night.png);
         }
 
 

@@ -42,7 +42,7 @@ $(document).ready(function(){
         console.log("brushType: "+brushType);
 
          // Display Palette menu instead of Fill menu for brushes that don't lend themselves to textures like stripes, gradients. etc.
-        if (brushType == "eightBitBrush" || brushType == "brush_spinner") {
+        if (brushType == "eightBitBrush" || brushType == "brush_spinner" || brushType == "brush_dots" || brushType == "brush_circles" || brushType == "brush_sparkles" || brushType == "brush_snowflakes") {
             $(".visualSelect_list_item-colors").hide();
             $(".select_menu-standard").hide();        
             $(".select_menu-alt").show();
@@ -276,8 +276,8 @@ for (i=0;i<numberOfObj;i++) {
         charBrushLayout(newObj, "circle");
         }    
 
-    if (theBrush == "brush_stars") {
-        charBrushLayout(newObj, "star");
+    if (theBrush == "brush_sparkles") {
+        charBrushLayout(newObj, "sparkle");
         }    
 
     if (theBrush == "brush_snowflakes") {
@@ -612,9 +612,14 @@ function showAnimatedBrush() {
     }
 
     /* Character-based animated brushes - stars */
-    if ($("#visualSelect_animatedBrushValue").val() === "brush_stars") {
-    $("#brush_stars").show();
-    theInterval = window.setInterval(function() { updateCharBrush("brush_stars"); },charSpeed); 
+    if ($("#visualSelect_animatedBrushValue").val() === "brush_sparkles") {
+    var sparkleFill = $("#visualSelect_fillValue").val();
+
+    document.getElementById("brush_sparkles").className = "animatedBrush brush_char"; // reset brush style
+    $("#brush_sparkles").addClass(sparkleFill); // set brush style
+
+    $("#brush_sparkles").show();
+    theInterval = window.setInterval(function() { updateCharBrush("brush_sparkles"); },charSpeed); 
     }
 
     /* Character-based animated brushes - snowflakes */

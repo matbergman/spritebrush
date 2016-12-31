@@ -191,7 +191,7 @@ $(selectedListButtons).click(function() {
         // Display fill menu if hidden by a non-filled brush (flame, etc.)
         $("#fieldset_fill").show();
 
-        if (this.value == "eightBitBrush" || this.value == "brush_spinner") {
+        if (this.value == "eightBitBrush" || this.value == "brush_spinner" || this.value == "brush_dots" || this.value == "brush_circles" || this.value == "brush_sparkles" || this.value == "brush_snowflakes") {
             $("#button_selectFill").html("Primary Palette");
             $("#visualSelect_fillValue").val("palette_primary");
             $(".visualSelect_list_item").hide();
