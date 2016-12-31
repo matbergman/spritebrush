@@ -18,7 +18,10 @@
 
 /* ##### navigation #####  */
 
-
+#showAnimatedBrushes {
+    color:#000;
+    font-weight:bold;
+}
 
 
 #select_menu_palette {
