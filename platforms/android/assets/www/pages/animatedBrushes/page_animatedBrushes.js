@@ -588,6 +588,9 @@ function showAnimatedBrush() {
         pulseContainer.className = "ball pulse";
         $(pulseContainer).addClass(selectedFill);
 
+        pulseContainer.style.width = $("#container_brushsize").height()+"px";
+        pulseContainer.style.height = $("#container_brushsize").height()+"px";
+
         animationMerge(pulseContainer,"pulseAnimation");
 
         $("#brush_pulse").show();    
