@@ -325,9 +325,7 @@
     -webkit-transform: translateY(0);
   }
 
-  to {
-    -webkit-transform: translateY(360px);
-  }
+
 
 }
 

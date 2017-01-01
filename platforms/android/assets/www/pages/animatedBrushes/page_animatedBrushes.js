@@ -526,6 +526,8 @@ function showAnimatedBrush() {
         bounceContainer = document.getElementsByClassName("bounce")[0];
         bounceContainer.style.webkitAnimationDuration=bounceSpeed; 
 
+        bounceContainer.style.webkitTransform = "translateY("+$("#container_brushsize").height()+"px)";
+
         selectedFill  = $("#visualSelect_fillValue").val();
         bounceContainer.className = "ball bounce";
         $(bounceContainer).addClass(selectedFill);
