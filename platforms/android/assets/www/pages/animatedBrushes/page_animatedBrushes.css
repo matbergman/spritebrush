@@ -387,52 +387,13 @@
 /* Animated brush - fade */
 
 .fader {
+    left:25%;
     -webkit-animation-name: faderAnimation;
     -webkit-animation-duration: 1s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-direction: alternate; 
     -webkit-animation-timing-function: linear;
 }
-
-.ball.fader {
-  
-}
-
-    .brushsize_20 .ball.fader {
-        width:8em;
-        height:8em;
-        border-radius:4em;
-        top:calc(50% - 4em);
-        left:calc(50% - 4em);  
-
-    }
-
-    .brushsize_50 .ball.fader {
-        width:18em;
-        height:18em;
-        border-radius:9em;
-        top:calc(50% - 9em);
-        left:calc(50% - 9em);          
-
-    }
-
-    .brushsize_80 .ball.fader {
-        width:28em;
-        height:28em;
-        border-radius:14em;
-        top:calc(50% - 14em);
-        left:calc(50% - 14em);         
-
-    }
-
-    .brushsize_100 .ball.fader {
-        width:36em;
-        height:36em;
-        border-radius:18em;
-        top:calc(50% - 18em);
-        left:calc(50% - 18em); 
-    }    
-
 
 @-webkit-keyframes faderAnimation {
 

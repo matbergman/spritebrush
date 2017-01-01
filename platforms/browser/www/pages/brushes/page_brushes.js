@@ -16,13 +16,8 @@ instructionsContainer.innerHTML = instructionsContent;
 
 }
 
-
 /* ##### Set brush size ####  */
-// brushsize variable set in index.js, modified in page_settings.html
-var brushsize = localStorage.getItem('brushsize');
-if (brushsize==null) {brushsize = defaultBrushsize}
-var brushsizeClassname = "brushsize_"+brushsize;
-$("#container_brushsize").removeClass().addClass(brushsizeClassname);
+setBrushSize();
 
 
 /* ##### Event handlers ##### */

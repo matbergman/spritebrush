@@ -17,14 +17,8 @@ $(document).ready(function(){
 
     }
 
-
     /* ##### Set brush size ####  */
-    // brushsize variable set in index.js, modified in page_settings.html
-    var brushsize = localStorage.getItem('brushsize');
-    if (brushsize==null) {brushsize = defaultBrushsize}
-    var brushsizeClassname = "brushsize_"+brushsize;
-    $("#container_brushsize").removeClass().addClass(brushsizeClassname);
-
+    setBrushSize();
 
     /* ##### Event handlers ##### */
 
@@ -615,6 +609,9 @@ function showAnimatedBrush() {
         selectedFill  = $("#visualSelect_fillValue").val();
         faderContainer.className = "ball fader";
         $(faderContainer).addClass(selectedFill);
+
+        faderContainer.style.width = $("#container_brushsize").height()+"px";
+        faderContainer.style.height = $("#container_brushsize").height()+"px";
 
         animationMerge(faderContainer,"faderAnimation");
 
