@@ -65,6 +65,7 @@ $("#colorFrame").on("taphold",function(){
 function showMask() {
     selectedMask = $("#visualSelect_maskValue").val();
     theMask = document.getElementById("colorMask");
+    theMask.className = "";
 
     maskBrushSize = document.getElementById("container_brushsize").className.slice(10);
 
@@ -72,7 +73,7 @@ function showMask() {
 
     if (selectedMask == "none" || selectedMask == "mask_fullscreen") {
         theMask.style.backgroundImage = "none";        
-        maskWidth = "maskBrushSize+"%"";
+        maskWidth = "100%";
     } 
 
     else {
