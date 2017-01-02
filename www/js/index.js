@@ -166,7 +166,6 @@ navSettings.innerHTML = "Brush size";
 
 var navBrushsize = document.createElement("span");
 navBrushsize.id = "overflow_brushSize";
-navBrushsize.innerHTML = "XXX";
 
 navNightMode.appendChild(navNightModeToggle);
 theOverflow.appendChild(navNightMode);
@@ -188,29 +187,62 @@ var selectedListButtons = selectedList.getElementsByTagName("button");
 
 $(selectedList).show();
 
+
+
 $(selectedListButtons).click(function() {
 
     // Reset Fill menu when switching between standand and alternate brushes
     if (isNaN(this.value) == true) { // Don't swap palette/fill menu for button_selectAnimatedBrushSpeed and button_selectStrobe
 
-        // Display fill menu if hidden by a non-filled brush (flame, etc.)
+        console.log(
+            "elem: "+elem+", \n"+
+            "this.value: "+this.value+", \n"+
+            "this.innerHTML: "+this.innerHTML
+            );
+
+
+
+        // Store the selected fill value so that it doesn't get reset if a different brush is selected
+        if (elem == "fieldset_fill") {
+
+            if (localStorage.getItem("fillType") == "standard") {
+                localStorage.setItem("fillValue",this.value);
+                localStorage.setItem("fillName",this.innerHTML);
+            }
+        }
+
+        // Display fill menu if previously hidden by a non-filled brush (flame, etc.)
         $("#fieldset_fill").show();
 
+
+        // Show fills for alternate brushes
+
+        console.log("Fill type: "+localStorage.getItem("fillType"));
+
         if (this.value == "eightBitBrush" || this.value == "brush_spinner" || this.value == "brush_dots" || this.value == "brush_circles" || this.value == "brush_sparkles" || this.value == "brush_snowflakes") {
+            console.log ("swap to alternate brushes");
+
             $("#button_selectFill").html("Primary Palette");
             $("#visualSelect_fillValue").val("palette_primary");
             $(".visualSelect_list_item").hide();
             $(".visualSelect_list_item-palette").show();
         }
 
+        // Hide the fill menu for brushes that don't take a fill (flame)
         else if (this.value == "brush_flame") {
-            // Hide the fill menu - the flame brush doesn't take a fill
             $("#fieldset_fill").hide();
         }
 
+        // Show fills for standard brushes
         else {
-            $("#button_selectFill").html("White");
-            $("#visualSelect_fillValue").val("color_white");
+            console.log("swap to standard brushes");
+
+            if (localStorage.fillValue == null) {$("#visualSelect_fillValue").val("color_white")}
+            else {$("#visualSelect_fillValue").val(localStorage.fillValue)}
+
+            if (localStorage.fillName == null) {$("#button_selectFill").html("White");}
+            else {$("#button_selectFill").html(localStorage.fillName)}
+            
 
             $(".select_menu_link").removeClass("active");
             $("#select_menu_colors").addClass("active");

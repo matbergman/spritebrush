@@ -17,8 +17,12 @@ $(document).ready(function(){
 
     }
 
+
     /* ##### Set brush size ####  */
     setBrushSize();
+
+    /* ##### Define fill type ##### */
+    localStorage.setItem("fillType","alt");
 
     /* ##### Event handlers ##### */
 
@@ -36,12 +40,14 @@ $(document).ready(function(){
 
          // Display Palette menu instead of Fill menu for brushes that don't lend themselves to textures like stripes, gradients. etc.
         if (brushType == "eightBitBrush" || brushType == "brush_spinner" || brushType == "brush_dots" || brushType == "brush_circles" || brushType == "brush_sparkles" || brushType == "brush_snowflakes") {
+            localStorage.setItem("fillType","alt");
             $(".visualSelect_list_item-colors").hide();
             $(".select_menu-standard").hide();        
             $(".select_menu-alt").show();
         }
 
         else {
+            localStorage.setItem("fillType","standard");
             $(".visualSelect_list_item-colors").show();            
             $(".select_menu-standard").show();        
             $(".select_menu-alt").hide();
@@ -298,9 +304,6 @@ newObj.style.fontSize = objSize+"em";
 /* Manually add the CSS webkit animation names for both the brush animation and color cycle animation. JS requires comma syntax to prevent animations from overriding each other. */
 function animationMerge(container, anim) {
 
-    console.log("container: "+container);
-    console.log("anim: "+anim);
-
     container.style.webkitAnimationName = "";
 
     if (selectedFill == "colorCycle colorCycle_primary") {
@@ -447,8 +450,6 @@ function showAnimatedBrush() {
         spinnerShape.style.left = (spinnerWidth/2) - (spinnerHeight/2) +"px";
 
         spinnerShape.className = spinnerBrush;
-
-        console.log("spinnerBrush:" +spinnerBrush);
 
         $("#brush_spinner").show();
         spinnerShape.style.webkitAnimationDuration=spinnerSpeed; 
