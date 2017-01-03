@@ -114,6 +114,11 @@ header nav a {
      font-weight:bold;
 }
 
+.content_container .ui-link {
+    font-size:inherit;
+}
+
+
 .panel_logo {
     border-bottom:1px solid #999;
     }
