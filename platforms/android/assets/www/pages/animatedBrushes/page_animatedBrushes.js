@@ -21,8 +21,13 @@ $(document).ready(function(){
     /* ##### Set brush size ####  */
     setBrushSize();
 
-    /* ##### Define fill type ##### */
-    localStorage.setItem("fillType","alt");
+    /* ##### 
+    Define fill type. 
+    'Standard' is the full selection of fills.
+    'Alt' is a selection of palettes for brushes that don't lend themselves to the standard fills. 
+    ##### */
+
+    localStorage.setItem("fillType","standard");
 
     /* ##### Event handlers ##### */
 
@@ -38,8 +43,8 @@ $(document).ready(function(){
 
         var brushType = $("#visualSelect_animatedBrushValue").val();
 
-         // Display Palette menu instead of Fill menu for brushes that don't lend themselves to textures like stripes, gradients. etc.
-        if (brushType == "eightBitBrush" || brushType == "brush_spinner" || brushType == "brush_dots" || brushType == "brush_circles" || brushType == "brush_sparkles" || brushType == "brush_snowflakes") {
+         // Display Palette menu instead of Fill menu for 'alt' brushes
+        if (brushType == "eightBitBrush" || brushType == "brush_dots" || brushType == "brush_circles" || brushType == "brush_sparkles" || brushType == "brush_snowflakes") {
             localStorage.setItem("fillType","alt");
             $(".visualSelect_list_item-colors").hide();
             $(".select_menu-standard").hide();        
@@ -433,13 +438,14 @@ function showAnimatedBrush() {
         spinnerContainer = document.getElementById("brush_spinner");
         spinnerShape = document.getElementById("brush_spinnerShape");
         var spinnerBrush = $("#visualSelect_fillValue").val();
+        selectedFill  = $("#visualSelect_fillValue").val();
+
 
         var spinnerSpeed;
         if (animationSpeed === 0) spinnerSpeed = "6s";
         else if (animationSpeed === 1) spinnerSpeed = "3s";
         else if (animationSpeed === 2) spinnerSpeed = "1s";
         else spinnerSpeed = "3s";
-
 
         var spinnerHeight =  $("#container_brushsize").height();
         var spinnerWidth = $("#container_brushsize").width();
@@ -450,6 +456,8 @@ function showAnimatedBrush() {
         spinnerShape.style.left = (spinnerWidth/2) - (spinnerHeight/2) +"px";
 
         spinnerShape.className = spinnerBrush;
+
+        animationMerge(spinnerShape,"spinnerAnimation");
 
         $("#brush_spinner").show();
         spinnerShape.style.webkitAnimationDuration=spinnerSpeed; 

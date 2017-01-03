@@ -256,7 +256,6 @@
     width:auto;
     height:6px;
     border-radius:3px;
-    background: -webkit-linear-gradient(left, #f9f9f9 0%, #d3d2d0 25%, #a7a4a1 50%, #514d46 75%, #ebeae8 100%);  
     -webkit-animation: spinnerAnimation 1s linear infinite;
     }
 

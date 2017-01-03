@@ -219,7 +219,7 @@ $(selectedListButtons).click(function() {
 
         console.log("Fill type: "+localStorage.getItem("fillType"));
 
-        if (this.value == "eightBitBrush" || this.value == "brush_spinner" || this.value == "brush_dots" || this.value == "brush_circles" || this.value == "brush_sparkles" || this.value == "brush_snowflakes") {
+        if (this.value == "eightBitBrush" || this.value == "brush_dots" || this.value == "brush_circles" || this.value == "brush_sparkles" || this.value == "brush_snowflakes") {
             console.log ("swap to alternate brushes");
 
             $("#button_selectFill").html("Primary Palette");
