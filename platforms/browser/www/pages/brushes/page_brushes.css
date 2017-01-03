@@ -57,11 +57,6 @@
         margin-bottom:5%;
         }
 
-#visualSelect_mask {}        
-
-    #visualSelect_mask .selectButtonContainer {
-        }
-
         #visualSelect_mask .selectButtonContainer .selectButtonThumbnail {
             position:relative;
             width:100%;
@@ -72,35 +67,35 @@
             margin-top:0;
             }
 
-            #visualSelect_mask .selectButtonContainer .thumbnail_fullscreen {
+            .thumbnail_fullscreen {
                 background-image:url(../../img/icon_mask_fullscreen.png);
                 }        
     
-            #visualSelect_mask .selectButtonContainer .thumbnail_circle {
+            .thumbnail_circle {
                 background-image:url(../../img/icon_mask_circle.png);
                 }        
             
-            #visualSelect_mask .selectButtonContainer .thumbnail_bar {
+            .thumbnail_bar {
                 background-image:url(../../img/icon_mask_bar.png);
                 }  
             
-            #visualSelect_mask .selectButtonContainer .thumbnail_line {
+            .thumbnail_line {
                 background-image:url(../../img/icon_mask_line.png);
                 }  
             
-            #visualSelect_mask .selectButtonContainer .thumbnail_square {
+            .thumbnail_square {
                 background-image:url(../../img/icon_mask_square.png);
                 }  
             
-            #visualSelect_mask .selectButtonContainer .thumbnail_sunburst {
+            .thumbnail_sunburst {
                 background-image:url(../../img/icon_mask_sunburst.png);
                 }                      
             
-            #visualSelect_mask .selectButtonContainer .thumbnail_point {
+            .thumbnail_point {
                 background-image:url(../../img/icon_mask_point.png);
                 }                      
 
-            #visualSelect_mask .selectButtonContainer .thumbnail_points {
+            .thumbnail_points {
                 background-image:url(../../img/icon_mask_points.png);
                 } 
 
