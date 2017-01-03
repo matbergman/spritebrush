@@ -93,6 +93,23 @@ $(".select_menu_link").on("click", function() {
 
     });
 
+// Check if the button values were previously set  
+if (localStorage.brushValue == null) {$("#visualSelect_brushValue").val("brush_spinner")}
+else {$("#visualSelect_animatedBrushValue").val(localStorage.brushValue)}
+
+if (localStorage.brushName == null) {$("#button_selectAnimatedBrush").html("Spinner");}
+else {$("#button_selectAnimatedBrush").html(localStorage.brushName)}
+
+
+/* ##### 
+Set the default fill type. 
+'Standard' is the full selection of fills.
+'Alt' is a selection of palettes for brushes that don't lend themselves to the standard fills. 
+##### */
+
+localStorage.setItem("fillType","standard");
+
+
 });
 
 
@@ -174,7 +191,7 @@ theOverflow.appendChild(navSettings);
 theOverflow.appendChild(navInstructions);
 theOverflow.appendChild(navAbout);
 
-    
+
 /* ##### Custom select control ##### */
 
 function createSelect(elem) {
@@ -187,8 +204,6 @@ var selectedListButtons = selectedList.getElementsByTagName("button");
 
 $(selectedList).show();
 
-
-
 $(selectedListButtons).click(function() {
 
     // Reset Fill menu when switching between standand and alternate brushes
@@ -200,15 +215,37 @@ $(selectedListButtons).click(function() {
             "this.innerHTML: "+this.innerHTML
             );
 
-
-
-        // Store the selected fill value so that it doesn't get reset if a different brush is selected
+        // Store the selected brush value so that it doesn't get reset if the page is reloaded or a different brush selected
+        if (elem == "fieldset_mask") {
+            localStorage.setItem("maskName",this.innerHTML);
+            localStorage.setItem("maskValue",this.value);
+        }
+        if (elem == "fieldset_strobe") {
+            localStorage.setItem("strobeName",this.innerHTML);
+            localStorage.setItem("strobeValue",this.value);
+        }
+        if (elem == "fieldset_animatedBrushSpeed") {
+            localStorage.setItem("speedName",this.innerHTML);
+            localStorage.setItem("speedValue",this.value);
+        }
+        if (elem == "fieldset_animatedBrush") {
+            localStorage.setItem("brushName",this.innerHTML);
+            localStorage.setItem("brushValue",this.value);
+        }
         if (elem == "fieldset_fill") {
+
+            console.log("++++ fieldset_fill");
 
             if (localStorage.getItem("fillType") == "standard") {
                 localStorage.setItem("fillValue",this.value);
                 localStorage.setItem("fillName",this.innerHTML);
             }
+
+            else {
+                localStorage.setItem("fillValue","palette_primary");
+                localStorage.setItem("fillName","Primary Palette");
+            }
+
         }
 
         // Display fill menu if previously hidden by a non-filled brush (flame, etc.)
@@ -216,10 +253,8 @@ $(selectedListButtons).click(function() {
 
 
         // Show fills for alternate brushes
-
-        console.log("Fill type: "+localStorage.getItem("fillType"));
-
         if (this.value == "eightBitBrush" || this.value == "brush_dots" || this.value == "brush_circles" || this.value == "brush_sparkles" || this.value == "brush_snowflakes") {
+
             console.log ("swap to alternate brushes");
 
             $("#button_selectFill").html("Primary Palette");
@@ -235,6 +270,7 @@ $(selectedListButtons).click(function() {
 
         // Show fills for standard brushes
         else {
+
             console.log("swap to standard brushes");
 
             if (localStorage.fillValue == null) {$("#visualSelect_fillValue").val("color_white")}

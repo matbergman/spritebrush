@@ -20,6 +20,33 @@ instructionsContainer.innerHTML = instructionsContent;
 setBrushSize();
 
 
+/* ##### Reset button states when page loads (returning from Settings, Instructions, or About) ##### */
+
+
+if (localStorage.maskValue == null) {$("#visualSelect_maskValue").val("mask_circle")}
+else {$("#visualSelect_maskValue").val(localStorage.getItem("maskValue"))}
+
+if (localStorage.maskName == null) {$("#button_selectMask").html("Circle")}
+else {$("#button_selectMask").html(localStorage.getItem("maskName"))}
+
+
+if (localStorage.fillValue == null) {$("#visualSelect_fillValue").val("color_white")}
+else {$("#visualSelect_fillValue").val(localStorage.getItem("fillValue"))}
+
+if (localStorage.fillName == null) {$("#button_selectFill").html("White")}
+else {$("#button_selectFill").html(localStorage.getItem("fillName"))}
+
+
+if (localStorage.strobeValue == null) {$("#visualSelect_strobeValue").val(0)}
+else {$("#visualSelect_strobeValue").val(localStorage.getItem("strobeValue"))}
+
+if (localStorage.strobeName == null) {$("#button_selectstrobe").html("No Strobe")}
+else {$("#button_selectStrobe").html(localStorage.getItem("strobeName"))}
+
+
+console.log($("#button_selectMask").html());
+
+
 /* ##### Event handlers ##### */
 
 $("#button_showFill").on("click", function() {

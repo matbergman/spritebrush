@@ -17,17 +17,25 @@ $(document).ready(function(){
 
     }
 
-
     /* ##### Set brush size ####  */
     setBrushSize();
 
-    /* ##### 
-    Define fill type. 
-    'Standard' is the full selection of fills.
-    'Alt' is a selection of palettes for brushes that don't lend themselves to the standard fills. 
-    ##### */
 
-    localStorage.setItem("fillType","standard");
+    /* ##### Reset button states when page loads (returning from Settings, Instructions, or About) ##### */
+
+    if (localStorage.fillValue == null) {$("#visualSelect_fillValue").val("color_white")}
+    else {$("#visualSelect_fillValue").val(localStorage.getItem("fillValue"))}
+
+    if (localStorage.fillName == null) {$("#button_selectFill").html("White")}
+    else {$("#button_selectFill").html(localStorage.getItem("fillName"))}
+
+
+    if (localStorage.speedValue == null) {$("#visualSelect_animatedBrushSpeedValue").val(1)}
+    else {$("#visualSelect_animatedBrushSpeedValue").val(localStorage.getItem("speedValue"))}
+
+    if (localStorage.speedName == null) {$("#button_selectAnimatedBrushSpeed").html("Normal")}
+    else {$("#button_selectAnimatedBrushSpeed").html(localStorage.getItem("speedName"))}
+
 
     /* ##### Event handlers ##### */
 
