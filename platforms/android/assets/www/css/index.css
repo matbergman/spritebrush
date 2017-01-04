@@ -514,8 +514,9 @@ body.content .ui-page-active {
 
 .panel_logo {
     width:auto;
+    overflow:auto;
     height:44px;
-    margin-bottom:2em;
+    margin:0 0 2em 0;
     }
 
 .panel_logo_image {
@@ -954,7 +955,7 @@ button#toggleBrushDisplay:focus {
         }
 
     .panel_logo {
-        display:none;
+        margin-top:.85em;
         }
 
     #form_color {
