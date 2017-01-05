@@ -364,6 +364,7 @@ form {
         .splash_content a:hover,
         .splash_content a:active {
             background-color:#dd2c00;
+            color:#fff;
         }
 
     .splash_logo {
