@@ -42,15 +42,15 @@ $(document).ready(function(){
 
         var brushType = $("#visualSelect_animatedBrushValue").val();
 
+        $(".visualSelect_list_item").hide();
+
          // Display Palette menu instead of Fill menu for 'alt' brushes
         if (brushType == "eightBitBrush" || brushType == "brush_dots" || brushType == "brush_circles" || brushType == "brush_sparkles" || brushType == "brush_snowflakes") {
-            $(".visualSelect_list_item-colors").hide();
             $(".visualSelect_list_item-stripes").show();
         }
 
         else {
             $(".visualSelect_list_item-colors").show();            
-            $(".visualSelect_list_item-stripes").hide();
         }
 
         createSelect("fieldset_fill"); 
