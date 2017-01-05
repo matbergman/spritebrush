@@ -215,7 +215,7 @@ $(selectedListButtons).click(function() {
 
         // Store the selected brush value so that it doesn't get reset if the page is reloaded or a different brush selected
 
-
+/*
         if (elem == "fieldset_mask") {
             localStorage.setItem("maskName",this.innerHTML);
             localStorage.setItem("maskValue",this.value);
@@ -236,7 +236,7 @@ $(selectedListButtons).click(function() {
 
             console.log("++++ fieldset_fill");
 
-/*
+
             if (localStorage.getItem("fillType") == "standard") {
                 localStorage.setItem("fillValue",this.value);
                 localStorage.setItem("fillName",this.innerHTML);
@@ -246,9 +246,9 @@ $(selectedListButtons).click(function() {
                 localStorage.setItem("fillValue","palette_primary");
                 localStorage.setItem("fillName","Primary Palette");
             }
-*/
-        }
 
+        }
+*/
         // Display fill menu if previously hidden by a non-filled brush (flame, etc.)
         $("#fieldset_fill").show();
 
