@@ -23,6 +23,10 @@ $(document).ready(function(){
 
     /* ##### Reset button states when page loads (returning from Settings, Instructions, or About) ##### */
 
+$("#visualSelect_animatedBrushValue").val("brush_spinner");
+$("#visualSelect_fillValue").val("color_white");
+$("#visualSelect_animatedBrushSpeedValue").val(1);
+/*
     if (localStorage.fillValue == null) {$("#visualSelect_fillValue").val("color_white")}
     else {$("#visualSelect_fillValue").val(localStorage.getItem("fillValue"))}
 
@@ -35,7 +39,7 @@ $(document).ready(function(){
 
     if (localStorage.speedName == null) {$("#button_selectAnimatedBrushSpeed").html("Normal")}
     else {$("#button_selectAnimatedBrushSpeed").html(localStorage.getItem("speedName"))}
-
+*/
 
     /* ##### Event handlers ##### */
 
@@ -53,25 +57,22 @@ $(document).ready(function(){
 
          // Display Palette menu instead of Fill menu for 'alt' brushes
         if (brushType == "eightBitBrush" || brushType == "brush_dots" || brushType == "brush_circles" || brushType == "brush_sparkles" || brushType == "brush_snowflakes") {
-            localStorage.setItem("fillType","alt");
+//            localStorage.setItem("fillType","alt");
             $(".visualSelect_list_item-colors").hide();
-            $(".select_menu-standard").hide();        
-            $(".select_menu-alt").show();
+            $(".visualSelect_list_item-stripes").show();
+//            $(".select_menu-standard").hide();        
+//            $(".select_menu-alt").show();
         }
 
         else {
-            localStorage.setItem("fillType","standard");
+//            localStorage.setItem("fillType","standard");
             $(".visualSelect_list_item-colors").show();            
-            $(".select_menu-standard").show();        
-            $(".select_menu-alt").hide();
+            $(".visualSelect_list_item-stripes").hide();
+//            $(".select_menu-standard").show();        
+//            $(".select_menu-alt").hide();
         }
 
         createSelect("fieldset_fill"); 
-        return false;
-        });
-
-    $("#button_selectPalette").on("click", function() {
-        createSelect("fieldset_palette"); 
         return false;
         });
 
@@ -129,6 +130,16 @@ var eightBitBrush_colorArray_primary = new Array(
 "red",
 "yellow",
 "blue"
+);
+
+var eightBitBrush_colorArray_spectrum = new Array(
+"red",
+"orange",
+"yellow",
+"green",
+"blue",
+"indigo",
+"violet"
 );
 
 var eightBitBrush_colorArray_citrus = new Array(
@@ -390,44 +401,44 @@ function showAnimatedBrush() {
 
         selectedPalette  = $("#visualSelect_fillValue").val();
 
-        if (selectedPalette == "palette_primary") {
-            eightBitBrush_colorArray = eightBitBrush_colorArray_primary;
+        if (selectedPalette == "stripes_spectrum") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_spectrum;
         }
 
-        else if (selectedPalette == "palette_citrus") {
+        else if (selectedPalette == "stripes_citrus") {
             eightBitBrush_colorArray = eightBitBrush_colorArray_citrus;
         }
 
-        else if (selectedPalette == "palette_retro") {
+        else if (selectedPalette == "stripes_retro") {
             eightBitBrush_colorArray = eightBitBrush_colorArray_retro;
         }
 
-        else if (selectedPalette == "palette_winter") {
+        else if (selectedPalette == "stripes_winter") {
             eightBitBrush_colorArray = eightBitBrush_colorArray_winter;
         }
 
-        else if (selectedPalette == "palette_spring") {
+        else if (selectedPalette == "stripes_spring") {
             eightBitBrush_colorArray = eightBitBrush_colorArray_spring;
         }
 
-        else if (selectedPalette == "palette_summer") {
+        else if (selectedPalette == "stripes_summer") {
             eightBitBrush_colorArray = eightBitBrush_colorArray_summer;
         }
 
-        else if (selectedPalette == "palette_autumn") {
+        else if (selectedPalette == "stripes_autumn") {
             eightBitBrush_colorArray = eightBitBrush_colorArray_autumn;
         }
 
-        else if (selectedPalette == "palette_usa") {
+        else if (selectedPalette == "stripes_usa") {
             eightBitBrush_colorArray = eightBitBrush_colorArray_usa;
         }
 
-        else if (selectedPalette == "palette_steel") {
+        else if (selectedPalette == "stripes_steel") {
             eightBitBrush_colorArray = eightBitBrush_colorArray_steel;
         }
 
         else {
-            eightBitBrush_colorArray == eightBitBrush_colorArray_primary;            
+            eightBitBrush_colorArray == eightBitBrush_colorArray_spectrum;            
         }
 
         var eightBitSpeed;

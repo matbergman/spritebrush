@@ -542,6 +542,13 @@ body.content .ui-page-active {
     list-style:none;
 }
 
+.select_menu_link {}
+
+.select_menu_link.disabled {
+    pointer-events: none;
+    opacity:0.4;
+}
+
 .visualSelect_list {
     float:left;
     width:75%;
@@ -562,9 +569,6 @@ body.content .ui-page-active {
     display:block;
 }
 
-.visualSelect_list_item-palette {
-    display:block;
-}
 
 
 /* Layout - overflow menu */

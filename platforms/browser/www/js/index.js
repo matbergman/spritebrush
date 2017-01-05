@@ -83,10 +83,6 @@ $(".select_menu_link").on("click", function() {
         $(".visualSelect_list_item-cycles").show();
     }
 
-    else if (selectedLink=="select_menu_palette") {
-        $(".visualSelect_list_item-palette").show();
-    }
-
     else {
         $(".visualSelect_list_item-colors").show();
     }        
@@ -94,12 +90,14 @@ $(".select_menu_link").on("click", function() {
     });
 
 // Check if the button values were previously set  
+
+/*
 if (localStorage.brushValue == null) {$("#visualSelect_brushValue").val("brush_spinner")}
 else {$("#visualSelect_animatedBrushValue").val(localStorage.brushValue)}
 
 if (localStorage.brushName == null) {$("#button_selectAnimatedBrush").html("Spinner");}
 else {$("#button_selectAnimatedBrush").html(localStorage.brushName)}
-
+*/
 
 /* ##### 
 Set the default fill type. 
@@ -107,7 +105,7 @@ Set the default fill type.
 'Alt' is a selection of palettes for brushes that don't lend themselves to the standard fills. 
 ##### */
 
-localStorage.setItem("fillType","standard");
+// localStorage.setItem("fillType","standard");
 
 
 });
@@ -216,6 +214,8 @@ $(selectedListButtons).click(function() {
             );
 
         // Store the selected brush value so that it doesn't get reset if the page is reloaded or a different brush selected
+
+
         if (elem == "fieldset_mask") {
             localStorage.setItem("maskName",this.innerHTML);
             localStorage.setItem("maskValue",this.value);
@@ -236,6 +236,7 @@ $(selectedListButtons).click(function() {
 
             console.log("++++ fieldset_fill");
 
+/*
             if (localStorage.getItem("fillType") == "standard") {
                 localStorage.setItem("fillValue",this.value);
                 localStorage.setItem("fillName",this.innerHTML);
@@ -245,7 +246,7 @@ $(selectedListButtons).click(function() {
                 localStorage.setItem("fillValue","palette_primary");
                 localStorage.setItem("fillName","Primary Palette");
             }
-
+*/
         }
 
         // Display fill menu if previously hidden by a non-filled brush (flame, etc.)
@@ -257,10 +258,22 @@ $(selectedListButtons).click(function() {
 
             console.log ("swap to alternate brushes");
 
-            $("#button_selectFill").html("Primary Palette");
-            $("#visualSelect_fillValue").val("palette_primary");
-            $(".visualSelect_list_item").hide();
-            $(".visualSelect_list_item-palette").show();
+           $("#button_selectFill").html("Spectrum Stripes");
+           $("#visualSelect_fillValue").val("stripes_spectrum");
+
+           $(".select_menu_link").removeClass("active");
+           $("#select_menu_stripes").addClass("active");
+  
+           $("#select_menu_colors").addClass("disabled");
+           $("#select_menu_gradient").addClass("disabled");
+           $("#select_menu_cycles").addClass("disabled");
+
+
+
+ //           $("#button_selectFill").html("Primary Palette");
+ //           $("#visualSelect_fillValue").val("palette_primary");
+ //           $(".visualSelect_list_item").hide();
+//            $(".visualSelect_list_item-palette").show();
         }
 
         // Hide the fill menu for brushes that don't take a fill (flame)
@@ -273,15 +286,20 @@ $(selectedListButtons).click(function() {
 
             console.log("swap to standard brushes");
 
-            if (localStorage.fillValue == null) {$("#visualSelect_fillValue").val("color_white")}
-            else {$("#visualSelect_fillValue").val(localStorage.fillValue)}
 
-            if (localStorage.fillName == null) {$("#button_selectFill").html("White");}
-            else {$("#button_selectFill").html(localStorage.fillName)}
+//            if (localStorage.fillValue == null) {$("#visualSelect_fillValue").val("color_white")}
+//            else {$("#visualSelect_fillValue").val(localStorage.fillValue)}
+
+//            if (localStorage.fillName == null) {$("#button_selectFill").html("White");}
+//            else {$("#button_selectFill").html(localStorage.fillName)}
             
 
             $(".select_menu_link").removeClass("active");
+            $(".select_menu_link").removeClass("disabled");
             $("#select_menu_colors").addClass("active");
+
+
+
         }
 
     }

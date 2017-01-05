@@ -22,7 +22,11 @@ setBrushSize();
 
 /* ##### Reset button states when page loads (returning from Settings, Instructions, or About) ##### */
 
+$("#visualSelect_maskValue").val("mask_circle")
+$("#visualSelect_fillValue").val("color_white")
+$("#visualSelect_strobeValue").val(0)
 
+/*
 if (localStorage.maskValue == null) {$("#visualSelect_maskValue").val("mask_circle")}
 else {$("#visualSelect_maskValue").val(localStorage.getItem("maskValue"))}
 
@@ -42,7 +46,7 @@ else {$("#visualSelect_strobeValue").val(localStorage.getItem("strobeValue"))}
 
 if (localStorage.strobeName == null) {$("#button_selectstrobe").html("No Strobe")}
 else {$("#button_selectStrobe").html(localStorage.getItem("strobeName"))}
-
+*/
 
 console.log($("#button_selectMask").html());
 
