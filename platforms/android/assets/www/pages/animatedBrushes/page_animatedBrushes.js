@@ -23,23 +23,10 @@ $(document).ready(function(){
 
     /* ##### Reset button states when page loads (returning from Settings, Instructions, or About) ##### */
 
-$("#visualSelect_animatedBrushValue").val("brush_spinner");
-$("#visualSelect_fillValue").val("color_white");
-$("#visualSelect_animatedBrushSpeedValue").val(1);
-/*
-    if (localStorage.fillValue == null) {$("#visualSelect_fillValue").val("color_white")}
-    else {$("#visualSelect_fillValue").val(localStorage.getItem("fillValue"))}
+    $("#visualSelect_animatedBrushValue").val("brush_spinner");
+    $("#visualSelect_fillValue").val("color_white");
+    $("#visualSelect_animatedBrushSpeedValue").val(1);
 
-    if (localStorage.fillName == null) {$("#button_selectFill").html("White")}
-    else {$("#button_selectFill").html(localStorage.getItem("fillName"))}
-
-
-    if (localStorage.speedValue == null) {$("#visualSelect_animatedBrushSpeedValue").val(1)}
-    else {$("#visualSelect_animatedBrushSpeedValue").val(localStorage.getItem("speedValue"))}
-
-    if (localStorage.speedName == null) {$("#button_selectAnimatedBrushSpeed").html("Normal")}
-    else {$("#button_selectAnimatedBrushSpeed").html(localStorage.getItem("speedName"))}
-*/
 
     /* ##### Event handlers ##### */
 
@@ -57,19 +44,13 @@ $("#visualSelect_animatedBrushSpeedValue").val(1);
 
          // Display Palette menu instead of Fill menu for 'alt' brushes
         if (brushType == "eightBitBrush" || brushType == "brush_dots" || brushType == "brush_circles" || brushType == "brush_sparkles" || brushType == "brush_snowflakes") {
-//            localStorage.setItem("fillType","alt");
             $(".visualSelect_list_item-colors").hide();
             $(".visualSelect_list_item-stripes").show();
-//            $(".select_menu-standard").hide();        
-//            $(".select_menu-alt").show();
         }
 
         else {
-//            localStorage.setItem("fillType","standard");
             $(".visualSelect_list_item-colors").show();            
             $(".visualSelect_list_item-stripes").hide();
-//            $(".select_menu-standard").show();        
-//            $(".select_menu-alt").hide();
         }
 
         createSelect("fieldset_fill"); 
