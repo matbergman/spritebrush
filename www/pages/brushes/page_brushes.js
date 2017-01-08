@@ -38,14 +38,14 @@ mask6 = new Image();
 mask7 = new Image();
 mask8 = new Image();
 
-mask1.src = "/images/mask_bar.png";
-mask2.src = "/images/mask_circle.png";
-mask3.src = "/images/mask_line.png";
-mask4.src = "/images/mask_line-small.png";
-mask5.src = "/images/mask_point.png";
-mask6.src = "/images/mask_points.png";
-mask7.src = "/images/mask_square.png";
-mask8.src = "/images/mask_sunburst.png";
+mask1.src = "/img/mask_bar.png";
+mask2.src = "/img/mask_circle.png";
+mask3.src = "/img/mask_line.png";
+mask4.src = "/img/mask_line-small.png";
+mask5.src = "/img/mask_point.png";
+mask6.src = "/img/mask_points.png";
+mask7.src = "/img/mask_square.png";
+mask8.src = "/img/mask_sunburst.png";
 
 
 
