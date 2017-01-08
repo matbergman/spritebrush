@@ -83,6 +83,11 @@
                 background-image:url(../../img/icon_mask_line.png);
                 }  
             
+                .brushsize_50 .thumbnail_line,
+                .brushsize_20 .thumbnail_line {
+                    background-image:url(../../img/icon_mask_line-small.png);
+                    }
+
             .thumbnail_square {
                 background-image:url(../../img/icon_mask_square.png);
                 }  
