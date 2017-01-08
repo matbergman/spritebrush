@@ -27,6 +27,28 @@ $("#visualSelect_fillValue").val("color_white")
 $("#visualSelect_strobeValue").val(0)
 
 
+/* ##### Preload mask images ##### */
+
+mask1 = new Image();
+mask2 = new Image();
+mask3 = new Image();
+mask4 = new Image();
+mask5 = new Image();
+mask6 = new Image();
+mask7 = new Image();
+mask8 = new Image();
+
+mask1.src = "/images/mask_bar.png";
+mask2.src = "/images/mask_circle.png";
+mask3.src = "/images/mask_line.png";
+mask4.src = "/images/mask_line-small.png";
+mask5.src = "/images/mask_point.png";
+mask6.src = "/images/mask_points.png";
+mask7.src = "/images/mask_square.png";
+mask8.src = "/images/mask_sunburst.png";
+
+
+
 /* ##### Event handlers ##### */
 
 $("#button_showFill").on("click", function() {
