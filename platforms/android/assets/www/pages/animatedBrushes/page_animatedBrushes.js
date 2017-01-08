@@ -196,6 +196,37 @@ var eightBitBrush_colorArray_steel = new Array(
 "#514d46"
 );
 
+var eightBitBrush_colorArray_forest = new Array(
+"#c7bb81",
+"#353a40",
+"#51774e",
+"#66563c",
+"#0c9c09"
+);
+
+var eightBitBrush_colorArray_ocean = new Array(
+"#008ddb",
+"#d8f6fe",
+"#f7edd4",
+"#83ece7",
+"#4087d7"
+);
+
+var eightBitBrush_colorArray_arid = new Array(
+"#ec9d52",
+"#ae5930",
+"#64a5cf",
+"#6c5148",
+"#d8a049"
+);
+
+var eightBitBrush_colorArray_urban = new Array(
+"#000000",
+"#20222f",
+"#fffffd",
+"#ec4331",
+"#5d420c"
+);
 
 /* randomize arrays */
 function ShuffleArray(array) {
@@ -347,6 +378,22 @@ function animationMerge(container, anim) {
         container.style.webkitAnimationName = anim + ", colorCycleSteel";             
     }
 
+    else if (selectedFill == "colorCycle colorCycle_forest") {
+        container.style.webkitAnimationName = anim + ", colorCycleForest";             
+    }
+
+    else if (selectedFill == "colorCycle colorCycle_ocean") {
+        container.style.webkitAnimationName = anim + ", colorCycleOcean";             
+    }
+
+    else if (selectedFill == "colorCycle colorCycle_arid") {
+        container.style.webkitAnimationName = anim + ", colorCycleArid";             
+    }
+
+    else if (selectedFill == "colorCycle colorCycle_urban") {
+        container.style.webkitAnimationName = anim + ", colorCycleUrban";             
+    }
+
     else {
         container.style.webkitAnimationName = anim;             
     }
@@ -416,6 +463,22 @@ function showAnimatedBrush() {
 
         else if (selectedPalette == "stripes_steel") {
             eightBitBrush_colorArray = eightBitBrush_colorArray_steel;
+        }
+
+        else if (selectedPalette == "stripes_forest") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_forest;
+        }
+
+        else if (selectedPalette == "stripes_ocean") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_ocean;
+        }
+
+        else if (selectedPalette == "stripes_arid") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_arid;
+        }
+
+        else if (selectedPalette == "stripes_urban") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_urban;
         }
 
         else {

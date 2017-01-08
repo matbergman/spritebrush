@@ -212,6 +212,67 @@
 }
 
 
+.stripes_forest {
+    background: -webkit-linear-gradient(left,
+    #c7bb81 0%,
+    #c7bb81 20%,
+    #353a40 20%,
+    #353a40 40%,
+    #51774e 40%,
+    #51774e 60%,
+    #66563c 60%,
+    #66563c 80%,
+    #0c9c09 80%,
+    #0c9c09 100%
+    );
+}
+
+.stripes_ocean {
+    background: -webkit-linear-gradient(left,
+    #008ddb 0%,
+    #008ddb 20%,
+    #d8f6fe 20%,
+    #d8f6fe 40%,
+    #f7edd4 40%,
+    #f7edd4 60%,
+    #83ece7 60%,
+    #83ece7 80%,
+    #4087d7 80%,
+    #4087d7 100%
+    );
+}
+
+.stripes_arid {
+    background: -webkit-linear-gradient(left,
+    #ec9d52 0%,
+    #ec9d52 20%,
+    #ae5930 20%,
+    #ae5930 40%,
+    #64a5cf 40%,
+    #64a5cf 60%,
+    #6c5148 60%,
+    #6c5148 80%,
+    #d8a049 80%,
+    #d8a049 100%
+    );
+}
+
+.stripes_urban {
+    background: -webkit-linear-gradient(left,
+    #000000 0%,
+    #000000 20%,
+    #20222f 20%,
+    #20222f 40%,
+    #fffffd 40%,
+    #fffffd 60%,
+    #ec4331 60%,
+    #ec4331 80%,
+    #5d420c 80%,
+    #5d420c 100%
+    );    
+}
+
+
 
 /* ##### Gradients ##### */
 
@@ -336,6 +397,49 @@ background: -webkit-linear-gradient(left,
     violet 88%
     );
 }
+
+
+.gradient_forest {
+    background: -webkit-linear-gradient(left,
+    #c7bb81 0%,
+    #353a40 25%,
+    #51774e 50%,
+    #66563c 75%,
+    #0c9c09 100%
+    );    
+}
+
+.gradient_ocean {
+    background: -webkit-linear-gradient(left,
+    #008ddb 0%,
+    #d8f6fe 25%,
+    #f7edd4 50%,
+    #83ece7 75%,
+    #4087d7 100%
+    );    
+}
+
+.gradient_arid {
+    background: -webkit-linear-gradient(left,
+    #ec9d52 0%,
+    #ae5930 25%,
+    #64a5cf 50%,
+    #6c5148 75%,
+    #d8a049 100%
+    );    
+}
+
+.gradient_urban {
+    background: -webkit-linear-gradient(left,
+    #000000 0%,
+    #20222f 25%,
+    #fffffd 50%,
+    #ec4331 75%,
+    #5d420c 100%
+    );    
+}
+
+
 
 .gradient_smoke {
     background: -webkit-linear-gradient(left,
@@ -469,6 +573,8 @@ background: -webkit-linear-gradient(left,
 
 
 
+
+
 /* ##### Color Cycles #####  */
 
 
@@ -582,6 +688,61 @@ background: -webkit-linear-gradient(left,
         66% {background: blue;}
         100% {background: red;}
         }
+
+
+.colorCycle_forest {
+    -webkit-animation-name:colorCycleForest;
+    }
+
+    @-webkit-keyframes colorCycleForest {
+        0% {background: #c7bb81;}
+        20% {background: #353a40;}
+        40% {background: #51774e;}
+        60% {background: #66563c;}
+        80% {background: #0c9c09;}
+        100% {background: #c7bb81;}
+        }
+
+
+.colorCycle_ocean {
+    -webkit-animation-name:colorCycleOcean;
+    }
+
+    @-webkit-keyframes colorCycleOcean {
+        0% {background: #008ddb;}
+        20% {background: #d8f6fe;}
+        40% {background: #f7edd4;}
+        60% {background: #83ece7;}
+        80% {background: #4087d7;}
+        100% {background: #008ddb;}
+        }
+
+.colorCycle_arid {
+    -webkit-animation-name:colorCycleArid;
+    }
+
+    @-webkit-keyframes colorCycleArid {
+        0% {background: #ec9d52;}
+        20% {background: #ae5930;}
+        40% {background: #64a5cf;}
+        60% {background: #6c5148;}
+        80% {background: #d8a049;}
+        100% {background: #ec9d52;}
+        }
+
+.colorCycle_urban {
+    -webkit-animation-name:colorCycleUrban;
+    }
+
+    @-webkit-keyframes colorCycleUrban {
+        0% {background: #000000;}
+        20% {background: #20222f;}
+        40% {background: #fffffd;}
+        60% {background: #ec4331;}
+        80% {background: #5d420c;}
+        100% {background: #000000;}
+        }
+
 
 
 
@@ -755,8 +916,88 @@ background: -webkit-linear-gradient(left,
     } 
 
 
+.stripes_forest .charColor0 {
+    color:#c7bb81;
+    }
+
+.stripes_forest .charColor1 {
+    color:#353a40;
+    }        
+
+.stripes_forest .charColor2 {
+    color:#51774e;
+    }
+
+.stripes_forest .charColor3 {
+    color:#66563c;
+    }        
+
+.stripes_forest .charColor4 {
+    color:#0c9c09;
+    } 
 
 
+.stripes_ocean .charColor0 {
+    color:#008ddb;
+    }
+
+.stripes_ocean .charColor1 {
+    color:#d8f6fe;
+    }        
+
+.stripes_ocean .charColor2 {
+    color:#f7edd4;
+    }
+
+.stripes_ocean .charColor3 {
+    color:#83ece7;
+    }        
+
+.stripes_ocean .charColor4 {
+    color:#4087d7;
+    } 
+
+
+.stripes_arid .charColor0 {
+    color:#ec9d52;
+    }
+
+.stripes_arid .charColor1 {
+    color:#ae5930;
+    }        
+
+.stripes_arid .charColor2 {
+    color:#64a5cf;
+    }
+
+.stripes_arid .charColor3 {
+    color:#6c5148;
+    }        
+
+.stripes_arid .charColor4 {
+    color:#d8a049;
+    } 
+
+
+.stripes_urban .charColor0 {
+    color:#000000;
+    }
+
+.stripes_urban .charColor1 {
+    color:#20222f;
+    }        
+
+.stripes_urban .charColor2 {
+    color:#fffffd;
+    }
+
+.stripes_urban .charColor3 {
+    color:#ec4331;
+    }        
+
+.stripes_urban .charColor4 {
+    color:#5d420c;
+    } 
 
 
 
@@ -824,4 +1065,20 @@ background: -webkit-linear-gradient(left,
 
     .thumbnail_colorCycle_green {
         -webkit-animation-name:colorCycleGreen;
-        }            
+        }  
+
+    .thumbnail_colorCycle_forest {
+        -webkit-animation-name:colorCycleForest;
+        }
+
+    .thumbnail_colorCycle_ocean {
+        -webkit-animation-name:colorCycleOcean;
+        }
+
+    .thumbnail_colorCycle_arid {
+        -webkit-animation-name:colorCycleArid;
+        }               
+
+    .thumbnail_colorCycle_urban {
+        -webkit-animation-name:colorCycleUrban;
+        }                                   
