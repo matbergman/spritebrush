@@ -743,16 +743,34 @@ background: -webkit-linear-gradient(left,
         100% {background: #000000;}
         }
 
+.colorCycle_spectrum {
+    -webkit-animation-name:colorCycleSpectrum;
+    }
+
+    @-webkit-keyframes colorCycleSpectrum {
+        0% {background: red;}
+        14% {background: orange;}
+        28% {background: yellow;}
+        43% {background: green;}
+        57% {background: blue;}
+        71% {background: indigo;}
+        100% {background: violet;}
+        }
 
 
-
-/* ##### Character animation color stripess ##### */
+/* ##### Character animation color stripes ##### */
 
 .stripes_spectrum .charColor0 {color:red;}
 .stripes_spectrum .charColor1 {color:yellow;}        
 .stripes_spectrum .charColor2 {color:green;}
 .stripes_spectrum .charColor3 {color:blue;}        
 .stripes_spectrum .charColor4 {color:violet;}        
+
+.stripes_primary .charColor0 {color:red;}
+.stripes_primary .charColor1 {color:red;}
+.stripes_primary .charColor2 {color:yellow;}
+.stripes_primary .charColor3 {color:blue;}
+.stripes_primary .charColor3 {color:blue;}
 
 .stripes_citrus .charColor0 {
     color:#84d628;
@@ -1010,6 +1028,10 @@ background: -webkit-linear-gradient(left,
     -webkit-animation-iteration-count:infinite;
     -webkit-animation-play-state:running;
 }
+
+    .thumbnail_colorCycle_spectrum {
+        -webkit-animation-name:colorCycleSpectrum;
+        } 
 
     .thumbnail_colorCycle_primary {
         -webkit-animation-name:colorCyclePrimary;

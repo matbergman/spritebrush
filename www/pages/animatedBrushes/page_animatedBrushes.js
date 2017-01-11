@@ -394,6 +394,10 @@ function animationMerge(container, anim) {
         container.style.webkitAnimationName = anim + ", colorCycleUrban";             
     }
 
+    else if (selectedFill == "colorCycle colorCycle_spectrum") {
+        container.style.webkitAnimationName = anim + ", colorCycleSpectrum";             
+    }
+
     else {
         container.style.webkitAnimationName = anim;             
     }
@@ -479,6 +483,10 @@ function showAnimatedBrush() {
 
         else if (selectedPalette == "stripes_urban") {
             eightBitBrush_colorArray = eightBitBrush_colorArray_urban;
+        }
+
+        else if (selectedPalette == "stripes_primary") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_primary;
         }
 
         else {
