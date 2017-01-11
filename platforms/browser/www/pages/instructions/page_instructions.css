@@ -22,6 +22,10 @@ a#instructions {
 	width:24.45%;
 	}
 
+	.nightMode .img_screenshot {
+		opacity:0.6;
+	}
+
 
 @media only screen and (max-device-width: 640px) {
 
