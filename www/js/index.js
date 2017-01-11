@@ -89,6 +89,7 @@ $(".select_menu_link").on("click", function() {
 
     });
 
+
 });
 
 
@@ -191,18 +192,17 @@ $(selectedListButtons).click(function() {
         // Display fill menu if previously hidden by a non-filled brush (flame, etc.)
         $("#fieldset_fill").show();
 
-        // Show fills for alternate brushes
+        // Set fills for alternate brushes
         if (this.value == "eightBitBrush" || this.value == "brush_dots" || this.value == "brush_circles" || this.value == "brush_sparkles" || this.value == "brush_snowflakes") {
 
-           $("#button_selectFill").html("Spectrum Stripes");
-           $("#visualSelect_fillValue").val("stripes_spectrum");
+            localStorage.setItem("brushType", "alt");                
 
-           $(".select_menu_link").removeClass("active");
-           $("#select_menu_stripes").addClass("active");
-  
-           $("#select_menu_colors").addClass("disabled");
-           $("#select_menu_gradient").addClass("disabled");
-           $("#select_menu_cycles").addClass("disabled");
+        }
+
+        // Set fills for standard brushes
+        else if (this.value == "brush_spinner" || this.value == "brush_streaker" || this.value == "brush_bounce" || this.value == "brush_orbit" || this.value == "brush_pulse" || this.value == "brush_fader") {
+
+            localStorage.setItem("brushType", "standard");                
 
         }
 
@@ -211,15 +211,31 @@ $(selectedListButtons).click(function() {
             $("#fieldset_fill").hide();
         }
 
-        // Show fills for standard brushes
         else {
-
-            $(".select_menu_link").removeClass("active");
-            $(".select_menu_link").removeClass("disabled");
-            $("#select_menu_colors").addClass("active");
 
         }
 
+    }
+
+
+    // Show fills for standard brushes
+    if (localStorage.getItem("brushType") == "standard") {
+            $(".select_menu_link").removeClass("active");
+            $(".select_menu_link").removeClass("disabled");
+            $("#select_menu_colors").addClass("active");
+    }
+
+    // Show fills for alternate brushes
+    else if (localStorage.getItem("brushType") == "alt") {
+           $("#button_selectFill").html("Spectrum Stripes");
+           $("#visualSelect_fillValue").val("stripes_spectrum");
+
+           $(".select_menu_link").removeClass("active");
+           $("#select_menu_stripes").addClass("active");
+  
+           $("#select_menu_colors").addClass("disabled");
+           $("#select_menu_gradient").addClass("disabled");
+           $("#select_menu_cycles").addClass("disabled");        
     }
 
     $(selectedListInput).val(this.value);
