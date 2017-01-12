@@ -186,6 +186,8 @@ $(selectedList).show();
 
 $(selectedListButtons).click(function() {
 
+    console.log(this.value);
+
     // Reset Fill menu when switching between standand and alternate brushes
     if (isNaN(this.value) == true) { // Don't swap palette/fill menu for button_selectAnimatedBrushSpeed and button_selectStrobe
 
@@ -200,7 +202,7 @@ $(selectedListButtons).click(function() {
         }
 
         // Set fills for standard brushes
-        else if (this.value == "brush_spinner" || this.value == "brush_streaker" || this.value == "brush_bounce" || this.value == "brush_orbit" || this.value == "brush_pulse" || this.value == "brush_fader") {
+        else if (this.value == "brush_spinner" || this.value == "brush_streaker" || this.value == "brush_bounce" || this.value == "brush_orbit" || this.value == "brush_pulse" || this.value == "brush_fader" || this.value == "mask_fullscreen" || this.value == "mask_circle" || this.value == "mask_square" || this.value == "mask_bar" || this.value == "mask_line" || this.value == "mask_point" || this.value == "mask_points" || this.value == "mask_sunburst") {
 
             localStorage.setItem("brushType", "standard");                
 
@@ -220,9 +222,13 @@ $(selectedListButtons).click(function() {
 
     // Show fills for standard brushes
     if (localStorage.getItem("brushType") == "standard") {
+
             $(".select_menu_link").removeClass("active");
             $(".select_menu_link").removeClass("disabled");
             $("#select_menu_colors").addClass("active");
+
+            $(".visualSelect_list_item").hide();
+            $(".visualSelect_list_item-colors").show(); 
     }
 
     // Show fills for alternate brushes
