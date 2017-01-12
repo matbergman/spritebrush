@@ -186,8 +186,6 @@ $(selectedList).show();
 
 $(selectedListButtons).click(function() {
 
-    console.log(this.value);
-
     // Reset Fill menu when switching between standand and alternate brushes
     if (isNaN(this.value) == true) { // Don't swap palette/fill menu for button_selectAnimatedBrushSpeed and button_selectStrobe
 
@@ -201,19 +199,15 @@ $(selectedListButtons).click(function() {
 
         }
 
-        // Set fills for standard brushes
-        else if (this.value == "brush_spinner" || this.value == "brush_streaker" || this.value == "brush_bounce" || this.value == "brush_orbit" || this.value == "brush_pulse" || this.value == "brush_fader" || this.value == "mask_fullscreen" || this.value == "mask_circle" || this.value == "mask_square" || this.value == "mask_bar" || this.value == "mask_line" || this.value == "mask_point" || this.value == "mask_points" || this.value == "mask_sunburst") {
-
-            localStorage.setItem("brushType", "standard");                
-
-        }
-
-        // Hide the fill menu for brushes that don't take a fill (flame)
+       // Hide the fill menu for brushes that don't take a fill (flame)
         else if (this.value == "brush_flame") {
             $("#fieldset_fill").hide();
         }
 
+        // Set fills for standard brushes
         else {
+
+            localStorage.setItem("brushType", "standard");                
 
         }
 
