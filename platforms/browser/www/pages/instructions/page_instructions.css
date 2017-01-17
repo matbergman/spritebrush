@@ -11,6 +11,12 @@ a#instructions {
 
 /* ##### Layout ##### */
 
+
+.img_demo {
+	width:100%;
+	margin-top:80px;
+}
+
 .screenshots {
 	width:100%;
 	overflow:auto;
