@@ -49,6 +49,50 @@ var app = {
 };
 
 
+
+$(document).ready(function(){
+
+/* ##### Event handlers ##### */
+
+$(".select_menu_link").on("click", function() {
+
+    $(".visualSelect_list_item").hide();
+
+    $(".select_menu_link").removeClass("active");
+    $(this).addClass("active");
+
+    var selectedLink = $(this).attr("id");
+
+    if (selectedLink=="select_menu_colors") {
+        $(".visualSelect_list_item-colors").show();
+    }
+
+    else if (selectedLink=="select_menu_stripes") {
+        $(".visualSelect_list_item-stripes").show();
+    }
+
+    else if (selectedLink=="select_menu_spectrum") {
+        $(".visualSelect_list_item-spectrum").show();
+    }
+
+    else if (selectedLink=="select_menu_gradient") {
+        $(".visualSelect_list_item-gradient").show();
+    }
+
+    else if (selectedLink=="select_menu_cycles") {
+        $(".visualSelect_list_item-cycles").show();
+    }
+
+    else {
+        $(".visualSelect_list_item-colors").show();
+    }        
+
+    });
+
+
+});
+
+
 /* ##### Configure layout #####  */
 
 var heightForPages = $(window).height();
@@ -66,14 +110,9 @@ thePanelLogoImage.className = "panel_logo_image";
 
 var navColors = document.createElement("a");
 navColors.href = "#";
-navColors.id = "showShapes";
+navColors.id = "showBrushes";
 navColors.className = "ui-link";
-navColors.innerHTML = "Shapes";
-
-var navBrushes = document.createElement("a");
-navBrushes.href = "#";
-navBrushes.id = "showBrushes";
-navBrushes.innerHTML = "Patterns";
+navColors.innerHTML = "Brushes";
 
 var navAnimatedBrushes = document.createElement("a");
 navAnimatedBrushes.href = "#";
@@ -85,19 +124,12 @@ navStencils.href = "#";
 navStencils.id = "showStencils";
 navStencils.innerHTML = "Stencils";
 
-var navFlashlight = document.createElement("a");
-navFlashlight.href = "#";
-navFlashlight.id = "showFlashlight";
-navFlashlight.innerHTML = "Flashlight";
-
 thePanelLogo.appendChild(thePanelLogoImage);
 thePanel.appendChild(thePanelLogo);
 
 thePanel.appendChild(navColors);
-thePanel.appendChild(navBrushes);
 thePanel.appendChild(navAnimatedBrushes);
 thePanel.appendChild(navStencils);
-//thePanel.appendChild(navFlashlight);
 
 
 
@@ -129,13 +161,17 @@ navSettings.href = "#";
 navSettings.id = "settings";
 navSettings.innerHTML = "Brush size";
 
+var navBrushsize = document.createElement("span");
+navBrushsize.id = "overflow_brushSize";
+
 navNightMode.appendChild(navNightModeToggle);
 theOverflow.appendChild(navNightMode);
+navSettings.appendChild(navBrushsize);
 theOverflow.appendChild(navSettings);
 theOverflow.appendChild(navInstructions);
 theOverflow.appendChild(navAbout);
 
-    
+
 /* ##### Custom select control ##### */
 
 function createSelect(elem) {
@@ -149,6 +185,59 @@ var selectedListButtons = selectedList.getElementsByTagName("button");
 $(selectedList).show();
 
 $(selectedListButtons).click(function() {
+
+    // Reset Fill menu when switching between standand and alternate brushes
+    if (isNaN(this.value) == true) { // Don't swap palette/fill menu for button_selectAnimatedBrushSpeed and button_selectStrobe
+
+        // Display fill menu if previously hidden by a non-filled brush (flame, etc.)
+        $("#fieldset_fill").show();
+
+        // Set fills for alternate brushes
+        if (this.value == "eightBitBrush" || this.value == "brush_dots" || this.value == "brush_circles" || this.value == "brush_sparkles" || this.value == "brush_snowflakes") {
+
+            localStorage.setItem("brushType", "alt");                
+
+        }
+
+       // Hide the fill menu for brushes that don't take a fill (flame)
+        else if (this.value == "brush_flame") {
+            $("#fieldset_fill").hide();
+        }
+
+        // Set fills for standard brushes
+        else {
+
+            localStorage.setItem("brushType", "standard");                
+
+        }
+
+    }
+
+
+    // Show fills for standard brushes
+    if (localStorage.getItem("brushType") == "standard") {
+
+            $(".select_menu_link").removeClass("active");
+            $(".select_menu_link").removeClass("disabled");
+            $("#select_menu_colors").addClass("active");
+
+            $(".visualSelect_list_item").hide();
+            $(".visualSelect_list_item-colors").show(); 
+    }
+
+    // Show fills for alternate brushes
+    else if (localStorage.getItem("brushType") == "alt") {
+           $("#button_selectFill").html("Spectrum Stripes");
+           $("#visualSelect_fillValue").val("stripes_spectrum");
+
+           $(".select_menu_link").removeClass("active");
+           $("#select_menu_stripes").addClass("active");
+  
+           $("#select_menu_colors").addClass("disabled");
+           $("#select_menu_gradient").addClass("disabled");
+           $("#select_menu_cycles").addClass("disabled");        
+    }
+
     $(selectedListInput).val(this.value);
 
     if (elem != "fieldset_stencil") {
@@ -165,6 +254,19 @@ $(selectedListButtons).click(function() {
 selectedList.style.height = heightForPages+"px";
 
 }    
+
+/* ##### Set brush size ##### */
+var brushsize;
+var defaultBrushsize = 100;
+
+function setBrushSize() {
+    var brushsize = localStorage.getItem('brushsize');
+    if (brushsize==null) {brushsize = defaultBrushsize}
+    var brushsizeClassname = "brushsize_"+brushsize;
+    $("#container_brushsize").removeClass().addClass(brushsizeClassname);
+    $("#overflow_brushSize").html(" ("+brushsize+"%)");
+}
+
 
 /* ##### Return to page ##### */
 
@@ -193,9 +295,3 @@ function toggleTheme() {
             }
     $("#overflow_menu").popup("close");
 }
-
-/* ##### Set brush size ##### */
-var brushsize;
-var defaultBrushsize = 100;
-
-

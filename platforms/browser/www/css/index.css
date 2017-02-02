@@ -97,11 +97,42 @@ header nav a {
     color:#fff;
     }
 
-#panel_menu a,
-#overflow_menu a,
-#select_menu a {
+.ui-link {
+    display:block;
+    padding:1em 5px;
+    border-bottom:1px solid #ccc;      
     color:#666;
+    font-size:2em;
     }
+
+.ui-link:last-child {
+    border-bottom:0;
+    }
+
+.ui-link.active {
+     color:#000;
+     font-weight:bold;
+}
+
+    .ui-link:active {
+       background-color:#dd2c00;
+       color:#fff;
+    }
+
+    .nightMode .ui-link:active {
+        background-color:#000;
+        color:inherit;
+    }
+
+
+.content_container .ui-link {
+    font-size:inherit;
+}
+
+
+nav .ui-link {
+    font-size:17px;
+}
 
 .panel_logo {
     border-bottom:1px solid #999;
@@ -111,73 +142,73 @@ header nav a {
 
 /* night mode theme */
 
-body.nightMode {
+.nightMode {
     color:#673ab7;
     }
 
-body.nightMode .ui-page-theme-a {
+.nightMode .ui-page-theme-a {
    background-color:#000 !important; /* override intermittent jqueryUI inline background color bug */
     }
 
-body.nightMode header {
+.nightMode header {
     background-color:#000;
     }
 
-body.nightMode #panel_menu,
-body.nightMode #overflow_menu,
-body.nightMode #select_menu {
+.nightMode #panel_menu,
+.nightMode #overflow_menu,
+.nightMode #select_menu {
     background-color:#212121;
     }
 
 
-body.nightMode button,
-body.nightMode .button {
+.nightMode button,
+.nightMode .button {
     color:#673ab7;
     background-color:#000;
     border:1px solid #673ab7;
     }
 
-    body.nightMode .selectButtonContainer button {
+    .nightMode .selectButtonContainer button {
         background-color:transparent;
         border:0;
         }
 
-body.nightMode .ui-page-theme-a.hide {
+.nightMode .ui-page-theme-a.hide {
   background-color:#000;
   }
 
-body.nightMode a {
+.nightMode a {
     color:#673ab7;
     }
 
-body.nightMode header nav a {
+.nightMode header nav a {
     color:#673ab7;
     }
 
-body.nightMode .panel_logo_image {
+.nightMode .panel_logo_image {
     opacity:0.2;
     }
 
-body.nightMode .section-title {
+.nightMode .section-title {
     color:#673ab7;
     }
 
-body.nightMode .instructions {
+.nightMode .instructions {
     display:none;
     }
 
-body.nightMode #panel_menu a,
-body.nightMode #overflow_menu a,
-body.nightMode #select_menu a {
+.nightMode #panel_menu a,
+.nightMode #overflow_menu a,
+.nightMode #select_menu a {
     color:#673ab7;
     border-color:#673ab7;
     }
 
-body.nightMode .panel_logo {
+.nightMode .panel_logo {
     border-bottom:1px solid #673ab7;
     }
 
-body.nightMode .nightMode_toggleIndicator {
+.nightMode .nightMode_toggleIndicator {
     width:28px;
     height:28px;
     font-family:icons-app;
@@ -185,7 +216,7 @@ body.nightMode .nightMode_toggleIndicator {
     color:#673ab7;
     }
 
-    body.nightMode  .nightMode_toggleIndicator::before {
+    .nightMode  .nightMode_toggleIndicator::before {
         content:"\E602";
         }
 
@@ -226,7 +257,7 @@ a {
     }
 
 form {
-    margin:84px 0 0 0;
+    margin:94px 0 0 0;
     padding:0;
     }
 
@@ -312,7 +343,7 @@ form {
 
 .splash_content {
     position:relative;
-    width:60%;
+    width:65%;
     height:90%;
     margin-left:auto;
     margin-right:auto;
@@ -326,8 +357,14 @@ form {
     }
 
     .splash_content a {
-        color:#000;
+        color:#dd2c00;
         font-family:Roboto-Medium;
+        }
+
+        .splash_content a:hover,
+        .splash_content a:active {
+            background-color:#dd2c00;
+            color:#fff;
         }
 
     .splash_logo {
@@ -353,22 +390,19 @@ form {
 
 .instructions {
     position:absolute;
-    bottom:9.5em;
+    bottom:0;
     left:0;
     width:100%;
     z-index:1;
     }
 
     .instructions_content {
-        width:calc(100% - 4.2em);
-        margin-left:1em;
-        margin-right:1em;
         text-align:center;
-        font-size:1.8em;
-        border:1px solid #b0bec5;
+        font-size:1.7em;
+        border-top:1px solid #b0bec5;
         background-color:#eceff1;
-        padding:.5em 1em;
-        line-height:1.8em;
+        height:56px;
+        line-height:56px;
         font-family:Roboto-Light;
         }  
 
@@ -386,7 +420,7 @@ body.content .ui-page-active {
     padding:0 2em;
     height:100%;
     overflow-y:scroll;
-    font-size:1.8em;
+    font-size:2em;
     line-height:140%;
     }
 
@@ -430,7 +464,7 @@ body.content .ui-page-active {
             border-top:0;
             }
 
-        body.nightMode .content_container table td {
+        .nightMode .content_container table td {
             background-color:#222;
             border-color:#673ab7;
             color:#673ab7;
@@ -448,11 +482,11 @@ body.content .ui-page-active {
 
 /* layout - forms */
 
-fieldset.layout_labels {
-    margin:0 2em 2em 2em;
+.layout_labels {
+    margin:0 2em 1.25em 2em;
     }
 
-fieldset.layout_labels label {
+.layout_labels label {
     float:left;
     margin:0;
     padding:0;
@@ -460,22 +494,22 @@ fieldset.layout_labels label {
     line-height:1.8em;
     }
     
-fieldset.layout_labels button:not(.selectButton) {
+.layout_labels button:not(.selectButton) {
     float:right;
     width:45%; 
     margin-bottom:0;
     }    
 
-fieldset.layout_submit {
+.layout_submit {
     position:absolute;
-    bottom:5.5em;
+    bottom:150px;
     left:0;
     z-index:200;
     width:100%;
     height:2em;
     }
 
-    fieldset.layout_submit button {
+    .layout_submit button {
         display:block;
         width:50%;
         margin-left:auto;
@@ -488,21 +522,6 @@ fieldset.layout_submit {
 #panel_menu {
     }
 
-    #panel_menu a,
-    #overflow_menu a,
-    #select_menu a {
-        display:block;
-        padding:1em 0;
-        font-size:1.4em;
-        border-bottom:1px solid #ccc;    
-        }
-
-        #panel_menu a:last-child,
-        #overflow_menu a:last-child,
-        #select_menu a:last-child {
-            border-bottom:0;
-            }
-
         #overflow_menu a {
             width:14em;
             }
@@ -510,18 +529,60 @@ fieldset.layout_submit {
 
 .panel_logo {
     width:auto;
+    overflow:auto;
     height:44px;
-    margin-bottom:2em;
+    margin:0 0 2em 0;
     }
 
 .panel_logo_image {
     display:block;
-    width:210px;
     height:28px;
     background-image:url(../img/logo.svg);
     background-repeat:no-repeat;
     background-size:cover;
     }
+
+
+/* Layout - visual select menu */
+
+#select_menu {
+    position:fixed;
+    top:0;
+    left:0;
+    width:calc(25% - 2em);
+    height:100%;
+    margin:0;
+    padding:1em;
+    list-style:none;
+}
+
+.select_menu_link {}
+
+.select_menu_link.disabled {
+    pointer-events: none;
+    opacity:0.4;
+}
+
+.visualSelect_list {
+    float:left;
+    width:75%;
+    height:100%;
+    margin:0 0 0 25%;
+    padding:0;
+    list-style:none;
+}
+
+.visualSelect_list_item {
+    width:100%;
+    height:100%;
+    display:none;
+}
+
+
+.visualSelect_list_item-colors {
+    display:block;
+}
+
 
 
 /* Layout - overflow menu */
@@ -552,6 +613,17 @@ fieldset.layout_submit {
 .brushsize_20 {width:20%; height:20%; margin-top:25%;}
 
 
+/* Layout - thumbnails */
+
+.selectButtonThumbnail {
+    width:100%;
+    height:1em;
+    margin-top:40%;
+    }
+
+.nightMode .selectButtonThumbnail {
+    opacity:0.4;
+}
 
 /* ##### controls ##### */
 
@@ -668,31 +740,34 @@ header nav a {
     position: fixed;
     font-family:icons-app; /* font family generated with icomoon.io app */
     text-align:center;
-    font-size:17px;
     line-height:48px;
     z-index: 2;
     }
 
-    a.button_menu {
+    a.button_nav {
         top: 8px;
-        left:20px;
+        padding:0;
+        color:#fff;
+        border:0;
         }
 
-        a.button_menu::before {
-            content:"\E600";
-            }
-
-    a.button_overflow {
-        top: 8px;
-        right:20px;
+        a.button_menu {
+            left:20px;
         }
 
-        a.button_overflow::before {
-            content:"\E601";
-            }
+            a.button_menu::before {
+                content:"\E600";
+                }
+
+        a.button_overflow {
+            right:20px;
+        }
+
+            a.button_overflow::before {
+                content:"\E601";
+                }
 
     a.button_back {
-        top:8px;
         left:20px;
         font-size:2.5em;
         }
@@ -794,7 +869,7 @@ button#toggleBrushDisplay:focus {
     }
 
     .visualSelect .selectButtonContainer {
-        height:45%;
+        height:40%;
         }
 
     .visualSelect_description {
@@ -813,7 +888,7 @@ button#toggleBrushDisplay:focus {
         padding:0;
         width:25%;
         float:left;
-        background:#455a64;
+        background-color:#455a64;
         background-size:contain;
         background-repeat:no-repeat;
         background-position:top center;
@@ -849,22 +924,33 @@ button#toggleBrushDisplay:focus {
             outline:1px solid #fff;
             }
 
+            .visualSelect_list_item-colors .selectButtonContainer button {
+                outline:0;
+                }
 
-    body.nightMode .visualSelect {
+
+            .selectButtonContainer button:active,
+            .visualSelect_list_item-colors .selectButtonContainer button:active {
+                outline:2px solid #dd2c00;
+                }
+
+
+
+    .nightMode .visualSelect {
         background-color:#000;
         }
 
-        body.nightMode .selectButtonContainer {
+        .nightMode .selectButtonContainer {
             background:#000;
             color:#673ab7;
             }        
 
-            body.nightMode .selectButtonContainer .selectButtonLabel {
+            .nightMode .selectButtonContainer .selectButtonLabel {
                 color:#673ab7;
                 text-shadow:none;
                 }
 
-            body.nightMode .selectButtonContainer button {
+            .nightMode .selectButtonContainer button {
                 outline:1px solid #673ab7;
                 }
 
@@ -873,7 +959,7 @@ button#toggleBrushDisplay:focus {
 
 /* Small screens, smartphones */
 
-@media only screen and (max-device-width: 640px) {
+@media only screen and (max-device-width: 959px) {
 
     body {
         font-size:.5em;
@@ -885,6 +971,10 @@ button#toggleBrushDisplay:focus {
         padding:.85em 1em;
         }
 
+    form {
+        margin:74px 0 0 0;
+        }
+
     .selectButtonContainer .selectButtonLabel {
         font-size:2.2em;
         }
@@ -893,18 +983,12 @@ button#toggleBrushDisplay:focus {
         left:10px;
         }
 
-    #panel_menu a,
-    #overflow_menu a,
-    #select_menu a {
-        font-size:2em;
-        }
-
     .visualSelect_description {
         font-size: 2.2em;
         }
 
     .panel_logo {
-        display:none;
+        margin-top:.85em;
         }
 
     #form_color {
@@ -919,16 +1003,8 @@ button#toggleBrushDisplay:focus {
         margin-top:3.5em;
         }
 
-    #page_shapes fieldset.layout_submit {
-        bottom:4.5em;
-        }
-
-    #page_shapes .instructions {
-        bottom:7.5em;
-        }
-
     .splash_content {
-        font-size:1.65em;
+        font-size:1.7em;
         }
 
     .splash_logo {
@@ -939,5 +1015,15 @@ button#toggleBrushDisplay:focus {
     #toggleBackground p {
         font-size:1.8em;
         }
+
+    .layout_submit {
+        bottom:85px;
+        }       
+
+    .instructions_content {
+        height:36px;
+        line-height:36px;        
+    }
+
 
 }        

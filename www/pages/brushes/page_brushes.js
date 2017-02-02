@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+
 /* ##### Check if night mode skin is enabled */
 getTheme();
 
@@ -8,7 +9,7 @@ getTheme();
 
 if ($(".instructions").length) {
 
-var instructionsContent = "Tap the screen to toggle the pattern. Tap &amp; hold to close and exit."
+var instructionsContent = "Tap the screen to toggle the brush. Tap &amp; hold to close and exit."
 
 var instructionsContainer = document.getElementsByClassName("instructions_content")[0];
 instructionsContainer.innerHTML = instructionsContent;
@@ -16,70 +17,136 @@ instructionsContainer.innerHTML = instructionsContent;
 }
 
 /* ##### Set brush size ####  */
-// brushsize variable set in index.js, modified in page_settings.html
-var brushsize = localStorage.getItem('brushsize');
-if (brushsize==0) {brushsize = defaultBrushsize}
-var brushsizeClassname = "brushsize_"+brushsize;
-$("#container_brushsize").removeClass().addClass(brushsizeClassname);
+setBrushSize();
 
 
+/* ##### Reset button states when page loads (returning from Settings, Instructions, or About) ##### */
+
+$("#visualSelect_maskValue").val("mask_circle")
+$("#visualSelect_fillValue").val("color_white")
+$("#visualSelect_strobeValue").val(0)
 
 
-/* ##### Configure layout ##### */
+/* ##### Preload mask images ##### */
 
-var pages = document.getElementsByClassName("page");
-var heightForPages = $(window).height();
-for (i=0; i<pages.length;i++) {
-    pages[i].style.height = heightForPages+"px";
-    }
+mask1 = new Image();
+mask2 = new Image();
+mask3 = new Image();
+mask4 = new Image();
+mask5 = new Image();
+mask6 = new Image();
+mask7 = new Image();
+mask8 = new Image();
+
+mask1.src = "/img/mask_bar.png";
+mask2.src = "/img/mask_circle.png";
+mask3.src = "/img/mask_line.png";
+mask4.src = "/img/mask_line-small.png";
+mask5.src = "/img/mask_point.png";
+mask6.src = "/img/mask_points.png";
+mask7.src = "/img/mask_square.png";
+mask8.src = "/img/mask_sunburst.png";
 
 
 
 /* ##### Event handlers ##### */
 
-$("#button_showBrush").click(function() {
-    showBrush();
-    $("#toggleBackground").hide();
+$("#button_showFill").on("click", function() {
+    showFill();
+    $("#toggleBackground").hide();    
     return false;
     });
 
 
 /* Select buttons */
 
-$("#button_selectBrush").click(function() {
-    createSelect("fieldset_brush"); 
+$("#button_selectFill").on("click", function() {
+    createSelect("fieldset_fill"); 
+    return false;
+    });
+    
+$("#button_selectMask").on("click", function() {
+    createSelect("fieldset_mask"); 
     return false;
     });
 
 
+$("#button_selectStrobe").on("click", function() {
+    createSelect("fieldset_strobe"); 
+    return false;
+    });
+
 /* Touch events */
 
-$("#brushFrame").on("tap",function(){
-    $("#theBrush").toggle();
-    $("#toggleBackground").toggle();    
+$("#colorFrame").on("tap",function(){
+    $("#theColor").toggle();
+    $("#toggleBackground").toggle();
     });
 
 
-$("#brushFrame").on("taphold",function(){
-    returnToPage("#page_brushes","#brushFrame");
+$("#colorFrame").on("taphold",function(){
+    returnToPage("#page_brushes","#colorFrame");
     });
-
-
 
 });
-                
 
 
-function showBrush() {
-$("header").hide();
-$("#page_brushes").hide();
+function showMask() {
+    selectedMask = $("#visualSelect_maskValue").val();
+    theMask = document.getElementById("colorMask");
+    theMask.className = "";
 
-selectedBrush  = $("#visualSelect_brushValue").val();
-    
-document.getElementById("theBrush").className = selectedBrush;
+    maskBrushSize = document.getElementById("container_brushsize").className.slice(10);
 
-$("#brushFrame").show();
-$("#theBrush").show();
+    var maskWidth;
+
+    if (selectedMask == "none" || selectedMask == "mask_fullscreen") {
+        theMask.style.backgroundImage = "none";        
+        maskWidth = "100%";
+    } 
+
+    else {
+        theMask.style.backgroundImage = "url(../../img/"+selectedMask+".png)";
+        $(theMask).addClass(selectedMask);
+
+        if (selectedMask  == "mask_points") {
+            maskWidth = "100%";
+        }
+
+        else if (selectedMask == "mask_circle" || selectedMask == "mask_square" || selectedMask == "mask_sunburst") {
+            maskWidth = ($(window).height()*(maskBrushSize/100))+"px";
+        }
+
+        else if (selectedMask == "mask_point") {
+            maskWidth = 20*(maskBrushSize/100)+"px";
+        }
+        else {
+            maskWidth = "100%";
+        }
+
+    }
+
+    $("#theColor").css("width", maskWidth);
 
 }
 
+
+
+function showFill() {
+
+    $("header").hide();
+    $("#page_brushes").hide();
+    $("#theColor").removeClass();
+
+    selectedColor  = $("#visualSelect_fillValue").val();
+    selectedStrobe = $("#visualSelect_strobeValue").val();
+
+    showMask();
+
+    document.getElementById("colorStrobe").style.webkitAnimationDuration=selectedStrobe+"s";
+
+    $("#colorFrame").show();
+    $("#theColor").addClass(selectedColor);
+    $("#theColor").show();
+
+}

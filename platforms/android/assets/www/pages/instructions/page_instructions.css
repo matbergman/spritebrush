@@ -11,6 +11,12 @@ a#instructions {
 
 /* ##### Layout ##### */
 
+
+.img_demo {
+	width:100%;
+	margin-top:80px;
+}
+
 .screenshots {
 	width:100%;
 	overflow:auto;
@@ -20,6 +26,10 @@ a#instructions {
 
 .img_screenshot {
 	width:24.45%;
+	}
+
+	.nightMode .img_screenshot {
+		opacity:0.6;
 	}
 
 

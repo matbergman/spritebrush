@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+
     /* ##### Check if night mode skin is enabled */
     getTheme();
 
@@ -15,13 +17,15 @@ $(document).ready(function(){
 
     }
 
-
     /* ##### Set brush size ####  */
-    // brushsize variable set in index.js, modified in page_settings.html
-    var brushsize = localStorage.getItem('brushsize');
-    if (brushsize==0 || brushsize==null) {brushsize = defaultBrushsize}
-    var brushsizeClassname = "brushsize_"+brushsize;
-    $("#container_brushsize").removeClass().addClass(brushsizeClassname);
+    setBrushSize();
+
+
+    /* ##### Reset button states when page loads (returning from Settings, Instructions, or About) ##### */
+
+    $("#visualSelect_animatedBrushValue").val("brush_spinner");
+    $("#visualSelect_fillValue").val("color_white");
+    $("#visualSelect_animatedBrushSpeedValue").val(1);
 
 
     /* ##### Event handlers ##### */
@@ -34,6 +38,25 @@ $(document).ready(function(){
 
 
     /* Select buttons */
+    $("#button_selectFill").on("click", function() {
+
+        var brushType = $("#visualSelect_animatedBrushValue").val();
+
+        $(".visualSelect_list_item").hide();
+
+         // Display Palette menu instead of Fill menu for 'alt' brushes
+        if (brushType == "eightBitBrush" || brushType == "brush_dots" || brushType == "brush_circles" || brushType == "brush_sparkles" || brushType == "brush_snowflakes") {
+            $(".visualSelect_list_item-stripes").show();
+        }
+
+        else {
+            $(".visualSelect_list_item-colors").show();            
+        }
+
+        createSelect("fieldset_fill"); 
+        return false;
+        });
+
 
     $("#button_selectAnimatedBrush").on("click", function() {
         createSelect("fieldset_animatedBrush"); 
@@ -84,25 +107,75 @@ $(document).ready(function(){
 
 /* Animated brush - "8-bit" */                
 
-var eightBitBrush_colorArray_flame = new Array(
-"#fe8300",
-"#feaf00",
-"#fc6500",    
-"#c32704",    
-"#8a0304",    
-"#d93b00",    
-"#ef4b00",    
-"#ffe300",    
-"#d45000",    
-"#e26400",    
-"#9b4200",    
-"#d37f00",    
-"#fffb96",    
-"#976d00",    
-"#c99c00",    
-"#fffb96"
+var eightBitBrush_colorArray_primary = new Array(
+"red",
+"yellow",
+"blue"
 );
 
+var eightBitBrush_colorArray_spectrum = new Array(
+"red",
+"orange",
+"yellow",
+"green",
+"blue",
+"indigo",
+"violet"
+);
+
+var eightBitBrush_colorArray_citrus = new Array(
+"#84d628",
+"#d0f54f",
+"#fcff33",
+"#ffa71b",
+"#ff5e45"
+);
+
+var eightBitBrush_colorArray_retro = new Array(
+"#404040",
+"#024959",
+"#037e8c",
+"#f2efdc",
+"#f24c27"
+);
+
+var eightBitBrush_colorArray_winter = new Array(
+"#273f5a",
+"#c6dbf3",
+"#4b81a5",
+"#74a0bf",
+"#98c4da"
+);
+
+var eightBitBrush_colorArray_spring = new Array(
+"#45e851",
+"#5cb9ff",
+"#ffd722",
+"#e80855",
+"#8626ee"
+);
+
+var eightBitBrush_colorArray_summer = new Array(
+"#ff860d",
+"#e8430c",
+"#ff0000",
+"#ff12dd",
+"#a10dff"
+);
+
+var eightBitBrush_colorArray_autumn = new Array(
+"#766537",
+"#eeb415",
+"#bf5b04",
+"#c26f2d",
+"#592202"
+);
+
+var eightBitBrush_colorArray_usa = new Array(
+"red",
+"white",
+"blue"
+);
 
 var eightBitBrush_colorArray_steel = new Array(
 "#f9f9f9",
@@ -123,37 +196,37 @@ var eightBitBrush_colorArray_steel = new Array(
 "#514d46"
 );
 
-var eightBitBrush_colorArray_camo = new Array(
+var eightBitBrush_colorArray_forest = new Array(
 "#c7bb81",
 "#353a40",
 "#51774e",
 "#66563c",
-"#c7bb81",
-"#353a40",
-"#51774e",
-"#66563c",
-"#c7bb81",
-"#353a40",
-"#51774e",
-"#66563c"
+"#0c9c09"
 );
 
-var eightBitBrush_colorArray_checkers = new Array(
-"#d72020",
-"#d72020",
-"#d72020",
-"#d72020",
-"#d72020",
-"#d72020",
-"#000000",
-"#000000",
-"#000000",
-"#000000",
-"#000000",
-"#000000"
+var eightBitBrush_colorArray_ocean = new Array(
+"#008ddb",
+"#d8f6fe",
+"#f7edd4",
+"#83ece7",
+"#4087d7"
 );
 
+var eightBitBrush_colorArray_arid = new Array(
+"#ec9d52",
+"#ae5930",
+"#64a5cf",
+"#6c5148",
+"#d8a049"
+);
 
+var eightBitBrush_colorArray_urban = new Array(
+"#000000",
+"#20222f",
+"#fffffd",
+"#ec4331",
+"#5d420c"
+);
 
 /* randomize arrays */
 function ShuffleArray(array) {
@@ -168,6 +241,9 @@ function ShuffleArray(array) {
 
 
 function update8BitBrush(eightBitBrush_colorArray) {
+
+
+
 
 var brush = document.getElementById("eightBitBrush");
 var chips = brush.getElementsByClassName("pixel");
@@ -185,7 +261,7 @@ for (i=0;i<chips.length;i++) {
 }
 
 
-function updateStreaker() {
+function updateStreaker(selectedFill) {
 
 var brush = document.getElementById("streaker");
 var chips = brush.getElementsByClassName("ball");
@@ -196,10 +272,10 @@ for (i=0;i<chips.length;i++) {
     displayVal = Math.random();
 
         if (displayVal > .8) {
-            chips[i].className = "ball on"
+            chips[i].className = "ball on " + selectedFill
         }
         else {
-            chips[i].className = "ball off"
+            chips[i].className = "ball off " + selectedFill
         }
     }
 
@@ -221,22 +297,16 @@ for (i=0;i<numberOfObj;i++) {
 
     var newObj = document.createElement("span"); // Characters are applied to <span> elements through the CSS content attribute
 
-    
-    // The dot animated brush is a bit different than the rest -- a single character and color. 
-    if (theBrush == "brush_dots") {
-        objStyle = Math.floor(Math.random() * 10);
-        if (objStyle == 1) {newObj.className = "showDot";}
-        else {newObj.className = "";}
-        objSize = Math.floor(Math.random() * 10);
-        newObj.style.fontSize = objSize+"em";
-        }
+    if (theBrush == "brush_dots") { 
+        charBrushLayout(newObj, "dots");
+    }
 
     if (theBrush == "brush_circles") {
         charBrushLayout(newObj, "circle");
         }    
 
-    if (theBrush == "brush_stars") {
-        charBrushLayout(newObj, "star");
+    if (theBrush == "brush_sparkles") {
+        charBrushLayout(newObj, "sparkle");
         }    
 
     if (theBrush == "brush_snowflakes") {
@@ -250,13 +320,13 @@ for (i=0;i<numberOfObj;i++) {
 }
 
  
-// Animated character brush - randomizes each frame 
+/* Animated character brush - randomizes each frame */
 function charBrushLayout(newObj, objType) {
 
 objStyle = Math.floor(Math.random() * 12);
 newObj.className = objType+objStyle;
 objColor = Math.floor(Math.random() * 50);
-if (objColor <= 4) {newObj.className += " "+objType+"Color"+objColor;}
+if (objColor <= 4) {newObj.className += " charColor"+objColor+" "+objType+"Color"+objColor;}
 
 else {newObj.className += " obj_hide";}
 
@@ -266,6 +336,73 @@ newObj.style.fontSize = objSize+"em";
 
 }
 
+
+/* Manually add the CSS webkit animation names for both the brush animation and color cycle animation. JS requires comma syntax to prevent animations from overriding each other. */
+function animationMerge(container, anim) {
+
+    container.style.webkitAnimationName = "";
+
+    if (selectedFill == "colorCycle colorCycle_primary") {
+        container.style.webkitAnimationName = anim + ", colorCyclePrimary"; 
+    }
+
+    else if (selectedFill == "colorCycle colorCycle_citrus") {
+        container.style.webkitAnimationName = anim + ", colorCycleCitrus"; 
+    }
+
+    else if (selectedFill == "colorCycle colorCycle_retro") {
+        container.style.webkitAnimationName = anim + ", colorCycleRetro";             
+    }
+
+    else if (selectedFill == "colorCycle colorCycle_winter") {
+        container.style.webkitAnimationName = anim + ", colorCycleWinter";             
+    }
+
+    else if (selectedFill == "colorCycle colorCycle_spring") {
+        container.style.webkitAnimationName = anim + ", colorCycleSpring";             
+    }
+
+    else if (selectedFill == "colorCycle colorCycle_summer") {
+        container.style.webkitAnimationName = anim + ", colorCycleSummer";             
+    }
+
+    else if (selectedFill == "colorCycle colorCycle_autumn") {
+        container.style.webkitAnimationName = anim + ", colorCycleAutumn";             
+    }
+
+    else if (selectedFill == "colorCycle colorCycle_usa") {
+        container.style.webkitAnimationName = anim + ", colorCycleUsa";             
+    }
+
+    else if (selectedFill == "colorCycle colorCycle_steel") {
+        container.style.webkitAnimationName = anim + ", colorCycleSteel";             
+    }
+
+    else if (selectedFill == "colorCycle colorCycle_forest") {
+        container.style.webkitAnimationName = anim + ", colorCycleForest";             
+    }
+
+    else if (selectedFill == "colorCycle colorCycle_ocean") {
+        container.style.webkitAnimationName = anim + ", colorCycleOcean";             
+    }
+
+    else if (selectedFill == "colorCycle colorCycle_arid") {
+        container.style.webkitAnimationName = anim + ", colorCycleArid";             
+    }
+
+    else if (selectedFill == "colorCycle colorCycle_urban") {
+        container.style.webkitAnimationName = anim + ", colorCycleUrban";             
+    }
+
+    else if (selectedFill == "colorCycle colorCycle_spectrum") {
+        container.style.webkitAnimationName = anim + ", colorCycleSpectrum";             
+    }
+
+    else {
+        container.style.webkitAnimationName = anim;             
+    }
+
+}
 
 
 /* ##### Display animated brush ##### */
@@ -290,10 +427,71 @@ function showAnimatedBrush() {
     var translateVal = brushHeight - ballHeight + "px";
 
     /* 8-bit brushes */
-    if ($("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_flame" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_steel" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_camo" || $("#visualSelect_animatedBrushValue").val() === "eightBitBrush_colorArray_checkers" ) {
+    if ($("#visualSelect_animatedBrushValue").val() === "eightBitBrush") {
 
         $("#eightBitBrush").show();
-        eightBitBrush_colorArray = eval($("#visualSelect_animatedBrushValue").val());
+
+        selectedPalette  = $("#visualSelect_fillValue").val();
+
+        if (selectedPalette == "stripes_spectrum") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_spectrum;
+        }
+
+        else if (selectedPalette == "stripes_citrus") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_citrus;
+        }
+
+        else if (selectedPalette == "stripes_retro") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_retro;
+        }
+
+        else if (selectedPalette == "stripes_winter") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_winter;
+        }
+
+        else if (selectedPalette == "stripes_spring") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_spring;
+        }
+
+        else if (selectedPalette == "stripes_summer") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_summer;
+        }
+
+        else if (selectedPalette == "stripes_autumn") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_autumn;
+        }
+
+        else if (selectedPalette == "stripes_usa") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_usa;
+        }
+
+        else if (selectedPalette == "stripes_steel") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_steel;
+        }
+
+        else if (selectedPalette == "stripes_forest") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_forest;
+        }
+
+        else if (selectedPalette == "stripes_ocean") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_ocean;
+        }
+
+        else if (selectedPalette == "stripes_arid") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_arid;
+        }
+
+        else if (selectedPalette == "stripes_urban") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_urban;
+        }
+
+        else if (selectedPalette == "stripes_primary") {
+            eightBitBrush_colorArray = eightBitBrush_colorArray_primary;
+        }
+
+        else {
+            eightBitBrush_colorArray == eightBitBrush_colorArray_spectrum;            
+        }
 
         var eightBitSpeed;
         if (animationSpeed === 0) eightBitSpeed = 1000;
@@ -305,63 +503,14 @@ function showAnimatedBrush() {
         }
 
 
-    /* Cycling Primary Colors animated brush */
-    if ($("#visualSelect_animatedBrushValue").val() === "colorCycle_primary") {
-
-        var colorPrimarySpeed;
-        if (animationSpeed === 0) colorPrimarySpeed = "6s";
-        else if (animationSpeed === 1) colorPrimarySpeed = "3s";
-        else if (animationSpeed === 2) colorPrimarySpeed = "1s";
-        else colorPrimarySpeed = "3s";
-
-        $("#colorCycle_primary").show();
-        document.getElementById("colorCycle_primary").style.webkitAnimationDuration=colorPrimarySpeed;        
-    }
-
-    /* Cycling Summer Colors animated brush */
-    if ($("#visualSelect_animatedBrushValue").val() === "colorCycle_summer") {
-
-        var colorSummerSpeed;
-        if (animationSpeed === 0) colorSummerSpeed = "6s";
-        else if (animationSpeed === 1) colorSummerSpeed = "3s";
-        else if (animationSpeed === 2) colorSummerSpeed = "1s";
-        else colorSummerSpeed = "3s";
-
-        $("#colorCycle_summer").show();
-        document.getElementById("colorCycle_summer").style.webkitAnimationDuration=colorSummerSpeed;        
-    }
-
-    /* Cycling Autumn Colors animated brush */
-    if ($("#visualSelect_animatedBrushValue").val() === "colorCycle_autumn") {
-
-        var colorAutumnSpeed;
-        if (animationSpeed === 0) colorAutumnSpeed = "6s";
-        else if (animationSpeed === 1) colorAutumnSpeed = "3s";
-        else if (animationSpeed === 2) colorAutumnSpeed = "1s";
-        else colorAutumnSpeed = "3s";
-
-        $("#colorCycle_autumn").show();
-        document.getElementById("colorCycle_autumn").style.webkitAnimationDuration=colorAutumnSpeed;        
-    }
-
-    /* Cycling Winter Colors animated brush */
-    if ($("#visualSelect_animatedBrushValue").val() === "colorCycle_winter") {
-
-        var colorWinterSpeed;
-        if (animationSpeed === 0) colorWinterSpeed = "6s";
-        else if (animationSpeed === 1) colorWinterSpeed = "3s";
-        else if (animationSpeed === 2) colorWinterSpeed = "1s";
-        else colorWinterSpeed = "3s";
-
-        $("#colorCycle_winter").show();
-        document.getElementById("colorCycle_winter").style.webkitAnimationDuration=colorWinterSpeed;        
-    }
-
     /* Spinner animated brush */
     if ($("#visualSelect_animatedBrushValue").val() === "brush_spinner") {
 
         spinnerContainer = document.getElementById("brush_spinner");
         spinnerShape = document.getElementById("brush_spinnerShape");
+        var spinnerBrush = $("#visualSelect_fillValue").val();
+        selectedFill  = $("#visualSelect_fillValue").val();
+
 
         var spinnerSpeed;
         if (animationSpeed === 0) spinnerSpeed = "6s";
@@ -369,16 +518,17 @@ function showAnimatedBrush() {
         else if (animationSpeed === 2) spinnerSpeed = "1s";
         else spinnerSpeed = "3s";
 
-
         var spinnerHeight =  $("#container_brushsize").height();
         var spinnerWidth = $("#container_brushsize").width();
-
-console.log(spinnerWidth);
 
         spinnerContainer.style.height = spinnerHeight+"px";
         spinnerShape.style.width = spinnerHeight+"px";
         spinnerShape.style.top = (spinnerHeight/2) - 3 +"px";
         spinnerShape.style.left = (spinnerWidth/2) - (spinnerHeight/2) +"px";
+
+        spinnerShape.className = spinnerBrush;
+
+        animationMerge(spinnerShape,"spinnerAnimation");
 
         $("#brush_spinner").show();
         spinnerShape.style.webkitAnimationDuration=spinnerSpeed; 
@@ -450,6 +600,13 @@ console.log(spinnerWidth);
         bounceContainer = document.getElementsByClassName("bounce")[0];
         bounceContainer.style.webkitAnimationDuration=bounceSpeed; 
 
+        bounceContainer.style.webkitTransform = "translateY("+$("#container_brushsize").height()+"px)";
+
+        selectedFill  = $("#visualSelect_fillValue").val();
+        bounceContainer.className = "ball bounce";
+        $(bounceContainer).addClass(selectedFill);
+
+        animationMerge(bounceContainer,"bounceAnimation");
 
         $("#brush_bounce").show();    
 
@@ -476,6 +633,11 @@ console.log(spinnerWidth);
 
         orbitContainer.style.webkitAnimationDuration=orbitSpeed; 
 
+        selectedFill  = $("#visualSelect_fillValue").val();
+        orbitContainer.className = "ball orbit";
+        $(orbitContainer).addClass(selectedFill);
+
+        animationMerge(orbitContainer,"orbitAnimation");
 
         $("#brush_orbit").show();    
 
@@ -488,8 +650,6 @@ console.log(spinnerWidth);
     if ($("#visualSelect_animatedBrushValue").val() === "brush_pulse") {
 
         pulseContainer = document.getElementsByClassName("pulse")[0];
-
-
         var pulseSpeed;
         if (animationSpeed === 0) pulseSpeed = "3s";
         else if (animationSpeed === 1) pulseSpeed = "1s";
@@ -498,6 +658,14 @@ console.log(spinnerWidth);
 
         pulseContainer.style.webkitAnimationDuration=pulseSpeed; 
 
+        selectedFill  = $("#visualSelect_fillValue").val();
+        pulseContainer.className = "ball pulse";
+        $(pulseContainer).addClass(selectedFill);
+
+        pulseContainer.style.width = $("#container_brushsize").height()+"px";
+        pulseContainer.style.height = $("#container_brushsize").height()+"px";
+
+        animationMerge(pulseContainer,"pulseAnimation");
 
         $("#brush_pulse").show();    
 
@@ -518,6 +686,15 @@ console.log(spinnerWidth);
 
         faderContainer.style.webkitAnimationDuration=faderSpeed; 
 
+        selectedFill  = $("#visualSelect_fillValue").val();
+        faderContainer.className = "ball fader";
+        $(faderContainer).addClass(selectedFill);
+
+        faderContainer.style.width = $("#container_brushsize").height()+"px";
+        faderContainer.style.height = $("#container_brushsize").height()+"px";
+
+        animationMerge(faderContainer,"faderAnimation");
+
         $("#brush_fader").show();    
 
     }
@@ -528,7 +705,8 @@ console.log(spinnerWidth);
 
     if ($("#visualSelect_animatedBrushValue").val() === "brush_streaker") {
 
-        theInterval = setInterval(function() { updateStreaker(); },1000); 
+        selectedFill  = $("#visualSelect_fillValue").val();
+        theInterval = setInterval(function() { updateStreaker(selectedFill); },1000); 
 
         $("#brush_streaker").show();    
 
@@ -549,26 +727,46 @@ console.log(spinnerWidth);
 
     /* Character-based animated brushes - dots */
     if ($("#visualSelect_animatedBrushValue").val() === "brush_dots") {
-    $("#brush_dots").show();
-    theInterval = setInterval(function() { updateCharBrush("brush_dots"); },charSpeed);    
+        var dotFill = $("#visualSelect_fillValue").val();
+
+        document.getElementById("brush_dots").className = "animatedBrush brush_char"; // reset brush style
+        $("#brush_dots").addClass(dotFill); // set brush style
+
+        $("#brush_dots").show();
+        theInterval = setInterval(function() { updateCharBrush("brush_dots"); },charSpeed);    
     }
 
     /* Character-based animated brushes - circles */
     if ($("#visualSelect_animatedBrushValue").val() === "brush_circles") {
-    $("#brush_circles").show();
-    theInterval = window.setInterval(function() { updateCharBrush("brush_circles"); },charSpeed);   
-    }
+        var circleFill = $("#visualSelect_fillValue").val();
 
-    /* Character-based animated brushes - stars */
-    if ($("#visualSelect_animatedBrushValue").val() === "brush_stars") {
-    $("#brush_stars").show();
-    theInterval = window.setInterval(function() { updateCharBrush("brush_stars"); },charSpeed); 
+        document.getElementById("brush_circles").className = "animatedBrush brush_char"; // reset brush style
+        $("#brush_circles").addClass(circleFill); // set brush style
+
+        $("#brush_circles").show();
+        theInterval = window.setInterval(function() { updateCharBrush("brush_circles"); },charSpeed);   
+        }
+
+    /* Character-based animated brushes - sparkles */
+    if ($("#visualSelect_animatedBrushValue").val() === "brush_sparkles") {
+        var sparkleFill = $("#visualSelect_fillValue").val();
+
+        document.getElementById("brush_sparkles").className = "animatedBrush brush_char"; // reset brush style
+        $("#brush_sparkles").addClass(sparkleFill); // set brush style
+
+        $("#brush_sparkles").show();
+        theInterval = window.setInterval(function() { updateCharBrush("brush_sparkles"); },charSpeed); 
     }
 
     /* Character-based animated brushes - snowflakes */
     if ($("#visualSelect_animatedBrushValue").val() === "brush_snowflakes") {
-    $("#brush_snowflakes").show();
-    theInterval = window.setInterval(function() { updateCharBrush("brush_snowflakes"); },charSpeed); 
+        var snowflakeFill = $("#visualSelect_fillValue").val();
+
+        document.getElementById("brush_snowflakes").className = "animatedBrush brush_char"; // reset brush style
+        $("#brush_snowflakes").addClass(snowflakeFill); // set brush style
+
+        $("#brush_snowflakes").show();
+        theInterval = window.setInterval(function() { updateCharBrush("brush_snowflakes"); },charSpeed); 
     }
 
 }

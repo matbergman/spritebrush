@@ -114,7 +114,7 @@
     margin-top:20%;
     }
 
-    body.nightMode #visualSelect_stencil .selectButtonThumbnail {
+    .nightMode #visualSelect_stencil .selectButtonThumbnail {
         color:#5c5c5c;
         }
 

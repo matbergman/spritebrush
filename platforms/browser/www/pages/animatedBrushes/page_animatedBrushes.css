@@ -1,6 +1,3 @@
- /* ##### animated brushes ##### */
-
-
 /* ##### layout styles ##### */
 
 #animatedBrushFrame {
@@ -15,8 +12,15 @@
     width:20px;
     height:20px;
     border-radius:50%;
-    background-color:#fff;
     position:absolute;
+}
+
+
+/* ##### navigation #####  */
+
+#showAnimatedBrushes {
+    color:#000;
+    font-weight:bold;
 }
 
 
@@ -54,75 +58,6 @@
     }
  
 
-/* animated brush - color cycling */
-
-.colorCycle {
-    display:none;
-    position:absolute;
-    top:40%;
-    left:0;
-    z-index:100;
-    width:100%;
-    height:10%;
-    -webkit-animation-duration:3s;
-    -webkit-animation-timing-function:ease;
-    -webkit-animation-delay:0s;
-    -webkit-animation-iteration-count:infinite;
-    -webkit-animation-play-state:running;    
-}
-
-#colorCycle_primary {
-    -webkit-animation-name:colorCyclePrimary;
-    }
-
-    @-webkit-keyframes colorCyclePrimary {
-        0% {background: red;}
-        20% {background: yellow;}
-        40% {background: blue;}
-        60% {background: green;}
-        80% {background: purple;}
-        100% {background: red;}
-        }
-
-#colorCycle_summer {
-    -webkit-animation-name:colorCycleSummer;
-    }
-
-    @-webkit-keyframes colorCycleSummer {
-        0% {background: #ff860d;}
-        20% {background: #e8430c;}
-        40% {background: #ff0000;}
-        60% {background: #ff12dd;}
-        80% {background: #a10dff;}
-        100% {background: #ff860d;}
-        }
-
-#colorCycle_autumn {
-    -webkit-animation-name:colorCycleAutumn;
-    }
-
-    @-webkit-keyframes colorCycleAutumn {
-        0% {background: #766537;}
-        20% {background: #eeb415;}
-        40% {background: #bf5b04;}
-        60% {background: #c26f2d;}
-        80% {background: #592202;}
-        100% {background: #766537;}
-        }
-
-#colorCycle_winter {
-    -webkit-animation-name:colorCycleWinter;
-    }
-
-    @-webkit-keyframes colorCycleWinter {
-        0% {background: #273f5a;}
-        20% {background: #c6dbf3;}
-        40% {background: #4b81a5;}
-        60% {background: #74a0bf;}
-        80% {background: #98c4da;}
-        100% {background: #273f5a;}
-        }
-
 
 /* animated brushes - character-based */
 
@@ -143,25 +78,26 @@
 
     /* Dots - animated character-based brushes */
 
+    #brush_dots {
+        background:transparent;
+    }
+
     #brush_dots span {
+        font-family:animatedBrushElements;
         vertical-align:middle;
         }
 
     #brush_dots span::before {
-        font-family:animatedBrushElements;
-        color:#000;
         content:"\e600";
-        }
-
-    #brush_dots span.showDot::before {
-        background: -webkit-linear-gradient(#eee, #333);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         }
 
 
 
     /* Circles - animated character-based brushes */
+
+    #brush_circles {
+        background:transparent;
+    }
 
     #brush_circles span {
         font-family:animatedBrushElements;
@@ -193,89 +129,49 @@
     .circle11::before {content:"\e630";}
 
 
-    .circleColor0 {
-        color:#ffffff;
-        }
 
-    .circleColor1 {
-        color:#bffff6;
-        }
+    /* Sparkles - animated character-based brushes */
 
-    .circleColor2 {
-        color:#f9ffc5;
-        }
+    #brush_sparkles {
+        background:transparent;
+    }
 
-    .circleColor3 {
-        color:#ff90b2;
-        }
-
-    .circleColor4 {
-        color:#ffdcb3;
-        }
-
-
-    /* Stars - animated character-based brushes */
-
-    #brush_stars span {
+    #brush_sparkles span {
         font-family:animatedBrushElements;
         vertical-align:middle;
         }
 
-    .star0::before {content:"\e619";}
+    .sparkle0::before {content:"\e619";}
 
-    .star1::before {content:"\e61a";}
+    .sparkle1::before {content:"\e61a";}
 
-    .star2::before {content:"\e61b";}
+    .sparkle2::before {content:"\e61b";}
 
-    .star3::before {content:"\e61c";}       
+    .sparkle3::before {content:"\e61c";}       
 
-    .star4::before {content:"\e61d";}
+    .sparkle4::before {content:"\e61d";}
 
-    .star5::before {content:"\e61e";}
+    .sparkle5::before {content:"\e61e";}
 
-    .star6::before {content:"\e61f";}
+    .sparkle6::before {content:"\e61f";}
 
-    .star7::before {content:"\e620";}
+    .sparkle7::before {content:"\e620";}
 
-    .star8::before {content:"\e621";}
+    .sparkle8::before {content:"\e621";}
 
-    .star9::before {content:"\e622";}
+    .sparkle9::before {content:"\e622";}
 
-    .star10::before {content:"\e623";}                      
+    .sparkle10::before {content:"\e623";}                      
 
-    .star11::before {content:"\e624";}
+    .sparkle11::before {content:"\e624";}
 
-
-    .starColor0 {
-        color:#ffffff;
-        }
-
-    .starColor1 {
-        color:#f8f8f8;
-        }
-
-    .starColor2 {
-        color:#e6e6e6;
-        }
-
-    .starColor3 {
-        color:#d7dbff;
-        }
-
-    .starColor4 {
-        color:#f3f4ff;
-        }
-
-    .starColor5 {
-        color:#faffd3;
-        }
-
-    .starColor6 {
-        color:#ffd3d3;
-        }   
 
 
     /* Snowflakes - animated character-based brushes */
+
+    #brush_snowflakes {
+        background:transparent;
+    }
 
     #brush_snowflakes span {
         font-family:animatedBrushElements;
@@ -307,176 +203,6 @@
     .snowflake11::before {content:"\e618";}
 
 
-    .snowflakeColor0 {
-        color:#ffffff;
-        }
-
-    .snowflakeColor1 {
-        color:#f8f8f8;
-        }
-
-    .snowflakeColor2 {
-        color:#e6e6e6;
-        }
-
-    .snowflakeColor3 {
-        color:#d7dbff;
-        }
-
-    .snowflakeColor4 {
-        color:#f3f4ff;
-        }
-
-
-    /* Notes - animated character-based brushes */
-
-    #brush_notes span {
-        font-family:animatedBrushElements;
-        }
-
-    .note0::before {content:"\e631";}
-
-    .note1::before {content:"\e632";}
-
-    .note2::before {content:"\e633";}
-
-    .note3::before {content:"\e634";}       
-
-    .note4::before {content:"\e635";}
-
-    .note5::before {content:"\e636";}
-
-    .note6::before {content:"\e637";}
-
-    .note7::before {content:"\e638";}
-
-    .note8::before {content:"\e639";}
-
-    .note9::before {content:"\e63a";}
-
-    .note10::before {content:"\e63b";}                      
-
-    .note11::before {content:"\e63c";}
-
-    .note12::before {content:"\e63d";}
-
-    .note13::before {content:"\e63e";}
-
-    .note14::before {content:"\e63f";}
-
-    .note15::before {content:"\e640";}
-
-    .note16::before {content:"\e641";}
-
-    .note17::before {content:"\e642";}
-
-    .note18::before {content:"\e643";}
-
-    .note19::before {content:"\e644";}
-
-    .note20::before {content:"\e645";}
-
-    .note21::before {content:"\e646";}
-
-    .note22::before {content:"\e647";}
-
-    .note23::before {content:"\e648";}
-
-    .note24::before {content:"\e649";}                              
-
-    .note25::before {content:"\e64a";}  
-
-    .noteColor0 {
-        color:#ffffff;
-        }
-
-    .noteColor1 {
-        color:#f8f8f8;
-        }
-
-    .noteColor2 {
-        color:#e6e6e6;
-        }
-
-    .noteColor3 {
-        color:#d7dbff;
-        }
-
-    .noteColor4 {
-        color:#f3f4ff;
-        }
-
-
-    /* Flowers - animated character-based brushes */
-
-    #brush_flowers span {
-        font-family:animatedBrushElements;
-        }
-
-    .flower0::before {content:"\e601";}
-
-    .flower1::before {content:"\e602";}
-
-    .flower2::before {content:"\e603";}
-
-    .flower3::before {content:"\e604";}     
-
-    .flower4::before {content:"\e605";}
-
-    .flower5::before {content:"\e606";}
-
-    .flower6::before {content:"\e607";}
-
-    .flower7::before {content:"\e608";}
-
-    .flower8::before {content:"\e609";}
-
-    .flower9::before {content:"\e60a";}
-
-    .flower10::before {content:"\e60b";}                        
-
-    .flower11::before {content:"\e60c";}
-
-
-    .flowerColor0 {
-        color:#ffffff;
-        }
-
-    .flowerColor1 {
-        color:#c6a1ee;
-        }
-
-    .flowerColor2 {
-        color:#edb4bb;
-        }
-
-    .flowerColor3 {
-        color:#fff186;
-        }
-
-    .flowerColor4 {
-        color:#afbeff;
-        }
-
-    .flowerColor5 {
-        color:#ffb173;
-        }
-
-    .flowerColor6 {
-        color:#c9fd78;
-        }                                       
-
-    .flowerColor7 {
-        color:#ff8dbd;
-        }
-
-    .flowerColor8 {
-        color:#ffec84;
-        }
-
-    .flowerColor9 {
-        color:#f3d2ff;
-        }
 
 
 /* Animated brush - flames */
@@ -524,7 +250,6 @@
     width:auto;
     height:6px;
     border-radius:3px;
-    background: -webkit-linear-gradient(left, #ffff96 0%,#ffffff 40%,#ffffff 60%,#ffff96 100%);
     -webkit-animation: spinnerAnimation 1s linear infinite;
     }
 
@@ -533,9 +258,43 @@
         to { -webkit-transform: rotate(360deg) scale(1) skew(1deg) translate(0px); }
         }
 
+/*
+    #brush_spinnerShape.palette_primary {
+        background: -webkit-linear-gradient(left, red  0%, yellow 50%, blue 100%);        
+    }
 
+    #brush_spinnerShape.palette_citrus {
+        background: -webkit-linear-gradient(left, #84d628 0%, #d0f54f 25%, #fcff33 50%, #ffa71b 75%, #ff5e45 100%);        
+    }
 
+    #brush_spinnerShape.palette_retro {
+        background: -webkit-linear-gradient(left, #404040 0%, #024959 25%, #037e8c 50%, #f2efdc 75%, #f24c27 100%);        
+    }
 
+    #brush_spinnerShape.palette_winter {
+        background: -webkit-linear-gradient(left, #273f5a 0%, #c6dbf3 25%, #4b81a5 50%, #74a0bf 75%, #98c4da 100%);        
+    }
+
+    #brush_spinnerShape.palette_spring {
+        background: -webkit-linear-gradient(left, #45e851 0%, #5cb9ff 25%, #ffd722 50%, #e80855 75%, #8626ee 100%);        
+    }
+
+    #brush_spinnerShape.palette_summer {
+        background: -webkit-linear-gradient(left, #ff860d 0%, #e8430c 25%, #ff0000 50%, #ff12dd 75%, #a10dff 100%);        
+    }
+
+    #brush_spinnerShape.palette_autumn {
+        background: -webkit-linear-gradient(left, #766537 0%, #eeb415 25%, #bf5b04 50%, #c26f2d 75%, #592202 100%);        
+    }
+
+    #brush_spinnerShape.palette_usa {
+        background: -webkit-linear-gradient(left, red  0%, white 50%, blue 100%);        
+    }
+
+    #brush_spinnerShape.palette_steel {
+        background: -webkit-linear-gradient(left, #f9f9f9 0%, #d3d2d0 25%, #a7a4a1 50%, #514d46 75%, #ebeae8 100%);        
+    }
+*/
 
 /* Animated brush - bounce */
 
@@ -544,7 +303,7 @@
     height:100%;
 }
 
-.ball.bounce {
+.bounce {
     top:0;
     left:calc(50% - 5px);   
     -webkit-animation-name: bounceAnimation;
@@ -554,14 +313,11 @@
     -webkit-animation-timing-function: linear;
 }
 
+/* "to" value set in JS */
 @-webkit-keyframes bounceAnimation {
 
   from {
     -webkit-transform: translateY(0);
-  }
-
-  to {
-    -webkit-transform: translateY(360px);
   }
 
 }
@@ -571,7 +327,7 @@
 
 #brush_orbit {}
 
-.ball.orbit {
+.orbit {
     top:calc(50% - 5px);
     left:calc(50% - 180px - 5px);
     -webkit-animation-name: orbitAnimation;
@@ -596,9 +352,10 @@
 
 /* Animated brush - pulse */
 
-.ball.pulse {
-    top:calc(50% - 5px);
-    left:calc(50% - 5px);   
+.pulse {
+    width:auto;
+    height:auto;
+    left:25%;
     -webkit-animation-name: pulseAnimation;
     -webkit-animation-duration: .5s;
     -webkit-animation-iteration-count: infinite;
@@ -607,17 +364,16 @@
 }
 
 
-
 @-webkit-keyframes pulseAnimation {
 
   from {
     -webkit-transform: scale(1,1);
   }
 
-  to {
-    -webkit-transform: scale(10,10);
-  }
 
+  to {
+    -webkit-transform: scale(0,0);
+  }
 
 }
 
@@ -625,52 +381,13 @@
 /* Animated brush - fade */
 
 .fader {
+    left:25%;
     -webkit-animation-name: faderAnimation;
     -webkit-animation-duration: 1s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-direction: alternate; 
     -webkit-animation-timing-function: linear;
 }
-
-.ball.fader {
-  
-}
-
-    .brushsize_20 .ball.fader {
-        width:8em;
-        height:8em;
-        border-radius:4em;
-        top:calc(50% - 4em);
-        left:calc(50% - 4em);  
-
-    }
-
-    .brushsize_50 .ball.fader {
-        width:18em;
-        height:18em;
-        border-radius:9em;
-        top:calc(50% - 9em);
-        left:calc(50% - 9em);          
-
-    }
-
-    .brushsize_80 .ball.fader {
-        width:28em;
-        height:28em;
-        border-radius:14em;
-        top:calc(50% - 14em);
-        left:calc(50% - 14em);         
-
-    }
-
-    .brushsize_100 .ball.fader {
-        width:36em;
-        height:36em;
-        border-radius:18em;
-        top:calc(50% - 18em);
-        left:calc(50% - 18em); 
-    }    
-
 
 @-webkit-keyframes faderAnimation {
 
@@ -697,7 +414,6 @@
 
 }
 
-
 .streaker_container .ball {
     opacity:0;
     position:relative;
@@ -708,12 +424,12 @@
     padding:0;
 }
 
-.streaker_container .ball.on {
+.streaker_container .on {
     -webkit-animation-name: streakerAnimationOn;
     opacity:1;
 }
 
-.streaker_container .ball.off {
+.streaker_container .off {
     -webkit-animation-name: streakerAnimationOff;
     opacity:0;
 }
@@ -746,34 +462,12 @@
 
 
 
-
-
 /* ##### Thumbnails ##### */
 
-.selectButtonThumbnail {
-    position:absolute;
-    width:100%;
-    height:100%;
-    background-size:contain;
-    background-repeat:no-repeat;
-    background-position:center;
-    }
 
-.thumbnail_colorArray_flame {
-    background-image:url(../../img/thumb_8bitFlame.png);
+.thumbnail_8bit {
+    background-image:url(../../img/thumb_8bit.gif);
     }
-
-.thumbnail_colorArray_steel {
-    background-image:url(../../img/thumb_8bitSteel.png);
-    }
-
-.thumbnail_colorArray_camo {
-    background-image:url(../../img/thumb_8bitCamo.png);
-    }
-
-.thumbnail_colorArray_checkers {
-    background-image:url(../../img/thumb_8bitCheckers.png);
-    }        
 
 .thumbnail_bounce {
 
@@ -784,7 +478,8 @@
     position:absolute;
 
     top:0;
-    left:calc(50% - 5px);   
+    left:calc(50% - 5px);
+    margin-top:0;   
     -webkit-animation-name: bounceThumbnailAnimation;
     -webkit-animation-duration: 1s;
     -webkit-animation-iteration-count: infinite;
@@ -814,7 +509,7 @@
     background-color:#fff;
     position:absolute;
 
-    top:calc(50% - 5px);
+    top:0;
     left:calc(50% - 50px - 5px);
     -webkit-animation-name: orbitThumbnailAnimation;
     -webkit-animation-duration: 2s;
@@ -845,7 +540,7 @@
     background-color:#fff;
     position:absolute;
 
-    top:calc(40% - 5px);
+    top:0;
     left:calc(50% - 5px);   
     -webkit-animation-name: pulseThumbnailAnimation;
     -webkit-animation-duration: 1s;
@@ -876,7 +571,7 @@
     border-radius:50%;
     background-color:#fff;
     position:absolute;
-    top:calc(40% - 5px);
+    top:0;
     left:calc(50% - 5px);
 
     -webkit-animation-name: faderThumbnailAnimation;
@@ -921,7 +616,7 @@
 .thumbnail_spinner {
     width:90%;
     height:3px;
-    background: -webkit-linear-gradient(left, #ffff96 0%,#ffffff 40%,#ffffff 60%,#ffff96 100%);
+    background: -webkit-linear-gradient(left, #f9f9f9 0%, #d3d2d0 50%, #ebeae8 100%);  
     margin-left:auto;
     margin-right:auto;
     margin-top:50%;
@@ -945,86 +640,34 @@
         100% { background-position: 0px -50px; }
         }
 
-.thumbnail_colorCycle {
-    position:relative;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top:40%;
-    width:100%;
-    height:5%;
-    -webkit-animation-duration:3s;
-    -webkit-animation-timing-function:ease;
-    -webkit-animation-delay:0s;
-    -webkit-animation-iteration-count:infinite;
-    -webkit-animation-play-state:running;
-}
-
-    .thumbnail_colorCycle_primary {
-        -webkit-animation-name:colorCyclePrimary;
-        }
-
-    .thumbnail_colorCycle_summer {
-        -webkit-animation-name:colorCycleSummer;
-        }
-
-    .thumbnail_colorCycle_autumn {
-        -webkit-animation-name:colorCycleAutumn;
-        }
-
-    .thumbnail_colorCycle_winter {
-        -webkit-animation-name:colorCycleWinter;
-        }
-
-
 
 .thumbnail_dots {
-    background-image:url(../../img/thumb_dots.png);
+    height:50px;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-image:url(../../img/thumb_dots.gif);
     }
 
 .thumbnail_circles {
-    background-image:url(../../img/thumb_circles.png);
+    height:50px;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-image:url(../../img/thumb_circles.gif);
     }
 
-.thumbnail_stars {
-    background-image:url(../../img/thumb_stars.png);
+.thumbnail_sparkles {
+    height:50px;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-image:url(../../img/thumb_sparkles.gif);
     }
 
 .thumbnail_snowflakes {
-    background-image:url(../../img/thumb_snowflakes.png);
+    height:50px;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-image:url(../../img/thumb_snowflakes.gif);
     }
-
-.thumbnail_notes {
-    background-image:url(../../img/thumb_notes.png);
-    }
-
-.thumbnail_flowers {
-    background-image:url(../../img/thumb_flowers.png);
-    }
-
-
-    body.nightMode .thumbnail_dots {
-        background-image:url(../../img/thumb_dots-night.png);
-        }
-
-    body.nightMode .thumbnail_circles {
-        background-image:url(../../img/thumb_circles-night.png);
-        }
-
-    body.nightMode .thumbnail_stars {
-        background-image:url(../../img/thumb_stars-night.png);
-        }
-
-    body.nightMode .thumbnail_snowflakes {
-        background-image:url(../../img/thumb_snowflakes-night.png);
-        }
-
-    body.nightMode .thumbnail_notes {
-        background-image:url(../../img/thumb_notes-night.png);
-        }
-
-    body.nightMode .thumbnail_flowers {
-        background-image:url(../../img/thumb_flowers-night.png);
-        }
 
 
 /* ##### Buttons ##### */
@@ -1032,11 +675,3 @@
     #visualSelect_animatedBrushSpeed .selectButtonContainer {
         width:33.33%;
         }
-
-
-/* ##### Navigation ##### */
-
-a#showAnimatedBrushes {
-    font-family:Roboto-Medium;
-    color:#000;
-    }        

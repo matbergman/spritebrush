@@ -9,14 +9,15 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=72" />
 
     <link rel="stylesheet" type="text/css" href="../../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/fill.css" />
     <link rel="stylesheet" type="text/css" href="../../css/jquery.mobile.custom.structure.css" /> 
-    <link rel="stylesheet" type="text/css" href="page_animatedBrushes.css" /> 
 
     <script src="../../js/jquery-2.1.0.min.js"></script>
     <script src="../../js/jquery.mobile-1.4.2.min.js"></script> 
 
     <script type="text/javascript" src="../../js/navigation.js"></script> 
 
+    <link rel="stylesheet" type="text/css" href="page_animatedBrushes.css" /> 
     <script type="text/javascript" src="page_animatedBrushes.js"></script>
 
     <title>SpriteBrush - Animation Brushes</title>
@@ -43,8 +44,8 @@
     </div>
 
     <nav>
-    <a class="button_menu" href="#panel_menu"></a>
-    <a class="button_overflow" href="#overflow_menu" data-rel="popup"></a>
+    <a class="button_nav button_menu" href="#panel_menu"></a>
+    <a class="button_nav button_overflow" href="#overflow_menu" data-rel="popup"></a>
     </nav>
 
 </header>
@@ -58,90 +59,59 @@
 <fieldset class="layout_labels" id="fieldset_animatedBrush">
 
 <label for="button_selectAnimatedBrush">Animation</label>
-<button id="button_selectAnimatedBrush">Cycle primary colors</button>
+<button id="button_selectAnimatedBrush">Spinner</button>
 <div class="visualSelect" id="visualSelect_animatedBrush">
 
-   <div class="selectButtonContainer">  
-        <div class="selectButtonLabel">Cycle primary colors</div>
-        <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_primary"></div>
-        <button class="selectButton" value="colorCycle_primary">Cycle primary colors</button>
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Spinner</div>
+        <div class="selectButtonThumbnail thumbnail_spinner"></div>
+        <button class="selectButton" value="brush_spinner">Spinner</button>
     </div>
-
-   <div class="selectButtonContainer">  
-        <div class="selectButtonLabel">Cycle summer colors</div>
-        <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_summer"></div>
-        <button class="selectButton" value="colorCycle_summer">Cycle summer colors</button>
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">8-Bit</div>
+        <div class="selectButtonThumbnail thumbnail_8bit"></div>
+        <button class="selectButton" value="eightBitBrush">8-Bit</button>
     </div>
-
-   <div class="selectButtonContainer">  
-        <div class="selectButtonLabel">Cycle autumn colors</div>
-        <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_autumn"></div>
-        <button class="selectButton" value="colorCycle_autumn">Cycle autumn colors</button>
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Streak</div>
+        <div class="selectButtonThumbnail thumbnail_streaker"></div>
+        <button class="selectButton" value="brush_streaker">Streak</button>
     </div>
-
-   <div class="selectButtonContainer">  
-        <div class="selectButtonLabel">Cycle winter colors</div>
-        <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_winter"></div>
-        <button class="selectButton" value="colorCycle_winter">Cycle autumn colors</button>
+    <div class="selectButtonContainer">  
+        <div class="selectButtonLabel">Fire</div>
+        <div class="selectButtonThumbnail thumbnail_flame"></div>
+        <button class="selectButton" value="brush_flame">Fire</button>
     </div>
-
     <div class="selectButtonContainer">  
         <div class="selectButtonLabel">Bounce</div>
         <div class="selectButtonThumbnail thumbnail_bounce"></div>
         <button class="selectButton" value="brush_bounce">Bounce</button>
     </div>
-
     <div class="selectButtonContainer">  
         <div class="selectButtonLabel">Orbit</div>
         <div class="selectButtonThumbnail thumbnail_orbit"></div>
         <button class="selectButton" value="brush_orbit">Orbit</button>
     </div>
-
     <div class="selectButtonContainer">  
         <div class="selectButtonLabel">Pulse</div>
         <div class="selectButtonThumbnail thumbnail_pulse"></div>
         <button class="selectButton" value="brush_pulse">Pulse</button>
     </div>
-
     <div class="selectButtonContainer">  
         <div class="selectButtonLabel">Fade</div>
         <div class="selectButtonThumbnail thumbnail_fader"></div>
         <button class="selectButton" value="brush_fader">Fade</button>
     </div>
-
-    <div class="selectButtonContainer">  
-        <div class="selectButtonLabel">8-Bit flame</div>
-        <div class="selectButtonThumbnail thumbnail_colorArray_flame"></div>
-        <button class="selectButton" value="eightBitBrush_colorArray_flame">8-Bit flame</button>
-    </div>
-    <div class="selectButtonContainer">
-        <div class="selectButtonLabel">8-Bit steel</div>
-        <div class="selectButtonThumbnail thumbnail_colorArray_steel"></div>
-        <button class="selectButton" value="eightBitBrush_colorArray_steel">8-Bit steel</button>
-    </div>
-
-    <div class="selectButtonContainer">
-        <div class="selectButtonLabel">8-Bit camo</div>
-        <div class="selectButtonThumbnail thumbnail_colorArray_camo"></div>
-        <button class="selectButton" value="eightBitBrush_colorArray_camo">8-Bit camo</button>
-    </div>
-
-    <div class="selectButtonContainer">
-        <div class="selectButtonLabel">8-Bit checkers</div>
-        <div class="selectButtonThumbnail thumbnail_colorArray_checkers"></div>
-        <button class="selectButton" value="eightBitBrush_colorArray_checkers">8-Bit checkers</button>
-    </div>
     <div class="selectButtonContainer">  
         <div class="selectButtonLabel">Sparkles</div>
-        <div class="selectButtonThumbnail thumbnail_stars"></div>
-        <button class="selectButton" value="brush_stars">Sparkles</button>
+        <div class="selectButtonThumbnail thumbnail_sparkles"></div>
+        <button class="selectButton" value="brush_sparkles">Sparkles</button>
     </div>
     <div class="selectButtonContainer">  
         <div class="selectButtonLabel">Dots</div>
         <div class="selectButtonThumbnail thumbnail_dots"></div>
         <button class="selectButton" value="brush_dots">Dots</button>
     </div>
-
     <div class="selectButtonContainer">  
         <div class="selectButtonLabel">Circles</div>
         <div class="selectButtonThumbnail thumbnail_circles"></div>
@@ -153,29 +123,342 @@
         <button class="selectButton" value="brush_snowflakes">Snowflakes</button>
     </div>
 
-    <div class="selectButtonContainer">  
-        <div class="selectButtonLabel">Streak</div>
-        <div class="selectButtonThumbnail thumbnail_streaker"></div>
-        <button class="selectButton" value="brush_streaker">Streak</button>
-    </div>
-
-    <div class="selectButtonContainer">  
-        <div class="selectButtonLabel">Spinner</div>
-        <div class="selectButtonThumbnail thumbnail_spinner"></div>
-        <button class="selectButton" value="brush_spinner">Spinner</button>
-    </div>
-
-    <div class="selectButtonContainer">  
-        <div class="selectButtonLabel">Fire</div>
-        <div class="selectButtonThumbnail thumbnail_flame"></div>
-        <button class="selectButton" value="brush_flame">Fire</button>
-    </div>
-
-
 </div>
-<input type="hidden" name="visualSelect_animatedBrushValue" id="visualSelect_animatedBrushValue" value="colorCycle_primary" />
+<input type="hidden" name="visualSelect_animatedBrushValue" id="visualSelect_animatedBrushValue" value="brush_spinner" />
 
 </fieldset>
+
+
+
+<fieldset class="layout_labels" id="fieldset_fill">
+
+<label for="button_selectFill">Fill</label>
+<button id="button_selectFill">White</button>
+
+<div class="visualSelect" id="visualSelect_fill">
+
+    <div id="select_menu">
+
+    <a class="select_menu_link active" id="select_menu_colors">Colors</a>
+
+    <a class="select_menu_link" id="select_menu_stripes">Stripes</a>
+
+    <a class="select_menu_link" id="select_menu_gradient">Gradients</a>
+
+    <a class="select_menu_link" id="select_menu_cycles">Cycles</a>
+
+    </div>
+
+    <ul class="visualSelect_list">
+
+        <li class="visualSelect_list_item visualSelect_list_item-colors">
+
+        <div class="selectButtonContainer" style="background-color:#fff">
+            <div class="selectButtonLabel">White</div>
+            <button class="selectButton" value="color_white">White</button>
+        </div>
+        <div class="selectButtonContainer" style="background-color:silver">
+            <div class="selectButtonLabel">Steel</div>
+            <button class="selectButton" value="color_silver">Steel</button>
+        </div>        
+        <div class="selectButtonContainer" style="background-color:blue">
+            <div class="selectButtonLabel">Blue</div>
+            <button class="selectButton" value="color_blue">Blue</button>
+        </div>
+        <div class="selectButtonContainer" style="background-color:aqua">
+            <div class="selectButtonLabel">Aqua</div>
+            <button class="selectButton" value="color_aqua">Aqua</button>
+        </div>
+        <div class="selectButtonContainer" style="background-color:teal">
+            <div class="selectButtonLabel">Teal</div>
+            <button class="selectButton" value="color_teal">Teal</button>
+        </div>
+        <div class="selectButtonContainer" style="background-color:olive">
+            <div class="selectButtonLabel">Olive</div>
+            <button class="selectButton" value="color_olive">Olive</button>
+        </div>
+        <div class="selectButtonContainer" style="background-color:green">
+            <div class="selectButtonLabel">Green</div>
+            <button class="selectButton" value="color_green">Green</button>
+        </div>
+        <div class="selectButtonContainer" style="background-color:lime">
+            <div class="selectButtonLabel">Lime</div>
+            <button class="selectButton" value="color_lime">Lime</button>
+        </div>
+        <div class="selectButtonContainer" style="background-color:yellow">
+            <div class="selectButtonLabel">Yellow</div>
+            <button class="selectButton" value="color_yellow">Yellow</button>
+        </div>
+        <div class="selectButtonContainer" style="background-color:orange">
+            <div class="selectButtonLabel">Orange</div>
+            <button class="selectButton" value="color_orange">Orange</button>
+        </div>
+        <div class="selectButtonContainer" style="background-color:red">
+            <div class="selectButtonLabel">Red</div>
+            <button class="selectButton" value="color_red">Red</button>
+        </div>
+        <div class="selectButtonContainer" style="background-color:maroon">
+            <div class="selectButtonLabel">Maroon</div>
+            <button class="selectButton" value="color_maroon">Maroon</button>
+        </div>
+        <div class="selectButtonContainer" style="background-color:fuchsia">
+            <div class="selectButtonLabel">Fuchsia</div>
+            <button class="selectButton" value="color_fuchsia">Fuchsia</button>
+        </div>
+        <div class="selectButtonContainer" style="background-color:purple">
+            <div class="selectButtonLabel">Purple</div>
+            <button class="selectButton" value="color_purple">Purple</button>
+        </div>
+
+        </li>
+
+        <li class="visualSelect_list_item visualSelect_list_item-stripes">
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Spectrum</div>
+            <div class="selectButtonThumbnail stripes_spectrum"></div>
+            <button class="selectButton" value="stripes_spectrum">Spectrum Stripes</button>
+        </div>
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Citrus</div>
+            <div class="selectButtonThumbnail stripes_citrus"></div>
+            <button class="selectButton" value="stripes_citrus">Citrus Stripes</button>
+        </div>
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Retro</div>
+            <div class="selectButtonThumbnail stripes_retro"></div>
+            <button class="selectButton" value="stripes_retro">Retro Stripes</button>
+        </div>
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Red, White, Blue</div>
+            <div class="selectButtonThumbnail stripes_usa"></div>
+            <button class="selectButton" value="stripes_usa">Red, White, Blue Stripes</button>
+        </div>        
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Winter</div>
+            <div class="selectButtonThumbnail stripes_winter"></div>
+            <button class="selectButton" value="stripes_winter">Winter Stripes</button>
+        </div>
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Spring</div>
+            <div class="selectButtonThumbnail stripes_spring"></div>
+            <button class="selectButton" value="stripes_spring">Spring Stripes</button>
+        </div>
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Summer</div>
+            <div class="selectButtonThumbnail stripes_summer"></div>
+            <button class="selectButton" value="stripes_summer">Summer Stripes</button>
+        </div>
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Autumn</div>
+            <div class="selectButtonThumbnail stripes_autumn"></div>
+            <button class="selectButton" value="stripes_autumn">Autumn Stripes</button>
+        </div>
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Forest</div>
+            <div class="selectButtonThumbnail stripes_forest"></div>
+            <button class="selectButton" value="stripes_forest">Forest Stripes</button>
+        </div>
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Ocean</div>
+            <div class="selectButtonThumbnail stripes_ocean"></div>
+            <button class="selectButton" value="stripes_ocean">Ocean Stripes</button>
+        </div>        
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Arid</div>
+            <div class="selectButtonThumbnail stripes_arid"></div>
+            <button class="selectButton" value="stripes_arid">Arid Stripes</button>
+        </div>
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Urban</div>
+            <div class="selectButtonThumbnail stripes_urban"></div>
+            <button class="selectButton" value="stripes_urban">Urban Stripes</button>
+        </div>          
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Primary</div>
+            <div class="selectButtonThumbnail stripes_primary"></div>
+            <button class="selectButton" value="stripes_primary">Primary Stripes</button>
+        </div>  
+        </li>
+
+        <li class="visualSelect_list_item visualSelect_list_item-gradient">
+         <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Spectrum</div>
+            <div class="selectButtonThumbnail gradient_spectrum"></div>
+            <button class="selectButton" value="gradient_spectrum">Spectrum Gradient</button>
+        </div>        
+        <div class="selectButtonContainer">
+            <div class="selectButtonLabel">Citrus</div>
+            <div class="selectButtonThumbnail gradient_citrus"></div>
+            <button class="selectButton" value="gradient_citrus">Citrus Gradient</button>
+        </div>                 
+        <div class="selectButtonContainer">
+            <div class="selectButtonLabel">Retro</div>
+            <div class="selectButtonThumbnail gradient_retro"></div>
+            <button class="selectButton" value="gradient_retro">Retro Gradient</button>
+        </div> 
+        <div class="selectButtonContainer">
+            <div class="selectButtonLabel">Red, White, Blue</div>
+            <div class="selectButtonThumbnail gradient_usa"></div>
+            <button class="selectButton" value="gradient_usa">Red, White, Blue Gradient</button>
+        </div>        
+        <div class="selectButtonContainer">
+            <div class="selectButtonLabel">Winter</div>
+            <div class="selectButtonThumbnail gradient_winter"></div>
+            <button class="selectButton" value="gradient_winter">Winter Gradient</button>
+        </div>         
+        <div class="selectButtonContainer">
+            <div class="selectButtonLabel">Spring</div>
+            <div class="selectButtonThumbnail gradient_spring"></div>
+            <button class="selectButton" value="gradient_spring">Spring Gradient</button>
+        </div> 
+        <div class="selectButtonContainer">
+            <div class="selectButtonLabel">Summer</div>
+            <div class="selectButtonThumbnail gradient_summer"></div>
+            <button class="selectButton" value="gradient_summer">Summer Gradient</button>
+        </div>         
+        <div class="selectButtonContainer">
+            <div class="selectButtonLabel">Autumn</div>
+            <div class="selectButtonThumbnail gradient_autumn"></div>
+            <button class="selectButton" value="gradient_autumn">Autumn Gradient</button>
+        </div>
+        <div class="selectButtonContainer">
+            <div class="selectButtonLabel">Forest</div>
+            <div class="selectButtonThumbnail gradient_forest"></div>
+            <button class="selectButton" value="gradient_forest">Forest Gradient</button>
+        </div>
+        <div class="selectButtonContainer">
+            <div class="selectButtonLabel">Ocean</div>
+            <div class="selectButtonThumbnail gradient_ocean"></div>
+            <button class="selectButton" value="gradient_ocean">Ocean Gradient</button>
+        </div>
+        <div class="selectButtonContainer">
+            <div class="selectButtonLabel">Arid</div>
+            <div class="selectButtonThumbnail gradient_arid"></div>
+            <button class="selectButton" value="gradient_arid">Arid Gradient</button>
+        </div>        
+        <div class="selectButtonContainer">
+            <div class="selectButtonLabel">Urban</div>
+            <div class="selectButtonThumbnail gradient_urban"></div>
+            <button class="selectButton" value="gradient_urban">Urban Gradient</button>
+        </div>        
+        <div class="selectButtonContainer">
+            <div class="selectButtonLabel">Primary</div>
+            <div class="selectButtonThumbnail gradient_primary"></div>
+            <button class="selectButton" value="gradient_primary">Primary Gradient</button>
+        </div>           
+        <div class="selectButtonContainer">
+            <div class="selectButtonLabel">Smoke</div>
+            <div class="selectButtonThumbnail gradient_smoke"></div>
+            <button class="selectButton" value="gradient_smoke">Smoke Gradient</button>
+        </div>                           
+        <div class="selectButtonContainer">
+            <div class="selectButtonLabel">Green</div>
+            <div class="selectButtonThumbnail gradient green"></div>
+            <button class="selectButton" value="gradient green">Green Gradient Gradient</button>
+        </div> 
+        <div class="selectButtonContainer">
+            <div class="selectButtonLabel">Violet</div>
+            <div class="selectButtonThumbnail gradient violet"></div>
+            <button class="selectButton" value="gradient violet">Violet Gradient</button>
+        </div> 
+        <div class="selectButtonContainer">
+            <div class="selectButtonLabel">Red</div>
+            <div class="selectButtonThumbnail gradient red"></div>
+            <button class="selectButton" value="gradient red">Red Gradient</button>
+        </div> 
+        <div class="selectButtonContainer">
+            <div class="selectButtonLabel">Yellow</div>
+            <div class="selectButtonThumbnail gradient yellow"></div>
+            <button class="selectButton" value="gradient yellow">Yellow Gradient</button>
+        </div> 
+        <div class="selectButtonContainer">
+            <div class="selectButtonLabel">Blue</div>
+            <div class="selectButtonThumbnail gradient blue"></div>
+            <button class="selectButton" value="gradient blue">Blue Gradient</button>
+        </div>
+       
+        </li>
+
+        <li class="visualSelect_list_item visualSelect_list_item-cycles">
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Spectrum</div>
+            <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_spectrum"></div>
+            <button class="selectButton" value="colorCycle colorCycle_spectrum">Spectrum Color Cycle</button>
+        </div>
+       <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Citrus</div>
+            <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_citrus"></div>
+            <button class="selectButton" value="colorCycle colorCycle_citrus">Citrus Color Cycle</button>
+        </div>
+
+       <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Retro</div>
+            <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_retro"></div>
+            <button class="selectButton" value="colorCycle colorCycle_retro">Retro Color Cycle</button>
+        </div>
+
+       <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Red, White, Blue</div>
+            <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_usa"></div>
+            <button class="selectButton" value="colorCycle colorCycle_usa">Red, White, Blue Cycle</button>
+        </div>                
+       <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Winter</div>
+            <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_winter"></div>
+            <button class="selectButton" value="colorCycle colorCycle_winter">Winter Color Cycle</button>
+        </div>        
+       <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Spring</div>
+            <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_spring"></div>
+            <button class="selectButton" value="colorCycle colorCycle_spring">Spring Color Cycle</button>
+        </div>        
+
+       <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Summer</div>
+            <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_summer"></div>
+            <button class="selectButton" value="colorCycle colorCycle_summer">Summer Color Cycle</button>
+        </div>
+
+       <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Autumn</div>
+            <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_autumn"></div>
+            <button class="selectButton" value="colorCycle colorCycle_autumn">Autumn Color Cycle</button>
+        </div>
+       <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Forest</div>
+            <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_forest"></div>
+            <button class="selectButton" value="colorCycle colorCycle_forest">Forest Color Cycle</button>
+        </div>
+       <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Ocean</div>
+            <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_ocean"></div>
+            <button class="selectButton" value="colorCycle colorCycle_ocean">Ocean Color Cycle</button>
+        </div>
+       <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Arid</div>
+            <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_arid"></div>
+            <button class="selectButton" value="colorCycle colorCycle_arid">Arid Color Cycle</button>
+        </div>
+       <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Urban</div>
+            <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_urban"></div>
+            <button class="selectButton" value="colorCycle colorCycle_urban">Urban Color Cycle</button>
+        </div>
+        <div class="selectButtonContainer">  
+            <div class="selectButtonLabel">Primary</div>
+            <div class="selectButtonThumbnail thumbnail_colorCycle thumbnail_colorCycle_primary"></div>
+            <button class="selectButton" value="colorCycle colorCycle_primary">Primary Color Cycle</button>
+        </div>
+        </li>
+
+    </ul>
+
+</div>
+
+<input type="hidden" name="visualSelect_fillValue" id="visualSelect_fillValue" value="color_white" />
+
+</fieldset>
+
 
 <fieldset class="layout_labels" id="fieldset_animatedBrushSpeed">
 
@@ -286,7 +569,7 @@
 
             <div class="animatedBrush brush_char" id="brush_circles"></div>
 
-            <div class="animatedBrush brush_char" id="brush_stars"></div>
+            <div class="animatedBrush brush_char" id="brush_sparkles"></div>
 
             <div class="animatedBrush brush_char" id="brush_snowflakes"></div>
 
@@ -341,8 +624,8 @@
 
     <div id="toggleBackground">
         <h1 class="paused_head">Paused</h1>
-        <p class="paused_p1">Tap the Screen to Restore</p>
-        <p class="paused_p2">Tap &amp; Hold the Screen to Exit</p>
+        <p class="paused_p1">Tap the screen to restore</p>
+        <p class="paused_p2">Tap &amp; hold the screen to exit</p>
     </div>
 
 </div>
