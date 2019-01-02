@@ -257,7 +257,7 @@ a {
     }
 
 form {
-    margin:94px 0 0 0;
+    margin:0;
     padding:0;
     }
 
@@ -494,6 +494,10 @@ body.content .ui-page-active {
     line-height:1.8em;
     }
     
+    .layout_labels label.onoffswitch-label {
+        float: none;
+    }
+
 .layout_labels button:not(.selectButton) {
     float:right;
     width:45%; 
@@ -515,6 +519,30 @@ body.content .ui-page-active {
         margin-left:auto;
         margin-right:auto;
         }
+
+.radioButtonList {
+    width: 45%;
+    float: right;
+    margin:0;
+    padding:0;
+    list-style:none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.radioButtonItem .ui-radio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.radioButton {
+    width:3em;
+    height: 3em;
+    margin-left: 1em;
+}
 
 
 /* Layout - menu */
@@ -718,8 +746,9 @@ a.button:hover {
     width:100%;
     text-align:center;
     border:0;
-    color:#222;
+    color:#dd2c00;
     font-size:1em;
+    font-family:'Roboto-Medium';
     box-shadow:none;
     border-radius:0;
     text-transform:inherit;
@@ -776,6 +805,8 @@ header nav a {
             content:"\e900";
         }
 
+
+/* ##### Pause display ##### */
 
 .toggleDisplay {
     position:absolute;
@@ -969,10 +1000,6 @@ button#toggleBrushDisplay:focus {
     .button {
         font-size:2.2em;
         padding:.85em 1em;
-        }
-
-    form {
-        margin:74px 0 0 0;
         }
 
     .selectButtonContainer .selectButtonLabel {

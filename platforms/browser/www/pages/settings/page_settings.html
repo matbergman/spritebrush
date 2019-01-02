@@ -37,7 +37,7 @@
 
     <div class="header-wrapper">
         <div class="header-title">
-        <span class="section-title">Brush Size</span>
+        <span class="section-title">Settings</span>
         </div>
     </div>
 
@@ -55,7 +55,7 @@
 
 <fieldset class="layout_labels" id="fieldset_brushsize">
 
-<label for="button_selectBrushsize">Select Brush Size</label>
+<label for="button_selectBrushsize">Brush Size</label>
 <button id="button_selectBrushsize"></button>
 
     <div class="visualSelect" id="visualSelect_brushsize">
@@ -94,7 +94,22 @@
 </fieldset>
 
 
+<fieldset class="layout_labels" id="fieldset_pausedTips">
 
+<label>Display "Paused" Text</label>
+
+    <ul class="radioButtonList">
+        <li class="radioButtonItem">
+           <input type="radio" class="radioButton" id="pausedTips_show" name="pausedTips" value="show"> <label class="radioButtonLabel" for="pausedTips_show">Show</label>
+        </li>
+        <li class="radioButtonItem">
+            <input type="radio" class="radioButton" id="pausedTips_hide" name="pausedTips" value="hide"> <label class="radioButtonLabel" for="pausedTips_hide">Hide</label>
+        </li>      
+    </div>
+    
+    <input type="hidden" name="radio_displayPausedTips" id="radio_displayPausedTips" value="show" />
+
+</fieldset>
 
 
 

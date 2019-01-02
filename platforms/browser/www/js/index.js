@@ -159,14 +159,10 @@ navAbout.innerHTML = "About";
 var navSettings = document.createElement("a");
 navSettings.href = "#";
 navSettings.id = "settings";
-navSettings.innerHTML = "Brush size";
-
-var navBrushsize = document.createElement("span");
-navBrushsize.id = "overflow_brushSize";
+navSettings.innerHTML = "Settings";
 
 navNightMode.appendChild(navNightModeToggle);
 theOverflow.appendChild(navNightMode);
-navSettings.appendChild(navBrushsize);
 theOverflow.appendChild(navSettings);
 theOverflow.appendChild(navInstructions);
 theOverflow.appendChild(navAbout);
@@ -255,6 +251,7 @@ selectedList.style.height = heightForPages+"px";
 
 }    
 
+
 /* ##### Set brush size ##### */
 var brushsize;
 var defaultBrushsize = 100;
@@ -279,7 +276,6 @@ function returnToPage(thePage, theFrame) {
 
 /* ##### Toggle night mode theme ##### */
 
-
 function getTheme() {
     if (localStorage.getItem("mode") == "night") {$("body").toggleClass("nightMode");}
     }
@@ -295,3 +291,15 @@ function toggleTheme() {
             }
     $("#overflow_menu").popup("close");
 }
+
+
+/* ##### Toggle pause screen ##### */
+
+function togglePauseScreen() {
+    if (localStorage.displayPausedTips == "show") {
+    $("#toggleBackground").toggle();        
+    }
+
+    console.log(localStorage.displayPausedTips);
+}
+

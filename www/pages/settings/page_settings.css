@@ -1,3 +1,15 @@
+#page_settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+#form_settings .layout_labels {
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+
 .visualSelect_settings {
 	position:relative;
 	display:block;
@@ -42,17 +54,3 @@
     font-family:brushsize;
     content:"\E903";
     }        
-
-#fieldset_brushsize {
-    margin-top:25%;
-}
-
-
-/* ##### Media Queries ##### */
-
-/* Small screens, smartphones */
-
-@media only screen and (max-device-width: 640px) {
-
-
-}

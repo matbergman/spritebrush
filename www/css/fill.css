@@ -107,12 +107,12 @@
 
 .stripes_retro {
     background: -webkit-linear-gradient(left,
-    #404040 0%,
-    #404040 20%,
+    #037e8c 0%,
+    #037e8c 20%,
     #024959 20%,
     #024959 40%,
-    #037e8c 40%,
-    #037e8c 60%,
+    #404040 40%,
+    #404040 60%,
     #f2efdc 60%,
     #f2efdc 80%,
     #f24c27 80%,
@@ -159,10 +159,10 @@
     #ff860d 20%,
     #e8430c 20%,
     #e8430c 40%,
-    #ff0000 40%,
-    #ff0000 60%,
+    #ff12dd 40%,
     #ff12dd 60%,
-    #ff12dd 80%,
+    #ff0000 60%,
+    #ff0000 80%,
     #a10dff 80%,
     #a10dff 100%
     );
@@ -211,19 +211,18 @@
     );
 }
 
-
 .stripes_forest {
     background: -webkit-linear-gradient(left,
-    #c7bb81 0%,
-    #c7bb81 20%,
-    #353a40 20%,
-    #353a40 40%,
-    #51774e 40%,
-    #51774e 60%,
-    #66563c 60%,
-    #66563c 80%,
-    #0c9c09 80%,
-    #0c9c09 100%
+    #993300 0%,
+    #993300 20%,
+    #CC6600 20%,
+    #CC6600 40%,
+    #FFCC66 40%,
+    #FFCC66 60%,
+    #99CC33 60%,
+    #99CC33 80%,
+    #009933 80%,
+    #009933 100%
     );
 }
 
@@ -233,8 +232,8 @@
     #008ddb 20%,
     #d8f6fe 20%,
     #d8f6fe 40%,
-    #f7edd4 40%,
-    #f7edd4 60%,
+    #fffb98 40%,
+    #fffb98 60%,
     #83ece7 60%,
     #83ece7 80%,
     #4087d7 80%,
@@ -259,12 +258,12 @@
 
 .stripes_urban {
     background: -webkit-linear-gradient(left,
-    #000000 0%,
-    #000000 20%,
-    #20222f 20%,
-    #20222f 40%,
-    #fffffd 40%,
-    #fffffd 60%,
+    #fffffd 0%,
+    #fffffd 20%,
+    #56596e 20%,
+    #56596e 40%,
+    #000000 40%,
+    #000000 60%,
     #ec4331 60%,
     #ec4331 80%,
     #5d420c 80%,
@@ -330,9 +329,9 @@ background: -webkit-linear-gradient(left,
 
 .gradient_retro {
     background: -webkit-linear-gradient(left,
-    #404040 0%,
+    #037e8c 0%,
     #024959 25%,
-    #037e8c 50%,
+    #404040 50%,
     #f2efdc 75%,
     #f24c27 100%
     );
@@ -362,8 +361,8 @@ background: -webkit-linear-gradient(left,
     background: -webkit-linear-gradient(left,
     #ff860d 0%,
     #e8430c 25%,
-    #ff0000 50%,
-    #ff12dd 75%,
+    #ff12dd 50%,
+    #ff0000 75%,
     #a10dff 100%
     );
 }
@@ -398,14 +397,13 @@ background: -webkit-linear-gradient(left,
     );
 }
 
-
 .gradient_forest {
     background: -webkit-linear-gradient(left,
-    #c7bb81 0%,
-    #353a40 25%,
-    #51774e 50%,
-    #66563c 75%,
-    #0c9c09 100%
+    #993300 0%,
+    #CC6600 25%,
+    #FFCC66 50%,
+    #99CC33 75%,
+    #009933 100%
     );    
 }
 
@@ -413,7 +411,7 @@ background: -webkit-linear-gradient(left,
     background: -webkit-linear-gradient(left,
     #008ddb 0%,
     #d8f6fe 25%,
-    #f7edd4 50%,
+    #fffb98 50%,
     #83ece7 75%,
     #4087d7 100%
     );    
@@ -431,9 +429,9 @@ background: -webkit-linear-gradient(left,
 
 .gradient_urban {
     background: -webkit-linear-gradient(left,
-    #000000 0%,
-    #20222f 25%,
-    #fffffd 50%,
+    #fffffd 0%,
+    #56596e 25%,
+    #000000 50%,
     #ec4331 75%,
     #5d420c 100%
     );    
@@ -617,9 +615,9 @@ background: -webkit-linear-gradient(left,
     }
 
     @-webkit-keyframes colorCycleRetro {
-        0% {background: #404040;}
+        0% {background: #037e8c;}
         20% {background: #024959;}
-        40% {background: #037e8c;}
+        40% {background: #404040;}
         60% {background: #f2efdc;}
         80% {background: #f24c27;}
         100% {background: #404040;}
@@ -659,8 +657,8 @@ background: -webkit-linear-gradient(left,
     @-webkit-keyframes colorCycleSummer {
         0% {background: #ff860d;}
         20% {background: #e8430c;}
-        40% {background: #ff0000;}
-        60% {background: #ff12dd;}
+        40% {background: #ff12dd;}
+        60% {background: #ff0000;}
         80% {background: #a10dff;}
         100% {background: #ff860d;}
         }
@@ -695,14 +693,13 @@ background: -webkit-linear-gradient(left,
     }
 
     @-webkit-keyframes colorCycleForest {
-        0% {background: #c7bb81;}
-        20% {background: #353a40;}
-        40% {background: #51774e;}
-        60% {background: #66563c;}
-        80% {background: #0c9c09;}
-        100% {background: #c7bb81;}
+        0% {background: #993300;}
+        20% {background: #CC6600;}
+        40% {background: #FFCC66;}
+        60% {background: #99CC33;}
+        80% {background: #009933;}
+        100% {background: #993300;}
         }
-
 
 .colorCycle_ocean {
     -webkit-animation-name:colorCycleOcean;
@@ -711,7 +708,7 @@ background: -webkit-linear-gradient(left,
     @-webkit-keyframes colorCycleOcean {
         0% {background: #008ddb;}
         20% {background: #d8f6fe;}
-        40% {background: #f7edd4;}
+        40% {background: #fffb98;}
         60% {background: #83ece7;}
         80% {background: #4087d7;}
         100% {background: #008ddb;}
@@ -735,9 +732,9 @@ background: -webkit-linear-gradient(left,
     }
 
     @-webkit-keyframes colorCycleUrban {
-        0% {background: #000000;}
-        20% {background: #20222f;}
-        40% {background: #fffffd;}
+        0% {background: #fffffd;}
+        20% {background: #56596e;}
+        40% {background: #000000;}
         60% {background: #ec4331;}
         80% {background: #5d420c;}
         100% {background: #000000;}
@@ -794,7 +791,7 @@ background: -webkit-linear-gradient(left,
 
 
 .stripes_retro .charColor0 {
-    color:#404040;
+    color:#037e8c;
     }
 
 .stripes_retro .charColor1 {
@@ -802,7 +799,7 @@ background: -webkit-linear-gradient(left,
     }        
 
 .stripes_retro .charColor2 {
-    color:#037e8c;
+    color:#404040;
     }
 
 .stripes_retro .charColor3 {
@@ -865,11 +862,11 @@ background: -webkit-linear-gradient(left,
     }        
 
 .stripes_summer .charColor2 {
-    color:#ff0000;
+    color:#ff12dd;
     }
 
 .stripes_summer .charColor3 {
-    color:#ff12dd;
+    color:#ff0000;
     }        
 
 .stripes_summer .charColor4 {
@@ -933,27 +930,25 @@ background: -webkit-linear-gradient(left,
     color:#ebeae8;
     } 
 
-
 .stripes_forest .charColor0 {
-    color:#c7bb81;
+    color:#993300;
     }
 
 .stripes_forest .charColor1 {
-    color:#353a40;
+    color:#CC6600;
     }        
 
 .stripes_forest .charColor2 {
-    color:#51774e;
+    color:#FFCC66;
     }
 
 .stripes_forest .charColor3 {
-    color:#66563c;
+    color:#99CC33;
     }        
 
 .stripes_forest .charColor4 {
-    color:#0c9c09;
+    color:#009933;
     } 
-
 
 .stripes_ocean .charColor0 {
     color:#008ddb;
@@ -964,7 +959,7 @@ background: -webkit-linear-gradient(left,
     }        
 
 .stripes_ocean .charColor2 {
-    color:#f7edd4;
+    color:#fffb98;
     }
 
 .stripes_ocean .charColor3 {
@@ -998,15 +993,15 @@ background: -webkit-linear-gradient(left,
 
 
 .stripes_urban .charColor0 {
-    color:#000000;
+    color:#fffffd;
     }
 
 .stripes_urban .charColor1 {
-    color:#20222f;
+    color:#56596e;
     }        
 
 .stripes_urban .charColor2 {
-    color:#fffffd;
+    color:#000000;
     }
 
 .stripes_urban .charColor3 {
@@ -1054,7 +1049,7 @@ background: -webkit-linear-gradient(left,
         }
 
     .thumbnail_colorCycle_forest {
-        -webkit-animation-name:colorCycleUsa;
+        -webkit-animation-name:colorCycleForest;
         }
 
     .thumbnail_colorCycle_citrus {
@@ -1088,10 +1083,6 @@ background: -webkit-linear-gradient(left,
     .thumbnail_colorCycle_green {
         -webkit-animation-name:colorCycleGreen;
         }  
-
-    .thumbnail_colorCycle_forest {
-        -webkit-animation-name:colorCycleForest;
-        }
 
     .thumbnail_colorCycle_ocean {
         -webkit-animation-name:colorCycleOcean;

@@ -1,28 +1,42 @@
 $(document).ready(function(){
 
-/* ##### Check if night mode skin is enabled */
-getTheme();
-
-if (localStorage.brushsize == null) {brushsize = defaultBrushsize;}
-else {brushsize = localStorage.brushsize;}
-document.getElementById("button_selectBrushsize").innerHTML = brushsize+"%";
+	/* ##### Check if night mode skin is enabled */
+	getTheme();
 
 
-/* Select buttons */
+	/* Brush size button */
 
-$("#button_selectBrushsize").on("click", function() {
-
-    createSelect("fieldset_brushsize"); 
-    return false;
-
-    });
+	if (localStorage.brushsize == null) {brushsize = defaultBrushsize;}
+	else {brushsize = localStorage.brushsize;}
+	document.getElementById("button_selectBrushsize").innerHTML = brushsize+"%";
 
 
-/* Save the selected brush size to local storage for use on all pages */
-$(".selectButton").on("click",function() {
-    localStorage.brushsize = this.value;
+	$("#button_selectBrushsize").on("click", function() {
+	    createSelect("fieldset_brushsize"); 
+	    return false;
 	});
 
+	/* Save the selected brush size to local storage for use on all pages */
+	$(".selectButton").on("click",function() {
+	    localStorage.brushsize = this.value;
+	});
+
+	/* Radio buttons */
+	if (localStorage.displayPausedTips == null) {
+		displayPausedTips = "show";
+	}
+
+	else {
+		displayPausedTips = localStorage.displayPausedTips;
+	}
+
+	$("#pausedTips_"+displayPausedTips).prop("checked", true);
+
+
+	$(".radioButton").on("change",function() {
+		this.checked = true;
+		localStorage.displayPausedTips = this.value;
+	});
 
 
 });

@@ -74,7 +74,7 @@ $(document).ready(function(){
 
     $("#animatedBrushFrame").on("tap",function(){
         $("#animatedBrushWrapper").toggle();
-        $("#toggleBackground").toggle();    
+        togglePauseScreen();
         });
 
 

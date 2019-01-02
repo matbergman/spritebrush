@@ -44,7 +44,7 @@
 
 #eightBitBrush {
     position:absolute;
-    top:45%;
+    top:48%;
     left:0;
     width:100%;
     }
@@ -52,7 +52,7 @@
 #eightBitBrush .pixel {
     float:left;
     width:6.2%;
-    height:3em;
+    height:1em;
     margin:0;
     padding:0;
     }

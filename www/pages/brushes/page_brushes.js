@@ -80,7 +80,7 @@ $("#button_selectStrobe").on("click", function() {
 
 $("#colorFrame").on("tap",function(){
     $("#theColor").toggle();
-    $("#toggleBackground").toggle();
+    togglePauseScreen();
     });
 
 

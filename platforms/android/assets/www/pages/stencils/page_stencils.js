@@ -44,7 +44,7 @@ $("#button_selectStencilSpeed").on("click", function() {
 
 $("#stencilFrame").on("tap",function(){
     $("#stencil").toggle();
-    $("#toggleBackground").toggle();    
+    togglePauseScreen();   
     });
 
 
