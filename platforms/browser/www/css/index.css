@@ -220,6 +220,15 @@ nav .ui-link {
         content:"\E602";
         }
 
+.nightMode input[type="radio"] {
+  border-color: #673ab7;
+  background-color: #000000;
+}
+
+.nightMode input[type="radio"]:checked {
+  background-color: #673ab7;
+}
+
 
 /* ##### layout ##### */
 
@@ -428,7 +437,7 @@ body.content .ui-page-active {
 .content_container h1 {
     font-family:Roboto-Light;
     font-size:1.6em;
-    margin:1.2em 0 .5em 0;
+    margin:2.4em 0 .5em 0;
     padding:0;
     }
 
@@ -539,9 +548,24 @@ body.content .ui-page-active {
 }
 
 .radioButton {
-    width:3em;
-    height: 3em;
     margin-left: 1em;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  padding: 6px;
+  background-clip: content-box;
+  border: 2px solid #455a64;
+  background-color: #cfd8dc;
+  border-radius: 50%;
+  outline: none;
+}
+
+input[type="radio"]:checked {
+  background-color: #455a64;
 }
 
 
@@ -550,9 +574,9 @@ body.content .ui-page-active {
 #panel_menu {
     }
 
-        #overflow_menu a {
-            width:14em;
-            }
+#overflow_menu a {
+    width:14em;
+    }
 
 
 .panel_logo {
