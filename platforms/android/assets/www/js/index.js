@@ -43,8 +43,6 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
     }
 };
 
@@ -112,20 +110,34 @@ var navColors = document.createElement("a");
 navColors.href = "#";
 navColors.id = "showBrushes";
 navColors.className = "ui-link";
-navColors.innerHTML = "Brushes";
+
+var navColorsLabel = document.createElement("span");
+navColorsLabel.className = "ui-link-label";
+navColorsLabel.innerHTML = "Brushes";
 
 var navAnimatedBrushes = document.createElement("a");
 navAnimatedBrushes.href = "#";
 navAnimatedBrushes.id = "showAnimatedBrushes";
-navAnimatedBrushes.innerHTML = "Animations";
+
+var navAnimatedBrushesLabel = document.createElement("span");
+navAnimatedBrushesLabel.className = "ui-link-label";
+navAnimatedBrushesLabel.innerHTML = "Animations";
 
 var navStencils = document.createElement("a");
 navStencils.href = "#";
 navStencils.id = "showStencils";
-navStencils.innerHTML = "Stencils";
+
+var navStencilsLabel = document.createElement("span");
+navStencilsLabel.className = "ui-link-label";
+navStencilsLabel.innerHTML = "Stencils";
+
 
 thePanelLogo.appendChild(thePanelLogoImage);
 thePanel.appendChild(thePanelLogo);
+
+navColors.appendChild(navColorsLabel);
+navAnimatedBrushes.appendChild(navAnimatedBrushesLabel);
+navStencils.appendChild(navStencilsLabel);
 
 thePanel.appendChild(navColors);
 thePanel.appendChild(navAnimatedBrushes);
@@ -141,7 +153,10 @@ var theOverflow = document.getElementById("overflow_menu");
 var navNightMode = document.createElement("a");
 navNightMode.href = "#";
 navNightMode.id = "nightMode";
-navNightMode.innerHTML = "Night mode";
+
+var navNightModeLabel = document.createElement("span");
+navNightModeLabel.className = "ui-link-label";
+navNightModeLabel.innerHTML = "Night mode";
 
 var navNightModeToggle = document.createElement("span");
 navNightModeToggle.className = "nightMode_toggleIndicator";
@@ -149,19 +164,35 @@ navNightModeToggle.className = "nightMode_toggleIndicator";
 var navInstructions = document.createElement("a");
 navInstructions.href = "#";
 navInstructions.id = "instructions";
-navInstructions.innerHTML = "Instructions";
+
+var navInstructionsLabel = document.createElement("span");
+navInstructionsLabel.className = "ui-link-label";
+navInstructionsLabel.innerHTML = "Instructions";
 
 var navAbout = document.createElement("a");
 navAbout.href = "#";
 navAbout.id = "about";
-navAbout.innerHTML = "About";
+
+var navAboutLabel = document.createElement("span");
+navAboutLabel.className = "ui-link-label";
+navAboutLabel.innerHTML = "About";
 
 var navSettings = document.createElement("a");
 navSettings.href = "#";
 navSettings.id = "settings";
-navSettings.innerHTML = "Settings";
 
-navNightMode.appendChild(navNightModeToggle);
+var navSettingsLabel = document.createElement("span");
+navSettingsLabel.className = "ui-link-label";
+navSettingsLabel.innerHTML = "Settings";
+
+
+navNightMode.appendChild(navNightModeLabel);
+navNightModeLabel.appendChild(navNightModeToggle);
+
+navInstructions.appendChild(navInstructionsLabel);
+navAbout.appendChild(navAboutLabel);
+navSettings.appendChild(navSettingsLabel);
+
 theOverflow.appendChild(navNightMode);
 theOverflow.appendChild(navSettings);
 theOverflow.appendChild(navInstructions);
@@ -299,7 +330,12 @@ function togglePauseScreen() {
     if (localStorage.displayPausedTips == "show") {
     $("#toggleBackground").toggle();        
     }
-
-    console.log(localStorage.displayPausedTips);
 }
 
+
+
+/* ##### Settings - default settings ##### */
+
+if (localStorage.displayPausedTips == null) {
+    localStorage.displayPausedTips = "show";
+}

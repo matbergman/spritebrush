@@ -1,8 +1,5 @@
-#page_settings {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
+#form_settings {
+    margin: 0px;
 }
 
 #form_settings .layout_labels {

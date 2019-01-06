@@ -38,14 +38,14 @@ mask6 = new Image();
 mask7 = new Image();
 mask8 = new Image();
 
-mask1.src = "/img/mask_bar.png";
-mask2.src = "/img/mask_circle.png";
-mask3.src = "/img/mask_line.png";
-mask4.src = "/img/mask_line-small.png";
-mask5.src = "/img/mask_point.png";
-mask6.src = "/img/mask_points.png";
-mask7.src = "/img/mask_square.png";
-mask8.src = "/img/mask_sunburst.png";
+mask1.src = "/img/mask_bar.svg";
+mask2.src = "/img/mask_circle.svg";
+mask3.src = "/img/mask_line.svg";
+mask4.src = "/img/mask_line-small.svg";
+mask5.src = "/img/mask_point.svg";
+mask6.src = "/img/mask_points.svg";
+mask7.src = "/img/mask_square.svg";
+mask8.src = "/img/mask_sunburst.svg";
 
 
 
@@ -106,7 +106,7 @@ function showMask() {
     } 
 
     else {
-        theMask.style.backgroundImage = "url(../../img/"+selectedMask+".png)";
+        theMask.style.backgroundImage = "url(../../img/"+selectedMask+".svg)";
         $(theMask).addClass(selectedMask);
 
         if (selectedMask  == "mask_points") {
@@ -137,6 +137,7 @@ function showFill() {
     $("header").hide();
     $("#page_brushes").hide();
     $("#theColor").removeClass();
+    $("#theColor").hide();
 
     selectedColor  = $("#visualSelect_fillValue").val();
     selectedStrobe = $("#visualSelect_strobeValue").val();
@@ -147,6 +148,10 @@ function showFill() {
 
     $("#colorFrame").show();
     $("#theColor").addClass(selectedColor);
-    $("#theColor").show();
+
+    // setTimeout to prevent a loading glitch
+    setTimeout(function() {$("#theColor").show()}, 100);
+
+    
 
 }

@@ -22,15 +22,7 @@ $(document).ready(function(){
 	});
 
 	/* Radio buttons */
-	if (localStorage.displayPausedTips == null) {
-		displayPausedTips = "show";
-	}
-
-	else {
-		displayPausedTips = localStorage.displayPausedTips;
-	}
-
-	$("#pausedTips_"+displayPausedTips).prop("checked", true);
+	$("#pausedTips_"+localStorage.displayPausedTips).prop("checked", true);
 
 
 	$(".radioButton").on("change",function() {

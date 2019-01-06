@@ -97,33 +97,45 @@ header nav a {
     color:#fff;
     }
 
+.ui-panel-inner {
+    padding: 0;
+}    
+
 .ui-link {
     display:block;
-    padding:1em 5px;
-    border-bottom:1px solid #ccc;      
     color:#666;
     font-size:2em;
     }
 
-.ui-link:last-child {
-    border-bottom:0;
-    }
-
-.ui-link.active {
+    .ui-link.active {
      color:#000;
      font-weight:bold;
-}
+    }
 
     .ui-link:active {
        background-color:#dd2c00;
        color:#fff;
     }
 
+        .ui-link:active .ui-link-label {
+            border-color: #dd2c00;
+        }
+
     .nightMode .ui-link:active {
         background-color:#000;
         color:inherit;
     }
 
+.ui-link-label {
+    display: block;
+    margin:0 1em;
+    padding: 1em 0;
+    border-bottom:1px solid #ccc;      
+}
+
+    .ui-link:last-child .ui-link-label {
+        border-bottom:0;
+        }
 
 .content_container .ui-link {
     font-size:inherit;
@@ -201,6 +213,10 @@ nav .ui-link {
 .nightMode #overflow_menu a,
 .nightMode #select_menu a {
     color:#673ab7;
+    }
+
+.nightMode .ui-link-label,
+.nightMode .ui-link:active .ui-link-label {
     border-color:#673ab7;
     }
 
@@ -209,11 +225,14 @@ nav .ui-link {
     }
 
 .nightMode .nightMode_toggleIndicator {
+    display: block;
+    float: left;
     width:28px;
     height:28px;
     font-family:icons-app;
     margin-left:.5em;
     color:#673ab7;
+    margin:0 .25em 0 0;
     }
 
     .nightMode  .nightMode_toggleIndicator::before {
@@ -265,23 +284,22 @@ a {
     text-decoration:none;
     }
 
-form {
-    margin:0;
+.form_controls {
+    margin:0 0 32px 0;
     padding:0;
     }
 
-    form fieldset {
+    .form_controls fieldset {
         border:0;
-        margin:0;
         padding:0;
         }
         
-    label {
+    .form_controls label {
         margin-right:2em;
         }        
         
-    select,
-    label {
+    .form_controls select,
+    .form_controls label {
         font-size:1.6em;
         }
 
@@ -333,7 +351,10 @@ form {
 
 .page_container {
     width:100%;
-    height:100%;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     }
 
 
@@ -583,7 +604,7 @@ input[type="radio"]:checked {
     width:auto;
     overflow:auto;
     height:44px;
-    margin:0 0 2em 0;
+    margin:1em 1em 2em 1em;
     }
 
 .panel_logo_image {
@@ -642,7 +663,6 @@ input[type="radio"]:checked {
 
 .ui-popup#overflow_menu {
     top:34px;
-    padding:1em;
     -webkit-box-shadow: 5px 0 5px rgba(0,0,0,.15);
     border:0;
     }
@@ -1040,10 +1060,6 @@ button#toggleBrushDisplay:focus {
 
     .panel_logo {
         margin-top:.85em;
-        }
-
-    #form_color {
-        margin-top:74px;
         }
 
     #page_instructions .content_container p:first-child {
