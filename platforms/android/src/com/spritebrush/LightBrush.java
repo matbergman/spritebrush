@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.spritebrushpro;
+package com.spritebrush;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.spritebrushpro" version="0.0.6.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.spritebrush" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
-    <name>SpriteBrush Pro</name>
+    <name>SpriteBrush</name>
     <description>
     Transform your smartphone or tablet into an enchanted light painting brush
     </description>
-    <author email="matbergman@gmail.com" href="http://www.spritebrush.com">
+    <author email="spritepaint@gmail.com" href="http://www.spritebrush.com">
     Mat Bergman
     </author>
     <content src="index.html" />
@@ -17,5 +17,5 @@
     <preference name="fullscreen" value="true" />
     <preference name="orientation" value="landscape" />
     <preference name="android-minSdkVersion" value="11" />
-    <preference name="android-targetSdkVersion" value="26" />
+    <preference name="android-targetSdkVersion" value="19" />
 </widget>
